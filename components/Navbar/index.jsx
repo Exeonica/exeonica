@@ -16,6 +16,7 @@ const Navbar = () => {
       />
       <Button>Button</Button>
       <span>{strings["home"]}</span>
+      <span className="">HOME</span>
     </div>
   );
 };
