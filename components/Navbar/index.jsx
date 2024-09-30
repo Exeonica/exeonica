@@ -1,6 +1,7 @@
 import { Logo } from "@/public/Icons";
 import { strings } from "@/utils";
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 const Navbar = () => {
   return (
@@ -13,20 +14,7 @@ const Navbar = () => {
         height={48}
         priority
       />
-      <Image
-        src="/images/Test.svg"
-        alt="Next.js logo"
-        width={500}
-        height={200}
-        priority
-      />
-      <Image
-        src="/images/Test2.png"
-        alt="Next.js logo"
-        width={500}
-        height={200}
-        priority
-      />
+      <Button>Button</Button>
       <span>{strings["home"]}</span>
     </div>
   );
