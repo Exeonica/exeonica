@@ -1,0 +1,9 @@
+**/.git
+**/.svn
+**/.next
+**/.config.js
+**/.config.mjs
+**/.gitignore
+**/.prettierignore
+**/.prettierrc.js
+**/node_modules

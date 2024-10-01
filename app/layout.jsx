@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
-import "./globals.css";
+
 import Navbar from "@/components/Navbar";
+import "./globals.css";
 
 const pangeaAfrikanTrial = localFont({
   src: "./fonts/Pangea Afrikan Trial.woff",
@@ -16,9 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body 
-      className={`${pangeaAfrikanTrial.className} antialiased`}
-      >
+      <body className={`${pangeaAfrikanTrial.className} antialiased`}>
         <Navbar />
         {children}
       </body>
