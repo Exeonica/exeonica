@@ -16,9 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body 
-      className={`${pangeaAfrikanTrial.className} antialiased`}
-      >
+      <body
+      //  className={`${pangeaAfrikanTrial.className} antialiased`}
+       >
         <Navbar />
         {children}
       </body>

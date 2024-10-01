@@ -49,6 +49,9 @@ module.exports = {
           4: "#4bc0c0",
           5: "#9966ff",
         },
+        text: {
+          DEFAULT: "#1E1E1E",
+        }
       },
       borderRadius: {
         lg: "12px",
