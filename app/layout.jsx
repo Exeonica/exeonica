@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
-import "./globals.css";
+
 import Navbar from "@/components/Navbar";
+import "./globals.css";
 
 const pangeaAfrikanTrial = localFont({
   src: "./fonts/Pangea Afrikan Trial.woff",
