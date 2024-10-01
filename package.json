@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "playwright": "npx playwright test --ui"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
@@ -25,6 +26,8 @@
   },
   "devDependencies": {
     "@eslint/js": "8.57.0",
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.13",
     "eslint-config-prettier": "^9.1.0",
@@ -36,7 +39,12 @@
     "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "3.4.1"
   },
-  "lint-staged": {},
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "npm run format"
+    ]
+  },
   "engines": {
     "node": ">=20.17.0"
   }
