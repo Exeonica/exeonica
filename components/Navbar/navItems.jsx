@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../button/index.jsx";
 
-// import { Button } from "../ui/button";
+import Button from "../button/index.jsx";
 
 import { navLinks, strings } from "@/utils";
 import { Logo, ArrowIcon, MenuIcon } from "@/public";
