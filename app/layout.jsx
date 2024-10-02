@@ -1,14 +1,19 @@
-// import localFont from "next/font/local";
+import localFont from "next/font/local";
 
 import Navbar from "@/components/Navbar";
 
 import "./globals.css";
 
-// const pangeaAfrikanTrial = localFont({
-//   src: "./fonts/Pangea Afrikan Trial.woff",
-//   variable: "--font-pangea-afrikan-trial",
-//   weight: "100 900",
-// });
+const pangeaAfrikanTrial = localFont({
+  src: [
+    { path: "./fonts/PangeaAfrikanTrial-Light.woff", weight: "300" },
+    { path: "./fonts/PangeaAfrikanTrial-Regular.woff", weight: "400" },
+    { path: "./fonts/PangeaAfrikanTrial-Medium.woff", weight: "500" },
+    { path: "./fonts/PangeaAfrikanTrial-SemiBold.woff", weight: "600" },
+    { path: "./fonts/PangeaAfrikanTrial-Bold.woff", weight: "700" },
+  ],
+  variable: "--font-pangeaAfrikanTrial",
+});
 
 export const metadata = {
   title: "Exeonic",
@@ -18,9 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-      // className={`${pangeaAfrikanTrial.className} antialiased`}
-      >
+      <body className={`${pangeaAfrikanTrial.variable} antialiased`}>
         <Navbar calculateLabel="Estimate Project Cost" contactLabel="Reach Out" />
         {children}
       </body>
