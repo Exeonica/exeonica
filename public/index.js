@@ -10,5 +10,6 @@ import Award3 from "./Icons/award3.svg";
 import Award4 from "./Icons/award4.svg";
 import Award5 from "./Icons/award5.svg";
 import Award6 from "./Icons/award6.svg";
+import DashboardCard from "./Icons/dashboardcard.svg";
 
-export { Logo, ArrowIcon, MenuIcon, HeaderTop, HeaderBottom, AboutUsImg, Award1, Award2, Award3, Award4, Award5, Award6 };
+export { Logo, ArrowIcon, MenuIcon, HeaderTop, HeaderBottom, AboutUsImg, Award1, Award2, Award3, Award4, Award5, Award6, DashboardCard };

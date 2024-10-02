@@ -12,11 +12,12 @@ const data = [
   { id: 3, title: "Card 3", number: 30 },
   { id: 4, title: "Card 4", number: 40 },
 ];
+const employeeTotals = [10, 25, 50, 75, 100];
 
 const aboutUs = () => {
   return (
     <div>
-      <div className="mt-[80px] flex h-screen flex-col sm:justify-center md:flex-row md:items-start lg:px-[137px]">
+      <div className="mt-[80px] flex flex-col sm:justify-center md:flex-row md:items-start lg:px-[137px]">
         {/* Left Section */}
         <div className="flex flex-1 flex-col sm:items-center sm:justify-center md:items-start">
           <div className="sm:w-12/3 md:w-1/4">
@@ -25,7 +26,7 @@ const aboutUs = () => {
             </Button>
           </div>
 
-          <div className="mt-0 flex flex-1 flex-col bg-gray-400 sm:px-6 md:items-start md:justify-start">
+          <div className="mt-0 flex flex-1 flex-col sm:px-6 md:items-start md:justify-start">
             {" "}
             <h1 className="leading-1 mb-4 text-center text-2xl font-medium text-title sm:text-3xl lg:text-[40px]">{strings["aboutTitle"]}</h1> {/* Responsive text size */}
             <p className="text-center text-xs font-normal text-description sm:text-sm">{strings["aboutDescription"]}</p> {/* Responsive text size */}
@@ -42,11 +43,11 @@ const aboutUs = () => {
           <Image src={AboutUsImg} alt="Picture of the author" width={"auto"} height={"auto"} className="sm:h-[343px] sm:w-[349px] lg:h-[507px] lg:w-[516px]" />
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-4 p-4">
-        {data.map((item) => (
-          <div className="rounded-md bg-white p-4 shadow-md">
-            <h2 className="text-xl font-bold text-gray-200">{item.title}</h2>
-            <p className="text-3xl font-extrabold text-gray-300">{item.number}</p>
+      <div className="mb-[80px] mt-[36px] flex flex-wrap items-center justify-center gap-4">
+        {employeeTotals.map((total, index) => (
+          <div className="max-w-[276px] rounded-lg border border-border bg-border p-6 shadow-lg">
+            <h2 className="mb-2 text-3xl font-bold text-gray-900">{total}</h2>
+            <p className="font-medium text-gray-500">Total employees</p>
           </div>
         ))}
       </div>
