@@ -1,11 +1,11 @@
 import React from "react";
 
+import Header from "./header";
+
 const page = () => {
   return (
     <div>
-      <div className="flex h-72 items-center justify-center bg-cyan-200">
-        <h6 className="text-4xl">ABOUT US</h6>
-      </div>
+      <Header />
     </div>
   );
 };
