@@ -5,4 +5,6 @@ export const strings = {
   aboutUs: "About Us",
   blogs: "Blogs",
   careers: "Careers",
+  getInTouch: "Get in Touch",
+  calculateCost: "Calculate Project Cost",
 };

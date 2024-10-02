@@ -35,7 +35,7 @@ module.exports = {
           DEFAULT: "#f44336",
           foreground: "#ffffff",
         },
-        border: "#cccccc",
+        border: "#F7FAFC",
         input: "#ffffff",
         ring: "#3b82f6",
         chart: {
@@ -44,6 +44,9 @@ module.exports = {
           3: "#ffce56",
           4: "#4bc0c0",
           5: "#9966ff",
+        },
+        text: {
+          DEFAULT: "#1E1E1E",
         },
       },
       borderRadius: {
