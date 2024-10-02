@@ -19,7 +19,12 @@
       { "blankLine": "always", "prev": "multiline-expression", "next": "*" },
       { "blankLine": "always", "prev": "if", "next": "*" }
     ],
-    "prettier/prettier": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "react/display-name": "off",
     "react/jsx-key": "off",
     "react/no-unescaped-entities": "off",
