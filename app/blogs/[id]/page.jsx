@@ -1,8 +1,7 @@
 import React from "react";
 
 const BlogDetails = ({ params }) => {
-  console.log("params", params);
-  return <div>BlogDetails</div>;
+  return <div>BlogDetails {params.id}</div>;
 };
 
 export default BlogDetails;
