@@ -22,8 +22,8 @@ const NavMenu = () => {
           <div className="mx-7 mt-12">
             <div className="mt-12 space-y-9 py-2">
               {navLinks.map((link) => (
-                <div className="group flex cursor-pointer items-center justify-between">
-                  <Link key={link.name} href={link.path} className="flex text-[28px] font-medium text-text group-hover:text-primary">
+                <div key={link.name} className="group flex cursor-pointer items-center justify-between">
+                  <Link href={link.path} className="flex text-[28px] font-medium text-text group-hover:text-primary">
                     {link.name}
                   </Link>
 
