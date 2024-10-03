@@ -7,4 +7,10 @@ export const strings = {
   careers: "Careers",
   getInTouch: "Get in Touch",
   calculateCost: "Calculate Project Cost",
+  excellenceBtn: "A trusted place where Innovation meets Excellence",
+  heroTitle: "Driving startup success with tailored digital solutions: from mobile and web apps to AI-powered innovations.",
+  heroDescription: "We specialize in designing and developing scalable web and mobile applications,",
+  heroDescription2: "custom-tailored to meet the unique needs and challenges of your business.",
+  heroBtn1: "View Our Services",
+  heroBtn2: "Let's Talk",
 };
