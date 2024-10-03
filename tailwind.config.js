@@ -59,7 +59,7 @@ module.exports = {
         sm: "4px",
       },
       fontFamily: {
-        pangeaAfrikanTrial: ["var(--font-pangea)"],
+        pangeaAfrikanTrial: ["var(--font-pangeaAfrikanTrial)"],
       },
       screens: {
         sm: "640px",
