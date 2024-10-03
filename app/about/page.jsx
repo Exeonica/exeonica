@@ -1,18 +1,19 @@
 import React from "react";
 
-import Header from "../../components/AboutPage/header";
-import AboutUs from "../../components/AboutPage/aboutUs";
-import Awards from "../../components/AboutPage/awards";
-import Partners from "../../components/AboutPage/partners";
-import Footer from "../../components/Footer/index";
+import AboutSection from "../../components/AboutSection";
+import ChooseUs from "../../components/chooseUs";
+import RevenueSection from "../../components/revenueSection";
+import Footer from "../../components/Footer";
+import { Header, Awards } from "@/components/AboutPage";
 
 const page = () => {
   return (
     <div>
       <Header />
-      <AboutUs />
+      <AboutSection />
+      <ChooseUs />
       <Awards />
-      <Partners />
+      <RevenueSection />
       <Footer />
     </div>
   );

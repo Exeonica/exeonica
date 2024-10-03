@@ -5,9 +5,11 @@ export const strings = {
   aboutUs: "About Us",
   blogs: "Blogs",
   careers: "Careers",
+  awards: "Awards",
   getInTouch: "Get in Touch",
   calculateCost: "Calculate Project Cost",
   learnMore: "Learn More",
+  whyUs: "Why Us",
   aboutTitle: "Building software for global leaders.",
   aboutDescription:
     "At Exeonic, we're dedicated to harnessing the power of AI and custom software development to drive business transformation. With over seven years of experience, we specialize in delivering innovative and tailored solutions that leverage the latest technologies to streamline operations, boost efficiency, and foster growth.",
@@ -21,4 +23,5 @@ export const strings = {
   newsLetTitle: "Subscribe to our newsletter",
   newsLetterDesc: "Join our newsletter to stay updated about our latest news and articles.",
   copyRight: "Copyright ©️ 2024 Exeonic. All rights reserved.",
+  whyChooseUs: "Why Exeonic Solutions?",
 };

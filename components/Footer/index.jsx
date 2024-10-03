@@ -19,9 +19,9 @@ const index = () => {
             </div>
             <p className="mr-[50px] mt-[10px] text-[16px] font-normal text-border lg:text-base">{strings["footerDescription"]}</p>
             <div className="mt-[24px] flex space-x-4">
-              {socialLinks.map((link, index) => (
-                <a key={index} href={link.path} className="flex h-[30px] w-[30px] items-center justify-center rounded-full border-2 border-white text-gray-400 hover:text-white">
-                  <Image src={FacebookIcon} alt="icon" className="h-[20px] w-[20px]" />
+              {socialLinks.map((link) => (
+                <a key={link.Icon} href={link.path} className="flex h-[30px] w-[30px] items-center justify-center rounded-full border-2 border-white text-gray-400 hover:text-white">
+                  <Image src={link.Icon} alt="icon" className="h-[20px] w-[20px]" />
                 </a>
               ))}
             </div>
@@ -30,7 +30,7 @@ const index = () => {
           {/* Quick Links */}
           <div>
             <h4 className="mb-[36px] mt-[48px] text-[20px] font-medium text-white">Quick Links</h4>
-            <ul className="mt-4 flex flex-col space-y-[24px] text-sm text-gray-400">
+            <ul className="mt-4 flex flex-col gap-[36px] text-sm text-gray-400">
               {navLinks.map((link) => (
                 <Link key={link.name} href={link.path} className="text-[16px] font-light text-white">
                   {link.name}
@@ -42,7 +42,7 @@ const index = () => {
           {/* Others */}
           <div>
             <h4 className="mb-[36px] mt-[48px] text-[20px] font-medium text-white">Others</h4>
-            <ul className="mt-4 flex flex-col space-y-[24px] text-sm text-gray-400">
+            <ul className="mt-4 flex flex-col gap-[24px] text-sm text-gray-400">
               {others.map((data) => (
                 <Link key={data.label} href={data.path} className="text-[16px] font-light text-white">
                   {data.label}
@@ -53,18 +53,21 @@ const index = () => {
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-[20px] font-medium text-white">{strings["newsLetTitle"]}</h4>
-            <p className="mt-4 text-[16px] text-white lg:text-base">{strings["newsLetterDesc"]}</p>
-
-            <div className="mt-15 flex flex-col sm:flex-row">
-              <input type="email" placeholder="Enter your email" className="w-full rounded-t-md bg-gray-200 px-4 py-2 text-gray-900 focus:outline-none sm:w-auto sm:rounded-none sm:rounded-l-md" />
-              <button className="rounded-b-md bg-primary px-4 py-2 text-white sm:rounded-none sm:rounded-r-md">Subscribe</button>
+            <h4 className="mt-[48px] text-[20px] font-medium leading-[24px] text-white">{strings["newsLetTitle"]}</h4>
+            <p className="mt-[15px] text-[16px] font-normal leading-[24px] text-white lg:text-base">{strings["newsLetterDesc"]}</p>
+            <div className="mt-[40px] flex flex-row items-center">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="focus:whitw focus:white w-full rounded-md border border-gray-400 bg-transparent px-4 py-2 text-white focus:outline-none sm:w-auto sm:rounded-l-md"
+              />
+              <button className="ml-2 rounded-sm bg-primary px-4 py-2 text-white">Subscribe</button>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="text-16px text-copywrite mt-10 border-t border-gray-700 pt-6 text-center text-sm lg:text-base">
+        <div className="text-16px text-copywrite mt-[50px] border-t border-gray-700 pt-6 text-center text-sm lg:text-base">
           <p>{strings["copyRight"]}</p>
         </div>
       </div>

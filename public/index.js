@@ -14,5 +14,15 @@ import DashboardCard from "./Images/dashboardcard.svg";
 import FacebookIcon from "./Icons/facebook.svg";
 import LinkedinIcon from "./Icons/linkedin.svg";
 import TwitterIcon from "./Icons/twitter.svg";
+import ContactUs from "./Images/contactUs.webp";
+import DigitalTransformation from "./Images/digitalTransformation.webp";
+import OnlineReview from "./Images/onlineReview.webp";
+import TeamWork from "./Images/teamWork.webp";
 
-export { TwitterIcon, FacebookIcon, LinkedinIcon, Logo, ArrowIcon, MenuIcon, HeaderTop, HeaderBottom, AboutUsImg, Award1, Award2, Award3, Award4, Award5, Award6, DashboardCard };
+
+export {
+    TwitterIcon, FacebookIcon, LinkedinIcon, Logo, ArrowIcon,
+    MenuIcon, HeaderTop, HeaderBottom, AboutUsImg, Award1, Award2, Award3,
+    Award4, Award5, Award6, DashboardCard, ContactUs,
+    DigitalTransformation, OnlineReview, TeamWork,
+};
