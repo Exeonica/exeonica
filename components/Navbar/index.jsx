@@ -1,17 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Button from "../button/index.jsx";
+import Button from "../button";
 
-import NavMenu from "@/components/Navbar/navmenu";
+import NavMenu from "./navItems";
+
 import { navLinks, strings } from "@/utils";
 import { Logo } from "@/public";
 
 const Navbar = () => {
   return (
-    <nav className="mx-[27px] flex items-center justify-between bg-white md:my-6 lg:mx-[110px]">
+    <nav className="mx-[27px] my-[15px] flex items-center justify-between bg-white md:my-6 lg:mx-[110px]">
       <div className="flex w-full items-center justify-between align-middle">
-        <Image src={Logo} alt="Logo" height={"auto"} width={"auto"} className="h-[42px] w-[36.75px] md:h-[48px] md:w-[42px]" />
+        <Image src={Logo} alt="Logo" height={"auto"} width={"auto"} className="h-[42px] w-[36.75px] md:h-12 md:w-[42px]" />
         <div className="md:hidden">
           <NavMenu />
         </div>

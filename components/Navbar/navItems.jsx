@@ -2,35 +2,33 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Button from "../button/index.jsx";
+import Button from "../button";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTrigger } from "../ui/sheet";
 
 import { navLinks, strings } from "@/utils";
 import { Logo, ArrowIcon, MenuIcon } from "@/public";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTrigger } from "@/components/ui/sheet";
 
 const NavMenu = () => {
   return (
     <Sheet className="items-center">
       <SheetTrigger>
-        <Image src={MenuIcon} alt="Menu" className="my-[24px]" />
+        <Image src={MenuIcon} alt="Menu" className="" />
       </SheetTrigger>
       <SheetContent>
         <SheetHeader className="border-b border-border">
-          <div className="my-[15px] ml-[27px]">
-            <Image src={Logo} alt="Logo" width={36.75} height={42} />
-          </div>
+          <Image src={Logo} alt="Logo" width={"auto"} height={"auto"} className="my-[15px] ml-[27px] h-[42px] w-[36.75px]" />
         </SheetHeader>
         <SheetDescription>
-          <div className="mx-7 mt-[48]">
+          <div className="mx-7 mt-12">
             <div className="mt-12 space-y-9 py-2">
               {navLinks.map((link) => (
                 <div className="group flex cursor-pointer items-center justify-between">
-                  <Link key={link.name} href={link.path} className="flex space-y-[36px] text-[28px] font-medium text-text group-hover:text-primary">
+                  <Link key={link.name} href={link.path} className="flex text-[28px] font-medium text-text group-hover:text-primary">
                     {link.name}
                   </Link>
 
-                  <div className="space-y-[36px]">
-                    <Image src={ArrowIcon} alt="arrowup" width={24} height={24} />
+                  <div className="">
+                    <Image src={ArrowIcon} alt="arrowup" width={"auto"} height={"auto"} className="h-6 w-6" />
                   </div>
                 </div>
               ))}
