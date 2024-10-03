@@ -35,6 +35,7 @@ module.exports = {
           DEFAULT: "#f44336",
           foreground: "#ffffff",
         },
+        greyBorder: "#5D6B7F",
         border: "#F7FAFC",
         input: "#ffffff",
         ring: "#3b82f6",

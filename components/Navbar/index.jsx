@@ -1,42 +1,40 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Button } from "../ui/button";
+import Button from "../button";
 
-import NavMenu from "@/components/Navbar/navmenu";
+import NavMenu from "./navItems";
+
 import { navLinks, strings } from "@/utils";
 import { Logo } from "@/public";
 
 const Navbar = () => {
   return (
-    <nav className="ml-[27px] flex items-center justify-between bg-white">
-      <div className="flex w-full items-center justify-between md:w-auto">
-        <div className="">
-          <Image
-            src={Logo}
-            alt="Logo"
-            width={36.75}
-            height={42}
-            // className="sm:w-[36.75px] sm:h-[42px]"
-          />
-        </div>
+    <nav className="mx-[27px] my-[15px] flex items-center justify-between bg-white md:my-6 lg:mx-[110px]">
+      <div className="flex w-full items-center justify-between align-middle">
+        <Image src={Logo} alt="Logo" height={"auto"} width={"auto"} className="h-[42px] w-[36.75px] md:h-12 md:w-[42px]" />
         <div className="md:hidden">
           <NavMenu />
         </div>
       </div>
 
-      <div className="hidden space-x-8 md:flex">
-        {navLinks.map((link) => (
-          <Link key={link.name} href={link.path} className="my-3 border-primary text-lg text-text hover:border-b-2 hover:text-primary">
-            {link.name}
-          </Link>
-        ))}
-        <Button variant="outline" size="lg" className="py-5">
-          {strings["calculateCost"]}
-        </Button>
-        <Button variant="default" size="lg" className="py-5">
-          {strings["getInTouch"]}
-        </Button>
+      <div className="mx-0 my-0 hidden items-center md:flex">
+        <div className="flex w-max md:space-x-9 md:text-lg md:font-medium">
+          {navLinks.map((link) => (
+            <Link key={link.name} href={link.path} className="border-primary text-text hover:text-primary">
+              {link.name}
+            </Link>
+          ))}
+        </div>
+
+        <div className="ml-10 flex gap-[10px] md:hidden xl:flex">
+          <Button variant={"outline"} className="">
+            {strings["calculateCost"]}
+          </Button>
+          <Button variant={"default"} className="">
+            {strings["getInTouch"]}
+          </Button>
+        </div>
       </div>
     </nav>
   );

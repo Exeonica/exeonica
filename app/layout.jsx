@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${pangeaAfrikanTrial.variable} antialiased`}>
+      <body className={`${pangeaAfrikanTrial.variable} mx-auto max-w-[1440px] antialiased`}>
         <Navbar calculateLabel="Estimate Project Cost" contactLabel="Reach Out" />
         {children}
       </body>
