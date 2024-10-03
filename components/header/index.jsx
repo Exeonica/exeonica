@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { HeaderTop, HeaderBottom } from "@/public";
 
-const header = () => {
+const index = () => {
   return (
     <div>
       {/* top section */}
@@ -30,4 +30,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default index;
