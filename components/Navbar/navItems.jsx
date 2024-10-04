@@ -14,8 +14,8 @@ const NavMenu = () => {
         <MenuIcon />
       </SheetTrigger>
       <SheetContent>
-        <SheetHeader className="my-[15px] ml-[27px] border-b border-border">
-          <Logo className="" />
+        <SheetHeader className="my-[15px] ml-[27px] border-b border-border pb-[15px]">
+          <Logo />
         </SheetHeader>
         <SheetDescription>
           <div className="mx-7 mt-12">

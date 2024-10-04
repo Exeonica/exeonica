@@ -7,8 +7,4 @@
   --foreground: #171717;
 }
 
-.heroBg {
-  background-image: url("../public/Images/heroBg.webp");
-  background-size: cover;
-  background-position: center;
-}
+
