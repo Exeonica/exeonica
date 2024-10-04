@@ -51,6 +51,7 @@ module.exports = {
         color: {
           1: "#5D6B7F",
           2: "#B0E7F11A",
+          3: "#3F486A",
         },
       },
       borderRadius: {

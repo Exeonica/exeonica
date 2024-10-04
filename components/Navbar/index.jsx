@@ -19,8 +19,8 @@ const Navbar = () => {
 
       <div className="mx-0 my-0 hidden items-center md:flex">
         <div className="flex w-max md:space-x-9 md:text-lg md:font-medium">
-          {navLinks.map((link) => (
-            <Link key={link.name} href={link.path} className="border-b-2 border-transparent text-text hover:border-primary hover:text-primary">
+          {navLinks.map((link, index) => (
+            <Link key={index} href={link.path} className="border-b-2 border-transparent text-text hover:border-primary hover:text-primary">
               {link.name}
             </Link>
           ))}

@@ -7,4 +7,3 @@ export { default as ArrowUp } from "./Icons/arrowUp";
 export { default as GreyArrow } from "./Icons/greyArrow";
 export { default as MenuIcon } from "./Icons/menu";
 export { default as Logo } from "./Icons/logo";
-
