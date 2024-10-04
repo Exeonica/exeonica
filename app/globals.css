@@ -12,3 +12,13 @@
   background-size: cover;
   background-position: center;
 }
+.headerBg {
+  background-image: url("../public/Images/headerBg.webp");
+  background-size: cover;
+  background-position: center;
+}
+.headerMobBg {
+  background-image: url("../public/Images/headerMobBg.webp");
+  background-size: cover;
+  background-position: center;
+}

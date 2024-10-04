@@ -1,6 +1,6 @@
 import React from "react";
-
 import Image from "next/image";
+
 import Button from "../button";
 
 import { Award1, Award2, Award3, Award4, Award5, Award6 } from "@/public";
@@ -15,7 +15,7 @@ const images = [
   { src: Award6, alt: "Picture of the author 3", classes: "h-[120px] w-[171.17px]" },
 ];
 
-const awards = () => {
+const Awards = () => {
   return (
     <div className="flex flex-col bg-border sm:justify-center md:flex-row md:py-[80px]">
       {/* Left Section */}
@@ -31,13 +31,11 @@ const awards = () => {
 
           <div className="mt-0 flex flex-col px-4 sm:px-6 lg:px-8">
             {" "}
-            <h1 className="md:leading[59.4px] mb-[36px] mt-[8px] px-[36] text-center font-pangeaAfrikanTrial text-[28px] font-semibold leading-[41.58px] text-title md:text-[40px]">
-              {strings["ourAwardsAndCertificates"]}
-            </h1>{" "}
+            <h1 className="md:leading[59.4px] mb-[36px] mt-[8px] text-center text-[28px] font-semibold leading-[41.58px] text-title md:text-[40px]">{strings["ourAwardsAndCertificates"]}</h1>{" "}
           </div>
         </div>
 
-        <div className="justify-cente mx-[37px] flex w-full flex-col items-center md:mx-[136px] md:w-9/12 md:flex-row md:justify-between">
+        <div className="mx-[37px] flex w-full flex-col items-center justify-center gap-[36px] md:mx-[136px] md:w-9/12 md:flex-row md:flex-wrap">
           {images.map((image) => (
             <Image key={image.src} src={image.src} alt={image.alt} className={`m-2 h-[120px] w-[108.22px] object-contain ${image.classes || ""}`} />
           ))}
@@ -47,4 +45,4 @@ const awards = () => {
   );
 };
 
-export default awards;
+export default Awards;

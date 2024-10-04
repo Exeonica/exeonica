@@ -1,8 +1,13 @@
-import Logo from "./Images/logo.svg";
-import ArrowIcon from "./Icons/arrowup.svg";
-import MenuIcon from "./Icons/menu.svg";
-import HeaderTop from "./Icons/headertop.svg";
-import HeaderBottom from "./Icons/headerbottom.svg";
+export { heroImage, heroImageLg };
+export { default as ArrowUp } from "./Icons/arrowUp";
+export { default as GreyArrow } from "./Icons/greyArrow";
+export { default as MenuIcon } from "./Icons/menu";
+export { default as Logo } from "./Icons/logo";
+
+import heroImage from "./Images/heroImage.webp";
+import heroImageLg from "./Images/headerImageLg.webp";
+import HeaderTop from "./Icons/headertop.webp";
+import HeaderBottom from "./Icons/headerbottom.webp";
 import AboutUsImg from "./Images/about.svg";
 import Award1 from "./Images/award1.svg";
 import Award2 from "./Images/award2.svg";
@@ -19,10 +24,23 @@ import DigitalTransformation from "./Images/digitalTransformation.webp";
 import OnlineReview from "./Images/onlineReview.webp";
 import TeamWork from "./Images/teamWork.webp";
 
-
 export {
-    TwitterIcon, FacebookIcon, LinkedinIcon, Logo, ArrowIcon,
-    MenuIcon, HeaderTop, HeaderBottom, AboutUsImg, Award1, Award2, Award3,
-    Award4, Award5, Award6, DashboardCard, ContactUs,
-    DigitalTransformation, OnlineReview, TeamWork,
+
+    TwitterIcon,
+    FacebookIcon,
+    LinkedinIcon,
+    HeaderTop,
+    HeaderBottom,
+    AboutUsImg,
+    Award1,
+    Award2,
+    Award3,
+    Award4,
+    Award5,
+    Award6,
+    DashboardCard,
+    ContactUs,
+    DigitalTransformation,
+    OnlineReview,
+    TeamWork,
 };

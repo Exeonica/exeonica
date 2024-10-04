@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import Button from "../button";
 
 import { DashboardCard } from "@/public";
@@ -7,11 +8,11 @@ import { strings } from "@/utils";
 
 const Index = () => {
   return (
-    <div className="my-[0px] px-4 py-8 md:mx-[60px] lg:mx-[110px]">
-      <div className="flex flex-col rounded-3xl bg-primary md:flex-row md:py-[70px]">
+    <div className="my-[80px] px-4 py-8 md:mx-[60px] lg:mx-[110px]">
+      <div className="flex flex-col rounded-3xl bg-primary md:flex-row md:py-[0px]">
         {/* Left section with image */}
-        <div className="flex justify-center pl-[11.5px] pt-[70px] md:ml-[81.85px] md:mt-0 md:w-2/5 md:justify-start md:py-[70px]">
-          <Image src={DashboardCard} alt="Dashboard illustration" className="object-contain sm:h-[319px] sm:w-[320px] md:h-[319.11px] md:w-[446.31px]" />
+        <div className="flex justify-center pl-[11.5px] pt-[70px] lg:ml-[81.85px] lg:mt-0 lg:w-2/5 lg:justify-start lg:py-[70px]">
+          <Image src={DashboardCard} alt="Dashboard illustration" className="object-contain sm:h-[319px] sm:w-[320px] lg:h-[319.11px] lg:w-[446.31px]" />
         </div>
 
         {/* Right section with text */}

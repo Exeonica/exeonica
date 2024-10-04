@@ -35,7 +35,6 @@ export const cardData = [
     imageSrc: OnlineReview,
     imageAlt: "Cutting-Edge Technology",
     classes: "w-[50px] h-[50px] lg:w-[280px] lg:h-[280px]",
-    card: "h-[2380px] w-full",
   },
   {
     title: "Experienced Team",
