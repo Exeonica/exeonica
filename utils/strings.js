@@ -13,4 +13,11 @@ export const strings = {
   heroDescription2: "custom-tailored to meet the unique needs and challenges of your business.",
   heroBtn1: "View Our Services",
   heroBtn2: "Let's Talk",
+  serviceBtn: "Services",
+  allServicesBtn: "View all Our Services",
+  serviceTitle: "Services we provide",
+  bannerTitle: "Project Cost Calculator",
+  bannerHeading: "Have a project idea in mind?",
+  bannerDesc: "Find out how much it costs to build such an app and how long it takes to launch it.",
+  bannerBtn: "Estimate your project cost",
 };
