@@ -40,7 +40,6 @@ module.exports = {
           DEFAULT: "#f44336",
           foreground: "#ffffff",
         },
-        greyBorder: "#5D6B7F",
         border: "#F7FAFC",
         input: "#ffffff",
         ring: "#3b82f6",
@@ -54,6 +53,10 @@ module.exports = {
         text: {
           DEFAULT: "#1E1E1E",
         },
+        color: {
+          1: "#5D6B7F",
+          2: "#B0E7F11A",
+        },
       },
       borderRadius: {
         lg: "12px",
@@ -61,7 +64,7 @@ module.exports = {
         sm: "4px",
       },
       fontFamily: {
-        pangeaAfrikanTrial: ["var(--font-pangea)"],
+        pangeaAfrikanTrial: ["var(--font-pangeaAfrikanTrial)"],
       },
       screens: {
         sm: "640px",
