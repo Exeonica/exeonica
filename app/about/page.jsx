@@ -1,18 +1,12 @@
 import React from "react";
 
-import Header from "../../components/header";
-import AboutSection from "../../components/AboutSection";
-import ChooseUs from "../../components/chooseUs";
-import RevenueSection from "../../components/revenueSection";
-import Footer from "../../components/Footer";
-
-import { Awards } from "@/components/AboutPage";
+import { ComHeader, Awards, AboutComponent, ChooseUs, RevenueSection, Footer } from "@/components/index";
 
 const page = () => {
   return (
     <div>
-      <Header />
-      <AboutSection />
+      <ComHeader title={"aboutUs"} />
+      <AboutComponent btnLabel={"aboutUs"} title={"aboutTitle"} description={"aboutDescription"} />
       <ChooseUs />
       <Awards />
       <RevenueSection />

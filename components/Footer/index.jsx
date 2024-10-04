@@ -7,9 +7,9 @@ import { strings, socialLinks, navLinks, others } from "@/utils";
 
 const index = () => {
   return (
-    <footer className="bg-footer px-[16px] py-[60px] text-white md:px-[108px] md:py-[100px]">
+    <footer className="bg-text-textColor2 px-[16px] py-[60px] text-white md:px-[108px] md:py-[100px]">
       <div className="mx-auto max-w-7xl lg:px-0">
-        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 md:gap-4 lg:grid-cols-4">
           {/* Logo and Description */}
           <div>
             <div className="flex items-center space-x-3 md:h-[60px] md:w-[60px]">
@@ -67,7 +67,7 @@ const index = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-16px mt-[50px] border-t border-gray-700 pt-6 text-center text-sm text-copywrite lg:text-base">
+        <div className="text-16px text-text-textColor3 mt-[50px] border-t border-gray-700 pt-6 text-center text-sm lg:text-base">
           <p>{strings["copyRight"]}</p>
         </div>
       </div>

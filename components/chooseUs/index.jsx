@@ -7,9 +7,9 @@ import { strings, cardData } from "@/utils";
 
 const index = () => {
   return (
-    <section className="py-16">
+    <section className="my-[80px]">
       {/* Why Us Button */}
-      <div className="sm:w-12/3 items-center justify-center">
+      <div>
         <div className="mt-[45.5px] flex flex-1 flex-col items-center justify-center md:px-0">
           <Button variant="outline" classes="w-full mb-3 rounded-[60px] px-[16px] py-[10px] text-[16px]">
             {strings["whyUs"]}
@@ -27,14 +27,14 @@ const index = () => {
 
       {/* Grid of Cards */}
 
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-8 px-[110px] md:grid-cols-2 lg:grid-cols-2">
+      <div>
+        <div className="mx-[16px] my-0 grid grid-cols-1 gap-8 py-0 md:grid-cols-2 md:px-[110px] lg:grid-cols-2">
           {cardData.map((card) => {
             return (
-              <div key={card.title} className={"relative flex flex-col rounded-lg bg-border pl-[36px] pt-[30px]"}>
-                <h3 className="mb-8 text-[24px] font-semibold leading-[35.64px] text-title">{card.title}</h3>
-                <p className="mb-6 text-[18px] font-normal leading-[26.73px] text-greyBorder">{card.description}</p>
-                {card.classes && <Image src={card.imageSrc} alt={card.imageAlt} className={card.classes} height={"auto"} width={"auto"} />}
+              <div key={card.title} className={`flex flex-col rounded-[32px] bg-border pl-[36.5px] pt-[31px]`}>
+                <h3 className="mb-4 pr-[6px] text-[24px] font-semibold leading-[35.64px] text-title">{card.title}</h3>
+                <p className="mb-4 pr-[104px] text-[18px] font-normal leading-[26.73px] text-greyBorder">{card.description}</p>
+                <Image src={card.imageSrc} alt={card.imageAlt} className={`self-end align-bottom ${card.classes}`} />
               </div>
             );
           })}

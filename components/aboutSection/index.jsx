@@ -6,7 +6,7 @@ import Button from "../button";
 import { AboutUsImg } from "@/public";
 import { strings, aboutInfo } from "@/utils";
 
-const index = () => {
+const index = ({ btnLabel, title, description }) => {
   return (
     <div className="mt-[80px]">
       <div className="flex flex-col px-[16px] sm:justify-center md:flex-row md:items-start lg:px-[137px]">
@@ -15,7 +15,7 @@ const index = () => {
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[45.5px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
               <Button variant="outline" classes="w-full mb-3 rounded-[60px] px-[16px] py-[10px] text-[16px]">
-                {strings["aboutUs"]}
+                {strings[btnLabel]}
               </Button>
             </div>
           </div>
@@ -23,9 +23,9 @@ const index = () => {
           <div className="mt-0 flex flex-1 flex-col items-start justify-start md:px-0">
             {" "}
             <div className="container">
-              <h1 className="mb-4 text-center text-[28px] font-semibold leading-[41.58px] text-title md:text-left md:leading-[54.9px] lg:text-[40px]">{strings["aboutTitle"]}</h1>
+              <h1 className="mb-4 text-center text-[28px] font-semibold leading-[41.58px] text-title md:text-left md:leading-[54.9px] lg:text-[40px]"> {strings[title]}</h1>
             </div>
-            <p className="text-center text-[18px] font-normal leading-[26.73px] text-description md:text-start md:leading-[26.73px]">{strings["aboutDescription"]}</p>
+            <p className="text-color-1 text-center text-[18px] font-normal leading-[26.73px] md:text-start md:leading-[26.73px]">{strings[description]}</p>
           </div>
 
           <div className="sm:w-12/3 md:w-1/4">
