@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Navbar from "@/components/Navbar";
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className={`${pangeaAfrikanTrial.variable} mx-auto max-w-[1440px] antialiased`}>
         <Navbar />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
