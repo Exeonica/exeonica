@@ -14,6 +14,8 @@ import DashboardCard from "./Images/dashboardCard.webp";
 import FacebookIcon from "./Icons/facebook.webp";
 import LinkedinIcon from "./Icons/linkedin.webp";
 import TwitterIcon from "./Icons/twitter.webp";
+import Location from "./Icons/location.webp";
+import Search from "./Icons/search.webp";
 import ContactUs from "./Images/contactUs.webp";
 import DigitalTransformation from "./Images/digitalTransformation.webp";
 import OnlineReview from "./Images/onlineReview.webp";
@@ -22,6 +24,8 @@ import Maintanance from "./Images/maintenance.webp";
 import Error from "./Images/404Error.webp";
 
 export {
+  Location,
+  Search,
   TwitterIcon,
   FacebookIcon,
   LinkedinIcon,

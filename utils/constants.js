@@ -1,4 +1,4 @@
-import { ContactUs, DigitalTransformation, FacebookIcon, LinkedinIcon, OnlineReview, TeamWork, TwitterIcon } from "@/public";
+import { ContactUs, DigitalTransformation, FacebookIcon, LinkedinIcon, OnlineReview, TeamWork, TwitterIcon, Award1, Award2, Award3, Award4, Award5, Award6 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
 
 export const navLinks = [
@@ -288,4 +288,15 @@ export const services = [
       },
     ],
   },
+];
+
+export const buttonLabels = ["All", "Option 2", "Option 3", "Option 4"];
+
+export const images = [
+  { src: Award4, alt: "Picture of the author 1" },
+  { src: Award1, alt: "Picture of the author 1" },
+  { src: Award2, alt: "Picture of the author 2", classes: "h-[120px] w-[267.91px]" },
+  { src: Award3, alt: "Picture of the author 3" },
+  { src: Award5, alt: "Picture of the author 2" },
+  { src: Award6, alt: "Picture of the author 3", classes: "h-[120px] w-[171.17px]" },
 ];

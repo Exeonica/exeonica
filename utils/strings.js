@@ -40,4 +40,5 @@ export const strings = {
   maintainance: "Site is under maintenance!",
   maintainMsg: "We are extremely sorry for inconvenience. We will be back soon live!",
   error: "No Page Found!",
+  joinUs: "Join Us!",
 };
