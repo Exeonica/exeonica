@@ -15,8 +15,8 @@ export default function Hero() {
         <p className="text-4xl font-semibold lg:text-[60px] lg:leading-[80px]">{strings["heroTitle"]}</p>
       </div>
       <div className="my-6">
-        <p className="text-lg font-normal text-color-1">{strings["heroDescription"]}</p>
-        <p className="text-lg font-normal text-color-1">{strings["heroDescription2"]}</p>
+        <p className="text-color-1 text-lg font-normal">{strings["heroDescription"]}</p>
+        <p className="text-color-1 text-lg font-normal">{strings["heroDescription2"]}</p>
       </div>
       <div className="flex items-center justify-center gap-3">
         <Button variant={"outlineArrow"} classes="text-base gap-[8px]">
