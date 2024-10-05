@@ -1,8 +1,6 @@
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import Navbar from "@/components/Navbar";
-
 import "./globals.css";
 
 const pangeaAfrikanTrial = localFont({
@@ -25,7 +23,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${pangeaAfrikanTrial.variable} mx-auto max-w-[1440px] antialiased`}>
-        <Navbar />
         {children}
         <SpeedInsights />
       </body>
