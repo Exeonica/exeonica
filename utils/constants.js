@@ -1,3 +1,4 @@
+import { ContactUs, DigitalTransformation, FacebookIcon, LinkedinIcon, OnlineReview, TeamWork, TwitterIcon } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
 
 export const navLinks = [
@@ -7,6 +8,59 @@ export const navLinks = [
   { name: "About Us", path: "/about" },
   { name: "Blogs", path: "/blogs" },
   { name: "Careers", path: "/careers" },
+];
+
+export const socialLinks = [
+  { Icon: FacebookIcon, path: "/" },
+  { Icon: TwitterIcon, path: "/services" },
+  { Icon: LinkedinIcon, path: "/portfolio" },
+];
+
+export const others = [
+  { label: "Privacy Policy", path: "/" },
+  { label: "Where to Find Us?", path: "/services" },
+  { label: "Conditions Policy", path: "/portfolio" },
+];
+export const aboutInfo = [
+  { title: "Total employees", noService: "10" },
+  { title: "Projects Done", noService: "25+" },
+  { title: "Total Clients", noService: "20+" },
+  { title: "Years of excellence", noService: "3+" },
+];
+
+export const cardData = [
+  {
+    title: "Cutting-Edge Technology",
+    description: "We leverage the latest technologies and tools to deliver innovative solutions that keep your business ahead of the competition.",
+    imageSrc: OnlineReview,
+    imageAlt: "Cutting-Edge Technology",
+    card: "w-[30%]",
+    classes: "w-[280px] h-[280px] m-0 p-0 justify-end items-end contain-cover",
+  },
+  {
+    title: "Experienced Team",
+    description: "Our team of seasoned developers and designers brings years of industry experience, ensuring that your project is in expert hands from start to finish.",
+    imageSrc: TeamWork,
+    imageAlt: "Experienced Team",
+    card: "w-[60%]",
+    classes: "h-[256px] w-[573px] self-end flex-1 justify-end contain-cover",
+  },
+  {
+    title: "Cutting-Edge Technology",
+    description: "We leverage the latest technologies and tools to deliver innovative solutions that keep your business ahead of the competition.",
+    imageSrc: DigitalTransformation,
+    imageAlt: "Cutting-Edge Technology",
+    card: "w-[60%]",
+    classes: "w-[280px] h-[280px] m-0 p-0 justify-end items-end contain-cover",
+  },
+  {
+    title: "Transparent Communication",
+    description: "We believe in open, honest communication at every stage of the project, providing regular updates and ensuring you're always in the loop.",
+    imageSrc: ContactUs,
+    imageAlt: "Transparent Communication",
+    card: "w-3/12 h-[280px]",
+    classes: "h-[280px] w-[420px] contain-cover ",
+  },
 ];
 
 export const services = [
