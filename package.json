@@ -41,7 +41,7 @@
     "tailwindcss": "3.4.1"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}":  "yarn lint",
+    "**/*.{js,jsx,ts,tsx}": "yarn lint",
     "**/*.{html,css,scss,json,md}": "prettier --write --ignore-unknown"
   },
   "engines": {
