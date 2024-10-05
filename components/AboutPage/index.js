@@ -15,15 +15,15 @@ const images = [
   { src: Award6, alt: "Picture of the author 3", classes: "h-[120px] w-[171.17px]" },
 ];
 
-const AboutPage = () => {
+const Awards = () => {
   return (
-    <div className="flex flex-1 flex-col bg-border sm:justify-center md:flex-row md:py-[80px]">
+    <div className="flex flex-1 flex-col bg-border sm:justify-center md:flex-row">
       {/* Left Section */}
-      <div className="flex flex-1 flex-col items-center pb-[80px] pt-[80px] md:justify-center">
+      <div className="flex flex-1 flex-col items-center py-[80px] md:justify-center">
         <div className="flex flex-col items-center justify-center">
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[45.5px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
-              <Button variant="outline" classes="w-full mb-3 rounded-[60px] px-[16px] py-[10px] text-[16px]">
+              <Button variant="outlineRounded" classes="w-full mb-3 rounded-[60px] px-[16px] py-[10px] text-[16px]">
                 {strings["awards"]}
               </Button>
             </div>
@@ -35,7 +35,7 @@ const AboutPage = () => {
           </div>
         </div>
         {/* Right Section */}
-        <div className="mx-[37px] flex w-full flex-col items-center justify-center gap-[36px] md:mx-[136px] md:w-9/12 md:flex-row md:flex-wrap">
+        <div className="mx-[37px] flex w-full flex-col items-center justify-center gap-[36px] md:mx-[136px] md:flex-row md:flex-wrap">
           {images.map((image) => (
             <Image key={image.src} src={image.src} alt={image.alt} className={`m-2 h-[120px] w-[108.22px] object-contain ${image.classes || ""}`} />
           ))}
@@ -45,4 +45,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default Awards;

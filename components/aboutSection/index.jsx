@@ -6,7 +6,7 @@ import Button from "../button";
 import { AboutUsImg } from "@/public";
 import { strings, aboutInfo } from "@/utils";
 
-const index = ({ btnLabel, title, description }) => {
+const AboutSection = ({ btnLabel, title, description }) => {
   return (
     <div className="mt-[80px]">
       <div className="flex flex-col px-[16px] sm:justify-center md:flex-row md:items-start lg:px-[137px]">
@@ -14,7 +14,7 @@ const index = ({ btnLabel, title, description }) => {
         <div className="flex flex-1 flex-col">
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[45.5px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
-              <Button variant="outline" classes="w-full mb-3 rounded-[60px] px-[16px] py-[10px] text-[16px]">
+              <Button variant="outlineRounded" classes="w-full mb-3 rounded-[60px] px-[16px] py-[10px] text-[16px]">
                 {strings[btnLabel]}
               </Button>
             </div>
@@ -56,4 +56,4 @@ const index = ({ btnLabel, title, description }) => {
   );
 };
 
-export default index;
+export default AboutSection;
