@@ -6,7 +6,7 @@ import Button from "../button";
 import { DashboardCard } from "@/public";
 import { strings } from "@/utils";
 
-const Index = () => {
+const RevenueSection = () => {
   return (
     <div className="my-[80px] px-4 py-8 md:mx-[60px] lg:mx-[110px]">
       <div className="flex flex-col rounded-3xl bg-primary md:flex-row md:py-[0px]">
@@ -33,4 +33,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default RevenueSection;

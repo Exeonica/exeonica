@@ -43,7 +43,7 @@ export const cardData = [
     imageSrc: TeamWork,
     imageAlt: "Experienced Team",
     card: "w-[60%]",
-    classes: "h-[256px] w-[573px] self-end flex-1 justify-end contain-cover",
+    classes: "h-[256px] w-[573px] justify-center items-center contain-cover",
   },
   {
     title: "Cutting-Edge Technology",

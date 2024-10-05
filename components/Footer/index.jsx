@@ -5,11 +5,11 @@ import Link from "next/link";
 import { Logo } from "@/public";
 import { strings, socialLinks, navLinks, others } from "@/utils";
 
-const index = () => {
+const Footer = () => {
   return (
     <footer className="bg-text-textColor2 px-[16px] py-[60px] text-white md:px-[108px] md:py-[100px]">
       <div className="mx-auto max-w-7xl lg:px-0">
-        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 md:gap-4 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 md:gap-4 xl:grid-cols-4">
           {/* Logo and Description */}
           <div>
             <div className="flex items-center space-x-3 md:h-[60px] md:w-[60px]">
@@ -32,7 +32,7 @@ const index = () => {
             <h4 className="mb-[36px] mt-[48px] text-[20px] font-medium text-white">Quick Links</h4>
             <ul className="mt-4 flex flex-col gap-[36px] text-sm text-gray-400">
               {navLinks.map((link) => (
-                <Link key={link.name} href={link.path} className="text-[16px] font-light text-white">
+                <Link key={link.name} href={link.path} className="text-[16px] font-light text-white hover:text-primary">
                   {link.name}
                 </Link>
               ))}
@@ -44,7 +44,7 @@ const index = () => {
             <h4 className="mb-[36px] mt-[48px] text-[20px] font-medium text-white">Others</h4>
             <ul className="mt-4 flex flex-col gap-[24px] text-sm text-gray-400">
               {others.map((data) => (
-                <Link key={data.label} href={data.path} className="text-[16px] font-light text-white">
+                <Link key={data.label} href={data.path} className="text-[16px] font-light text-white hover:text-primary">
                   {data.label}
                 </Link>
               ))}
@@ -75,4 +75,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Footer;

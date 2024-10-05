@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navBar";
 
 import "./globals.css";
 
