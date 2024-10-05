@@ -32,7 +32,7 @@ const Footer = () => {
             <h4 className="mb-[36px] mt-[48px] text-[20px] font-medium text-white">Quick Links</h4>
             <ul className="mt-4 flex flex-col gap-[36px] text-sm text-gray-400">
               {navLinks.map((link) => (
-                <Link key={link.name} href={link.path} className="text-[16px] font-light text-white">
+                <Link key={link.name} href={link.path} className="text-[16px] font-light text-white hover:text-primary">
                   {link.name}
                 </Link>
               ))}
@@ -44,7 +44,7 @@ const Footer = () => {
             <h4 className="mb-[36px] mt-[48px] text-[20px] font-medium text-white">Others</h4>
             <ul className="mt-4 flex flex-col gap-[24px] text-sm text-gray-400">
               {others.map((data) => (
-                <Link key={data.label} href={data.path} className="text-[16px] font-light text-white">
+                <Link key={data.label} href={data.path} className="text-[16px] font-light text-white hover:text-primary">
                   {data.label}
                 </Link>
               ))}

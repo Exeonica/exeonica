@@ -8,8 +8,8 @@ import { strings, aboutInfo } from "@/utils";
 
 const AboutSection = ({ btnLabel, title, description }) => {
   return (
-    <div className="mt-[80px]">
-      <div className="flex flex-col px-[16px] sm:justify-center md:flex-row md:items-start lg:px-[137px]">
+    <div className="mt-[80px] lg:px-[137px]">
+      <div className="flex flex-col px-[16px] sm:justify-center md:flex-row md:items-start">
         {/* Left Section */}
         <div className="flex flex-1 flex-col">
           <div className="sm:w-12/3 md:w-1/4">
@@ -44,7 +44,7 @@ const AboutSection = ({ btnLabel, title, description }) => {
       </div>
 
       {/* Cards Section */}
-      <div className="lg:px[90px] mb-[80px] mt-[36px] flex flex-wrap items-center justify-center gap-4">
+      <div className="mb-[80px] mt-[36px] flex flex-wrap items-center justify-center gap-6 xl:mx-[0px]">
         {aboutInfo.map((item, index) => (
           <div key={index} className="h-[129px] w-[276px] rounded-[12px] border border-border bg-border pl-[27px] pt-[26px]">
             <h2 className="mb-2 text-3xl font-bold text-gray-900">{item.noService}</h2>

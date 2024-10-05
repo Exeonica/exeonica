@@ -7,7 +7,7 @@ import { strings, cardData } from "@/utils";
 
 const ChooseUs = () => {
   return (
-    <section className="mx-[16px] my-[80px] lg:mx-[120px]">
+    <section className="mx-[16px] my-[80px] lg:mx-[110px]">
       {/* Why Us Button */}
       <div>
         <div className="mt-[45.5px] flex flex-1 flex-col items-center justify-center md:px-0">
