@@ -2,7 +2,7 @@ import React from "react";
 
 import { ComHeader, Awards, AboutComponent, ChooseUs, RevenueSection, Footer } from "@/components/index";
 
-const page = () => {
+const AboutUs = () => {
   return (
     <div>
       <ComHeader title={"aboutUs"} />
@@ -15,4 +15,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AboutUs;
