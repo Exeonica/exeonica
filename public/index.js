@@ -19,6 +19,7 @@ import DigitalTransformation from "./Images/digitalTransformation.webp";
 import OnlineReview from "./Images/onlineReview.webp";
 import TeamWork from "./Images/teamWork.webp";
 import Maintanance from "./Images/maintenance.webp";
+import Error from "./Images/404Error.webp";
 
 export {
   TwitterIcon,
@@ -42,6 +43,7 @@ export {
   heroImageLg,
   calculatorImage,
   Maintanance,
+  Error,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";

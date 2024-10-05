@@ -37,4 +37,7 @@ export const strings = {
   newsLetterDesc: "Join our newsletter to stay updated about our latest news and articles.",
   copyRight: "Copyright ©️ 2024 Exeonic. All rights reserved.",
   whyChooseUs: "Why Exeonic Solutions?",
+  maintainance: "Site is under maintenance!",
+  maintainMsg: "We are extremely sorry for inconvenience. We will be back soon live!",
+  error: "No Page Found!",
 };
