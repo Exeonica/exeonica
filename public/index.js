@@ -56,3 +56,4 @@ export { default as LeftArrow } from "./Icons/leftArrow";
 export { default as RightArrow } from "./Icons/rightArrow";
 export { default as PhoneIcon } from "./Icons/phone";
 export { default as MailIcon } from "./Icons/mail";
+export { default as ArrowRight } from "./Icons/arrowRight";

@@ -1,4 +1,4 @@
-import { Hero, Services, EstimationBanner, Testimonial, Contact } from "@/components/homePage";
+import { RevenueSection, Footer, Hero, Services, EstimationBanner, Testimonial, Contact } from "@/components/index";
 
 const Home = () => {
   return (
@@ -8,6 +8,8 @@ const Home = () => {
       <EstimationBanner />
       <Testimonial />
       <Contact />
+      <RevenueSection />
+      <Footer />
     </div>
   );
 };

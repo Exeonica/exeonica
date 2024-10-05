@@ -1,3 +1,7 @@
+import { Hero, Services, EstimationBanner, Testimonial, Contact } from "./homePage";
+
+export { Hero, Services, EstimationBanner, Testimonial, Contact };
+
 export { default as ComHeader } from "./header";
 export { default as Awards } from "./aboutPage";
 export { default as AboutComponent } from "./aboutSection";

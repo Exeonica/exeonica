@@ -9,7 +9,7 @@ import { Logo } from "@/public";
 
 const Navbar = () => {
   return (
-    <nav className="mx-[27px] my-[15px] flex items-center justify-between bg-white md:my-6 lg:mx-[110px]">
+    <nav className="flex items-center justify-between bg-white px-[27px] py-[15px] md:py-6 lg:px-[110px]">
       <div className="flex w-full items-center justify-between align-middle">
         <Logo />
         <div className="md:hidden">

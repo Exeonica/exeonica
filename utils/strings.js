@@ -56,4 +56,5 @@ export const strings = {
   emailInput: "Email Address",
   messageInput: "Message",
   checkInput: "I’d like to occasionally receive other communication from Exeonic, such as contact and product news",
+  contactBtn: "Submit",
 };
