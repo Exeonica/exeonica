@@ -1,5 +1,6 @@
 import heroImage from "./Images/heroImage.webp";
 import heroImageLg from "./Images/headerImageLg.webp";
+import calculatorImage from "./Images/calculatorBanner.webp";
 import HeaderTop from "./Icons/headertop.webp";
 import HeaderBottom from "./Icons/headerbottom.webp";
 import AboutUsImg from "./Images/about.svg";
@@ -38,6 +39,7 @@ export {
   TeamWork,
   heroImage,
   heroImageLg,
+  calculatorImage,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";
