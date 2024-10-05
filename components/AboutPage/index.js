@@ -15,7 +15,7 @@ const images = [
   { src: Award6, alt: "Picture of the author 3", classes: "h-[120px] w-[171.17px]" },
 ];
 
-const Index = () => {
+const AboutPage = () => {
   return (
     <div className="flex flex-1 flex-col bg-border sm:justify-center md:flex-row md:py-[80px]">
       {/* Left Section */}
@@ -45,4 +45,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default AboutPage;
