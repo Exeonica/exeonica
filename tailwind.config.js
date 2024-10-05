@@ -48,7 +48,7 @@ module.exports = {
         text: {
           DEFAULT: "#1E1E1E",
           textColor2: "#102E3C",
-          textColor3: "#A6AAC3"
+          textColor3: "#A6AAC3",
         },
         color: {
           1: "#5D6B7F",

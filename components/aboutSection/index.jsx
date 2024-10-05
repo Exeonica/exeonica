@@ -23,9 +23,9 @@ const index = ({ btnLabel, title, description }) => {
           <div className="mt-0 flex flex-1 flex-col items-start justify-start md:px-0">
             {" "}
             <div className="container">
-              <h1 className="mb-4 text-center text-[28px] font-semibold leading-[41.58px] text-title md:text-left md:leading-[54.9px] lg:text-[40px]"> {strings[title]}</h1>
+              <h1 className="text-title mb-4 text-center text-[28px] font-semibold leading-[41.58px] md:text-left md:leading-[54.9px] lg:text-[40px]"> {strings[title]}</h1>
             </div>
-            <p className="text-color-1 text-center text-[18px] font-normal leading-[26.73px] md:text-start md:leading-[26.73px]">{strings[description]}</p>
+            <p className="text-center text-[18px] font-normal leading-[26.73px] text-color-1 md:text-start md:leading-[26.73px]">{strings[description]}</p>
           </div>
 
           <div className="sm:w-12/3 md:w-1/4">

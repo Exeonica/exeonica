@@ -67,7 +67,7 @@ const index = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-16px text-text-textColor3 mt-[50px] border-t border-gray-700 pt-6 text-center text-sm lg:text-base">
+        <div className="text-16px mt-[50px] border-t border-gray-700 pt-6 text-center text-sm text-text-textColor3 lg:text-base">
           <p>{strings["copyRight"]}</p>
         </div>
       </div>
