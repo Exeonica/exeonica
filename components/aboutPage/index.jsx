@@ -3,17 +3,7 @@ import Image from "next/image";
 
 import Button from "../button";
 
-import { Award1, Award2, Award3, Award4, Award5, Award6 } from "@/public";
-import { strings } from "@/utils";
-
-const images = [
-  { src: Award4, alt: "Picture of the author 1" },
-  { src: Award1, alt: "Picture of the author 1" },
-  { src: Award2, alt: "Picture of the author 2", classes: "h-[120px] w-[267.91px]" },
-  { src: Award3, alt: "Picture of the author 3" },
-  { src: Award5, alt: "Picture of the author 2" },
-  { src: Award6, alt: "Picture of the author 3", classes: "h-[120px] w-[171.17px]" },
-];
+import { strings, images } from "@/utils";
 
 const Awards = () => {
   return (
@@ -31,7 +21,7 @@ const Awards = () => {
 
           <div className="mt-0 flex flex-col px-4 sm:px-6 lg:px-8">
             {" "}
-            <h1 className="md:leading[59.4px] text-title mb-[36px] mt-[8px] text-center text-[28px] font-semibold leading-[41.58px] md:text-[40px]">{strings["ourAwardsAndCertificates"]}</h1>{" "}
+            <h1 className="text-title mb-[36px] mt-[8px] text-center text-[28px] font-semibold leading-[41.58px] md:text-[40px]">{strings["ourAwardsAndCertificates"]}</h1>{" "}
           </div>
         </div>
         {/* Right Section */}
