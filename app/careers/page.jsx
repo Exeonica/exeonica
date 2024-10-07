@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComHeader } from "@/components/index";
+import { ComHeader, Footer } from "@/components/index";
 import { CareersCards } from "@/components/careerPage";
 
 const Careers = () => {
@@ -8,6 +8,7 @@ const Careers = () => {
     <div>
       <ComHeader title={"joinUs"} />
       <CareersCards />
+      <Footer />
     </div>
   );
 };

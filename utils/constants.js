@@ -300,3 +300,97 @@ export const images = [
   { src: Award5, alt: "Picture of the author 2" },
   { src: Award6, alt: "Picture of the author 3", classes: "h-[120px] w-[171.17px]" },
 ];
+
+export const jobDetails = [
+  {
+    title: "Who Are We Looking For",
+    descriptions: [
+      "Passionate and driven individuals",
+      "Experience in software development or related fields",
+      "Excellent problem-solving skills and attention to detail.",
+      "Ability to work in a fast-paced environment.",
+      "Strong communication and teamwork abilities.",
+      "Eagerness to learn and adapt to new technologies.",
+    ],
+  },
+  {
+    title: "What You Will Do",
+    descriptions: [
+      "Collaborate with cross-functional teams to define project requirements",
+      "Write clean, scalable, and maintainable code",
+      "Participate in code reviews and testing.",
+      "Work closely with designers and product managers to create user-friendly applications.",
+      "Troubleshoot and debug software issues.",
+      "Stay up-to-date with industry trends and technologies.",
+    ],
+  },
+  {
+    title: "Required Skills",
+    descriptions: [
+      "Proficiency in JavaScript, React, and related technologies.",
+      "Understanding of mobile development frameworks (React Native, Flutter).",
+      "Familiarity with RESTful APIs and integration.",
+      "Knowledge of version control systems (Git, GitHub).",
+      "Experience with Agile development methodologies.",
+      "Strong understanding of UI/UX principles.",
+    ],
+  },
+];
+
+export const jobs = [
+  {
+    id: 1,
+    time: "24 hours ago",
+    title: "UI/UX Designer",
+    tags: ["Remote", "Full-time", "Senior level"],
+    location: "Faisalabad, Pakistan",
+    applyText: "Apply Now",
+  },
+  {
+    id: 2,
+    time: "48 hours ago",
+    title: "Frontend Developer",
+    tags: ["Remote", "Part-time", "Junior level"],
+    location: "Lahore, Pakistan",
+    applyText: "Apply Now",
+  },
+  {
+    id: 3,
+    time: "72 hours ago",
+    title: "Backend Developer",
+    tags: ["On-site", "Full-time", "Mid level"],
+    location: "Karachi, Pakistan",
+    applyText: "Apply Now",
+  },
+  {
+    id: 4,
+    time: "24 hours ago",
+    title: "UI/UX Designer",
+    tags: ["Remote", "Full-time", "Senior level"],
+    location: "Faisalabad, Pakistan",
+    applyText: "Apply Now",
+  },
+  {
+    id: 5,
+    time: "48 hours ago",
+    title: "Frontend Developer",
+    tags: ["Remote", "Part-time", "Junior level"],
+    location: "Lahore, Pakistan",
+    applyText: "Apply Now",
+  },
+  {
+    id: 6,
+    time: "72 hours ago",
+    title: "Backend Developer",
+    tags: ["On-site", "Full-time", "Mid level"],
+    location: "Karachi, Pakistan",
+    applyText: "Apply Now",
+  },
+];
+
+export const jobInfo = [
+  { title: "Industry", result: "IT Services" },
+  { title: "Work experience", result: "6+ Years" },
+  { title: "Location", result: "Faisalabad, Pakistan" },
+  { title: "Role", result: "On-Site" },
+];

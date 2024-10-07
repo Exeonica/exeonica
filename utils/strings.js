@@ -61,4 +61,9 @@ export const strings = {
   messageInput: "Message",
   checkInput: "I’d like to occasionally receive other communication from Exeonic, such as contact and product news",
   contactBtn: "Submit",
+  designer: "UI/UX DESIGNER",
+  jobDescrip:
+    "From concept to launch, we handle every stage of the development process, ensuring a seamless and efficient experience. Our apps are designed to engage, inform, and entertain,providing a valuable experience for your customers. Let us help you reach new heights with a cutting-edge mobile app that sets you apart from the competition!",
+  jobDescTitle: "Job Description",
+  intrested: "I am Intrested",
 };

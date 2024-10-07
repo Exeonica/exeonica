@@ -47,13 +47,13 @@ module.exports = {
         },
         text: {
           DEFAULT: "#1E1E1E",
-          textColor2: "#102E3C",
-          textColor3: "#A6AAC3",
         },
         color: {
           1: "#5D6B7F",
           2: "#B0E7F11A",
-          3: "#3F486A",
+          3: "#6B7280",
+          4: "#A6AAC3",
+          5: "#102E3C",
         },
       },
       borderRadius: {

@@ -11,7 +11,7 @@ const RevenueSection = () => {
     <div className="my-[80px] px-4 py-8 md:mx-[60px] lg:mx-[110px]">
       <div className="flex flex-col rounded-3xl bg-primary md:flex-row md:py-[0px]">
         {/* Left section with image */}
-        <div className="flex justify-center pl-[11.5px] pt-[70px] lg:ml-[81.85px] lg:mt-0 lg:w-2/5 lg:justify-start lg:py-[70px]">
+        <div className="flex justify-center px-[11.5px] pt-[70px] lg:ml-[81.85px] lg:mt-0 lg:w-2/5 lg:justify-start lg:py-[70px]">
           <Image src={DashboardCard} alt="Dashboard illustration" className="object-contain sm:h-[319px] sm:w-[320px] lg:h-[319.11px] lg:w-[446.31px]" />
         </div>
 
