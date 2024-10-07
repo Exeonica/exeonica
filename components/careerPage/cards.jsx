@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Button from "../button";
 
-import { Location, Search } from "@/public";
+import { Search } from "@/public";
 import { buttonLabels } from "@/utils";
 
 const page = () => {
@@ -14,7 +14,7 @@ const page = () => {
         <div className="mt-4 flex items-center justify-center">
           <div className="relative flex w-full max-w-lg">
             <input type="text" placeholder="Search for jobs" className="w-full rounded-full border p-3 pl-12 pr-24 text-[16px] font-normal leading-[23.73px] focus:outline-none focus:ring-2" />
-            <div className="text-color-3 absolute left-4 top-1/2 -translate-y-1/2 transform">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 transform text-color-3">
               <Image src={Search} alt="icon" className="h-[20px] w-[20px]" />
             </div>
             <button className="absolute right-0 top-0 h-full rounded-full rounded-l-none bg-primary px-6 text-[16px] font-medium leading-[23.73px] text-white focus:outline-none">Search</button>

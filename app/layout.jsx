@@ -40,7 +40,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${pangeaAfrikanTrial.variable} mx-auto max-w-[2100px] antialiased`}>
+      <body className={`${pangeaAfrikanTrial.variable} mx-auto max-w-[2100px] font-pangeaAfrikanTrial antialiased`}>
         <Navbar />
         {children}
         <SpeedInsights />
