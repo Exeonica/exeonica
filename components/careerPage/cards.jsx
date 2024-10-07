@@ -6,7 +6,6 @@ import Button from "../button";
 import { Location, Search } from "@/public";
 import { buttonLabels, jobs } from "@/utils";
 
-
 const page = () => {
   return (
     <div>
