@@ -7,7 +7,7 @@ import { heroImage, heroImageLg, GreyArrow } from "@/public";
 
 export default function Hero() {
   return (
-    <div className="mt-[60px] flex flex-col items-center justify-center bg-gradient-to-b from-white to-color-2 px-[16px] text-center lg:mt-[84px]">
+    <div className="mt-[60px] flex flex-col items-center justify-center bg-gradient-to-b from-white to-color-2 px-[16px] text-center lg:mt-[84px] lg:px-[110px]">
       <Button variant={"outlineRounded"} classes="text-xs lg:text-base">
         {strings["excellenceBtn"]}
       </Button>

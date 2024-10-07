@@ -22,6 +22,7 @@ import OnlineReview from "./Images/onlineReview.webp";
 import TeamWork from "./Images/teamWork.webp";
 import Maintanance from "./Images/maintenance.webp";
 import Error from "./Images/404Error.webp";
+import personImage from "./Images/userImage.webp";
 
 export {
   Location,
@@ -48,9 +49,17 @@ export {
   calculatorImage,
   Maintanance,
   Error,
+  personImage,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";
 export { default as GreyArrow } from "./Icons/greyArrow";
 export { default as MenuIcon } from "./Icons/menu";
 export { default as Logo } from "./Icons/logo";
+export { default as Quotes } from "./Icons/quotes";
+export { default as UserImage } from "./Icons/userImage";
+export { default as LeftArrow } from "./Icons/leftArrow";
+export { default as RightArrow } from "./Icons/rightArrow";
+export { default as PhoneIcon } from "./Icons/phone";
+export { default as MailIcon } from "./Icons/mail";
+export { default as ArrowRight } from "./Icons/arrowRight";
