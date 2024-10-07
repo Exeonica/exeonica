@@ -3,7 +3,7 @@ import React from "react";
 import { ComHeader } from "@/components/index";
 import { CareersCards } from "@/components/careerPage";
 
-const page = () => {
+const Careers = () => {
   return (
     <div>
       <ComHeader title={"joinUs"} />
@@ -12,4 +12,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Careers;
