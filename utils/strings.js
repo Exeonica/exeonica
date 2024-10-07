@@ -41,4 +41,9 @@ export const strings = {
   maintainMsg: "We are extremely sorry for inconvenience. We will be back soon live!",
   error: "No Page Found!",
   joinUs: "Join Us!",
+  designer: "UI/UX DESIGNER",
+  jobDescrip:
+    "From concept to launch, we handle every stage of the development process, ensuring a seamless and efficient experience. Our apps are designed to engage, inform, and entertain,providing a valuable experience for your customers. Let us help you reach new heights with a cutting-edge mobile app that sets you apart from the competition!",
+  jobDescTitle: "Job Description",
+  intrested: "I am Intrested",
 };

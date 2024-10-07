@@ -1,4 +1,5 @@
 import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ import { strings, socialLinks, navLinks, others } from "@/utils";
 
 const Footer = () => {
   return (
-    <footer className="bg-text-textColor2 px-[16px] py-[60px] text-white md:px-[108px] md:py-[100px]">
+    <footer className="bg-color-5 px-[16px] py-[60px] text-white md:px-[108px] md:py-[100px]">
       <div className="mx-auto max-w-7xl lg:px-0">
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 md:gap-4 xl:grid-cols-4">
           {/* Logo and Description */}
@@ -19,8 +20,8 @@ const Footer = () => {
             </div>
             <p className="mr-[50px] mt-[10px] text-[16px] text-border lg:text-base">{strings["footerDescription"]}</p>
             <div className="mt-[24px] flex space-x-4">
-              {socialLinks.map((link) => (
-                <a key={link.Icon} href={link.path} className="flex h-[30px] w-[30px] items-center justify-center rounded-full border-2 border-white text-gray-400 hover:text-white">
+              {socialLinks.map((link, index) => (
+                <a key={index} href={link.path} className="flex h-[30px] w-[30px] items-center justify-center rounded-full border-2 border-white text-gray-400 hover:text-white">
                   <Image src={link.Icon} alt="icon" className="h-[20px] w-[20px]" />
                 </a>
               ))}
@@ -30,9 +31,9 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="mb-[36px] mt-[48px] text-[20px] font-medium text-white">Quick Links</h4>
-            <ul className="mt-4 flex flex-col gap-[36px] text-sm text-gray-400">
-              {navLinks.map((link) => (
-                <Link key={link.name} href={link.path} className="text-[16px] font-light text-white hover:text-primary">
+            <ul className="mt-4 flex flex-col gap-[24px] text-sm text-gray-400">
+              {navLinks.map((link, index) => (
+                <Link key={index} href={link.path} className="text-[16px] font-light text-white hover:text-primary">
                   {link.name}
                 </Link>
               ))}
@@ -43,8 +44,8 @@ const Footer = () => {
           <div>
             <h4 className="mb-[36px] mt-[48px] text-[20px] font-medium text-white">Others</h4>
             <ul className="mt-4 flex flex-col gap-[24px] text-sm text-gray-400">
-              {others.map((data) => (
-                <Link key={data.label} href={data.path} className="text-[16px] font-light text-white hover:text-primary">
+              {others.map((data, index) => (
+                <Link key={index} href={data.path} className="text-[16px] font-light text-white hover:text-primary">
                   {data.label}
                 </Link>
               ))}
@@ -67,7 +68,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-16px mt-[50px] border-t border-gray-700 pt-6 text-center text-sm text-text-textColor3 lg:text-base">
+        <div className="text-16px text-text-textColor3 mt-[50px] border-t border-gray-700 pt-6 text-center text-sm lg:text-base">
           <p>{strings["copyRight"]}</p>
         </div>
       </div>

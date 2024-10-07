@@ -26,8 +26,8 @@ const Awards = () => {
         </div>
         {/* Right Section */}
         <div className="mx-[37px] flex w-full flex-col items-center justify-center gap-[36px] md:mx-[136px] md:flex-row md:flex-wrap">
-          {images.map((image) => (
-            <Image key={image.src} src={image.src} alt={image.alt} className={`m-2 h-[120px] w-[108.22px] object-cover ${image.classes || ""}`} />
+          {images.map((image, index) => (
+            <Image key={index} src={image.src} alt={image.alt} className={`m-2 h-[120px] w-[108.22px] object-cover ${image.classes || ""}`} />
           ))}
         </div>
       </div>
