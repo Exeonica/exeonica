@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     images: [
       {
-        url: "../public/Images/headerImageLg.web",
+        url: "../public/Images/headerImageLg.webp",
         width: 500,
         height: 300,
         alt: "Exeonic - Innovative Solutionss",
