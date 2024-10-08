@@ -41,7 +41,7 @@ const page = () => {
           </div>
         </div>
         {/*  job cards  */}
-        <div className="text mb-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mb-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {jobs.map((job, index) => (
             <div key={index} className="gb-border border border-none p-6 shadow-sm">
               <p className="text-[14px] font-normal leading-[20.79px] text-color-1">{job.time}</p>
