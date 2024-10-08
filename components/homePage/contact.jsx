@@ -34,11 +34,11 @@ const Contact = () => {
       <div className="mt-6">
         <form className="rounded-lg border border-white bg-white p-10">
           <label className="text-lg font-medium">{strings["nameInput"]}</label>
-          <input type="text" placeHolder="Ex. Jhon Alex" className="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4" />
+          <input type="text" placeholder="Ex. Jhon Alex" className="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4" />
           <label className="text-lg font-medium" htmlFor="">
             {strings["emailInput"]}
           </label>
-          <input type="text" placeHolder="Ex. jhon@gmail.com " className="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4" />
+          <input type="text" placeholder="Ex. jhon@gmail.com " className="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4" />
           <label className="text-lg font-medium">{strings["messageInput"]}</label>
           <textarea placeHolder="What can we help you with?" className="mt-[20px] w-full rounded-[10px] border border-color-1 p-4" />
           <div className="mt-[20px] flex justify-start space-x-2">
