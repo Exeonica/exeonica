@@ -394,3 +394,22 @@ export const jobInfo = [
   { title: "Location", result: "Faisalabad, Pakistan" },
   { title: "Role", result: "On-Site" },
 ];
+
+export const frequentlyAskedQuestions = [
+  {
+    question: "Tolor sit amet consectetur. Enim tincidunt orci?",
+    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+  },
+  {
+    question: "Eolor sit amet consectetur nim tincidunt orci?",
+    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+  },
+  {
+    question: "Dmet consectetur nim tincidunt orci?",
+    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+  },
+  {
+    question: "Qamet consectetur enim tincidunt orci?",
+    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+  },
+];

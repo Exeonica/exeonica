@@ -1,4 +1,4 @@
-import { RevenueSection, Footer, Hero, Services, EstimationBanner, Testimonial, Contact } from "@/components/index";
+import { RevenueSection, Footer, Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions } from "@/components/index";
 
 const Home = () => {
   return (
@@ -7,6 +7,7 @@ const Home = () => {
       <Services />
       <EstimationBanner />
       <Testimonial />
+      <FrequentlyAskedQuestions />
       <Contact />
       <RevenueSection />
       <Footer />

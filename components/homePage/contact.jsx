@@ -1,5 +1,3 @@
-import React from "react";
-
 import Button from "../button";
 
 import { strings } from "@/utils";
@@ -7,7 +5,7 @@ import { MailIcon, PhoneIcon, ArrowRight } from "@/public";
 
 const Contact = () => {
   return (
-    <div className="bg-border px-[16px] py-[80px] md:gap-x-[35px] md:px-[108px] lg:flex lg:items-center lg:justify-center lg:gap-x-[70px]">
+    <div className="bg-border px-[16px] py-[80px] md:gap-x-[35px] md:px-[120px] lg:flex lg:items-center lg:justify-center lg:gap-x-[70px]">
       <div>
         <p className="w-max rounded-[60px] border border-primary px-[16px] py-[10px] text-xs font-normal text-primary md:text-base">{strings["contactTitle"]}</p>
         <p className="my-2 text-[28px] font-semibold md:text-[40px]">{strings["contactHeading"]}</p>
