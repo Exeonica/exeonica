@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -30,7 +31,7 @@ const page = () => {
                 <div key={index}>
                   {" "}
                   <div className="flex flex-col items-center justify-center md:items-start md:justify-start">
-                    <Button variant="outlineRounded" classes="w-full mb-3  px-[16px] pb-[10px] !border-color-1 text-[16px] active active:!border-primary">
+                    <Button variant="outlineRounded" classes="w-full mb-3  px-[16px] pb-[10px] !border-color-1 text-[16px] !text-color-1 ">
                       {label}
                     </Button>
                   </div>
@@ -54,14 +55,15 @@ const page = () => {
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center text-gray-600">
-                  {/* <Location /> */}
                   <Image src={Location} alt="icon" className="mr-[4px] h-[20px] w-[20px]" />
                   <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.location}</span>
                 </div>
-                {/* <button className="gap-2 rounded-md bg-primary px-4 py-2 text-white">{job.applyText}</button> */}
-                <Button variant={"default"} className="gap-2 rounded-md bg-primary p-[16px] text-white">
+                {/* <Button variant={"default"} className="gap-2 rounded-md bg-primary p-[16px] text-white">
                   {job.applyText}
-                </Button>
+                </Button> */}
+                <Link href={`/careers/${job.id}`}>
+                  <p className="text-lg font-semibold text-blue-600 hover:underline">{job.applyText}</p>
+                </Link>
               </div>
             </div>
           ))}
