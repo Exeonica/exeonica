@@ -22,15 +22,9 @@ export const metadata = {
   openGraph: {
     images: [
       {
-        url: "/Images/headerImageLg.web",
-        width: 1200,
-        height: 630,
-        alt: "Exeonic - Innovative Solutions",
-      },
-      {
         url: "/public/Images/headerImageLg.web",
-        width: 1200,
-        height: 630,
+        width: 500,
+        height: 300,
         alt: "Exeonic - Innovative Solutionss",
       },
     ],
