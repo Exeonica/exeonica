@@ -4,3 +4,4 @@ export { default as EstimationBanner } from "./estimationBanner";
 export { default as Testimonial } from "./testimonial";
 export { default as Contact } from "./contact";
 export { default as FrequentlyAskedQuestions } from "./frequentlyAskedQuestions";
+export { default as Launch } from "./launch";
