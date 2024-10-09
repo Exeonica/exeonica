@@ -6,7 +6,7 @@ import Button from "@/components/button";
 const page = () => {
   return (
     <div className="mx-[16px] mt-[80px] px-4 py-8 lg:mx-[225px] lg:mt-[141px]">
-      <div className="flex flex-col-reverse md:flex-row lg:gap-[24px]">
+      <div className="mb-[80px] flex flex-col-reverse md:flex-row lg:gap-[24px]">
         {/* Left Job Details Side */}
         <div className="flex-1">
           <div className="mb-[48px]">
@@ -55,7 +55,7 @@ const page = () => {
       </div>
 
       {/* Button Container */}
-      <div className="mt-[109px] flex items-center justify-center lg:mb-[61px] lg:mt-[29px]">
+      <div className="mb-[80px] mt-[60px] flex items-center justify-center lg:mb-[61px] lg:mt-[29px]">
         <div className="flex flex-col md:items-start md:justify-start md:px-0">
           <Button variant="default" classes="w-full mb-3 rounded-[8px] font-normal border-white px-[64px] py-[12px] text-[16px] text-white ">
             {strings["intrested"]}

@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import Button from "../button";
 
@@ -41,7 +40,7 @@ const page = () => {
           </div>
         </div>
         {/*  job cards  */}
-        <div className="test mb-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mb-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {jobs.map((job, index) => (
             <div key={index} className="gb-border border border-none p-6 shadow-sm">
               <p className="text-[14px] font-normal leading-[20.79px] text-color-1">{job.time}</p>
@@ -58,12 +57,9 @@ const page = () => {
                   <Image src={Location} alt="icon" className="mr-[4px] h-[20px] w-[20px]" />
                   <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.location}</span>
                 </div>
-                {/* <Button variant={"default"} className="gap-2 rounded-md bg-primary p-[16px] text-white">
+                <Button variant={"default"} className="gap-2 rounded-md bg-primary p-[16px] text-white">
                   {job.applyText}
-                </Button> */}
-                <Link href={`/careers/${job.id}`}>
-                  <p className="text-lg font-semibold text-blue-600 hover:underline">{job.applyText}</p>
-                </Link>
+                </Button>
               </div>
             </div>
           ))}
