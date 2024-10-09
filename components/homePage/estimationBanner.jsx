@@ -7,7 +7,7 @@ import { calculatorImage } from "@/public";
 
 const EstimationBanner = () => {
   return (
-    <div className="bg-border px-[16px] py-[60px] md:flex md:items-center md:justify-center md:py-[60px]">
+    <div className="bg-border px-[16px] py-[60px] md:flex md:items-center md:justify-between md:py-[60px] lg:px-[110px]">
       <div className="sm:w-1/2">
         <p className="w-max rounded-[60px] border border-primary px-[16px] py-[10px] text-xs font-normal text-primary md:text-base">{strings["bannerTitle"]}</p>
         <p className="my-2 text-[28px] font-semibold md:text-[40px]">{strings["bannerHeading"]}</p>

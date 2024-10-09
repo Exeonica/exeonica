@@ -1,5 +1,3 @@
-import React from "react";
-
 import { strings } from "@/utils";
 import { Quotes, UserImage, LeftArrow, RightArrow } from "@/public";
 

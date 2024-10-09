@@ -73,4 +73,10 @@ export const strings = {
   faqDesc2: "Our team will answer all your quesions.",
   faqDesc3: "We ensure a quick response.",
   faqBtn: "Contact Support team",
+  launchTitle: "Launch in 6 weeks",
+  launchHeading: "Accelerate Your Startup Growth",
+  launchDesc: "We will finalize the prototype into a functional product in just 4 Weeks and release the product on public stores for users in 6 Weeks.",
+  servicesHeader: "SERVICE WE PROVIDE",
+  portfolioHeader: "BRINGING VISION TO LIFE",
+  blogsHeader: "BLOGS & ARTICLES",
 };
