@@ -5,7 +5,7 @@ import { Quotes, UserImage, LeftArrow, RightArrow } from "@/public";
 
 const Testimonial = () => {
   return (
-    <div className="flex flex-col justify-center bg-border px-[16px] py-[80px] text-center md:px-[70px] md:py-[120px] lg:px-[192px]">
+    <div className="flex flex-col justify-center bg-border px-[16px] py-[80px] text-center md:px-[60px] md:py-[100px] lg:px-[102px] lg:py-[120px] xl:px-[192px]">
       <div className="pb-[60px]">
         <p className="mx-auto w-max rounded-[60px] border border-primary px-[16px] py-[10px] text-xs font-normal text-primary md:text-base">{strings["testimonialTitle"]}</p>
         <p className="my-2 text-[28px] font-semibold md:text-[40px]">{strings["testimonialHeading"]}</p>

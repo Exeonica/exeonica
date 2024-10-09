@@ -63,3 +63,7 @@ export { default as RightArrow } from "./Icons/rightArrow";
 export { default as PhoneIcon } from "./Icons/phone";
 export { default as MailIcon } from "./Icons/mail";
 export { default as ArrowRight } from "./Icons/arrowRight";
+export { default as OpenIcon } from "./Icons/openIcon";
+export { default as CloseIcon } from "./Icons/closeIcon";
+export { default as MsgIcon } from "./Icons/msgIcon";
+export { default as CellPhoneIcon } from "./Icons/cellPhoneIcon";

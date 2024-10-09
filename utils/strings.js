@@ -66,4 +66,11 @@ export const strings = {
     "From concept to launch, we handle every stage of the development process, ensuring a seamless and efficient experience. Our apps are designed to engage, inform, and entertain,providing a valuable experience for your customers. Let us help you reach new heights with a cutting-edge mobile app that sets you apart from the competition!",
   jobDescTitle: "Job Description",
   intrested: "I am Intrested",
+  faqTitle: "FAQs",
+  faqHeading: "Frequently Asked Questions",
+  faqDesc: "This is where we answer all your questions. Check it out.",
+  faqHeading2: "You have different questions?",
+  faqDesc2: "Our team will answer all your quesions.",
+  faqDesc3: "We ensure a quick response.",
+  faqBtn: "Contact Support team",
 };
