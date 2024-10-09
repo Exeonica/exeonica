@@ -69,4 +69,6 @@ export const strings = {
   apply: "Apply Now",
   uploadCV: "Upload CV",
   fileAttachment: "No file chosen",
+  findUs: "Where to Find Us?",
+  Locations: "Locations",
 };
