@@ -67,3 +67,8 @@ export { default as OpenIcon } from "./Icons/openIcon";
 export { default as CloseIcon } from "./Icons/closeIcon";
 export { default as MsgIcon } from "./Icons/msgIcon";
 export { default as CellPhoneIcon } from "./Icons/cellPhoneIcon";
+export { default as LaunchCardIcon1 } from "./Icons/launchCardIcon1";
+export { default as LaunchCardIcon2 } from "./Icons/launchCardIcon2";
+export { default as LaunchCardIcon3 } from "./Icons/launchCardIcon3";
+export { default as LaunchCardIcon4 } from "./Icons/launchCardIcon4";
+export { default as DottedLine } from "./Icons/dottedLine";
