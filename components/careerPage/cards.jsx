@@ -30,7 +30,7 @@ const page = () => {
                 <div key={index}>
                   {" "}
                   <div className="flex flex-col items-center justify-center md:items-start md:justify-start">
-                    <Button variant="outlineRounded" classes="w-full mb-3  px-[16px] pb-[10px] !border-color-1 text-[16px] !text-color-1 ">
+                    <Button variant="outlineRounded" classes="w-full mb-3  px-[16px] pb-[10px] !border-color-1 text-[16px]">
                       {label}
                     </Button>
                   </div>
