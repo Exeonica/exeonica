@@ -24,8 +24,12 @@ import Maintanance from "./Images/maintenance.webp";
 import Error from "./Images/404Error.webp";
 import personImage from "./Images/userImage.webp";
 import ContactUsImage from "./Images/contactContainer.webp";
+import BlogPost from "./Images/blogpost.webp";
+import Avatar from "./Images/avatar.webp";
 
 export {
+  BlogPost,
+  Avatar,
   Location,
   Search,
   TwitterIcon,

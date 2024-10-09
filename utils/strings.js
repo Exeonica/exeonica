@@ -70,5 +70,5 @@ export const strings = {
   uploadCV: "Upload CV",
   fileAttachment: "No file chosen",
   findUs: "Where to Find Us?",
-  Locations: "Locations",
+  locations: "Locations",
 };
