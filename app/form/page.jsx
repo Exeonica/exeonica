@@ -1,9 +1,7 @@
 import React from "react";
 
-import TextInput from "../../components/textInput";
-
+import { TextInput, Button } from "@/components/index";
 import { strings } from "@/utils";
-import Button from "@/components/button";
 
 const placeholders = ["Name", "Email", "Whatspp Number", "Total Experience", "Last Degree", "Last Degree Completion year", "CGPA", "Cover Letter (optional)"];
 
