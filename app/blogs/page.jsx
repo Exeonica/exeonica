@@ -6,7 +6,8 @@ const Blogs = async () => {
 
   return (
     <div>
-      <ComHeader title={"blogsHeader"} /> {data.length}
+      <ComHeader title={"blogsHeader"} />
+      Blogs - {data.blogs?.length}
     </div>
   );
 };

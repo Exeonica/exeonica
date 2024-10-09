@@ -54,7 +54,6 @@ const page = () => {
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center text-gray-600">
-                  {/* <Location /> */}
                   <Image src={Location} alt="icon" className="mr-[4px] h-[20px] w-[20px]" />
                   <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.location}</span>
                 </div>
