@@ -1,6 +1,27 @@
+"use server";
+import Handlebars from "handlebars";
 import { collection, getDocs } from "firebase/firestore";
 
-import { db } from "@/services";
+import { db, transporter, mailOptions } from "@/services";
+import { contactUs } from "@/public";
+
+export const sendMail = async (templateData) => {
+  const template = Handlebars.compile(contactUs);
+  const html = template(templateData);
+
+  console.log("html", html);
+
+  const info = await transporter.sendMail({
+    ...mailOptions,
+    ...templateData,
+    to: templateData.email || "bilal.akram@exeonic.com",
+    html: html,
+  });
+
+  console.log("html", info);
+
+  return info;
+};
 
 export const getAllBlogs = async () => {
   const blogsCollection = collection(db, "blogs");
