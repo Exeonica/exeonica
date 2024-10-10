@@ -1,4 +1,22 @@
-import { ContactUs, DigitalTransformation, FacebookIcon, LinkedinIcon, OnlineReview, TeamWork, TwitterIcon, Award1, Award2, Award3, Award4, Award5, Award6 } from "@/public";
+import {
+  ContactUs,
+  DigitalTransformation,
+  FacebookIcon,
+  LinkedinIcon,
+  OnlineReview,
+  TeamWork,
+  TwitterIcon,
+  Award1,
+  Award2,
+  Award3,
+  Award4,
+  Award5,
+  Award6,
+  LaunchCardIcon1,
+  LaunchCardIcon2,
+  LaunchCardIcon3,
+  LaunchCardIcon4,
+} from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
 
 export const navLinks = [
@@ -559,4 +577,50 @@ export const jobInfo = [
   { title: "Work experience", result: "6+ Years" },
   { title: "Location", result: "Faisalabad, Pakistan" },
   { title: "Role", result: "On-Site" },
+];
+
+export const frequentlyAskedQuestions = [
+  {
+    question: "Tolor sit amet consectetur. Enim tincidunt orci?",
+    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+  },
+  {
+    question: "Eolor sit amet consectetur nim tincidunt orci?",
+    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+  },
+  {
+    question: "Dmet consectetur nim tincidunt orci?",
+    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+  },
+  {
+    question: "Qamet consectetur enim tincidunt orci?",
+    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+  },
+];
+
+export const launchCards = [
+  {
+    duration: "1 week",
+    icon: LaunchCardIcon1,
+    title: "Planning & Estimation",
+    description: "Collaborate with our team to refine your idea and plan the prototype features.",
+  },
+  {
+    duration: "Week 2",
+    icon: LaunchCardIcon2,
+    title: "Wireframes & Design",
+    description: "Designs (UI/UX) Development to visualize your concept and gather valuable feedback from you.",
+  },
+  {
+    duration: "Week 2-5",
+    icon: LaunchCardIcon3,
+    title: "Development & Testing",
+    description: "Continuous cycles of development & testing to transform prototype into functional product.",
+  },
+  {
+    duration: "Week 6",
+    icon: LaunchCardIcon4,
+    title: "Production Readiness & Launch",
+    description: "Conduct thorough testing and launch your product on public stores, reaching your target audience quickly.",
+  },
 ];
