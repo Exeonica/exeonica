@@ -18,6 +18,7 @@ import {
   LaunchCardIcon4,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
+import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
 
 export const navLinks = [
   { name: "Home", path: "/" },
@@ -622,5 +623,53 @@ export const launchCards = [
     icon: LaunchCardIcon4,
     title: "Production Readiness & Launch",
     description: "Conduct thorough testing and launch your product on public stores, reaching your target audience quickly.",
+  },
+];
+
+export const portfolioData = [
+  {
+    title: "WALLIFY",
+    images: [FileManagerApp, GiftShopWeb, ToDoListApp],
+    tags: ["Mobile App", "Web App", "Backend", "Backend", "Backend"],
+    description: "Wallpaper downloader App for both iOS & Android.",
+    details:
+      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+    tools: [
+      { icon: Ex, name: "Express.js" },
+      { icon: GatsBy, name: "GraphQL" },
+      { icon: TechIcon, name: "Next.js" },
+      { icon: C, name: "C#" },
+      { icon: React, name: "React.js" },
+    ],
+  },
+  {
+    title: "Project Two",
+    images: [WallpaperDownloader, ToDoListApp, FileManagerApp],
+    tags: ["Mobile App", "Web App"],
+    details:
+      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+
+    tools: [
+      { icon: Ex, name: "Express.js" },
+      { icon: GatsBy, name: "GraphQL" },
+      { icon: TechIcon, name: "Next.js" },
+      { icon: C, name: "C#" },
+      { icon: React, name: "React.js" },
+    ],
+  },
+  {
+    title: "Project Three",
+    images: [GiftShopWeb, WallpaperDownloader, ToDoListApp],
+    tags: ["Web App"],
+    details:
+      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+
+    tools: [
+      { icon: Ex, name: "Express.js" },
+      { icon: GatsBy, name: "GraphQL" },
+      { icon: TechIcon, name: "Next.js" },
+      { icon: C, name: "C#" },
+      { icon: React, name: "React.js" },
+    ],
   },
 ];

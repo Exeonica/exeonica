@@ -20,7 +20,7 @@ const Index = ({ title, showButton }) => {
           </div>
         )}
 
-        <h6 className="z-10 text-4xl font-medium text-text md:text-4xl lg:text-5xl">{strings[title]}</h6>
+        <h6 className="z-10 text-center text-4xl font-medium text-text md:text-4xl lg:text-5xl">{strings[title]}</h6>
         {showButton && (
           <div className="mb-[80px] mt-[51px] flex items-center justify-center lg:mb-[61px] lg:mt-[29px]">
             <div className="flex flex-col md:items-start md:justify-start md:px-0">

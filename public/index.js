@@ -1,8 +1,6 @@
 import heroImage from "./Images/heroImage.webp";
 import heroImageLg from "./Images/headerImageLg.webp";
 import calculatorImage from "./Images/calculatorBanner.webp";
-import HeaderTop from "./Icons/headerTop.webp";
-import HeaderBottom from "./Icons/headerBottom.webp";
 import AboutUsImg from "./Images/about.webp";
 import Award1 from "./Images/award1.webp";
 import Award2 from "./Images/award2.webp";
@@ -35,8 +33,6 @@ export {
   TwitterIcon,
   FacebookIcon,
   LinkedinIcon,
-  HeaderTop,
-  HeaderBottom,
   AboutUsImg,
   Award1,
   Award2,
