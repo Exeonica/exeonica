@@ -35,8 +35,6 @@ export {
   TwitterIcon,
   FacebookIcon,
   LinkedinIcon,
-  HeaderTop,
-  HeaderBottom,
   AboutUsImg,
   Award1,
   Award2,
