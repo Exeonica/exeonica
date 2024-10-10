@@ -5,7 +5,7 @@ import { strings } from "@/utils";
 
 const placeholders = ["Name", "Email", "Whatspp Number", "Total Experience", "Last Degree", "Last Degree Completion year", "CGPA", "Cover Letter (optional)"];
 
-const page = () => {
+const Form = () => {
   return (
     <div className="mx-[375px] mt-[300px] lg:mb-[1040px] lg:mt-[758px] lg:px-[82px] lg:pt-[53px]">
       <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -43,4 +43,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Form;
