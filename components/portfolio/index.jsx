@@ -33,7 +33,7 @@ const Index = () => {
             {/* Right Section - Project Details */}
             <div className="flex flex-1">
               <div className="mt-12 lg:mt-0 lg:flex-1 lg:pl-12 lg:text-left">
-                <h1 className="from-color-7 to-color-8 mb-[24px] bg-gradient-to-t bg-clip-text text-5xl font-bold text-transparent">{portfolioItem.title}</h1>
+                <h1 className="mb-[24px] bg-gradient-to-t from-color-7 to-color-8 bg-clip-text text-5xl font-bold text-transparent">{portfolioItem.title}</h1>
 
                 <div className="mt-4 flex flex-wrap gap-[4px] lg:justify-start">
                   {portfolioItem.tags.map((tag, tagIndex) => (
