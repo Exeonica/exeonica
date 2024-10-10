@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import { portfolioData, strings } from "@/utils";
-import { Button } from "@/components/index";
+import { Button, Carousal } from "@/components/index";
 
 const Index = () => {
   return (
@@ -12,22 +12,7 @@ const Index = () => {
           <div key={index} className={`flex flex-col lg:flex-row ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} mb-12 w-full lg:mb-0 lg:space-x-8`}>
             {/* Left Section - App Screens */}
             <div className="flex flex-1 justify-center">
-              <div className="relative w-full max-w-[600px] flex-shrink-0 overflow-hidden rounded-[16px]">
-                <Image alt={`Image ${index + 1}`} src={portfolioItem.images[0]} layout="responsive" objectFit="cover" />
-                {/* Left Arrow */}
-                <div className="absolute left-2 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer lg:top-[30%] xl:top-1/2">
-                  <button className="flex items-center justify-center rounded-full bg-white px-[17px] py-[10px] shadow-lg">
-                    <span className="text-[20px] text-color-1">&#8592;</span> {/* Right Arrow Icon */}
-                  </button>
-                </div>
-
-                {/* Right Arrow */}
-                <div className="absolute right-2 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer lg:top-[30%] xl:top-1/2">
-                  <button className="flex items-center justify-center rounded-full bg-white px-[17px] py-[10px] shadow-lg">
-                    <span className="text-[20px] text-color-1">&#8594;</span> {/* Right Arrow Icon */}
-                  </button>
-                </div>
-              </div>
+              <Carousal portfolioItem={portfolioItem} index={index} />
             </div>
 
             {/* Right Section - Project Details */}
@@ -37,12 +22,10 @@ const Index = () => {
 
                 <div className="mt-4 flex flex-wrap gap-[4px] lg:justify-start">
                   {portfolioItem.tags.map((tag, tagIndex) => (
-                    <div key={(tag, tagIndex)}>
-                      <div className="flex flex-1 flex-col gap-[4px] md:px-0">
-                        <Button variant="outlineRounded" classes="w-full mb-3 rounded-[60px] px-[16px] py-[10px] text-[16px]">
-                          {tag}
-                        </Button>
-                      </div>
+                    <div key={tagIndex}>
+                      <Button variant="outlineRounded" classes="w-full mb-3 rounded-[60px] px-[16px] py-[10px] text-[16px]">
+                        {tag}
+                      </Button>
                     </div>
                   ))}
                 </div>
