@@ -1,6 +1,6 @@
-import { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch } from "./homePage";
+import { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch, BlogsSection } from "./homePage";
 
-export { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch };
+export { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch, BlogsSection };
 
 export { default as ComHeader } from "./header";
 export { default as Awards } from "./aboutPage";

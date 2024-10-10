@@ -5,7 +5,7 @@ import { Contact, ContactUsMap, RevenueSection, Footer } from "@/components/inde
 const ContactUs = () => {
   return (
     <div>
-      <Contact />
+      <Contact sectionBgColor={"white"} tableBgColor={"color-2"} />
       <ContactUsMap />
       <RevenueSection />
       <Footer />
