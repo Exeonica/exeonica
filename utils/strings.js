@@ -84,4 +84,8 @@ export const strings = {
   servicesHeader: "SERVICE WE PROVIDE",
   portfolioHeader: "BRINGING VISION TO LIFE",
   blogsHeader: "BLOGS & ARTICLES",
+  liveSection: "View live project",
+  blogsTitle: "Blogs & Articles",
+  blogsHeading: "Resources to help you to grow your business",
+  blogsBtn: "View more blogs",
 };

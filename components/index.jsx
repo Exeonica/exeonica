@@ -1,6 +1,6 @@
-import { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch } from "./homePage";
+import { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch, BlogsSection } from "./homePage";
 
-export { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch };
+export { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch, BlogsSection };
 
 export { default as ComHeader } from "./header";
 export { default as Awards } from "./aboutPage";
@@ -14,3 +14,5 @@ export { default as TextInput } from "./textInput";
 export { default as Button } from "./button";
 export { default as ContactUsMap } from "./contactUs";
 export { default as BlogPosts } from "./blogs";
+export { default as Form } from "./form";
+export { default as PortfolioData } from "./portfolio";

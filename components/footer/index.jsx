@@ -9,7 +9,7 @@ import { strings, socialLinks, navLinks, others } from "@/utils";
 
 const Footer = () => {
   return (
-    <footer className="bg-color-5 px-[16px] py-[60px] text-white md:px-[108px] md:py-[100px] 2xl:w-[100%]">
+    <footer className="bg-color-5 px-[16px] py-[60px] text-white md:px-[108px] md:py-[100px]">
       <div className="lg:px-0">
         <div className="grid grid-cols-1 justify-between sm:grid-cols-2 md:gap-4 xl:grid-cols-4">
           {/* Logo and Description */}
@@ -58,7 +58,7 @@ const Footer = () => {
             <h4 className="mt-[48px] text-[20px] font-medium leading-[24px] text-white">{strings["newsLetTitle"]}</h4>
             <p className="mt-[15px] text-[16px] font-normal leading-[24px] text-white lg:text-base">{strings["newsLetterDesc"]}</p>
             <div className="mt-[40px] flex flex-row items-center md:pr-[40px]">
-              <TextInput placeholder="Enter your email" />
+              <TextInput placeholder="Enter your email" classes="pl-[8px]" />
               <button className="ml-2 rounded-sm bg-primary px-4 py-2 text-white">Subscribe</button>
             </div>
           </div>

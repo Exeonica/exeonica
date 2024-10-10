@@ -1,8 +1,6 @@
 import heroImage from "./Images/heroImage.webp";
 import heroImageLg from "./Images/headerImageLg.webp";
 import calculatorImage from "./Images/calculatorBanner.webp";
-import HeaderTop from "./Icons/headerTop.webp";
-import HeaderBottom from "./Icons/headerBottom.webp";
 import AboutUsImg from "./Images/about.webp";
 import Award1 from "./Images/award1.webp";
 import Award2 from "./Images/award2.webp";
@@ -22,6 +20,7 @@ import OnlineReview from "./Images/onlineReview.webp";
 import TeamWork from "./Images/teamWork.webp";
 import Maintanance from "./Images/maintenance.webp";
 import Error from "./Images/404Error.webp";
+import BlogsImage from "./Images/blogsImage.webp";
 import personImage from "./Images/userImage.webp";
 import ContactUsImage from "./Images/contactContainer.webp";
 import BlogPost from "./Images/blogpost.webp";
@@ -35,8 +34,6 @@ export {
   TwitterIcon,
   FacebookIcon,
   LinkedinIcon,
-  HeaderTop,
-  HeaderBottom,
   AboutUsImg,
   Award1,
   Award2,
@@ -56,6 +53,7 @@ export {
   Error,
   personImage,
   ContactUsImage,
+  BlogsImage,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";
@@ -78,5 +76,8 @@ export { default as LaunchCardIcon2 } from "./Icons/launchCardIcon2";
 export { default as LaunchCardIcon3 } from "./Icons/launchCardIcon3";
 export { default as LaunchCardIcon4 } from "./Icons/launchCardIcon4";
 export { default as DottedLine } from "./Icons/dottedLine";
+
+export { default as ClockIcon } from "./Icons/clock";
+export { default as CalenderIcon } from "./Icons/calender";
 
 export * from "./Templates";
