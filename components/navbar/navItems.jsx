@@ -1,8 +1,7 @@
-import React from "react";
 import Link from "next/link";
 
 import Button from "../button";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTrigger, SheetClose } from "../ui/sheet";
 
 import { navLinks, strings } from "@/utils";
 import { Logo, MenuIcon, ArrowUp } from "@/public";
@@ -23,7 +22,7 @@ const NavMenu = () => {
               {navLinks.map((link) => (
                 <div key={link.name} className="group flex cursor-pointer items-center justify-between">
                   <Link href={link.path} className="flex text-[28px] font-medium text-text group-hover:text-primary">
-                    {link.name}
+                    <SheetClose>{link.name}</SheetClose>
                   </Link>
 
                   <div className="">
