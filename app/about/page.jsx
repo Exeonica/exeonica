@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div>
       <ComHeader title={"aboutUs"} />
-      <AboutComponent btnLabel={"aboutUs"} title={"aboutTitle"} description={"aboutDescription"} cardclass={"bg-border"} />
+      <AboutComponent btnLabel={"aboutUs"} title={"aboutTitle"} description={"aboutDescription"} cardclass={"!bg-border"} />
       <ChooseUs />
       <Awards />
       <RevenueSection />

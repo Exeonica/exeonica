@@ -346,11 +346,11 @@ export const jobDetails = [
   {
     title: "Required Skills",
     descriptions: [
-      "Proficiency in JavaScript, React, and related technologies.",
-      "Understanding of mobile development frameworks (React Native, Flutter).",
+      "Create and enhance mobile applications using React Native",
+      "Solid background in software development.",
       "Familiarity with RESTful APIs and integration.",
       "Knowledge of version control systems (Git, GitHub).",
-      "Experience with Agile development methodologies.",
+      "Excellent communication and teamwork skills.",
       "Strong understanding of UI/UX principles.",
     ],
   },
@@ -379,8 +379,8 @@ export const jobs = [
     ],
   },
   {
-    id: 1,
-    time: "24 hours ago",
+    id: 2,
+    time: "20 hours ago",
     title: "React Native",
     tags: ["Remote", "Full-time", "Senior level"],
     location: "Faisalabad, Pakistan",
@@ -410,20 +410,20 @@ export const jobInfo = [
 
 export const frequentlyAskedQuestions = [
   {
-    question: "Tolor sit amet consectetur. Enim tincidunt orci?",
-    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+    question: "What services does Exeonic offer?",
+    answer: ["Exeonic specializes in full-stack development using the MERN stack (MongoDB, Express, React, Node.js) and mobile app development with React Native."],
   },
   {
-    question: "Eolor sit amet consectetur nim tincidunt orci?",
-    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+    question: "How experienced is Exeonic in MERN stack development?",
+    answer: ["Our team at Exeonic has extensive experience in building scalable, robust applications using the MERN stack, delivering optimized solutions for web-based platforms."],
   },
   {
-    question: "Dmet consectetur nim tincidunt orci?",
-    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+    question: "Can Exeonic develop cross-platform mobile apps?",
+    answer: ["Yes, Exeonic develops cross-platform mobile applications using React Native, ensuring that your app works seamlessly on both Android and iOS devices."],
   },
   {
-    question: "Qamet consectetur enim tincidunt orci?",
-    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+    question: "How does Exeonic ensure project success?",
+    answer: ["Exeonic leverages agile methodologies, focusing on iterative development and frequent client feedback to ensure projects stay aligned with business goals."],
   },
 ];
 
