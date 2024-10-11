@@ -9,16 +9,12 @@ export const sendMail = async (templateData) => {
   const template = Handlebars.compile(contactUs);
   const html = template(templateData);
 
-  console.log("html", html);
-
   const info = await transporter.sendMail({
     ...mailOptions,
     ...templateData,
     to: templateData.email || "bilal.akram@exeonic.com",
     html: html,
   });
-
-  console.log("html", info);
 
   return info;
 };
