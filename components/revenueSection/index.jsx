@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -8,10 +9,10 @@ import { strings } from "@/utils";
 
 const RevenueSection = () => {
   return (
-    <div className="my-[80px] px-[16px] md:mx-[60px] lg:mx-[110px]">
+    <div className="my-[80px] px-[16px] md:mx-[60px] lg:my-[70px]">
       <div className="flex flex-col rounded-3xl bg-primary md:flex-row md:py-[0px]">
         {/* Left section with image */}
-        <div className="flex justify-center px-[11.5px] pt-[70px] lg:ml-[81.85px] lg:mt-0 lg:w-2/5 lg:justify-start lg:py-[70px]">
+        <div className="flex justify-center px-[11.5px] pt-[70px] lg:ml-[81.85px] lg:mt-0 lg:w-2/5 lg:justify-start">
           <Image src={DashboardCard} alt="Dashboard illustration" className="object-contain sm:h-[319px] sm:w-[320px] lg:h-[319.11px] lg:w-[446.31px]" />
         </div>
 
@@ -23,7 +24,7 @@ const RevenueSection = () => {
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[24px] flex flex-col pb-[70px] md:items-start md:justify-start md:px-0">
               <Button variant="outline" classes="w-full mb-3 rounded-[8px] font-normal border-white px-[24px] py-[12px] text-[16px] text-white ">
-                {strings["getStarted"]}
+                <Link href={"/contact"}>{strings["getStarted"]}</Link>
               </Button>
             </div>
           </div>
