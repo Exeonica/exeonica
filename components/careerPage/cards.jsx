@@ -1,8 +1,6 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -10,12 +8,6 @@ import { Location, Search } from "@/public";
 import { buttonLabels, jobs } from "@/utils";
 
 const CareerCards = () => {
-  const router = useRouter();
-
-  const handleButtonClick = (id) => {
-    router.push(`/careers/${id}`);
-  };
-
   return (
     <div>
       <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px] 2xl:mx-0">
@@ -67,8 +59,8 @@ const CareerCards = () => {
                   <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.location}</span>
                 </div>
                 <div>
-                  <Button variant={"default"} onClick={() => handleButtonClick(job.id)} className="rounded-md bg-primary p-[14px] text-white">
-                    {job.applyText}
+                  <Button variant={"default"} className="rounded-md bg-primary p-[14px] text-white">
+                    <Link href={`/careers/${job.id}`}>{job.applyText}</Link>
                   </Button>
                 </div>
               </div>

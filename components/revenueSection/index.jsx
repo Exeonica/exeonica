@@ -1,8 +1,6 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -10,12 +8,6 @@ import { DashboardCard } from "@/public";
 import { strings } from "@/utils";
 
 const RevenueSection = () => {
-  const router = useRouter();
-
-  const handleNavigation = () => {
-    router.push("/contact");
-  };
-
   return (
     <div className="my-[80px] px-[16px] md:mx-[60px] lg:my-[70px]">
       <div className="flex flex-col rounded-3xl bg-primary md:flex-row md:py-[0px]">
@@ -31,8 +23,8 @@ const RevenueSection = () => {
           <p className="mb-6 text-base font-normal text-white md:text-[16px] md:leading-[24px]">{strings["partnerDescription"]}</p>
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[24px] flex flex-col pb-[70px] md:items-start md:justify-start md:px-0">
-              <Button variant="outline" onClick={handleNavigation} classes="w-full mb-3 rounded-[8px] font-normal border-white px-[24px] py-[12px] text-[16px] text-white ">
-                {strings["getStarted"]}
+              <Button variant="outline" classes="w-full mb-3 rounded-[8px] font-normal border-white px-[24px] py-[12px] text-[16px] text-white ">
+                <Link href={"/contact"}>{strings["getStarted"]}</Link>
               </Button>
             </div>
           </div>

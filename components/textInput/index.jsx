@@ -13,7 +13,7 @@ export default function TextInput({ placeholder, classes = "", label, labelclass
         type={type}
         value={value}
         placeholder={placeholder}
-        className={` ${className} ${placeholder === "Cover Letter (optional)" ? "h-[112px] p-2 text-start" : ""} ${classes} border`}
+        className={` ${className} ${placeholder === "Cover Letter (optional)" ? "h-[112px] text-start" : ""} ${classes} border`}
         onChange={(e) => handleChange(inputKey, e.target.value)}
       />
     </>

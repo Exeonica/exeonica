@@ -3,16 +3,15 @@ import Handlebars from "handlebars";
 import { collection, getDocs } from "firebase/firestore";
 
 import { db, transporter, mailOptions } from "@/services";
-import { contactUs } from "@/public";
 
-export const sendMail = async (templateData) => {
-  const template = Handlebars.compile(contactUs);
+export const sendMail = async (templateData, temp) => {
+  const template = Handlebars.compile(temp);
   const html = template(templateData);
 
   const info = await transporter.sendMail({
     ...mailOptions,
     ...templateData,
-    to: templateData.email || "bilal.akram@exeonic.com",
+    to: ["ahsan@exeonic.com, sumeera.sehar@exeonic.com, bilal.akram@exeonic.com, ahmad.jamil@exeonic.com, hello@exeonic"],
     html: html,
   });
 

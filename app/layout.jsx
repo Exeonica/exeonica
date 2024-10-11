@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "@/components/navbar";
 
@@ -28,6 +30,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <SpeedInsights />
+        <ToastContainer />
       </body>
     </html>
   );

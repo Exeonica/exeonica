@@ -1,7 +1,5 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 import Button from "../button";
@@ -10,12 +8,6 @@ import { AboutUsImg } from "@/public";
 import { strings, aboutInfo } from "@/utils";
 
 const AboutSection = ({ btnLabel, title, description }) => {
-  const router = useRouter();
-
-  const handleNavigation = () => {
-    router.push("/contact");
-  };
-
   return (
     <div className="bg-color-2 py-[80px] lg:px-[137px]">
       <div className="flex flex-col px-[16px] sm:justify-center md:flex-row md:items-start">
@@ -39,8 +31,8 @@ const AboutSection = ({ btnLabel, title, description }) => {
 
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[24px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
-              <Button onClick={handleNavigation} variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
-                {strings["learnMore"]}
+              <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
+                <Link href={"/contact"}>{strings["learnMore"]}</Link>
               </Button>
             </div>
           </div>

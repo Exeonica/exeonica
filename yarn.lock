@@ -144,16 +144,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@firebase/app-compat@npm:0.2.42":
-  version: 0.2.42
-  resolution: "@firebase/app-compat@npm:0.2.42"
+"@firebase/app-compat@npm:0.2.43":
+  version: 0.2.43
+  resolution: "@firebase/app-compat@npm:0.2.43"
   dependencies:
-    "@firebase/app": 0.10.12
+    "@firebase/app": 0.10.13
     "@firebase/component": 0.6.9
     "@firebase/logger": 0.4.2
     "@firebase/util": 1.10.0
     tslib: ^2.1.0
-  checksum: 20e0e7892473fa5df9575c24ecd2f769f1af684356337d1b391bb52fd9390fa05ad56e7510ff21910a766a7c25f634169e0a3c22c36e0f76a68c55f12bcdfd77
+  checksum: b143fd449d7aaf081ac3ee343031753e80b196e28357e7bfb5a81a06de5f667fc720f4e7781741b611972183a1343b8bac33845f7bae93a0281e827ba7c13e61
   languageName: node
   linkType: hard
 
@@ -164,16 +164,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@firebase/app@npm:0.10.12":
-  version: 0.10.12
-  resolution: "@firebase/app@npm:0.10.12"
+"@firebase/app@npm:0.10.13":
+  version: 0.10.13
+  resolution: "@firebase/app@npm:0.10.13"
   dependencies:
     "@firebase/component": 0.6.9
     "@firebase/logger": 0.4.2
     "@firebase/util": 1.10.0
     idb: 7.1.1
     tslib: ^2.1.0
-  checksum: 7ef70390e56fd2222844d279d5cc36d101e6a821cda86dc1d41ce5c9182a4ba7dc79bcff97b60c44c62d9ef6ebfabf75375ba344207b27508f98dab6df1cd531
+  checksum: 13dc167480c7491e07ffaea4fd6f7565cf74a179b038153c5a5d6c66c7117ee451c9ab5b66b6e84b1a12abafa881b6395f92cad0a4def8aaf3374b2deb2b1daa
   languageName: node
   linkType: hard
 
@@ -422,17 +422,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@firebase/messaging-compat@npm:0.2.11":
-  version: 0.2.11
-  resolution: "@firebase/messaging-compat@npm:0.2.11"
+"@firebase/messaging-compat@npm:0.2.12":
+  version: 0.2.12
+  resolution: "@firebase/messaging-compat@npm:0.2.12"
   dependencies:
     "@firebase/component": 0.6.9
-    "@firebase/messaging": 0.12.11
+    "@firebase/messaging": 0.12.12
     "@firebase/util": 1.10.0
     tslib: ^2.1.0
   peerDependencies:
     "@firebase/app-compat": 0.x
-  checksum: f7cb460e26d284df9bb9727192801d763708d70a11175228d97578898b6fe76e2da3d49db50ca4aea9bc0e5b2275a0b50c1286c4f5164785b87453b1ce4d3af6
+  checksum: 7bb2401d1badb3ba094a8a8df13b63594f6eaa226fca92b93e4e46c15463c9a43bb5053fd52d715aa6b30c73550ff3639de25f0bb921d6d982facedd3a234dcb
   languageName: node
   linkType: hard
 
@@ -443,9 +443,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@firebase/messaging@npm:0.12.11":
-  version: 0.12.11
-  resolution: "@firebase/messaging@npm:0.12.11"
+"@firebase/messaging@npm:0.12.12":
+  version: 0.12.12
+  resolution: "@firebase/messaging@npm:0.12.12"
   dependencies:
     "@firebase/component": 0.6.9
     "@firebase/installations": 0.6.9
@@ -455,7 +455,7 @@ __metadata:
     tslib: ^2.1.0
   peerDependencies:
     "@firebase/app": 0.x
-  checksum: 90230086f8ae5b953c91fbfa37ce5f750e132af0591cf7ce18bcf254c042fa004ee50302f8aa2332b05bd328dfff88f180223fc898672a80ca83ab22bba2d715
+  checksum: 750dd13e7d0d37523ff4fc2b475fefe28b4ae8c744d661029e673110f98de94b453d7ba87a9ed749e542f75c3dd07dd83f7c636d85285a4cb78720a80d724ff7
   languageName: node
   linkType: hard
 
@@ -1413,8 +1413,8 @@ __metadata:
   linkType: hard
 
 "@react-google-maps/api@npm:^2.19.3":
-  version: 2.20.1
-  resolution: "@react-google-maps/api@npm:2.20.1"
+  version: 2.20.2
+  resolution: "@react-google-maps/api@npm:2.20.2"
   dependencies:
     "@googlemaps/js-api-loader": 1.16.8
     "@googlemaps/markerclusterer": 2.5.3
@@ -1425,7 +1425,7 @@ __metadata:
   peerDependencies:
     react: ^16.8 || ^17 || ^18
     react-dom: ^16.8 || ^17 || ^18
-  checksum: d85cba530c76c8d6031706e595bd615a3cd687971d453d2a804ba5505adf2e7e35d6cf9e0b569317d0a549e4ce50989938cca835f3098690b98900f880069329
+  checksum: 8995622d3bf22a162ee94da75cef940a35f61083a1dcc82e4c5666f6c5a6a3fa3fbe3572873543d8935ab26c43f84e167e2948ea5a9fd46cdf8bb17b03884d81
   languageName: node
   linkType: hard
 
@@ -2025,9 +2025,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001579":
-  version: 1.0.30001667
-  resolution: "caniuse-lite@npm:1.0.30001667"
-  checksum: f3c6a40c3e4115c6e5fb46c47884d903191285d29ec8a8b092546efbc9cdedcbd7183cce72dd3cab7dfc16c4d5b2745892876b3d6dda75d4cba49f9389239aa9
+  version: 1.0.30001668
+  resolution: "caniuse-lite@npm:1.0.30001668"
+  checksum: ce6996901b5883454a8ddb3040f82342277b6a6275876dfefcdecb11f7e472e29877f34cae47c2b674f08f2e71971dd4a2acb9bc01adfe8421b7148a7e9e8297
   languageName: node
   linkType: hard
 
@@ -2134,7 +2134,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:2.1.1":
+"clsx@npm:2.1.1, clsx@npm:^2.1.0":
   version: 2.1.1
   resolution: "clsx@npm:2.1.1"
   checksum: acd3e1ab9d8a433ecb3cc2f6a05ab95fe50b4a3cfc5ba47abb6cbf3754585fcb87b84e90c822a1f256c4198e3b41c7f6c391577ffc8678ad587fc0976b24fd57
@@ -2975,6 +2975,7 @@ __metadata:
     prettier-plugin-tailwindcss: ^0.6.8
     react: 18.3.1
     react-dom: 18.3.1
+    react-toastify: ^10.0.5
     sharp: ^0.33.5
     tailwind-merge: 2.5.2
     tailwindcss: 3.4.1
@@ -3077,15 +3078,15 @@ __metadata:
   linkType: hard
 
 "firebase@npm:^10.14.0":
-  version: 10.14.0
-  resolution: "firebase@npm:10.14.0"
+  version: 10.14.1
+  resolution: "firebase@npm:10.14.1"
   dependencies:
     "@firebase/analytics": 0.10.8
     "@firebase/analytics-compat": 0.2.14
-    "@firebase/app": 0.10.12
+    "@firebase/app": 0.10.13
     "@firebase/app-check": 0.8.8
     "@firebase/app-check-compat": 0.3.15
-    "@firebase/app-compat": 0.2.42
+    "@firebase/app-compat": 0.2.43
     "@firebase/app-types": 0.9.2
     "@firebase/auth": 1.7.9
     "@firebase/auth-compat": 0.5.14
@@ -3098,8 +3099,8 @@ __metadata:
     "@firebase/functions-compat": 0.3.14
     "@firebase/installations": 0.6.9
     "@firebase/installations-compat": 0.2.9
-    "@firebase/messaging": 0.12.11
-    "@firebase/messaging-compat": 0.2.11
+    "@firebase/messaging": 0.12.12
+    "@firebase/messaging-compat": 0.2.12
     "@firebase/performance": 0.6.9
     "@firebase/performance-compat": 0.2.9
     "@firebase/remote-config": 0.4.9
@@ -3108,7 +3109,7 @@ __metadata:
     "@firebase/storage-compat": 0.3.12
     "@firebase/util": 1.10.0
     "@firebase/vertexai-preview": 0.0.4
-  checksum: 3feabc690ce2fd2854acc2c7cf598562fda5369121466dbf592a2f0742575a72c27ee434868849889e516b17d4d55162fc45b86635f425d6e1bf1f301887aa69
+  checksum: fd9b8dee012da6736fc401614e2297994e6e44664121b7f6a9e3c962566f50aceccd8d24ef9c589d6c5f1a3e446388fc1d87eb774dd8a945e93790fbf4186734
   languageName: node
   linkType: hard
 
@@ -5153,6 +5154,18 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 7ee8ef3aab74c7ae1d70ff34a27643d11ba1a8d62d072c767827d9ff9a520905223e567002e0bf6c772929d8ea1c781a3ba0cc4a563e92b1e3dc2eaa817ecbe8
+  languageName: node
+  linkType: hard
+
+"react-toastify@npm:^10.0.5":
+  version: 10.0.5
+  resolution: "react-toastify@npm:10.0.5"
+  dependencies:
+    clsx: ^2.1.0
+  peerDependencies:
+    react: ">=18"
+    react-dom: ">=18"
+  checksum: 982d33918c63e99464623a1b3b023ab5fe18fe341143cb0cb04287e37fd0611c560d9ef451e151ac8ade15a1cda09df09d4c442b3db582965d71aaf42d49b230
   languageName: node
   linkType: hard
 
