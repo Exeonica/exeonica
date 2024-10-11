@@ -4,15 +4,15 @@ import Link from "next/link";
 
 import Button from "../button";
 
-import { Location, Search } from "@/public";
-import { buttonLabels, jobs } from "@/utils";
+import { Location } from "@/public";
+import { jobs } from "@/utils";
 
 const CareerCards = () => {
   return (
     <div>
       <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px] 2xl:mx-0">
         {/* Search Bar */}
-        <div className="mt-4 flex">
+        {/* <div className="mt-4 flex">
           <div className="relative flex w-full">
             <input type="text" placeholder="Search for jobs" className="w-full rounded-full border p-3 pl-12 pr-24 text-[16px] font-normal leading-[23.73px] focus:outline-none focus:ring-2" />
             <div className="absolute left-4 top-1/2 -translate-y-1/2 transform text-color-3">
@@ -20,9 +20,9 @@ const CareerCards = () => {
             </div>
             <button className="absolute right-0 top-0 h-full rounded-full rounded-l-none bg-primary px-6 text-[16px] font-medium leading-[23.73px] text-white focus:outline-none">Search</button>
           </div>
-        </div>
+        </div> */}
         {/* Buttons Array  */}
-        <div className="mb-[72px] flex">
+        {/* <div className="mb-[72px] flex">
           <div className="flex flex-1 items-center justify-center">
             {" "}
             <div className="mt-[36px] flex flex-wrap justify-center space-x-4">
@@ -39,7 +39,7 @@ const CareerCards = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
         {/*  job cards  */}
         <div className="mb-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {jobs.map((job, index) => (
