@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Button from "../button";
 
-import { ArrowRight } from "@/public";
+import { ArrowRight, contactUs } from "@/public";
 import { sendMail, strings } from "@/utils";
 
 const ContactForm = () => {
@@ -17,7 +17,7 @@ const ContactForm = () => {
   };
 
   const handleForm = async () => {
-    sendMail(formData);
+    sendMail(formData, contactUs);
   };
 
   return (
