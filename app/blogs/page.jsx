@@ -1,5 +1,5 @@
 import { useBlogs } from "@/hooks";
-import { ComHeader } from "@/components/index";
+import { ComHeader, BlogPosts } from "@/components/index";
 
 const Blogs = async () => {
   const data = await useBlogs();
@@ -7,7 +7,8 @@ const Blogs = async () => {
   return (
     <div>
       <ComHeader title={"blogsHeader"} />
-      Blogs - {data.blogs?.length}
+      <BlogPosts />
+      {/* Blogs - {data.blogs?.length} */}
     </div>
   );
 };
