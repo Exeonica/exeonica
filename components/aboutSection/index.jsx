@@ -7,9 +7,9 @@ import Button from "../button";
 import { AboutUsImg } from "@/public";
 import { strings, aboutInfo } from "@/utils";
 
-const AboutSection = ({ btnLabel, title, description }) => {
+const AboutSection = ({ btnLabel, title, description, classes, cardclass }) => {
   return (
-    <div className="bg-color-2 py-[80px] lg:px-[137px]">
+    <div className={`bg-white py-[80px] lg:px-[137px] ${classes} `}>
       <div className="flex flex-col px-[16px] sm:justify-center md:flex-row md:items-start">
         {/* Left Section */}
         <div className="flex flex-1 flex-col">
@@ -49,7 +49,7 @@ const AboutSection = ({ btnLabel, title, description }) => {
       {/* Cards Section */}
       <div className="mx-[15px] mb-[80px] mt-[36px] grid grid-cols-1 gap-[24px] md:grid-cols-2 xl:grid-cols-4">
         {aboutInfo.map((item, index) => (
-          <div key={index} className="rounded-[12px] border border-border bg-border py-[26px] pl-[27px] shadow-sm">
+          <div key={index} className={`rounded-[12px] border border-border bg-white py-[26px] pl-[27px] shadow-sm ${cardclass} `}>
             <h2 className="mb-2 text-3xl font-bold text-gray-900">{item.noService}</h2>
             <p className="font-medium text-gray-500">{item.title}</p>
           </div>

@@ -32,3 +32,18 @@ export const getBlog = async (blogId) => {
 
   return blogSnapshot.data();
 };
+
+export const getAllCareers = async () => {
+  const careersCollection = collection(db, "careers");
+  const careersSnapshot = await getDocs(careersCollection);
+  const careersList = careersSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+  return careersList;
+};
+
+export const getCareers = async (careersId) => {
+  const careersCollection = doc(db, "careers", careersId);
+  const careersSnapshot = await getDoc(careersCollection);
+
+  return careersSnapshot.data();
+};

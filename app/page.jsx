@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <Hero />
       <Launch />
-      <AboutComponent btnLabel={"aboutUs"} title={"aboutTitle"} description={"aboutDescription"} />
+      <AboutComponent btnLabel={"aboutUs"} title={"aboutTitle"} description={"aboutDescription"} classes={"bg-color-9"} />
       <Services />
       <Testimonial />
       <FrequentlyAskedQuestions />

@@ -83,4 +83,6 @@ export const strings = {
   blogsTitle: "Blogs & Articles",
   blogsHeading: "Resources to help you to grow your business",
   blogsBtn: "View more blogs",
+  termsAndConditions: "TERM & CONDITIONS",
+  privacyPolicy: "PRIVACY POLICY",
 };
