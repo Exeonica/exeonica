@@ -5,7 +5,6 @@ import {
   LinkedinIcon,
   OnlineReview,
   TeamWork,
-  TwitterIcon,
   Award1,
   Award2,
   Award3,
@@ -30,9 +29,8 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-  { Icon: FacebookIcon, path: "/" },
-  { Icon: TwitterIcon, path: "/services" },
-  { Icon: LinkedinIcon, path: "/portfolio" },
+  { Icon: FacebookIcon, link: "https://www.facebook.com/exeonicdotcom" },
+  { Icon: LinkedinIcon, link: "https://www.linkedin.com/company/exeonic" },
 ];
 
 export const others = [
