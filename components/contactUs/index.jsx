@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/index";
 import { strings } from "@/utils";
+import { ContactUsImage } from "@/public";
 
 const locations = [
   {
@@ -50,11 +51,12 @@ const Map = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center">
+      {/* <div className="flex flex-wrap justify-center">
         {locations.map((location) => (
           <LocationCard key={location.id} location={location} />
         ))}
-      </div>
+      </div> */}
+      <Image src={ContactUsImage} priority alt="map" />
     </div>
   );
 };
