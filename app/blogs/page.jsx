@@ -1,14 +1,13 @@
-import { useBlogs } from "@/hooks";
 import { ComHeader, BlogPosts } from "@/components/index";
+import { getAllBlogs } from "@/utils";
 
 const Blogs = async () => {
-  const data = await useBlogs();
+  const blogs = await getAllBlogs();
 
   return (
     <div>
       <ComHeader title={"blogsHeader"} />
-      <BlogPosts />
-      {/* Blogs - {data.blogs?.length} */}
+      <BlogPosts cardsData={blogs} />
     </div>
   );
 };

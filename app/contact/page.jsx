@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Contact, ContactUsMap, RevenueSection, Footer, ComHeader } from "@/components/index";
+import { ComHeader, Contact, ContactUsMap, RevenueSection, Footer } from "@/components/index";
 
 const ContactUs = () => {
   return (
     <div>
-      <ComHeader title={"contactTitle"} />
+      <ComHeader title={"contact"} />
       <Contact sectionBgColor={"white"} tableBgColor={"color-2"} />
       <ContactUsMap />
       <RevenueSection />
