@@ -8,7 +8,9 @@ import { BlogsImage, ClockIcon, CalenderIcon } from "@/public";
 const BlogsSection = () => {
   return (
     <div className="px-4 py-[80px] md:px-[200px] lg:px-[110px]">
-      <p className="w-max rounded-[60px] border border-primary px-4 py-2 text-xs font-normal text-primary md:text-base">{strings["blogsTitle"]}</p>
+      <Button variant={"outlineRounded"} classes="text-xs md:text-base md:font-normal cursor-default">
+        {strings["blogsTitle"]}
+      </Button>
       <p className="mt-2 pb-9 text-[28px] font-semibold md:text-[40px]">{strings["blogsHeading"]}</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-[35px] xl:gap-x-[50px]">

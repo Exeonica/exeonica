@@ -7,7 +7,7 @@ const tags = ["Onsite", "Full", "Hybrid"];
 const Index = ({ title, showButton }) => {
   return (
     <div className="">
-      <div className="headerBg relative mt-4 flex h-[480px] flex-col items-center justify-center sm:h-[200px] md:h-[300px]">
+      <div className="headerBg relative flex h-[480px] flex-col items-center justify-center pt-4 sm:h-[200px] md:h-[300px]">
         {showButton && (
           <div className="gap-8px mb-4 mt-[59px] flex items-center rounded-md bg-white">
             {tags.map((tag, index) => (

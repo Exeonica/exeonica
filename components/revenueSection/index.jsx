@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -22,9 +23,11 @@ const RevenueSection = () => {
           <p className="mb-6 text-base font-normal text-white md:text-[16px] md:leading-[24px]">{strings["partnerDescription"]}</p>
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[24px] flex flex-col pb-[70px] md:items-start md:justify-start md:px-0">
-              <Button variant="outline" classes="w-full mb-3 rounded-[8px] font-normal border-white px-[24px] py-[12px] text-[16px] text-white ">
-                {strings["getStarted"]}
-              </Button>
+              <Link href={"./contact"}>
+                <Button variant="outline" classes="w-full mb-3 rounded-[8px] font-normal border-white px-[24px] py-[12px] text-[16px] text-white ">
+                  {strings["getStarted"]}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

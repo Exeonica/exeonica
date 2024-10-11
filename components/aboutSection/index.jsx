@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -14,7 +15,7 @@ const AboutSection = ({ btnLabel, title, description }) => {
         <div className="flex flex-1 flex-col">
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[45.5px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
-              <Button variant="outlineRounded" classes="w-full mb-3 rounded-[60px] px-[16px] py-[10px] text-[16px]">
+              <Button variant="outlineRounded" classes="w-full mb-3 text-[16px] cursor-default">
                 {strings[btnLabel]}
               </Button>
             </div>
@@ -30,9 +31,11 @@ const AboutSection = ({ btnLabel, title, description }) => {
 
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[24px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
-              <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
-                {strings["learnMore"]}
-              </Button>
+              <Link href={"./about"}>
+                <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
+                  {strings["learnMore"]}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
