@@ -1,18 +1,71 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 import { TextInput, Button } from "@/components/index";
-import { strings } from "@/utils";
+import { sendMail, strings } from "@/utils";
+import { applicationTemp } from "@/public";
 
-const placeholders = ["Name", "Email", "Whatspp Number", "Total Experience", "Last Degree", "Last Degree Completion year", "CGPA", "Cover Letter (optional)"];
+const inputs = [
+  { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
+  { label: "Email", inputKey: "email", type: "email", placeholder: "Email" },
+  { label: "WhatsApp Number", inputKey: "whatsappNumber", type: "tel", placeholder: "WhatsApp Number" },
+  { label: "Total Experience", inputKey: "totalExperience", type: "number", placeholder: "Total Experience" },
+  { label: "Last Degree", inputKey: "lastDegree", type: "text", placeholder: "Last Degree" },
+  { label: "Last Degree Completion Year", inputKey: "lastDegreeCompletionYear", type: "number", placeholder: "Last Degree Completion Year" },
+  { label: "CGPA", inputKey: "cgpa", type: "number", placeholder: "CGPA" },
+  { label: "Cover Letter (optional)", inputKey: "coverLetter", type: "textarea", placeholder: "Cover Letter (optional)" },
+];
 
 const ApplicationForm = ({ onClose }) => {
   const formRef = useRef(null);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    whatsappNumber: "",
+    totalExperience: "",
+    lastDegree: "",
+    lastDegreeCompletionYear: "",
+    cgpa: "",
+    coverLetter: "",
+  });
 
   // Function to handle clicks outside the form
   const handleClickOutside = (event) => {
     if (formRef.current && !formRef.current.contains(event.target)) {
       onClose(); // Close the form if clicked outside
+    }
+  };
+
+  const handleChange = (key, val) => {
+    setFormData((v) => ({
+      ...v,
+      [key]: val,
+    }));
+  };
+
+  const handleSubmit = async () => {
+    let isValid = true;
+
+    inputs.map((v) => {
+      if (!formData[v.inputKey]) {
+        isValid = false;
+      }
+    });
+
+    if (!isValid) {
+      toast.error("Please fill the form");
+
+      return;
+    }
+
+    try {
+      toast.info("Saving Data");
+      await sendMail(formData, applicationTemp);
+      toast.success("Data Saved");
+    } catch (error) {
+      toast.error(error.message);
     }
   };
 
@@ -46,19 +99,19 @@ const ApplicationForm = ({ onClose }) => {
               <p className="mb-[35px] text-center text-[28px] font-semibold leading-[41.58px] text-text lg:text-[36px] lg:leading-[53.46px]">Application for UI/Ux Designer</p>
             </div>
             {/* Text Input Fields */}
-            {placeholders.map((placeholder, index) => (
-              <div className="pb-5" key={index}>
-                <TextInput placeholder={placeholder} classes="" />
+            {inputs.map((v, i) => (
+              <div className="pb-5" key={i}>
+                <TextInput type={v.type} inputKey={v.inputKey} placeHolder={v.placeholder} value={formData[v.inputKey]} handleChange={handleChange} />
               </div>
             ))}
             {/* Upload CV module */}
-            <div className="flex flex-row items-center">
+            {/* <div className="flex flex-row items-center">
               <span className="rounded-md bg-border px-[34px] py-[6px] text-[18px] font-light text-text">{strings["uploadCV"]}</span>
               <p className="ml-[13px]">{strings["fileAttachment"]}</p>
-            </div>
+            </div> */}
 
             <div className="mt-[60px] flex w-full lg:mt-[29px]">
-              <Button variant="default" classes="w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white ">
+              <Button onClick={handleSubmit} variant="default" classes="w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white ">
                 {strings["apply"]}
               </Button>
             </div>
