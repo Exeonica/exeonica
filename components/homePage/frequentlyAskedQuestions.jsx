@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -21,7 +22,9 @@ const FrequentlyAskedQuestions = () => {
   return (
     <div className="flex flex-col justify-between px-[16px] py-[80px] md:px-[60px] lg:flex lg:flex-row lg:items-center lg:space-x-[133px] lg:px-[110px]">
       <div className="mb-12 md:mb-0">
-        <p className="w-max rounded-[60px] border border-primary px-[16px] py-[10px] text-xs font-normal text-primary md:text-base">{strings["faqTitle"]}</p>
+        <Button variant={"outlineRounded"} classes="text-xs md:text-base md:font-normal cursor-default">
+          {strings["faqTitle"]}
+        </Button>
         <p className="my-2 text-[28px] font-semibold md:text-[40px]">{strings["faqHeading"]}</p>
         <p className="text-lg font-normal text-color-1">{strings["faqDesc"]}</p>
 
@@ -44,12 +47,14 @@ const FrequentlyAskedQuestions = () => {
         <p className="mb-3 mt-[30px] text-xl font-medium">{strings["faqHeading2"]}</p>
         <p className="text-base font-normal text-color-1">{strings["faqDesc2"]}</p>
         <p className="mb-[30px] text-base font-normal text-color-1">{strings["faqDesc3"]}</p>
-        <Button variant="bgRounded">
-          <div className="mr-2 items-center">
-            <CellPhoneIcon />
-          </div>
-          {strings["faqBtn"]}
-        </Button>
+        <Link href={"./contact"}>
+          <Button variant="bgRounded">
+            <div className="mr-2 items-center">
+              <CellPhoneIcon />
+            </div>
+            {strings["faqBtn"]}
+          </Button>
+        </Link>
       </div>
     </div>
   );

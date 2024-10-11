@@ -1,10 +1,16 @@
+import Button from "../button";
+
 import { strings, launchCards } from "@/utils";
 
 const Launch = () => {
   return (
     <div className="flex flex-col px-[16px] py-[80px] text-center lg:px-[110px]">
       <div className="pb-9">
-        <p className="mx-auto w-max rounded-[60px] border border-primary px-[16px] py-[10px] text-xs font-normal text-primary md:text-base">{strings["launchTitle"]}</p>
+        <div className="flex justify-center">
+          <Button variant={"outlineRounded"} classes="text-xs lg:text-base cursor-default">
+            {strings["launchTitle"]}
+          </Button>
+        </div>
         <p className="my-2 text-[28px] font-semibold md:text-[40px]">{strings["launchHeading"]}</p>
         <p className="text-lg font-normal text-color-3">{strings["launchDesc"]}</p>
       </div>

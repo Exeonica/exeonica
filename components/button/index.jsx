@@ -8,7 +8,7 @@ export default function Button({ variant, children, classes = "", ...rest }) {
       className = `${className}  border-primary border text-primary hover:bg-primary hover:text-white hover:border-white rounded-lg`;
       break;
     case "outlineRounded":
-      className = `${className} border border-primary text-primary rounded-[60px] py-[10px] px-4 hover:bg-primary hover:text-white h-[38px]`;
+      className = `${className} border border-primary text-primary rounded-[60px] py-[10px] px-4 hover:bg-primary hover:text-white`;
       break;
     case "bgRounded":
       className = `${className} rounded-[60px] py-3 px-6 bg-primary text-white hover:bg-primary/90`;

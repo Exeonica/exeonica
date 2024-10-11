@@ -14,7 +14,9 @@ const NavMenu = () => {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader className="border-b border-border py-[15px] pb-[15px] pl-[27px]">
-          <Logo />
+          <Link href={"./"} className="cusor-pointer">
+            <Logo />
+          </Link>
         </SheetHeader>
         <SheetDescription>
           <div className="mx-7 mt-12">
@@ -30,13 +32,19 @@ const NavMenu = () => {
                   </div>
                 </div>
               ))}
-              <div className="flex flex-col items-center justify-center">
-                <Button variant="outline" classes="!w-full mb-3 mt-[48px] items-center justify-center">
-                  {strings["calculateCost"]}
-                </Button>
-                <Button variant="default" classes="!w-full items-center justify-center">
-                  {strings["getInTouch"]}
-                </Button>
+              <div className="flex flex-col items-center justify-center pt-[48px]">
+                {/* <SheetClose>
+                  <Button variant="outline" classes="!w-full mb-3 items-center justify-center">
+                    {strings["calculateCost"]}
+                  </Button>
+                </SheetClose> */}
+                <Link href="./contact">
+                  <SheetClose>
+                    <Button variant="default" classes="!w-full items-center justify-center">
+                      {strings["getInTouch"]}
+                    </Button>
+                  </SheetClose>
+                </Link>
               </div>
             </div>
           </div>
