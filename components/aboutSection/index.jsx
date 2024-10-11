@@ -1,3 +1,6 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import React from "react";
 import Image from "next/image";
 
@@ -7,6 +10,12 @@ import { AboutUsImg } from "@/public";
 import { strings, aboutInfo } from "@/utils";
 
 const AboutSection = ({ btnLabel, title, description }) => {
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push("/contact");
+  };
+
   return (
     <div className="bg-color-2 py-[80px] lg:px-[137px]">
       <div className="flex flex-col px-[16px] sm:justify-center md:flex-row md:items-start">
@@ -30,7 +39,7 @@ const AboutSection = ({ btnLabel, title, description }) => {
 
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[24px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
-              <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
+              <Button onClick={handleNavigation} variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
                 {strings["learnMore"]}
               </Button>
             </div>
@@ -44,11 +53,11 @@ const AboutSection = ({ btnLabel, title, description }) => {
       </div>
 
       {/* Cards Section */}
-      <div className="mb-[80px] mt-[36px] flex flex-wrap items-center justify-center gap-6 xl:mx-[0px]">
+      <div className="mx-[15px] mb-[80px] mt-[36px] grid grid-cols-1 gap-[24px] md:grid-cols-2 xl:grid-cols-4">
         {aboutInfo.map((item, index) => (
-          <div key={index} className="h-[129px] w-[276px] rounded-[12px] border border-border bg-border pl-[27px] pt-[26px]">
+          <div key={index} className="rounded-[12px] border border-border bg-border py-[26px] pl-[27px] shadow-sm">
             <h2 className="mb-2 text-3xl font-bold text-gray-900">{item.noService}</h2>
-            <p className={`font-medium text-gray-500`}>{item.title}</p>
+            <p className="font-medium text-gray-500">{item.title}</p>
           </div>
         ))}
       </div>

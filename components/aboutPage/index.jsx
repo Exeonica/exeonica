@@ -7,7 +7,7 @@ import { strings, images } from "@/utils";
 
 const Awards = () => {
   return (
-    <div className="flex flex-1 flex-col bg-border sm:justify-center md:flex-row">
+    <div className="flex flex-1 flex-col bg-border sm:justify-center md:flex-row 2xl:mx-[125px]">
       {/* Left Section */}
       <div className="flex flex-1 flex-col items-center py-[80px] md:justify-center">
         <div className="flex flex-col items-center justify-center">

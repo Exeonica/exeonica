@@ -1,3 +1,6 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import React from "react";
 import Image from "next/image";
 
@@ -7,11 +10,17 @@ import { DashboardCard } from "@/public";
 import { strings } from "@/utils";
 
 const RevenueSection = () => {
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push("/contact");
+  };
+
   return (
-    <div className="my-[80px] px-[16px] md:mx-[60px] lg:mx-[110px]">
+    <div className="my-[80px] px-[16px] md:mx-[60px] lg:my-[70px]">
       <div className="flex flex-col rounded-3xl bg-primary md:flex-row md:py-[0px]">
         {/* Left section with image */}
-        <div className="flex justify-center px-[11.5px] pt-[70px] lg:ml-[81.85px] lg:mt-0 lg:w-2/5 lg:justify-start lg:py-[70px]">
+        <div className="flex justify-center px-[11.5px] pt-[70px] lg:ml-[81.85px] lg:mt-0 lg:w-2/5 lg:justify-start">
           <Image src={DashboardCard} alt="Dashboard illustration" className="object-contain sm:h-[319px] sm:w-[320px] lg:h-[319.11px] lg:w-[446.31px]" />
         </div>
 
@@ -22,7 +31,7 @@ const RevenueSection = () => {
           <p className="mb-6 text-base font-normal text-white md:text-[16px] md:leading-[24px]">{strings["partnerDescription"]}</p>
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[24px] flex flex-col pb-[70px] md:items-start md:justify-start md:px-0">
-              <Button variant="outline" classes="w-full mb-3 rounded-[8px] font-normal border-white px-[24px] py-[12px] text-[16px] text-white ">
+              <Button variant="outline" onClick={handleNavigation} classes="w-full mb-3 rounded-[8px] font-normal border-white px-[24px] py-[12px] text-[16px] text-white ">
                 {strings["getStarted"]}
               </Button>
             </div>
