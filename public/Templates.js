@@ -40,11 +40,11 @@ export const applicationTemp = `<!DOCTYPE html>
        <h1>Job Application Submission</h1>
     <p>Name: {{name}}</p>
     <p>Email: {{email}}</p>
-    <p>WhatsApp Number: {{whatsappNo}}</p>
-    <p>Total Experience: {{totalExp}} years</p>
+    <p>WhatsApp Number: {{whatsappNumber}}</p>
+    <p>Total Experience: {{totalExperience}} years</p>
     <p>Last Degree: {{lastDegree}}</p>
-    <p>Last Degree Completion Year: {{degreeCompletionYear}}</p>
-    <p>CGPA: {{gpa}}</p>
+    <p>Last Degree Completion Year: {{lastDegreeCompletionYear}}</p>
+    <p>CGPA: {{cgpa}}</p>
     <p>Cover Letter: {{coverLetter}}</p>
     
 </body>

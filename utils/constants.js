@@ -82,6 +82,25 @@ export const cardData = [
   },
 ];
 
+export const testimonialData = [
+  {
+    title: "What they says",
+    description:
+      "I hired Ahsan to help develop a mobile and web app in the health and wellness space. We had a large codebase and quite a lot of legacy code for Ahsan to familiarize himself with. Ahsan was incredibly quick to not only master the code, but also make suggestions for greater efficiencies, fewer packages, and better design, all of which improved our app’s performance and ease of use within the first few months of his hire. Ahsan immediately proved to be a key contributor to the team, not only with his vast knowledge, deep expertise, and reliable work, but also with his clear, kind, and thorough mode of communication. He is a true joy to work with. In short, Ahsan is the ideal team member. He is dedicated, hard working, tackles every challenge and task with friendly and effective gusto, and still has the bandwidth to troubleshoot, problem solve, and improve on aspects of our app that we haven’t even noted. I highly recommend him for any project and any team, big or small. His contributions are invaluable. Thank you, Ahsan!",
+    imageSrc: OnlineReview,
+    developerName: "Brooklyn Simmons",
+    developerTitle: "Webflow Developer",
+  },
+  {
+    title: "Our Thougts",
+    description:
+      "I brought Ahmad on board to help develop a mobile and web app in the health and wellness space, which involved a large, complex codebase with quite a bit of legacy code. Ahmad was quick to not only get up to speed but also make valuable recommendations for improving the app’s performance by reducing dependencies, optimizing code efficiency, and refining the overall design. In just a few months, his contributions had a significant impact. Ahmad quickly established himself as a key player on the team, combining his vast technical expertise with an outstanding work ethic. His communication was always clear, thoughtful, and thorough, making him an absolute pleasure to collaborate with. Ahmad approaches every task with enthusiasm and care, proactively solving issues and enhancing aspects of the app we hadn’t even considered. His dedication and ability to tackle challenges head-on make him an essential asset to any team. I highly recommend Ahmad for any project—his work speaks for itself, and his contributions are invaluable. Thank you, Ahmad!I hired Ahmad to assist in developing a mobile and web app in the health and wellness space. We had a substantial codebase with many legacy components, and Ahmad was impressively fast in not only mastering the code but also offering suggestions that enhanced efficiency, reduced dependencies, and improved the app's overall design. Within a few months of his hire, Ahmad's contributions led to noticeable improvements in performance and user experience. Ahmad quickly became a key member of the team, leveraging his deep expertise, wide knowledge base, and reliable work ethic. His communication was always clear, considerate, and detailed, making collaboration smooth and enjoyable. Ahmad tackles every challenge with enthusiasm and precision, while consistently finding time to troubleshoot, problem-solve, and refine areas of the app that we hadn’t even identified. His dedication, hard work, and insightful contributions make him an invaluable asset to any team or project. I highly recommend Ahmad for any role, large or small—his impact is truly remarkable. Thank you, Ahmad!",
+    imageSrc: OnlineReview,
+    developerName: "Muhammad Ahmad",
+    developerTitle: "React Developer",
+  },
+];
+
 export const services = [
   {
     icon: ACD,

@@ -1,16 +1,16 @@
 "use client";
+
 import React from "react";
 
 import { strings } from "@/utils";
 
-export default function TextInput({ placeholder, disabled, classes = "", label, labelclass = "" }) {
-  let baseClassName = "w-full rounded-sm border border-color-1 bg-transparent pl-[24px] py-2 focus:outline-none";
-  let disabledClassName = disabled ? "!bg-gray-50 !text-gray-500 cursor-not-allowed" : "";
-
+const TextInput = ({ label, placeHolder, handleChange, type = "text", inputKey = "", value, classes }) => {
   return (
-    <>
-      <label className={`text-base font-medium ${labelclass}`}>{strings[label]}</label>
-      <input placeholder={placeholder} className={`${baseClassName} ${disabledClassName} ${classes}`} />
-    </>
+    <div className="flex flex-col">
+      <label>{strings[label]}</label>
+      <input type={type} value={value} placeholder={placeHolder} className={`w-full rounded-[10px] border border-color-1 p-4 ${classes}`} onChange={(e) => handleChange(inputKey, e.target.value)} />
+    </div>
   );
-}
+};
+
+export default TextInput;

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import Button from "../button";
 
-import { Location, Search } from "@/public";
-import { buttonLabels, jobs } from "@/utils";
+import { Location } from "@/public";
+import { jobs } from "@/utils";
 
 const CareerCards = () => {
   return (
