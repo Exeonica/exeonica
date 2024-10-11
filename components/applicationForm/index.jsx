@@ -5,7 +5,7 @@ import { strings } from "@/utils";
 
 const placeholders = ["Name", "Email", "Whatspp Number", "Total Experience", "Last Degree", "Last Degree Completion year", "CGPA", "Cover Letter (optional)"];
 
-const Form = () => {
+const ApplicationForm = ({ onClose }) => {
   return (
     <div className="relative z-10 flex items-center justify-center" aria-labelledby="modal-title" role="dialog" aria-modal="true">
       <div className="fixed inset-0 bg-color-6 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
@@ -33,6 +33,9 @@ const Form = () => {
               <Button variant="default" classes="w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white ">
                 {strings["apply"]}
               </Button>
+              <button type="button" onClick={onClose}>
+                Close
+              </button>
             </div>
           </div>
         </div>
@@ -41,4 +44,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ApplicationForm;

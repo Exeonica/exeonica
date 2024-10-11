@@ -14,6 +14,6 @@ export { default as TextInput } from "./textInput";
 export { default as Button } from "./button";
 export { default as ContactUsMap } from "./contactUs";
 export { default as BlogPosts } from "./blogs";
-export { default as Form } from "./form";
+export { default as ApplicationForm } from "./applicationForm";
 export { default as PortfolioData } from "./portfolio";
 export { default as Carousal } from "./carousel";
