@@ -6,11 +6,11 @@ import { BlogPost } from "@/public";
 
 const BlogPosts = ({ cardsData }) => {
   return (
-    <div className="min-h-screen bg-gray-100 p-4 pt-[100px]">
+    <div className="p-4 pt-[100px]">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {cardsData.map((card) => (
           <Link key={card.id} href={`blogs/${card.id}`}>
-            <div className="max-w-sm cursor-pointer overflow-hidden rounded bg-white shadow-lg">
+            <div className="cursor-pointer overflow-hidden rounded bg-white shadow-lg">
               {/* Image at the top */}
               <div className="relative h-48">
                 <Image src={card.profileImage} alt={card.title} layout="fill" objectFit="cover" className="rounded-t-lg" />
