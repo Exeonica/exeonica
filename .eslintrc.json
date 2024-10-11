@@ -4,7 +4,7 @@
   "rules": {
     "curly": "error",
     "eqeqeq": "off",
-    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
     "no-debugger": "warn",
     "no-else-return": "error",
     "lines-between-class-members": ["error", "always"],

@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 import Button from "../button";
 import TextInput from "../textInput";
 
-import { ArrowRight } from "@/public";
+import { ArrowRight, contactUs } from "@/public";
 import { sendMail, strings } from "@/utils";
 
 const ContactForm = ({ tableBgColor }) => {
@@ -19,11 +20,19 @@ const ContactForm = ({ tableBgColor }) => {
   };
 
   const handleForm = async () => {
-    setIsLoading(true);
+    if (!formData.email || !formData.name || !formData.message) {
+      toast.error("Please Enter Data");
+
+      return;
+    }
+
     try {
-      await sendMail(formData);
+      setIsLoading(true);
+      toast.info("Sending Mail");
+      await sendMail(formData, contactUs);
+      toast.success("Mail Sent Successfully");
     } catch (error) {
-      console.error("Failed to send email", error);
+      toast.error(error.message);
     } finally {
       setIsLoading(false);
     }

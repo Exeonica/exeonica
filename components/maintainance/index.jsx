@@ -10,7 +10,7 @@ const Maintainance = () => {
     <div>
       <div className="mx-[16px] mt-[40px] md:mt-[81px] xl:mx-[320px]">
         <div className="flex flex-1 items-center justify-center">
-          <Image src={Maintanance} className="flex-1 justify-center object-contain sm:h-[343px] sm:w-[343px] lg:h-[800px] lg:w-[800px]" alt="maintainance" />
+          <Image src={Maintanance} className="flex-1 justify-center object-contain sm:h-[343px] sm:w-[343px] lg:h-[500px] lg:w-[500px]" alt="maintainance" />
         </div>
         <div>
           <h2 className="text-center text-[36px] font-semibold leading-[53.64px] text-text lg:text-[60px] lg:leading-[80px]">{strings["maintainance"]}</h2>

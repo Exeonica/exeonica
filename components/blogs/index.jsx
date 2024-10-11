@@ -16,36 +16,36 @@ const BlogPosts = () => {
     },
     {
       id: 2,
-      imageSrc: "/path/to/image2.jpg", // Replace with your image path
+      imageSrc: BlogPost,
       title: "Card Title 2",
       description: "This is a brief description for card 2.",
-      userImage: "/path/to/user2.jpg", // Replace with user image path
+      userImage: BlogPost,
       userName: "Jane Smith",
       time: "1 hour ago",
     },
     {
       id: 3,
-      imageSrc: "/path/to/image3.jpg", // Replace with your image path
+      imageSrc: BlogPost,
       title: "Card Title 3",
       description: "This is a brief description for card 3.",
-      userImage: "/path/to/user3.jpg", // Replace with user image path
+      userImage: BlogPost,
       userName: "Alice Brown",
       time: "5 hours ago",
     },
     {
       id: 4,
-      imageSrc: "/path/to/image4.jpg", // Replace with your image path
+      imageSrc: BlogPost,
       title: "Card Title 4",
       description: "This is a brief description for card 4.",
-      userImage: "/path/to/user4.jpg", // Replace with user image path
+      userImage: BlogPost,
       userName: "Bob Johnson",
       time: "3 hours ago",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="min-h-screen bg-gray-100 p-4 pt-[100px]">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {cardsData.map((card) => (
           <div key={card.id} className="max-w-sm overflow-hidden rounded bg-white shadow-lg">
             {/* Image at the top */}

@@ -1,15 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../button";
 
 import { Location, Search } from "@/public";
 import { buttonLabels, jobs } from "@/utils";
 
-const page = () => {
+const CareerCards = () => {
   return (
     <div>
-      <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px]">
+      <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px] 2xl:mx-0">
         {/* Search Bar */}
         <div className="mt-4 flex">
           <div className="relative flex w-full">
@@ -57,9 +58,11 @@ const page = () => {
                   <Image src={Location} alt="icon" className="mr-[4px] h-[20px] w-[20px]" />
                   <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.location}</span>
                 </div>
-                <Button variant={"default"} className="gap-2 rounded-md bg-primary p-[16px] text-white">
-                  {job.applyText}
-                </Button>
+                <div>
+                  <Button variant={"default"} className="rounded-md bg-primary p-[14px] text-white">
+                    <Link href={`/careers/${job.id}`}>{job.applyText}</Link>
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
@@ -69,4 +72,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CareerCards;

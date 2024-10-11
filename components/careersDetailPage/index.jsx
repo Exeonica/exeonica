@@ -1,9 +1,20 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 import { jobDetails, strings, jobInfo } from "@/utils";
-import Button from "@/components/button";
+import { Button, ApplicationForm } from "@/components/index";
 
-const page = () => {
+const CareerDetails = () => {
+  const [isFormVisible, setFormVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setFormVisible(true);
+  };
+
+  const handleCloseForm = () => {
+    setFormVisible(false);
+  };
+
   return (
     <div className="mx-[16px] mt-[80px] px-4 py-8 lg:mx-[225px] lg:mt-[141px]">
       <div className="mb-[80px] flex flex-col-reverse md:flex-row lg:gap-[24px]">
@@ -54,10 +65,12 @@ const page = () => {
         </div>
       </div>
 
+      {isFormVisible && <ApplicationForm onClose={handleCloseForm} />}
+
       {/* Button Container */}
       <div className="mb-[80px] mt-[60px] flex items-center justify-center lg:mb-[61px] lg:mt-[29px]">
         <div className="flex flex-col md:items-start md:justify-start md:px-0">
-          <Button variant="default" classes="w-full mb-3 rounded-[8px] font-normal border-white px-[64px] py-[12px] text-[16px] text-white ">
+          <Button variant="default" onClick={handleButtonClick} classes="w-full mb-3 rounded-[8px] font-normal border-white px-[64px] py-[12px] text-[16px] text-white ">
             {strings["intrested"]}
           </Button>
         </div>
@@ -66,4 +79,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CareerDetails;
