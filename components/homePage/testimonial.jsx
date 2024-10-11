@@ -1,3 +1,5 @@
+import Button from "../button";
+
 import { strings } from "@/utils";
 import { Quotes, UserImage, LeftArrow, RightArrow } from "@/public";
 
@@ -29,8 +31,12 @@ const Testimonial = () => {
             </div>
           </div>
           <div className="mt-9 flex space-x-[10px] md:mt-0">
-            <RightArrow />
-            <LeftArrow />
+            <Button variant="outlineIcon">
+              <RightArrow />
+            </Button>
+            <Button variant="outlineIcon">
+              <LeftArrow />
+            </Button>
           </div>
         </div>
       </div>

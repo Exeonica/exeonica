@@ -16,6 +16,9 @@ export default function Button({ variant, children, classes = "", ...rest }) {
     case "outlineArrow":
       className = `${className} border border-color-1 text-color-1 hover:border-primary hover:text-primary rounded-lg`;
       break;
+    case "outlineIcon":
+      className = `${className} border border-border hover:border-primary !p-3 rounded`;
+      break;
     default:
       className = `${className} bg-primary text-white hover:bg-primary/90 rounded-lg`;
   }
