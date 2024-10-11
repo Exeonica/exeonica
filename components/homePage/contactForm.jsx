@@ -41,23 +41,27 @@ const ContactForm = ({ tableBgColor }) => {
   return (
     <div className={`rounded-lg border border-border p-10 bg-${tableBgColor}`}>
       <TextInput
+        labelclass="text-lg font-medium"
+        classes="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4 bg-white"
+        type={"text"}
         label="nameInput"
+        inputKey={"name"}
         placeholder="Ex. Jhon Alex"
-        classes="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4 bg-white"
-        labelclass="text-lg font-medium"
-        onChange={(e) => handleChange("name", e.target.value)}
         value={formData.name}
-        disabled={isLoading}
+        handleChange={handleChange}
       />
+
       <TextInput
-        label="emailInput"
-        placeholder="Ex. jhon@gmail.com"
-        classes="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4 bg-white"
         labelclass="text-lg font-medium"
-        onChange={(e) => handleChange("email", e.target.value)}
+        classes="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4 bg-white"
+        type={"email"}
+        label="emailInput"
+        inputKey={"email"}
+        placeholder="Ex. jhon@gmail.com"
         value={formData.email}
-        disabled={isLoading}
+        handleChange={handleChange}
       />
+
       <label className="text-lg font-medium">{strings["messageInput"]}</label>
       <textarea
         value={formData.message}
