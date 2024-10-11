@@ -11,7 +11,9 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between bg-white px-[27px] py-[15px] md:py-6 lg:px-[110px]">
       <div className="flex w-full items-center justify-between align-middle">
-        <Logo />
+        <Link href={"./"} className="cusor-pointer">
+          <Logo />
+        </Link>
         <div className="md:hidden">
           <NavMenu />
         </div>
@@ -27,8 +29,10 @@ const Navbar = () => {
         </div>
 
         <div className="ml-10 flex gap-[10px] md:hidden xl:flex">
-          <Button variant={"outline"}>{strings["calculateCost"]}</Button>
-          <Button variant={"default"}>{strings["getInTouch"]}</Button>
+          {/* <Button variant={"outline"}>{strings["calculateCost"]}</Button> */}
+          <Link href="./contact">
+            <Button variant={"default"}>{strings["getInTouch"]}</Button>
+          </Link>
         </div>
       </div>
     </nav>
