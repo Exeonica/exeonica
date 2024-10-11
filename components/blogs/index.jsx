@@ -30,7 +30,7 @@ const BlogPosts = ({ cardsData }) => {
               </div>
               <div>
                 <p className="font-bold">{card.profileName}</p>
-                <p className="text-sm text-gray-600">{"new Date(card.createdAt).getDate()"}</p>
+                <p className="text-sm text-gray-600">{"12 Nov 2021"}</p>
               </div>
             </div>
           </div>
