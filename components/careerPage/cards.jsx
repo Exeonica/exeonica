@@ -57,9 +57,11 @@ const page = () => {
                   <Image src={Location} alt="icon" className="mr-[4px] h-[20px] w-[20px]" />
                   <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.location}</span>
                 </div>
-                <Button variant={"default"} className="gap-2 rounded-md bg-primary p-[16px] text-white">
-                  {job.applyText}
-                </Button>
+                <div>
+                  <Button variant={"default"} className="rounded-md bg-primary p-[14px] text-white">
+                    {job.applyText}
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
