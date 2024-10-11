@@ -6,18 +6,18 @@ import { Button, Carousal } from "@/components/index";
 
 const Index = () => {
   return (
-    <div className="my-[60px] px-6 lg:px-[124px] lg:py-[67px]">
-      <div className="flex flex-1 flex-col lg:items-start lg:gap-[100px]">
+    <div className="my-[60px] px-6 lg:px-[124px] lg:py-[67px] xl:px-[110px]">
+      <div className="flex flex-1 flex-col lg:items-start">
         {portfolioData.map((portfolioItem, index) => (
-          <div key={index} className={`flex flex-col lg:flex-row ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} mb-12 w-full lg:mb-0 lg:space-x-8`}>
+          <div key={index} className={`flex flex-col lg:flex-row ${index % 2 === 0 ? "gap-[100px] lg:flex-row" : "gap-[100px] lg:flex-row-reverse"} mb-[60px] w-full`}>
             {/* Left Section - App Screens */}
-            <div className="flex flex-1 justify-center">
+            <div className="flex flex-1">
               <Carousal portfolioItem={portfolioItem} index={index} />
             </div>
 
             {/* Right Section - Project Details */}
-            <div className="flex flex-1">
-              <div className="mt-12 lg:mt-0 lg:flex-1 lg:pl-12 lg:text-left">
+            <div className="flex flex-1 flex-col items-start justify-start">
+              <div className="mt-12 lg:mt-0 lg:flex-1 lg:text-left">
                 <h1 className="mb-[24px] bg-gradient-to-t from-color-7 to-color-8 bg-clip-text text-5xl font-bold text-transparent">{portfolioItem.title}</h1>
 
                 <div className="mt-4 flex flex-wrap gap-[4px] lg:justify-start">

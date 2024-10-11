@@ -9,7 +9,7 @@ import { buttonLabels, jobs } from "@/utils";
 const page = () => {
   return (
     <div>
-      <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px]">
+      <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px] 2xl:mx-0">
         {/* Search Bar */}
         <div className="mt-4 flex">
           <div className="relative flex w-full">
