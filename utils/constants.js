@@ -23,9 +23,9 @@ import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsB
 export const navLinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
-  { name: "Portfolio", path: "/portfolio" },
+  // { name: "Portfolio", path: "/portfolio" },
   { name: "About Us", path: "/about" },
-  { name: "Blogs", path: "/blogs" },
+  // { name: "Blogs", path: "/blogs" },
   { name: "Careers", path: "/careers" },
 ];
 

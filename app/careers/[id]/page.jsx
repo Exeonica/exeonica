@@ -18,7 +18,7 @@ export default function CareerDetails({ params }) {
 
   return (
     <div>
-      <ComHeader title="designer" showButton={true} />
+      <ComHeader title={job.title} showButton={true} />
       <CareersDetailPage />
       <Footer />
     </div>
