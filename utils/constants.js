@@ -36,9 +36,9 @@ export const socialLinks = [
 ];
 
 export const others = [
-  { label: "Privacy Policy", path: "/" },
-  { label: "Where to Find Us?", path: "/services" },
-  { label: "Conditions Policy", path: "/portfolio" },
+  { label: "Privacy Policy", path: "/privacyPolicy" },
+  { label: "Where to Find Us?", path: "/contact" },
+  { label: "Term & Conditions", path: "/termAndConditions" },
 ];
 export const aboutInfo = [
   { title: "Total employees", noService: "10" },

@@ -17,3 +17,5 @@ export { default as BlogPosts } from "./blogs";
 export { default as ApplicationForm } from "./applicationForm";
 export { default as PortfolioData } from "./portfolio";
 export { default as Carousal } from "./carousel";
+export { default as TermAndConditions } from "./termAndConditions";
+export { default as Policy } from "./privacyPolicy";
