@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 import Button from "../button";
 
@@ -17,7 +18,20 @@ const ContactForm = () => {
   };
 
   const handleForm = async () => {
-    sendMail(formData, contactUs);
+    if (!formData.email || !formData.name || !formData.message) {
+      toast.error("Please Enter Data");
+
+      return;
+    }
+
+    try {
+      toast.info("Sending Mail");
+
+      await sendMail(formData, contactUs);
+      toast.success("Mail Sent Successfully");
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (
