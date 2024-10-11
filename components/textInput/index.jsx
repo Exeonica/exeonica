@@ -3,7 +3,7 @@ import React from "react";
 
 import { strings } from "@/utils";
 
-export default function TextInput({ placeholder, classes = "", label, labelclass = "", type = "text", value = "", handleChange = () => {}, inputKey = "" }) {
+export default function TextInput({ placeholder, classes = "", label, labelclass = "", textarea, type = "text", value = "", handleChange = () => {}, inputKey = "" }) {
   let className = "w-full rounded-md border border-color-1 bg-transparent pl-[24px] py-[15px] text-[18px] text-color-1 font-normal";
 
   return (
@@ -15,6 +15,7 @@ export default function TextInput({ placeholder, classes = "", label, labelclass
         placeholder={placeholder}
         className={` ${className} ${placeholder === "Cover Letter (optional)" ? "h-[112px] text-start" : ""} ${classes} border`}
         onChange={(e) => handleChange(inputKey, e.target.value)}
+        numberOfLines={4}
       />
     </>
   );
