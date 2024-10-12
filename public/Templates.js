@@ -37,7 +37,7 @@ export const applicationTemp = `<!DOCTYPE html>
 </head>
 <body>
    
-       <h1>Job Application Submission</h1>
+    <h1>Job Application Submission - {{ title }}</h1>
     <p>Name: {{name}}</p>
     <p>Email: {{email}}</p>
     <p>WhatsApp Number: {{whatsappNumber}}</p>
