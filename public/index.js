@@ -31,8 +31,14 @@ import Map from "./Images/map.webp";
 import MobMap from "./Images/mobMap.webp";
 import Marker from "./Images/marker.webp";
 import Cursor from "./Images/cursor.webp";
+import Phillip from "./Images/Phillip.jpg";
+import Kiersten from "./Images/Kiersten.jpeg";
+import Fazle from "./Images/Fazle.jpg";
 
 export {
+  Phillip,
+  Kiersten,
+  Fazle,
   BlogPost,
   Avatar,
   Location,

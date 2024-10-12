@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/index";
 import { strings } from "@/utils";
-import { PKFlag, PhoneIcon, Marker, Cursor } from "@/public";
+import { PKFlag, PhoneIcon, Marker } from "@/public";
 
 const locations = [
   {
