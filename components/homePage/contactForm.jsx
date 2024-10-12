@@ -49,6 +49,7 @@ const ContactForm = ({ tableBgColor }) => {
         placeholder="Ex. Jhon Alex"
         value={formData.name}
         handleChange={handleChange}
+        loading={isLoading}
       />
 
       <TextInput
@@ -60,15 +61,18 @@ const ContactForm = ({ tableBgColor }) => {
         placeholder="Ex. jhon@gmail.com"
         value={formData.email}
         handleChange={handleChange}
+        loading={isLoading}
       />
-
-      <label className="text-lg font-medium">{strings["messageInput"]}</label>
-      <textarea
-        value={formData.message}
-        onChange={(e) => handleChange("message", e.target.value)}
+      <TextInput
+        labelclass="text-lg font-medium"
+        classes="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4 bg-white"
+        label="messageInput"
         placeholder="What can we help you with?"
-        className={`mt-[20px] w-full resize-none rounded-[10px] border border-color-1 p-4 ${isLoading ? "cursor-not-allowed" : ""}`}
-        disabled={isLoading}
+        handleChange={handleChange}
+        value={formData.message}
+        rows={2}
+        inputKey="message"
+        loading={isLoading}
       />
       <div className="mt-[20px] flex justify-start space-x-2">
         <label className="flex justify-center text-base font-normal">
@@ -79,20 +83,11 @@ const ContactForm = ({ tableBgColor }) => {
       <Button
         onClick={handleForm}
         variant="outlineArrow"
-        classes={`mt-[20px] bg-primary border-primary text-lg text-white hover:bg-primary/90 hover:text-white rounded-md gap-[5px] ${isLoading ? "cursor-not-allowed" : ""}`}
-        disabled={isLoading}
+        classes={`mt-[20px] bg-primary border-primary text-lg text-white hover:bg-primary/90 hover:text-white rounded-md gap-[5px]`}
+        loading={isLoading}
       >
-        {isLoading ? (
-          <div className="flex items-center justify-center">
-            <div className="mr-2"></div>
-            Loading...
-          </div>
-        ) : (
-          <>
-            {strings["contactBtn"]}
-            <ArrowRight />
-          </>
-        )}
+        {strings["contactBtn"]}
+        <ArrowRight />
       </Button>
     </div>
   );
