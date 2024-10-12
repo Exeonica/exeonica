@@ -34,7 +34,7 @@ const NavMenu = () => {
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col items-center justify-between pt-[48px]">
+              <div className="flex flex-col pt-[48px]">
                 {/* <SheetClose>
                   <Button variant="outline" classes="!w-full mb-3 items-center justify-center">
                     {strings["calculateCost"]}
