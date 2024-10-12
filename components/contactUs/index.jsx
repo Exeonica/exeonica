@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/index";
 import { strings } from "@/utils";
-import { PKFlag, PhoneIcon, Marker } from "@/public";
+import { PKFlag, PhoneIcon, Marker, Cursor } from "@/public";
 
 const locations = [
   {
@@ -53,7 +53,7 @@ const LocationCard = ({ location }) => (
 const Location = () => {
   return (
     <div>
-      <div className="flex flex-1 flex-col items-center justify-center lg:my-[64px]">
+      <div className="my-[64px] flex flex-1 flex-col items-center justify-center">
         <Button variant={"outlineRounded"} classes="text-xs md:text-base md:font-normal">
           {strings["locations"]}
         </Button>
@@ -64,9 +64,9 @@ const Location = () => {
       </div>
 
       <div className="relative">
-        <div className="mapBg relative flex h-screen w-full flex-col items-center justify-center bg-cover bg-center">
-          <Image src={Marker} alt="icon" className="absolute bottom-[38%] left-[70%] z-20 h-[50px] w-[50px] sm:left-[57%] md:left-[55%]" />
-          <div className="absolute bottom-[42%] z-20 flex max-h-[100%] w-full flex-col items-center gap-4 overflow-y-auto bg-white bg-opacity-0 p-4">
+        <div className="mapBg relative flex h-[500px] w-full flex-col items-center justify-center bg-cover bg-center">
+          <Image src={Marker} alt="icon" className="absolute bottom-[35%] left-[68%] z-20 h-[50px] w-[50px] sm:left-[53%] md:left-[51.5%]" />
+          <div className="absolute bottom-[40%] z-20 flex max-h-[100%] w-full flex-col items-center gap-4 overflow-y-auto bg-white bg-opacity-0 p-4">
             {locations.map((location, index) => (
               <LocationCard key={index} location={location} />
             ))}

@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 .headerBg {
   background-image: url("../public/Images/headerMobBg.webp");
   background-size: cover;
@@ -24,6 +19,7 @@
   background-size: cover;
   background-position: center;
   width: 100%;
+  background-repeat: no-repeat;
 }
 @media (min-width: 700px) {
   .mapBg {

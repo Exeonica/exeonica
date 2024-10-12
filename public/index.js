@@ -30,6 +30,7 @@ import UKFlag from "./Images/ukFlag.webp";
 import Map from "./Images/map.webp";
 import MobMap from "./Images/mobMap.webp";
 import Marker from "./Images/marker.webp";
+import Cursor from "./Images/cursor.webp";
 
 export {
   BlogPost,
@@ -64,6 +65,7 @@ export {
   Map,
   MobMap,
   Marker,
+  Cursor,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";
