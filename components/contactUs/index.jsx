@@ -34,11 +34,13 @@ const LocationCard = ({ location }) => (
       <p className="mt-[8px] text-center text-[12px] font-normal leading-[17.82px] text-color-1">{location.address}</p>
     </div>
 
-    <div className="flex flex-1 flex-row">
-      <PhoneIcon />
-      <div className="flex flex-col pl-[8px]">
-        <p className="text-[12px] font-medium leading-[17.82px] text-text">Contact us: </p>
-        <p className="mr-[16px] text-[12px] font-normal leading-[17.82px] text-color-6">{location.contact}</p>
+    <div className="flex flex-1 flex-row justify-between">
+      <div className="flex flex-row">
+        <PhoneIcon />
+        <div className="flex flex-col pl-[8px]">
+          <p className="text-[12px] font-medium leading-[17.82px] text-text">Contact us: </p>
+          <p className="mr-[16px] text-[12px] font-normal leading-[17.82px] text-color-6">{location.contact}</p>
+        </div>
       </div>
 
       <Button variant={"default"} classes="text-xs md:text-base md:font-normal">
