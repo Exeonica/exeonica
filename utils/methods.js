@@ -1,8 +1,9 @@
 "use server";
 import Handlebars from "handlebars";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 
-import { db, transporter, mailOptions } from "@/services";
+import { db, transporter, mailOptions, storage } from "@/services";
 
 export const sendMail = async (templateData, temp) => {
   const template = Handlebars.compile(temp);
@@ -41,9 +42,23 @@ export const getAllCareers = async () => {
   return careersList;
 };
 
-export const getCareers = async (careersId) => {
+export const getCareer = async (careersId) => {
   const careersCollection = doc(db, "careers", careersId);
   const careersSnapshot = await getDoc(careersCollection);
 
   return careersSnapshot.data();
+};
+
+export const uploadCV = async (file) => {
+  const storageRef = ref(storage, `cvs/${file.name}`);
+
+  uploadBytes(storageRef, file)
+    .then(() => {
+      const downloadURL = getDownloadURL(storageRef);
+
+      return downloadURL;
+    })
+    .catch((error) => {
+      console.error("Error uploading file", error);
+    });
 };

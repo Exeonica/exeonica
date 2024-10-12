@@ -2,7 +2,7 @@
 
 import { strings } from "@/utils";
 
-const TextInput = ({ label, placeholder, handleChange, type = "text", inputKey = "", value, classes = "", labelclass = "", loading = false, rows }) => {
+const TextInput = ({ label, placeholder, handleChange = () => {}, type = "text", inputKey = "", value, classes = "", labelclass = "", loading = false, rows }) => {
   return (
     <div className="flex flex-col">
       <label className={labelclass}>{strings[label]}</label>

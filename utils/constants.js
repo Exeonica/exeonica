@@ -15,6 +15,9 @@ import {
   LaunchCardIcon2,
   LaunchCardIcon3,
   LaunchCardIcon4,
+  Phillip,
+  Kiersten,
+  Fazle,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
 import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
@@ -35,8 +38,8 @@ export const socialLinks = [
 
 export const others = [
   { label: "Privacy Policy", path: "/privacyPolicy" },
-  { label: "Where to Find Us?", path: "/contact" },
   { label: "Term & Conditions", path: "/termAndConditions" },
+  { label: "Where to Find Us?", path: "/contact" },
 ];
 export const aboutInfo = [
   { title: "Total employees", noService: "10" },
@@ -82,20 +85,25 @@ export const cardData = [
 
 export const testimonialData = [
   {
-    title: "What they says",
     description:
-      "I hired Ahsan to help develop a mobile and web app in the health and wellness space. We had a large codebase and quite a lot of legacy code for Ahsan to familiarize himself with. Ahsan was incredibly quick to not only master the code, but also make suggestions for greater efficiencies, fewer packages, and better design, all of which improved our app’s performance and ease of use within the first few months of his hire. Ahsan immediately proved to be a key contributor to the team, not only with his vast knowledge, deep expertise, and reliable work, but also with his clear, kind, and thorough mode of communication. He is a true joy to work with. In short, Ahsan is the ideal team member. He is dedicated, hard working, tackles every challenge and task with friendly and effective gusto, and still has the bandwidth to troubleshoot, problem solve, and improve on aspects of our app that we haven’t even noted. I highly recommend him for any project and any team, big or small. His contributions are invaluable. Thank you, Ahsan!",
-    imageSrc: OnlineReview,
-    developerName: "Brooklyn Simmons",
-    developerTitle: "Webflow Developer",
+      "I worked with the Exeonic team to help develop a mobile and web app in the health and wellness space. We had a large codebase and quite a lot of legacy code for Ahsan to familiarize himself with. Ahsan was incredibly quick to not only master the code, but also make suggestions for greater efficiencies, fewer packages, and better design, all of which improved our app’s performance and ease of use within the first few months of his hire. Exeonic's immediately proved to be a key contributor to our team, not only with his vast knowledge, deep expertise, and reliable work, but also with his clear, kind, and thorough mode of communication. I highly recommend a team for any project and any team, big or small.  Thank you! ",
+    imageSrc: Kiersten,
+    developerName: "Kiersten Jakobsen",
+    developerTitle: "Founder of Yoga & Fitness",
   },
   {
-    title: "Our Thougts",
     description:
-      "I brought Ahmad on board to help develop a mobile and web app in the health and wellness space, which involved a large, complex codebase with quite a bit of legacy code. Ahmad was quick to not only get up to speed but also make valuable recommendations for improving the app’s performance by reducing dependencies, optimizing code efficiency, and refining the overall design. In just a few months, his contributions had a significant impact. Ahmad quickly established himself as a key player on the team, combining his vast technical expertise with an outstanding work ethic. His communication was always clear, thoughtful, and thorough, making him an absolute pleasure to collaborate with. Ahmad approaches every task with enthusiasm and care, proactively solving issues and enhancing aspects of the app we hadn’t even considered. His dedication and ability to tackle challenges head-on make him an essential asset to any team. I highly recommend Ahmad for any project—his work speaks for itself, and his contributions are invaluable. Thank you, Ahmad!I hired Ahmad to assist in developing a mobile and web app in the health and wellness space. We had a substantial codebase with many legacy components, and Ahmad was impressively fast in not only mastering the code but also offering suggestions that enhanced efficiency, reduced dependencies, and improved the app's overall design. Within a few months of his hire, Ahmad's contributions led to noticeable improvements in performance and user experience. Ahmad quickly became a key member of the team, leveraging his deep expertise, wide knowledge base, and reliable work ethic. His communication was always clear, considerate, and detailed, making collaboration smooth and enjoyable. Ahmad tackles every challenge with enthusiasm and precision, while consistently finding time to troubleshoot, problem-solve, and refine areas of the app that we hadn’t even identified. His dedication, hard work, and insightful contributions make him an invaluable asset to any team or project. I highly recommend Ahmad for any role, large or small—his impact is truly remarkable. Thank you, Ahmad!",
-    imageSrc: OnlineReview,
-    developerName: "Muhammad Ahmad",
-    developerTitle: "React Developer",
+      "I worked with Exeonic on the Simfee project, involving web, mobile, and backend development. They impressed me with his speed and efficiency, delivering a first prototype in just four weeks. His handling of complex integrations, like stripe and crypto payments, was exceptional. With Ahsan's and his team's expertise, we launched on web, Playstore, and Appstore seamlessly. I highly recommend these guys for any development project.",
+    imageSrc: Fazle,
+    developerName: "Muhammad Fazle",
+    developerTitle: "Serial Entrepreneur",
+  },
+  {
+    description:
+      "Exeonic team was patient and was an absolute pleasure to work with. His work is impeccable and I would recommend it to anyone. I look forward to working with him in the near future.",
+    imageSrc: Phillip,
+    developerName: "Phillip Mostert",
+    developerTitle: "Founder of RoadRunner",
   },
 ];
 
@@ -337,48 +345,12 @@ export const images = [
   { src: Award6, alt: "Picture of the author 3", classes: "h-[120px] w-[171.17px]" },
 ];
 
-export const jobDetails = [
-  {
-    title: "Who Are We Looking For",
-    descriptions: [
-      "Passionate and driven individuals",
-      "Experience in software development or related fields",
-      "Excellent problem-solving skills and attention to detail.",
-      "Ability to work in a fast-paced environment.",
-      "Strong communication and teamwork abilities.",
-      "Eagerness to learn and adapt to new technologies.",
-    ],
-  },
-  {
-    title: "What You Will Do",
-    descriptions: [
-      "Collaborate with cross-functional teams to define project requirements",
-      "Write clean, scalable, and maintainable code",
-      "Participate in code reviews and testing.",
-      "Work closely with designers and product managers to create user-friendly applications.",
-      "Troubleshoot and debug software issues.",
-      "Stay up-to-date with industry trends and technologies.",
-    ],
-  },
-  {
-    title: "Required Skills",
-    descriptions: [
-      "Create and enhance mobile applications using React Native",
-      "Solid background in software development.",
-      "Familiarity with RESTful APIs and integration.",
-      "Knowledge of version control systems (Git, GitHub).",
-      "Excellent communication and teamwork skills.",
-      "Strong understanding of UI/UX principles.",
-    ],
-  },
-];
-
 export const jobs = [
   {
     id: 1,
     time: "24 hours ago",
-    title: "React ",
-    tags: ["Remote", "Full-time", "Senior level"],
+    title: "React Developer",
+    tags: ["Full-time"],
     location: "Faisalabad, Pakistan",
     applyText: "Apply Now",
     jobDetails: [
@@ -386,11 +358,34 @@ export const jobs = [
         title: "Who Are We Looking For",
         descriptions: [
           "Passionate and driven individuals",
-          "Experience in software development or related fields",
+          "0.5-1 years of experience in software development or related fields",
           "Excellent problem-solving skills and attention to detail.",
           "Ability to work in a fast-paced environment.",
           "Strong communication and teamwork abilities.",
           "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
         ],
       },
     ],
@@ -398,8 +393,8 @@ export const jobs = [
   {
     id: 2,
     time: "20 hours ago",
-    title: "React Native",
-    tags: ["Remote", "Full-time", "Senior level"],
+    title: "React Native Developer",
+    tags: ["Full-time"],
     location: "Faisalabad, Pakistan",
     applyText: "Apply Now",
     jobDetails: [
@@ -407,11 +402,166 @@ export const jobs = [
         title: "Who Are We Looking For",
         descriptions: [
           "Passionate and driven individuals",
-          "Experience in software development or related fields",
+          "0.5-1 years of experience in software development or related fields",
           "Excellent problem-solving skills and attention to detail.",
           "Ability to work in a fast-paced environment.",
           "Strong communication and teamwork abilities.",
           "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    time: "20 hours ago",
+    title: "React Intern",
+    tags: ["Full-time"],
+    location: "Faisalabad, Pakistan",
+    applyText: "Apply Now",
+    jobDetails: [
+      {
+        title: "Who Are We Looking For",
+        descriptions: [
+          "Passionate and driven individuals",
+          "Knowledge of basic concepts of OOP and DSA",
+          "Excellent problem-solving skills and attention to detail.",
+          "Ability to work in a fast-paced environment.",
+          "Strong communication and teamwork abilities.",
+          "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    time: "25 hours ago",
+    title: "React Native Intern",
+    tags: ["Full-time"],
+    location: "Faisalabad, Pakistan",
+    applyText: "Apply Now",
+    jobDetails: [
+      {
+        title: "Who Are We Looking For",
+        descriptions: [
+          "Passionate and driven individuals",
+          "Knowledge of basic concepts of OOP and DSA",
+          "Excellent problem-solving skills and attention to detail.",
+          "Ability to work in a fast-paced environment.",
+          "Strong communication and teamwork abilities.",
+          "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    time: "20 hours ago",
+    title: "UI/UX Designer Intern",
+    tags: ["Full-time"],
+    location: "Faisalabad, Pakistan",
+    applyText: "Apply Now",
+    jobDetails: [
+      {
+        title: "Who Are We Looking For",
+        descriptions: [
+          "Passionate and driven individuals",
+          "Knowledge of basic concepts of OOP and DSA",
+          "Excellent problem-solving skills and attention to detail.",
+          "Ability to work in a fast-paced environment.",
+          "Strong communication and teamwork abilities.",
+          "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
         ],
       },
     ],
@@ -420,28 +570,17 @@ export const jobs = [
 
 export const jobInfo = [
   { title: "Industry", result: "IT Services" },
-  { title: "Work experience", result: "6+ Years" },
+  { title: "Work experience", result: "0.5+ Years" },
   { title: "Location", result: "Faisalabad, Pakistan" },
   { title: "Role", result: "On-Site" },
 ];
 
 export const frequentlyAskedQuestions = [
-  {
-    question: "What services does Exeonic offer?",
-    answer: ["Exeonic specializes in full-stack development using the MERN stack (MongoDB, Express, React, Node.js) and mobile app development with React Native."],
-  },
-  {
-    question: "How experienced is Exeonic in MERN stack development?",
-    answer: ["Our team at Exeonic has extensive experience in building scalable, robust applications using the MERN stack, delivering optimized solutions for web-based platforms."],
-  },
-  {
-    question: "Can Exeonic develop cross-platform mobile apps?",
-    answer: ["Yes, Exeonic develops cross-platform mobile applications using React Native, ensuring that your app works seamlessly on both Android and iOS devices."],
-  },
-  {
-    question: "How does Exeonic ensure project success?",
-    answer: ["Exeonic leverages agile methodologies, focusing on iterative development and frequent client feedback to ensure projects stay aligned with business goals."],
-  },
+  { question: "How often will we communicate throughout the project?", answer: "We'll maintain regular communication through weekly meetings, as-needed contact, and a project management tool." },
+  { question: "Who will be my primary point of contact?", answer: "A dedicated project manager will be your primary point of contact." },
+  { question: "What kind of post-launch support do you offer?", answer: "We offer ongoing maintenance, bug fixes, and updates." },
+  { question: "How will you handle updates and maintenance?", answer: "We'll work with you on a maintenance plan and prioritize addressing issues promptly." },
+  { question: "What is your policy for bug fixes and technical issues?", answer: "We'll prioritize bug fixes and technical issues to minimize downtime and ensure your software operates reliably." },
 ];
 
 export const launchCards = [

@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 
-import { jobDetails, strings, jobInfo } from "@/utils";
+import { strings, jobInfo } from "@/utils";
 import { Button, ApplicationForm } from "@/components/index";
 
-const CareerDetails = () => {
+const CareerDetails = ({ job }) => {
   const [isFormVisible, setFormVisible] = useState(false);
 
   const handleButtonClick = () => {
@@ -28,7 +28,7 @@ const CareerDetails = () => {
           <div>
             <span className="mb-[24px] text-[28px] font-semibold leading-[41.58px] text-text">{strings["jobDescTitle"]}</span>
 
-            {jobDetails.map((item, index) => (
+            {job.jobDetails.map((item, index) => (
               <div key={index} className="mb-4">
                 <div className="flex items-center">
                   <span className="mr-2 inline-block h-1 w-8 bg-primary"></span>
@@ -65,7 +65,7 @@ const CareerDetails = () => {
         </div>
       </div>
 
-      {isFormVisible && <ApplicationForm onClose={handleCloseForm} />}
+      {isFormVisible && <ApplicationForm title={job.title} onClose={handleCloseForm} />}
 
       {/* Button Container */}
       <div className="mb-[80px] mt-[60px] flex items-center justify-center lg:mb-[61px] lg:mt-[29px]">
