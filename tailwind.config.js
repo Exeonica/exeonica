@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./utils/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
@@ -48,6 +48,17 @@ module.exports = {
         text: {
           DEFAULT: "#1E1E1E",
         },
+        color: {
+          1: "#5D6B7F",
+          2: "#B0E7F11A",
+          3: "#6B7280",
+          4: "#A6AAC3",
+          5: "#102E3C",
+          6: "#3F486A",
+          7: "#6D5DFF",
+          8: "#F453D4",
+          9: "#EEFBFD",
+        },
       },
       borderRadius: {
         lg: "12px",
@@ -55,13 +66,14 @@ module.exports = {
         sm: "4px",
       },
       fontFamily: {
-        pangeaAfrikanTrial: ["var(--font-pangea)"],
+        pangeaAfrikanTrial: ["var(--font-pangeaAfrikanTrial)"],
       },
       screens: {
         sm: "640px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
+        "2xl": "1440px",
       },
     },
   },
