@@ -5,7 +5,6 @@ import {
   LinkedinIcon,
   OnlineReview,
   TeamWork,
-  TwitterIcon,
   Award1,
   Award2,
   Award3,
@@ -23,22 +22,21 @@ import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsB
 export const navLinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
-  { name: "Portfolio", path: "/portfolio" },
+  // { name: "Portfolio", path: "/portfolio" },
   { name: "About Us", path: "/about" },
-  { name: "Blogs", path: "/blogs" },
+  // { name: "Blogs", path: "/blogs" },
   { name: "Careers", path: "/careers" },
 ];
 
 export const socialLinks = [
-  { Icon: FacebookIcon, path: "/" },
-  { Icon: TwitterIcon, path: "/services" },
-  { Icon: LinkedinIcon, path: "/portfolio" },
+  { Icon: FacebookIcon, link: "https://www.facebook.com/exeonicdotcom" },
+  { Icon: LinkedinIcon, link: "https://www.linkedin.com/company/exeonic" },
 ];
 
 export const others = [
-  { label: "Privacy Policy", path: "/" },
-  { label: "Where to Find Us?", path: "/services" },
-  { label: "Conditions Policy", path: "/portfolio" },
+  { label: "Privacy Policy", path: "/privacyPolicy" },
+  { label: "Where to Find Us?", path: "/contact" },
+  { label: "Term & Conditions", path: "/termAndConditions" },
 ];
 export const aboutInfo = [
   { title: "Total employees", noService: "10" },
@@ -365,11 +363,11 @@ export const jobDetails = [
   {
     title: "Required Skills",
     descriptions: [
-      "Proficiency in JavaScript, React, and related technologies.",
-      "Understanding of mobile development frameworks (React Native, Flutter).",
+      "Create and enhance mobile applications using React Native",
+      "Solid background in software development.",
       "Familiarity with RESTful APIs and integration.",
       "Knowledge of version control systems (Git, GitHub).",
-      "Experience with Agile development methodologies.",
+      "Excellent communication and teamwork skills.",
       "Strong understanding of UI/UX principles.",
     ],
   },
@@ -379,7 +377,7 @@ export const jobs = [
   {
     id: 1,
     time: "24 hours ago",
-    title: "UI/UX Designer",
+    title: "React ",
     tags: ["Remote", "Full-time", "Senior level"],
     location: "Faisalabad, Pakistan",
     applyText: "Apply Now",
@@ -393,111 +391,14 @@ export const jobs = [
           "Ability to work in a fast-paced environment.",
           "Strong communication and teamwork abilities.",
           "Eagerness to learn and adapt to new technologies.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-      {
-        title: "Required Skills",
-        descriptions: [
-          "Proficiency in JavaScript, React, and related technologies.",
-          "Understanding of mobile development frameworks (React Native, Flutter).",
-          "Familiarity with RESTful APIs and integration.",
-          "Knowledge of version control systems (Git, GitHub).",
-          "Experience with Agile development methodologies.",
-          "Strong understanding of UI/UX principles.",
         ],
       },
     ],
   },
   {
     id: 2,
-    time: "48 hours ago",
-    title: "Frontend Developer",
-    tags: ["Remote", "Part-time", "Junior level"],
-    location: "Lahore, Pakistan",
-    applyText: "Apply Now",
-    jobDetails: [
-      {
-        title: "Who Are We Looking For",
-        descriptions: [
-          "Passionate and driven individuals",
-          "Experience in software development or related fields",
-          "Excellent problem-solving skills and attention to detail.",
-          "Ability to work in a fast-paced environment.",
-          "Strong communication and teamwork abilities.",
-          "Eagerness to learn and adapt to new technologies.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    time: "72 hours ago",
-    title: "Backend Developer",
-    tags: ["On-site", "Full-time", "Mid level"],
-    location: "Karachi, Pakistan",
-    applyText: "Apply Now",
-    jobDetails: [
-      {
-        title: "Who Are We Looking For",
-        descriptions: [
-          "Passionate and driven individuals",
-          "Experience in software development or related fields",
-          "Excellent problem-solving skills and attention to detail.",
-          "Ability to work in a fast-paced environment.",
-          "Strong communication and teamwork abilities.",
-          "Eagerness to learn and adapt to new technologies.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-      {
-        title: "Required Skills",
-        descriptions: [
-          "Proficiency in JavaScript, React, and related technologies.",
-          "Understanding of mobile development frameworks (React Native, Flutter).",
-          "Familiarity with RESTful APIs and integration.",
-          "Knowledge of version control systems (Git, GitHub).",
-          "Experience with Agile development methodologies.",
-          "Strong understanding of UI/UX principles.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 4,
-    time: "24 hours ago",
-    title: "UI/UX Designer",
+    time: "20 hours ago",
+    title: "React Native",
     tags: ["Remote", "Full-time", "Senior level"],
     location: "Faisalabad, Pakistan",
     applyText: "Apply Now",
@@ -511,81 +412,6 @@ export const jobs = [
           "Ability to work in a fast-paced environment.",
           "Strong communication and teamwork abilities.",
           "Eagerness to learn and adapt to new technologies.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 5,
-    time: "48 hours ago",
-    title: "Frontend Developer",
-    tags: ["Remote", "Part-time", "Junior level"],
-    location: "Lahore, Pakistan",
-    applyText: "Apply Now",
-    jobDetails: [
-      {
-        title: "Who Are We Looking For",
-        descriptions: [
-          "Passionate and driven individuals",
-          "Experience in software development or related fields",
-          "Excellent problem-solving skills and attention to detail.",
-          "Ability to work in a fast-paced environment.",
-          "Strong communication and teamwork abilities.",
-          "Eagerness to learn and adapt to new technologies.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 6,
-    time: "72 hours ago",
-    title: "Backend Developer",
-    tags: ["On-site", "Full-time", "Mid level"],
-    location: "Karachi, Pakistan",
-    applyText: "Apply Now",
-    jobDetails: [
-      {
-        title: "Who Are We Looking For",
-        descriptions: [
-          "Passionate and driven individuals",
-          "Experience in software development or related fields",
-          "Excellent problem-solving skills and attention to detail.",
-          "Ability to work in a fast-paced environment.",
-          "Strong communication and teamwork abilities.",
-          "Eagerness to learn and adapt to new technologies.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
         ],
       },
     ],
@@ -601,20 +427,20 @@ export const jobInfo = [
 
 export const frequentlyAskedQuestions = [
   {
-    question: "Tolor sit amet consectetur. Enim tincidunt orci?",
-    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+    question: "What services does Exeonic offer?",
+    answer: ["Exeonic specializes in full-stack development using the MERN stack (MongoDB, Express, React, Node.js) and mobile app development with React Native."],
   },
   {
-    question: "Eolor sit amet consectetur nim tincidunt orci?",
-    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+    question: "How experienced is Exeonic in MERN stack development?",
+    answer: ["Our team at Exeonic has extensive experience in building scalable, robust applications using the MERN stack, delivering optimized solutions for web-based platforms."],
   },
   {
-    question: "Dmet consectetur nim tincidunt orci?",
-    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+    question: "Can Exeonic develop cross-platform mobile apps?",
+    answer: ["Yes, Exeonic develops cross-platform mobile applications using React Native, ensuring that your app works seamlessly on both Android and iOS devices."],
   },
   {
-    question: "Qamet consectetur enim tincidunt orci?",
-    answer: ["Leverage  agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches."],
+    question: "How does Exeonic ensure project success?",
+    answer: ["Exeonic leverages agile methodologies, focusing on iterative development and frequent client feedback to ensure projects stay aligned with business goals."],
   },
 ];
 

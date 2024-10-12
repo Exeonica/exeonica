@@ -48,9 +48,9 @@ export const strings = {
   contactHeading: "Send a message to get your free quote",
   contactDesc: "Curious about how we can bring your vision to life? Let's discuss your project in detail.",
   email: "Email Us",
-  companyMail: "exeonic@gmail.com",
+  companyMail: "hello@exeonic.com",
   contact: "Contact Us",
-  companyContact: "+92-324-6666537",
+  companyContact: "+92 317 4922289",
   nameInput: "Full Name",
   emailInput: "Email Address",
   messageInput: "Message",
@@ -83,4 +83,6 @@ export const strings = {
   blogsTitle: "Blogs & Articles",
   blogsHeading: "Resources to help you to grow your business",
   blogsBtn: "View more blogs",
+  termsAndConditions: "TERM & CONDITIONS",
+  privacyPolicy: "PRIVACY POLICY",
 };

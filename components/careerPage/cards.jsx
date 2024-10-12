@@ -10,7 +10,7 @@ import { jobs } from "@/utils";
 const CareerCards = () => {
   return (
     <div>
-      <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px] 2xl:mx-0">
+      <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px]">
         {/* Search Bar */}
         {/* <div className="mt-4 flex">
           <div className="relative flex w-full">

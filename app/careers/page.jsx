@@ -2,12 +2,15 @@ import React from "react";
 
 import { ComHeader, Footer } from "@/components/index";
 import { CareersCards } from "@/components/careerPage";
+import { getAllCareers } from "@/utils";
 
-const Careers = () => {
+const Careers = async () => {
+  const careers = await getAllCareers();
+
   return (
     <div>
       <ComHeader title={"joinUs"} />
-      <CareersCards />
+      <CareersCards cardsData={careers} />
       <Footer />
     </div>
   );

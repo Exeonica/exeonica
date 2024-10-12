@@ -101,7 +101,7 @@ const ApplicationForm = ({ onClose }) => {
             {/* Text Input Fields */}
             {inputs.map((v, i) => (
               <div className="pb-5" key={i}>
-                <TextInput type={v.type} inputKey={v.inputKey} placeHolder={v.placeholder} value={formData[v.inputKey]} handleChange={handleChange} />
+                <TextInput type={v.type} inputKey={v.inputKey} placeholder={v.placeholder} value={formData[v.inputKey]} handleChange={handleChange} />
               </div>
             ))}
             {/* Upload CV module */}
