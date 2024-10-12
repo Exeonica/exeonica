@@ -1,9 +1,14 @@
 import React from "react";
+import { notFound } from "next/navigation";
 
 import { getBlog } from "@/utils";
 
 const BlogDetails = async ({ params }) => {
   const blog = await getBlog(params.id);
+
+  if (!blog) {
+    return notFound();
+  }
 
   return (
     <div>

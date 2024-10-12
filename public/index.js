@@ -25,8 +25,14 @@ import personImage from "./Images/userImage.webp";
 import ContactUsImage from "./Images/contactContainer.webp";
 import BlogPost from "./Images/blogpost.webp";
 import Avatar from "./Images/avatar.webp";
+import Phillip from "./Images/Phillip.jpg";
+import Kiersten from "./Images/Kiersten.jpeg";
+import Fazle from "./Images/Fazle.jpg";
 
 export {
+  Phillip,
+  Kiersten,
+  Fazle,
   BlogPost,
   Avatar,
   Location,

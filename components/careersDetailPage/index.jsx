@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { jobDetails, strings, jobInfo } from "@/utils";
 import { Button, ApplicationForm } from "@/components/index";
 
-const CareerDetails = () => {
+const CareerDetails = ({ title }) => {
   const [isFormVisible, setFormVisible] = useState(false);
 
   const handleButtonClick = () => {
@@ -65,7 +65,7 @@ const CareerDetails = () => {
         </div>
       </div>
 
-      {isFormVisible && <ApplicationForm onClose={handleCloseForm} />}
+      {isFormVisible && <ApplicationForm title={title} onClose={handleCloseForm} />}
 
       {/* Button Container */}
       <div className="mb-[80px] mt-[60px] flex items-center justify-center lg:mb-[61px] lg:mt-[29px]">

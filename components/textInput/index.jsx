@@ -4,7 +4,7 @@ import React from "react";
 
 import { strings } from "@/utils";
 
-const TextInput = ({ label, placeholder, handleChange, type = "text", inputKey = "", value, classes, labelclass }) => {
+const TextInput = ({ label, placeholder, handleChange = () => {}, type = "text", inputKey = "", value, classes, labelclass }) => {
   return (
     <div className="flex flex-col">
       <label className={labelclass}>{strings[label]}</label>

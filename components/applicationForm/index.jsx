@@ -17,7 +17,7 @@ const inputs = [
   { label: "Cover Letter (optional)", inputKey: "coverLetter", type: "textarea", placeholder: "Cover Letter (optional)" },
 ];
 
-const ApplicationForm = ({ onClose }) => {
+const ApplicationForm = ({ title, onClose }) => {
   const formRef = useRef(null);
 
   const [formData, setFormData] = useState({
@@ -31,10 +31,9 @@ const ApplicationForm = ({ onClose }) => {
     coverLetter: "",
   });
 
-  // Function to handle clicks outside the form
   const handleClickOutside = (event) => {
     if (formRef.current && !formRef.current.contains(event.target)) {
-      onClose(); // Close the form if clicked outside
+      onClose();
     }
   };
 
@@ -70,14 +69,20 @@ const ApplicationForm = ({ onClose }) => {
   };
 
   useEffect(() => {
-    // Add event listener for clicks
     document.addEventListener("mousedown", handleClickOutside);
 
-    // Cleanup the event listener on component unmount
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  // const handleFileChange = (e) => {
+  //   const file = e.target.files[0];
+
+  //   if (file) {
+  //     handleChange("selectedCV", file);
+  //   }
+  // };
 
   return (
     <div className="relative z-10 flex items-center justify-center" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -96,7 +101,7 @@ const ApplicationForm = ({ onClose }) => {
 
             {/* Title */}
             <div>
-              <p className="mb-[35px] text-center text-[28px] font-semibold leading-[41.58px] text-text lg:text-[36px] lg:leading-[53.46px]">Application for UI/Ux Designer</p>
+              <p className="mb-[35px] text-center text-[28px] font-semibold leading-[41.58px] text-text lg:text-[36px] lg:leading-[53.46px]">Application for {title}</p>
             </div>
             {/* Text Input Fields */}
             {inputs.map((v, i) => (
@@ -106,8 +111,13 @@ const ApplicationForm = ({ onClose }) => {
             ))}
             {/* Upload CV module */}
             {/* <div className="flex flex-row items-center">
-              <span className="rounded-md bg-border px-[34px] py-[6px] text-[18px] font-light text-text">{strings["uploadCV"]}</span>
-              <p className="ml-[13px]">{strings["fileAttachment"]}</p>
+              <div>
+                <label className="rounded-md bg-border px-[34px] py-[6px] text-[18px] font-light text-text" htmlFor="image_uploads">
+                  {strings["uploadCV"]}
+                </label>
+                <input type="file" id="image_uploads" name="image_uploads" accept=".pdf" className="hidden" onChange={handleFileChange} />
+              </div>
+              <p className="ml-[13px]">{formData.selectedCV?.name || strings["fileAttachment"]}</p>
             </div> */}
 
             <div className="mt-[60px] flex w-full lg:mt-[29px]">
