@@ -85,4 +85,5 @@ export const strings = {
   blogsBtn: "View more blogs",
   termsAndConditions: "TERM & CONDITIONS",
   privacyPolicy: "PRIVACY POLICY",
+  getDirection: "Get Directions",
 };
