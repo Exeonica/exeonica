@@ -3,8 +3,8 @@ import { termAndConditions } from "@/public";
 // app/termAndConditions/page.js
 const TermAndConditions = () => {
   return (
-    <div>
-      <iframe srcDoc={termAndConditions} className="min-h-screen w-full" />
+    <div className="px-4 py-20 md:px-[110px]">
+      <div dangerouslySetInnerHTML={{ __html: termAndConditions }} />
     </div>
   );
 };
