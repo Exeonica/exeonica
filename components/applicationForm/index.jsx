@@ -20,6 +20,8 @@ const inputs = [
 const ApplicationForm = ({ title, onClose }) => {
   const formRef = useRef(null);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -60,11 +62,15 @@ const ApplicationForm = ({ title, onClose }) => {
     }
 
     try {
+      setIsLoading(true);
+
       toast.info("Saving Data");
       await sendMail({ title, ...formData }, applicationTemp);
       toast.success("Data Saved");
+      setIsLoading(false);
     } catch (error) {
       toast.error(error.message);
+      setIsLoading(false);
     }
   };
 
@@ -121,7 +127,7 @@ const ApplicationForm = ({ title, onClose }) => {
             </div> */}
 
             <div className="mt-[60px] flex w-full lg:mt-[29px]">
-              <Button onClick={handleSubmit} variant="default" classes="w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white ">
+              <Button loading={isLoading} onClick={handleSubmit} variant="default" classes="w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white ">
                 {strings["apply"]}
               </Button>
             </div>

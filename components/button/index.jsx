@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Button({ variant, children, classes = "", ...rest }) {
+export default function Button({ variant, children, classes = "", loading = false, ...rest }) {
   let className = "flex text-base font-medium w-max text-center py-3 px-6 h-12 items-center";
 
   switch (variant) {
@@ -24,7 +24,7 @@ export default function Button({ variant, children, classes = "", ...rest }) {
   }
 
   return (
-    <button className={`${className} ${classes}`} {...rest}>
+    <button className={`${className} ${classes} ${loading ? "cursor-default opacity-50" : ""}`} disabled={loading} {...rest}>
       {children}
     </button>
   );

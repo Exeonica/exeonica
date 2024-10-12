@@ -32,14 +32,14 @@ const NavMenu = () => {
                   </div>
                 </div>
               ))}
-              <div className="flex flex-col items-center justify-center pt-[48px]">
+              <div className="flex flex-col pt-[48px]">
                 {/* <SheetClose>
                   <Button variant="outline" classes="!w-full mb-3 items-center justify-center">
                     {strings["calculateCost"]}
                   </Button>
                 </SheetClose> */}
-                <Link href="./contact">
-                  <SheetClose>
+                <Link href="./contact" className="!w-full">
+                  <SheetClose asChild>
                     <Button variant="default" classes="!w-full items-center justify-center">
                       {strings["getInTouch"]}
                     </Button>

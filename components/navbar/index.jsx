@@ -28,7 +28,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="ml-10 flex gap-[10px] md:hidden xl:flex">
+        <div className="ml-10 flex gap-[10px] xl:flex">
           {/* <Button variant={"outline"}>{strings["calculateCost"]}</Button> */}
           <Link href="./contact">
             <Button variant={"default"}>{strings["getInTouch"]}</Button>
