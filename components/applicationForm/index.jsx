@@ -61,7 +61,7 @@ const ApplicationForm = ({ title, onClose }) => {
 
     try {
       toast.info("Saving Data");
-      await sendMail(formData, applicationTemp);
+      await sendMail({ title, ...formData }, applicationTemp);
       toast.success("Data Saved");
     } catch (error) {
       toast.error(error.message);

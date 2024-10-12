@@ -345,48 +345,12 @@ export const images = [
   { src: Award6, alt: "Picture of the author 3", classes: "h-[120px] w-[171.17px]" },
 ];
 
-export const jobDetails = [
-  {
-    title: "Who Are We Looking For",
-    descriptions: [
-      "Passionate and driven individuals",
-      "Experience in software development or related fields",
-      "Excellent problem-solving skills and attention to detail.",
-      "Ability to work in a fast-paced environment.",
-      "Strong communication and teamwork abilities.",
-      "Eagerness to learn and adapt to new technologies.",
-    ],
-  },
-  {
-    title: "What You Will Do",
-    descriptions: [
-      "Collaborate with cross-functional teams to define project requirements",
-      "Write clean, scalable, and maintainable code",
-      "Participate in code reviews and testing.",
-      "Work closely with designers and product managers to create user-friendly applications.",
-      "Troubleshoot and debug software issues.",
-      "Stay up-to-date with industry trends and technologies.",
-    ],
-  },
-  {
-    title: "Required Skills",
-    descriptions: [
-      "Create and enhance mobile applications using React Native",
-      "Solid background in software development.",
-      "Familiarity with RESTful APIs and integration.",
-      "Knowledge of version control systems (Git, GitHub).",
-      "Excellent communication and teamwork skills.",
-      "Strong understanding of UI/UX principles.",
-    ],
-  },
-];
-
 export const jobs = [
   {
     id: 1,
     time: "24 hours ago",
-    title: "React ",
-    tags: ["Remote", "Full-time", "Senior level"],
+    title: "React Developer",
+    tags: ["Full-time"],
     location: "Faisalabad, Pakistan",
     applyText: "Apply Now",
     jobDetails: [
@@ -394,11 +358,34 @@ export const jobs = [
         title: "Who Are We Looking For",
         descriptions: [
           "Passionate and driven individuals",
-          "Experience in software development or related fields",
+          "0.5-1 years of experience in software development or related fields",
           "Excellent problem-solving skills and attention to detail.",
           "Ability to work in a fast-paced environment.",
           "Strong communication and teamwork abilities.",
           "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
         ],
       },
     ],
@@ -406,8 +393,8 @@ export const jobs = [
   {
     id: 2,
     time: "20 hours ago",
-    title: "React Native",
-    tags: ["Remote", "Full-time", "Senior level"],
+    title: "React Native Developer",
+    tags: ["Full-time"],
     location: "Faisalabad, Pakistan",
     applyText: "Apply Now",
     jobDetails: [
@@ -415,11 +402,166 @@ export const jobs = [
         title: "Who Are We Looking For",
         descriptions: [
           "Passionate and driven individuals",
-          "Experience in software development or related fields",
+          "0.5-1 years of experience in software development or related fields",
           "Excellent problem-solving skills and attention to detail.",
           "Ability to work in a fast-paced environment.",
           "Strong communication and teamwork abilities.",
           "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    time: "20 hours ago",
+    title: "React Intern",
+    tags: ["Full-time"],
+    location: "Faisalabad, Pakistan",
+    applyText: "Apply Now",
+    jobDetails: [
+      {
+        title: "Who Are We Looking For",
+        descriptions: [
+          "Passionate and driven individuals",
+          "Knowledge of basic concepts of OOP and DSA",
+          "Excellent problem-solving skills and attention to detail.",
+          "Ability to work in a fast-paced environment.",
+          "Strong communication and teamwork abilities.",
+          "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    time: "25 hours ago",
+    title: "React Native Intern",
+    tags: ["Full-time"],
+    location: "Faisalabad, Pakistan",
+    applyText: "Apply Now",
+    jobDetails: [
+      {
+        title: "Who Are We Looking For",
+        descriptions: [
+          "Passionate and driven individuals",
+          "Knowledge of basic concepts of OOP and DSA",
+          "Excellent problem-solving skills and attention to detail.",
+          "Ability to work in a fast-paced environment.",
+          "Strong communication and teamwork abilities.",
+          "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    time: "20 hours ago",
+    title: "UI/UX Designer Intern",
+    tags: ["Full-time"],
+    location: "Faisalabad, Pakistan",
+    applyText: "Apply Now",
+    jobDetails: [
+      {
+        title: "Who Are We Looking For",
+        descriptions: [
+          "Passionate and driven individuals",
+          "Knowledge of basic concepts of OOP and DSA",
+          "Excellent problem-solving skills and attention to detail.",
+          "Ability to work in a fast-paced environment.",
+          "Strong communication and teamwork abilities.",
+          "Eagerness to learn and adapt to new technologies.",
+          "Must be a graduate.",
+        ],
+      },
+      {
+        title: "What You Will Do",
+        descriptions: [
+          "Collaborate with cross-functional teams to define project requirements",
+          "Write clean, scalable, and maintainable code",
+          "Participate in code reviews and testing.",
+          "Work closely with designers and product managers to create user-friendly applications.",
+          "Troubleshoot and debug software issues.",
+          "Stay up-to-date with industry trends and technologies.",
+        ],
+      },
+      {
+        title: "Required Skills",
+        descriptions: [
+          "Create and enhance mobile applications using React Native",
+          "Solid background in software development.",
+          "Familiarity with RESTful APIs and integration.",
+          "Knowledge of version control systems (Git, GitHub).",
+          "Excellent communication and teamwork skills.",
+          "Strong understanding of UI/UX principles.",
         ],
       },
     ],
@@ -428,7 +570,7 @@ export const jobs = [
 
 export const jobInfo = [
   { title: "Industry", result: "IT Services" },
-  { title: "Work experience", result: "6+ Years" },
+  { title: "Work experience", result: "0.5+ Years" },
   { title: "Location", result: "Faisalabad, Pakistan" },
   { title: "Role", result: "On-Site" },
 ];

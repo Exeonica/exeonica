@@ -43,7 +43,7 @@ const CareerCards = () => {
         {/*  job cards  */}
         <div className="mb-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {jobs.map((job, index) => (
-            <div key={index} className="gb-border border border-none p-6 shadow-sm">
+            <div key={index} className="rounded-md border border-border p-6 shadow-md">
               <p className="text-[14px] font-normal leading-[20.79px] text-color-1">{job.time}</p>
               <h2 className="mb-4 text-2xl font-semibold leading-[35.64px] text-text">{job.title}</h2>
               <div className="mb-4 flex space-x-2">
