@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 .headerBg {
   background-image: url("../public/Images/headerMobBg.webp");
   background-size: cover;
@@ -17,5 +12,20 @@
 @media (min-width: 700px) {
   .headerBg {
     background-image: url("../public/Images/headerBg.webp");
+  }
+}
+.mapBg {
+  background-image: url("../public/Images/mobMap.webp");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 700px) {
+  .mapBg {
+    background-image: url("../public/Images/map.webp");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
   }
 }

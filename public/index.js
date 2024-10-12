@@ -25,6 +25,12 @@ import personImage from "./Images/userImage.webp";
 import ContactUsImage from "./Images/contactContainer.webp";
 import BlogPost from "./Images/blogpost.webp";
 import Avatar from "./Images/avatar.webp";
+import PKFlag from "./Images/pkFlag.webp";
+import UKFlag from "./Images/ukFlag.webp";
+import Map from "./Images/map.webp";
+import MobMap from "./Images/mobMap.webp";
+import Marker from "./Images/marker.webp";
+import Cursor from "./Images/cursor.webp";
 import Phillip from "./Images/Phillip.jpg";
 import Kiersten from "./Images/Kiersten.jpeg";
 import Fazle from "./Images/Fazle.jpg";
@@ -60,6 +66,12 @@ export {
   personImage,
   ContactUsImage,
   BlogsImage,
+  PKFlag,
+  UKFlag,
+  Map,
+  MobMap,
+  Marker,
+  Cursor,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";
