@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import Button from "../button";
-
 import { testimonialData } from "@/utils";
 import { Quotes, LeftArrow, RightArrow } from "@/public";
 
@@ -44,12 +42,12 @@ const TestimonialCarousal = () => {
           </div>
         </div>
         <div className="mt-9 flex space-x-[10px] md:mt-0">
-          <Button variant="outlineIcon" onClick={handlePrev}>
+          <span className="rounded border border-border p-2 hover:border-primary" onClick={handlePrev}>
             <RightArrow />
-          </Button>
-          <Button variant="outlineIcon" onClick={handleNext}>
+          </span>
+          <span className="rounded border border-border p-2 hover:border-primary" onClick={handleNext}>
             <LeftArrow />
-          </Button>
+          </span>
         </div>
       </div>
     </div>
