@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import Button from "../button";
-
 import { testimonialData } from "@/utils";
 import { Quotes, LeftArrow, RightArrow } from "@/public";
 
@@ -36,7 +34,7 @@ const TestimonialCarousal = () => {
       <div className="mb-[60px] mt-9 flex flex-col md:mt-8 md:flex-row md:items-center md:justify-between">
         <div className="flex gap-x-[14px] text-start">
           <div>
-            <Image src={currentTestimonial.imageSrc} width={"auto"} height="auto" className="h-12 w-12 rounded-full object-cover" priority />
+            <Image src={currentTestimonial.imageSrc} alt={currentTestimonial.developerName} width={"auto"} height="auto" className="h-12 w-12 rounded-full object-cover" priority />
           </div>
           <div>
             <p className="text-xl font-bold text-color-1">{currentTestimonial.developerName}</p>
@@ -44,12 +42,12 @@ const TestimonialCarousal = () => {
           </div>
         </div>
         <div className="mt-9 flex space-x-[10px] md:mt-0">
-          <Button variant="outlineIcon" onClick={handlePrev}>
+          <span className="rounded border border-border p-2 hover:border-primary" onClick={handlePrev}>
             <RightArrow />
-          </Button>
-          <Button variant="outlineIcon" onClick={handleNext}>
+          </span>
+          <span className="rounded border border-border p-2 hover:border-primary" onClick={handleNext}>
             <LeftArrow />
-          </Button>
+          </span>
         </div>
       </div>
     </div>

@@ -15,13 +15,13 @@ const AboutSection = ({ btnLabel, title, description, classes, cardclass }) => {
         <div className="flex flex-1 flex-col">
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[45.5px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
-              <Button variant="outlineRounded" classes="w-full mb-3 text-[16px] cursor-default">
+              <Button variant="outlineRounded" classes="w-full text-[16px] cursor-default">
                 {strings[btnLabel]}
               </Button>
             </div>
           </div>
 
-          <div className="mt-0 flex flex-1 flex-col items-start justify-start md:px-0">
+          <div className="mt-2 flex flex-1 flex-col items-start justify-start md:px-0">
             {" "}
             <div className="container">
               <h1 className="text-title mb-4 text-center text-[28px] font-semibold leading-[41.58px] md:text-left md:leading-[54.9px] lg:text-[40px]"> {strings[title]}</h1>
@@ -32,7 +32,7 @@ const AboutSection = ({ btnLabel, title, description, classes, cardclass }) => {
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[24px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
               <Link href={"./about"}>
-                <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
+                <Button variant="default" classes="w-full rounded-[8px] px-[16px] py-[10px] text-[16px]">
                   {strings["learnMore"]}
                 </Button>
               </Link>
