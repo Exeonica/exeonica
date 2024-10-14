@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/index";
 import { Location } from "@/public";
 import { jobs } from "@/utils";
-import CategoryButton from "@/components/buttonsFilter";
+import { ButtonFilter } from "@/components/index";
 
 const categoriesData = [
   { id: 1, name: "All", value: "all" },
@@ -30,7 +30,7 @@ const CareerCards = () => {
         {/* Buttons Array */}
         <div className="flex flex-wrap gap-[8px] pb-[72px]">
           {categoriesData.map((category) => (
-            <CategoryButton key={category.id} label={category.name} value={category.value} selectedCategory={selectedCategory} onClick={setSelectedCategory} />
+            <ButtonFilter key={category.id} label={category.name} value={category.value} selectedCategory={selectedCategory} onClick={setSelectedCategory} />
           ))}
         </div>
 

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import { BlogPost, GreyArrow } from "@/public";
-import CategoryButton from "@/components/buttonsFilter";
+import { ButtonFilter } from "@/components/index";
 
 const categoriesData = [
   { id: 1, name: "All", value: "all" },
@@ -25,7 +25,7 @@ const BlogPosts = ({ cardsData }) => {
     <div className="mx-[16px] p-4 pt-[80px] lg:mx-[112px]">
       <div className="flex flex-wrap gap-[8px] pb-[72px]">
         {categoriesData.map((category) => (
-          <CategoryButton key={category.id} label={category.name} value={category.value} selectedCategory={selectedCategory} onClick={setSelectedCategory} />
+          <ButtonFilter key={category.id} label={category.name} value={category.value} selectedCategory={selectedCategory} onClick={setSelectedCategory} />
         ))}
       </div>
 

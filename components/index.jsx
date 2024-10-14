@@ -19,3 +19,4 @@ export { default as PortfolioData } from "./portfolio";
 export { default as Carousal } from "./carousel";
 export { default as TermAndConditions } from "./termAndConditions";
 export { default as Policy } from "./privacyPolicy";
+export { default as ButtonFilter } from "./buttonsFilter";
