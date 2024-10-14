@@ -109,6 +109,7 @@ export const testimonialData = [
 
 export const services = [
   {
+    id: 1,
     icon: ACD,
     title: "AI Chatbot Development",
     desc: "Elevate your customer experience with AI-powered chatbots. Our experts will design and develop a custom chatbot tailored to your specific needs.",

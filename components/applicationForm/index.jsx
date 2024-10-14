@@ -95,15 +95,17 @@ const ApplicationForm = ({ title, onClose }) => {
       <div className="fixed inset-0 bg-color-6 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
 
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
           <div
             ref={formRef}
-            className="relative max-h-[70vh] transform overflow-scroll overflow-y-auto rounded-2xl bg-white px-[12px] py-[37px] text-left shadow-xl transition-all lg:px-[82px] lg:py-[53px]"
+            className="relative max-h-[70vh] transform overflow-scroll overflow-y-auto rounded-2xl bg-white px-[12px] py-[37px] text-left shadow-xl transition-all md:px-[82px] md:py-[53px]"
           >
             {/* Close Icon */}
-            <button type="button" onClick={onClose} className="absolute right-4 top-4 p-2 text-gray-500 hover:text-gray-700" aria-label="Close">
-              <p className="text-[20px] font-bold text-card-foreground">X</p>
-            </button>
+            <div className="flex-end flex justify-end">
+              <button type="button" onClick={onClose} className="flex text-gray-500 hover:text-gray-700" aria-label="Close">
+                <span className="text-[20px] font-bold text-card-foreground">X</span>
+              </button>
+            </div>
 
             {/* Title */}
             <div>
@@ -112,7 +114,7 @@ const ApplicationForm = ({ title, onClose }) => {
             {/* Text Input Fields */}
             {inputs.map((v, i) => (
               <div className="pb-5" key={i}>
-                <TextInput type={v.type} inputKey={v.inputKey} placeholder={v.placeholder} value={formData[v.inputKey]} handleChange={handleChange} />
+                <TextInput type={v.type} inputKey={v.inputKey} placeholder={v.placeholder} value={formData[v.inputKey]} handleChange={handleChange} rows={i === inputs.length - 1 ? 3 : 0} />
               </div>
             ))}
             {/* Upload CV module */}
@@ -126,8 +128,8 @@ const ApplicationForm = ({ title, onClose }) => {
               <p className="ml-[13px]">{formData.selectedCV?.name || strings["fileAttachment"]}</p>
             </div> */}
 
-            <div className="mt-[60px] flex w-full lg:mt-[29px]">
-              <Button loading={isLoading} onClick={handleSubmit} variant="default" classes="w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white ">
+            <div className="mt-[60px] flex !w-full lg:mt-[29px]">
+              <Button loading={isLoading} onClick={handleSubmit} variant="default" classes="!w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white justify-center">
                 {strings["apply"]}
               </Button>
             </div>

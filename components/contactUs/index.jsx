@@ -39,7 +39,7 @@ const LocationCard = ({ location }) => (
         <PhoneIcon />
         <div className="flex flex-col pl-[8px]">
           <p className="text-[12px] font-medium leading-[17.82px] text-text">Contact us: </p>
-          <p className="mr-[16px] text-[12px] font-normal leading-[17.82px] text-color-6">{location.contact}</p>
+          <p className="mr-[16px] text-[12px] font-normal leading-[17.82px] text-color-6">{strings["companyContact"]}</p>
         </div>
       </div>
 
