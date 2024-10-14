@@ -34,7 +34,7 @@ const TestimonialCarousal = () => {
       <div className="mb-[60px] mt-9 flex flex-col md:mt-8 md:flex-row md:items-center md:justify-between">
         <div className="flex gap-x-[14px] text-start">
           <div>
-            <Image src={currentTestimonial.imageSrc} alt={currentTestimonial.developerName} width={"auto"} height="auto" className="h-12 w-12 rounded-full object-cover" priority />
+            <Image alt={currentTestimonial.developerName} src={currentTestimonial.imageSrc} width={"auto"} height="auto" className="h-12 w-12 rounded-full object-cover" priority />
           </div>
           <div>
             <p className="text-xl font-bold text-color-1">{currentTestimonial.developerName}</p>

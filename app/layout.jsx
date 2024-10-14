@@ -20,8 +20,17 @@ const pangeaAfrikanTrial = localFont({
 });
 
 export const metadata = {
-  title: "Exeonic - Innovative Solutions for Modern Challenges",
+  title: "Exeonic - Where Innovation meets Excellence",
   description: "Discover cutting-edge technology solutions with Exeonic. We provide innovative services to tackle modern challenges.",
+  openGraph: {
+    images: [
+      {
+        url: "/public/Images/previewImage.png",
+        width: 1000,
+        height: 300,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

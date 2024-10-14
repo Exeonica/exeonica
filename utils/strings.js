@@ -21,7 +21,7 @@ export const strings = {
   bannerHeading: "Have a project idea in mind?",
   bannerDesc: "Find out how much it costs to build such an app and how long it takes to launch it.",
   bannerBtn: "Estimate your project cost",
-  learnMore: "Learn More",
+  learnMore: "Learn About Us",
   whyUs: "Why Us",
   aboutTitle: "Building software for global leaders.",
   aboutDescription:
