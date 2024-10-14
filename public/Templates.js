@@ -209,3 +209,87 @@ export const privacyPolicy = `
 
 
 `;
+export const blogDetails = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Content Creation Article</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Container -->
+  <div class="max-w-4xl mx-auto p-6">
+
+    <!-- Header Section -->
+    <section class="mb-12">
+      <h1 class="text-4xl font-bold mb-4 text-gray-800">Exploring Generative AI in Content Creation</h1>
+      <p class="text-lg mb-6 text-gray-600">
+        Hello there! As a marketing manager in the SaaS industry, you might be looking for innovative ways to engage your audience.
+        I bet generative AI has crossed your mind as an option for creating content. Well, let me share from my firsthand experience.
+      </p>
+      <p class="text-lg text-gray-600">
+        Google encourages high-quality blogs regardless of whether they're written by humans or created using artificial intelligence tools like ChatGPT.
+        Here's what matters: producing original material with expertise and trustworthiness based on Google’s E-E-A-T principles.
+      </p>
+      <p class="text-lg text-gray-600">
+      This means focusing more on people-first writing rather than primarily employing AI tools to manipulate search rankings. There comes a time when many experienced professionals want to communicate their insights but get stuck due to limited writing skills – that’s where Generative AI can step in.
+
+So, together, we’re going explore how this technology could help us deliver valuable content without sounding robotic or defaulting into mere regurgitations of existing materials (spoiler alert – common pitfalls!). Hang tight - it’ll be a fun learning journey!
+      </p>
+    </section>
+
+    <!-- Image Section -->
+    <section class="mb-12">
+      <img src="https://th.bing.com/th/id/OIP.wwxK07x0Umfnh0l-nrjxjgHaDg?rs=1&pid=ImgDetMain" 
+           alt="AI Concept" class="rounded-lg shadow-lg w-full h-auto">
+    </section>
+
+    <!-- Steering Clear Section -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4 text-gray-800">Steering Clear of Common AI Writing Pitfalls</h2>
+      <p class="mb-4 text-gray-600">
+        Jumping headfirst into using AI, like ChatGPT, without a content strategy can lead to some unfortunate results.
+        One common pitfall I’ve seen is people opting for quantity over quality—they churn out blogs, but each one feels robotic and soulless, reading just like countless others on the internet.
+      </p>
+      <p class="text-gray-600">
+        Another trap is in creating reproductions rather than delivering unique perspectives that offer value to readers. It often happens if you let AI do all the writing without fully understanding how to fine-tune it.
+      </p>
+    </section>
+
+    <!-- Understanding Capabilities Section -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4 text-gray-800">Understanding ChatGPT Capabilities - Define Your Style</h2>
+      <p class="mb-4 text-gray-600">
+        Welcome to the intriguing world of ChatGPT! Its ability and potential can truly be mind-boggling. 
+        I have seen from experience how capable it is in dealing with diverse content generation tasks, 
+        yet many find that its standard style feels “unnatural.”
+      </p>
+      <p class="text-gray-600">
+        One strategic move I’ve seen work wonders is defining your unique writing style first before handing over the reins to AI.
+        You treat it like a canvas whereupon your vision opens up.
+      </p>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="bg-gray-100 p-6 rounded-lg shadow-md">
+      <p class="text-gray-600">
+        Let’s be clear: ChatGPT wrote this article and generated the hero image.
+        It combined my personal experiences, knowledge, and research. From the initial notes to finish, it took just 37 minutes.
+      </p>
+      <p class="mt-4 text-gray-600">
+        Even though AI was made by auto-detection tools, the only thing used was OpenAI’s Chat API, no external tools.
+      </p>
+      <p class="mt-4 text-gray-600">
+        It shows how AI can help in making content interesting and relevant. It’s a new chapter in how we create and share information.
+      </p>
+    </section>
+    
+  </div>
+
+</body>
+</html>
+
+`;

@@ -1,4 +1,4 @@
-import { ComHeader, BlogPosts, Footer } from "@/components/index";
+import { ComHeader, BlogsPost, Footer } from "@/components/index";
 import { getAllBlogs } from "@/utils";
 
 const Blogs = async () => {
@@ -7,7 +7,7 @@ const Blogs = async () => {
   return (
     <div>
       <ComHeader title={"blogsHeader"} />
-      <BlogPosts cardsData={blogs} />
+      <BlogsPost cardsData={blogs} />
       <Footer />
     </div>
   );
