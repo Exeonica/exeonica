@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -19,11 +20,13 @@ const ServiceComponent = () => {
         {services.map((service, index) => {
           return (
             <div className={`flex w-full`} key={index}>
-              <div className="flex flex-col rounded-2xl border border-border p-6 shadow-sm hover:border-primary hover:shadow-md">
-                <service.icon className="h-12 w-12 text-primary" />
-                <h3 className="mt-4 text-xl font-semibold">{service.title}</h3>
-                <p className="mt-2 text-base font-normal text-color-1">{service.desc}</p>
-              </div>
+              <Link href={`/services/${service.id}`}>
+                <div className="flex flex-col rounded-2xl border border-border p-6 shadow-sm hover:border-primary hover:shadow-md">
+                  <service.icon className="h-12 w-12 text-primary" />
+                  <h3 className="mt-4 text-xl font-semibold">{service.title}</h3>
+                  <p className="mt-2 text-base font-normal text-color-1">{service.desc}</p>
+                </div>
+              </Link>
             </div>
           );
         })}

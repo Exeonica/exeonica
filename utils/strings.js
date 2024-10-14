@@ -14,6 +14,7 @@ export const strings = {
   heroDescription2: "custom-tailored to meet the unique needs and challenges of your business.",
   heroBtn1: "View Our Services",
   heroBtn2: "Let's Talk",
+  serviceDetailsBtn: "Our Services",
   serviceBtn: "Services",
   allServicesBtn: "View all Our Services",
   serviceTitle: "Services we provide",
@@ -86,4 +87,6 @@ export const strings = {
   termsAndConditions: "TERM & CONDITIONS",
   privacyPolicy: "PRIVACY POLICY",
   getDirection: "Get Directions",
+  achievementTitle: "Achievements",
+  achievementHeading: "Our achievements in numbers",
 };

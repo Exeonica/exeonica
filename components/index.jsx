@@ -19,3 +19,6 @@ export { default as PortfolioData } from "./portfolio";
 export { default as Carousal } from "./carousel";
 export { default as TermAndConditions } from "./termAndConditions";
 export { default as Policy } from "./privacyPolicy";
+export { default as ServiceDetailsHeader } from "./serviceDetailsHeader";
+export { default as AchievementCards } from "./achievementCards";
+export { default as OfferedServices } from "./offeredServices";
