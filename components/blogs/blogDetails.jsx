@@ -10,7 +10,7 @@ const blogDetails = ({ cardsData }) => {
           <div>
             <p className="mb-[36px] text-[32px] font-semibold leading-[47.52px] text-card-foreground">Related Articles</p>
           </div>
-          <BlogsCards cardsData={cardsData} />
+          <BlogsCards cardsData={cardsData} limit={3} />
         </div>
       </div>
     </div>

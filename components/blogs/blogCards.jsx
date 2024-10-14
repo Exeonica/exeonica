@@ -4,10 +4,12 @@ import Link from "next/link";
 
 import { BlogPost, GreyArrow } from "@/public";
 
-const BlogsCards = ({ cardsData }) => {
+const BlogsCards = ({ cardsData, limit }) => {
+  const displayedCards = limit ? cardsData.slice(0, limit) : cardsData;
+
   return (
     <div className="grid grid-cols-1 gap-4 pb-[112px] md:grid-cols-2 lg:grid-cols-3">
-      {cardsData.map((card) => (
+      {displayedCards.map((card) => (
         <Link key={card.id} href={`blogs/${card.id}`}>
           <div key={card.id} className="flex rounded-[16px] p-[24px] shadow-lg">
             <div className="cursor-pointer overflow-hidden rounded bg-white">

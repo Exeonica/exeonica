@@ -219,6 +219,12 @@ export const blogDetails = `
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-900 font-sans">
+ <section class="bg-gray-100 p-6 rounded-lg shadow-md">
+      <p class="text-black text-[36px] font-bold">
+        Mastering ChatGPT Blog Creation: Dos and Don'ts for SaaS Marketing Managers
+      </p>
+      
+    </section>
 
   <!-- Container -->
   <div class="max-w-4xl mx-auto p-6">
@@ -235,8 +241,8 @@ export const blogDetails = `
         Here's what matters: producing original material with expertise and trustworthiness based on Google’s E-E-A-T principles.
       </p>
       <p class="text-lg text-gray-600">
-      This means focusing more on people-first writing rather than primarily employing AI tools to manipulate search rankings. There comes a time when many experienced professionals want to communicate their insights but get stuck due to limited writing skills – that’s where Generative AI can step in.
-
+      This means focusing more on people-first writing rather than primarily employing AI tools to manipulate search rankings. There comes a time when many experienced professionals want to communicate their insights but get stuck due to limited writing skills – that’s where Generative AI can step in.</p>
+<p class="text-lg text-gray-600">
 So, together, we’re going explore how this technology could help us deliver valuable content without sounding robotic or defaulting into mere regurgitations of existing materials (spoiler alert – common pitfalls!). Hang tight - it’ll be a fun learning journey!
       </p>
     </section>
@@ -271,6 +277,11 @@ So, together, we’re going explore how this technology could help us deliver va
         One strategic move I’ve seen work wonders is defining your unique writing style first before handing over the reins to AI.
         You treat it like a canvas whereupon your vision opens up.
       </p>
+    </section>
+     <!-- Image Section -->
+    <section class="mb-12">
+      <img src="https://th.bing.com/th/id/OIP.wwxK07x0Umfnh0l-nrjxjgHaDg?rs=1&pid=ImgDetMain" 
+           alt="AI Concept" class="rounded-lg shadow-lg w-full h-auto">
     </section>
 
     <!-- Conclusion Section -->
