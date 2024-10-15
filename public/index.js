@@ -37,6 +37,7 @@ import Fazle from "./Images/Fazle.jpg";
 import serviceHeaderImage from "./Images/serviceHeaderImage.webp";
 import serviceImage from "./Images/service.webp";
 import offerImage from "./Images/offerService.webp";
+import BlogImage1 from "./Images/blog1.webp";
 import reactIcon from "./Images/react.webp";
 import flutterIcon from "./Images/flutter.webp";
 import pythonIcon from "./Images/python.webp";
@@ -92,6 +93,7 @@ export {
   MobMap,
   Marker,
   Cursor,
+  BlogImage1,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";

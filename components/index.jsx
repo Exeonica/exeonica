@@ -1,6 +1,7 @@
 import { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch, BlogsSection } from "./homePage";
+import { BlogsPost, BlogsDetailsComp, BlogsCards } from "./blogs";
 
-export { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch, BlogsSection };
+export { Hero, Services, EstimationBanner, Testimonial, Contact, FrequentlyAskedQuestions, Launch, BlogsSection, BlogsPost, BlogsDetailsComp, BlogsCards };
 
 export { default as ComHeader } from "./header";
 export { default as Awards } from "./aboutPage";
@@ -13,7 +14,6 @@ export { default as CareersDetailPage } from "./careersDetailPage";
 export { default as TextInput } from "./textInput";
 export { default as Button } from "./button";
 export { default as ContactUsMap } from "./contactUs";
-export { default as BlogPosts } from "./blogs";
 export { default as ApplicationForm } from "./applicationForm";
 export { default as PortfolioData } from "./portfolio";
 export { default as Carousal } from "./carousel";
@@ -22,4 +22,5 @@ export { default as Policy } from "./privacyPolicy";
 export { default as ServiceDetailsHeader } from "./serviceDetailsHeader";
 export { default as AchievementCards } from "./achievementCards";
 export { default as OfferedServices } from "./offeredServices";
+export { default as ButtonFilter } from "./buttonsFilter";
 export { default as TechnologySection } from "./technologySection";

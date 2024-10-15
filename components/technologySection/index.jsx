@@ -7,7 +7,7 @@ import { strings } from "@/utils";
 
 const TechnologySection = ({ service }) => {
   return (
-    <div className="bg-color-11 px-[16px] py-[80px] md:px-[60px] lg:px-[120px] xl:flex xl:flex-row-reverse xl:items-center xl:justify-between xl:gap-x-[75px]">
+    <div className="bg-color-9 px-[16px] py-[80px] md:px-[60px] lg:px-[120px] xl:flex xl:flex-row-reverse xl:items-center xl:justify-between xl:gap-x-[75px]">
       <div className="flex flex-col pb-[75px] text-center xl:pb-0 xl:text-start">
         <p className="text-[28px] font-semibold md:text-[40px]">Technologies We Used In {service.title} </p>
         <p className="my-[20px] text-lg font-normal text-color-3">{service.subDesc}</p>

@@ -89,4 +89,10 @@ export const strings = {
   getDirection: "Get Directions",
   achievementTitle: "Achievements",
   achievementHeading: "Our achievements in numbers",
+  blogsCardTitle: "Artificial Intelligence",
+  blogDesc: "Mastering ChatGPT Blog Creation: Dos and Don'ts for SaaS Marketing Managers",
+  blogDate: "October 19",
+  blogTime: "10 min ago",
+  artical: "In this article",
+  relatedArticals: "Related Articles",
 };
