@@ -14,7 +14,7 @@ const OfferedServices = ({ service }) => {
         <div className="lg:w-[50%]">
           {service.offers.map((item, index) => (
             <div key={index}>
-              <p className="px-[30px] py-[30px] text-2xl font-semibold text-color-1 hover:rounded-[15px] hover:border hover:border-primary hover:bg-primary hover:text-color-10">{item.title}</p>
+              <p className="hover:text-color-12 px-[30px] py-[30px] text-2xl font-semibold text-color-1 hover:rounded-[15px] hover:border hover:border-primary hover:bg-primary">{item.title}</p>
             </div>
           ))}
         </div>
