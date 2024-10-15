@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import { Button } from "@/components/index";
 import { Carousel, CarouselContent } from "@/components/ui/carousel";
-
 import { options } from "@/utils";
 
 const ProjectEstimation = () => {
@@ -28,6 +27,7 @@ const ProjectEstimation = () => {
                         {option.type === "radio" &&
                             option.choices.map((choice, index) => {
                                 const choiceId = `option${option.id}_choice${index}`;
+                                
                                 return (
                                     <div
                                         key={index}
