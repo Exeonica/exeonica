@@ -37,8 +37,22 @@ import Fazle from "./Images/Fazle.jpg";
 import serviceHeaderImage from "./Images/serviceHeaderImage.webp";
 import serviceImage from "./Images/service.webp";
 import offerImage from "./Images/offerService.webp";
+import reactIcon from "./Images/react.webp";
+import flutterIcon from "./Images/flutter.webp";
+import pythonIcon from "./Images/python.webp";
+import javaScriptIcon from "./Images/javaScript.webp";
+import iosIcon from "./Images/ios.webp";
+import gatsByIcon from "./Images/gatsBy.webp";
+import csharpIcon from "./Images/cSharp.webp";
 
 export {
+  reactIcon,
+  flutterIcon,
+  pythonIcon,
+  javaScriptIcon,
+  iosIcon,
+  gatsByIcon,
+  csharpIcon,
   offerImage,
   serviceImage,
   serviceHeaderImage,

@@ -18,6 +18,13 @@ import {
   Phillip,
   Kiersten,
   Fazle,
+  reactIcon,
+  pythonIcon,
+  gatsByIcon,
+  flutterIcon,
+  csharpIcon,
+  javaScriptIcon,
+  iosIcon,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
 import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
@@ -140,6 +147,36 @@ export const services = [
         image: Dev,
       },
     ],
+    technologies: [
+      {
+        title: "React Native",
+        image: reactIcon,
+      },
+      {
+        title: "Flutter",
+        image: flutterIcon,
+      },
+      {
+        title: "Python",
+        image: pythonIcon,
+      },
+      {
+        title: "IOS",
+        image: iosIcon,
+      },
+      {
+        title: "Javascript",
+        image: javaScriptIcon,
+      },
+      {
+        title: "C#",
+        image: csharpIcon,
+      },
+      {
+        title: "Gats By",
+        image: gatsByIcon,
+      },
+    ],
   },
   {
     id: 2,
@@ -171,6 +208,36 @@ export const services = [
       {
         title: "Maintenance & Support",
         image: Dev,
+      },
+    ],
+    technologies: [
+      {
+        title: "React Native",
+        image: reactIcon,
+      },
+      {
+        title: "Flutter",
+        image: flutterIcon,
+      },
+      {
+        title: "Python",
+        image: pythonIcon,
+      },
+      {
+        title: "IOS",
+        image: iosIcon,
+      },
+      {
+        title: "Javascript",
+        image: javaScriptIcon,
+      },
+      {
+        title: "C#",
+        image: csharpIcon,
+      },
+      {
+        title: "Gats By",
+        image: gatsByIcon,
       },
     ],
   },
@@ -206,6 +273,36 @@ export const services = [
         image: Dev,
       },
     ],
+    technologies: [
+      {
+        title: "React Native",
+        image: reactIcon,
+      },
+      {
+        title: "Flutter",
+        image: flutterIcon,
+      },
+      {
+        title: "Python",
+        image: pythonIcon,
+      },
+      {
+        title: "IOS",
+        image: iosIcon,
+      },
+      {
+        title: "Javascript",
+        image: javaScriptIcon,
+      },
+      {
+        title: "C#",
+        image: csharpIcon,
+      },
+      {
+        title: "Gats By",
+        image: gatsByIcon,
+      },
+    ],
   },
   {
     id: 4,
@@ -237,6 +334,36 @@ export const services = [
       {
         title: "Maintenance & Support",
         image: Dev,
+      },
+    ],
+    technologies: [
+      {
+        title: "React Native",
+        image: reactIcon,
+      },
+      {
+        title: "Flutter",
+        image: flutterIcon,
+      },
+      {
+        title: "Python",
+        image: pythonIcon,
+      },
+      {
+        title: "IOS",
+        image: iosIcon,
+      },
+      {
+        title: "Javascript",
+        image: javaScriptIcon,
+      },
+      {
+        title: "C#",
+        image: csharpIcon,
+      },
+      {
+        title: "Gats By",
+        image: gatsByIcon,
       },
     ],
   },
@@ -272,6 +399,36 @@ export const services = [
         image: Dev,
       },
     ],
+    technologies: [
+      {
+        title: "React Native",
+        image: reactIcon,
+      },
+      {
+        title: "Flutter",
+        image: flutterIcon,
+      },
+      {
+        title: "Python",
+        image: pythonIcon,
+      },
+      {
+        title: "IOS",
+        image: iosIcon,
+      },
+      {
+        title: "Javascript",
+        image: javaScriptIcon,
+      },
+      {
+        title: "C#",
+        image: csharpIcon,
+      },
+      {
+        title: "Gats By",
+        image: gatsByIcon,
+      },
+    ],
   },
   {
     id: 6,
@@ -305,6 +462,36 @@ export const services = [
         image: Dev,
       },
     ],
+    technologies: [
+      {
+        title: "React Native",
+        image: reactIcon,
+      },
+      {
+        title: "Flutter",
+        image: flutterIcon,
+      },
+      {
+        title: "Python",
+        image: pythonIcon,
+      },
+      {
+        title: "IOS",
+        image: iosIcon,
+      },
+      {
+        title: "Javascript",
+        image: javaScriptIcon,
+      },
+      {
+        title: "C#",
+        image: csharpIcon,
+      },
+      {
+        title: "Gats By",
+        image: gatsByIcon,
+      },
+    ],
   },
   {
     id: 7,
@@ -336,6 +523,36 @@ export const services = [
       {
         title: "Maintenance & Support",
         image: Dev,
+      },
+    ],
+    technologies: [
+      {
+        title: "React Native",
+        image: reactIcon,
+      },
+      {
+        title: "Flutter",
+        image: flutterIcon,
+      },
+      {
+        title: "Python",
+        image: pythonIcon,
+      },
+      {
+        title: "IOS",
+        image: iosIcon,
+      },
+      {
+        title: "Javascript",
+        image: javaScriptIcon,
+      },
+      {
+        title: "C#",
+        image: csharpIcon,
+      },
+      {
+        title: "Gats By",
+        image: gatsByIcon,
       },
     ],
   },

@@ -22,3 +22,4 @@ export { default as Policy } from "./privacyPolicy";
 export { default as ServiceDetailsHeader } from "./serviceDetailsHeader";
 export { default as AchievementCards } from "./achievementCards";
 export { default as OfferedServices } from "./offeredServices";
+export { default as TechnologySection } from "./technologySection";

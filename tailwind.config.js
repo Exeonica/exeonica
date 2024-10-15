@@ -59,6 +59,7 @@ module.exports = {
           8: "#F453D4",
           9: "#EEFBFD",
           10: "#f5f5f5",
+          11: "#EEFBFD",
         },
       },
       borderRadius: {
