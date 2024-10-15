@@ -45,8 +45,44 @@ import javaScriptIcon from "./Images/javaScript.webp";
 import iosIcon from "./Images/ios.webp";
 import gatsByIcon from "./Images/gatsBy.webp";
 import csharpIcon from "./Images/cSharp.webp";
+import androidStudioIcon from "./Images/androidStudio.webp";
+import canvaIcon from "./Images/canva.webp";
+import cocoapodsIcon from "./Images/Cocoapods.webp";
+import dialogflowIcon from "./Images/dialogflow.webp";
+import figmaIcon from "./Images/figma.webp";
+import firebaseIcon from "./Images/firebase.webp";
+import gradleIcon from "./Images/gradle.webp";
+import javaIcon from "./Images/java-original.webp";
+import kotlinIcon from "./Images/kotlin.webp";
+import nextJsIcon from "./Images/nextJs.webp";
+import nodeJsIcon from "./Images/nodeJs.webp";
+import primereProIcon from "./Images/premiere.webp";
+import sketchIcon from "./Images/sketch.webp";
+import swiftIcon from "./Images/swift.webp";
+import tensorflowIcon from "./Images/tensorflow.webp";
+import typescriptIcon from "./Images/typescript.webp";
+import xcodeIcon from "./Images/xcode.webp";
+import xdIcon from "./Images/xd.webp";
 
 export {
+  xdIcon,
+  xcodeIcon,
+  typescriptIcon,
+  tensorflowIcon,
+  swiftIcon,
+  sketchIcon,
+  primereProIcon,
+  nodeJsIcon,
+  nextJsIcon,
+  kotlinIcon,
+  javaIcon,
+  gradleIcon,
+  firebaseIcon,
+  figmaIcon,
+  dialogflowIcon,
+  cocoapodsIcon,
+  canvaIcon,
+  androidStudioIcon,
   reactIcon,
   flutterIcon,
   pythonIcon,

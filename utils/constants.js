@@ -20,11 +20,27 @@ import {
   Fazle,
   reactIcon,
   pythonIcon,
-  gatsByIcon,
   flutterIcon,
-  csharpIcon,
   javaScriptIcon,
   iosIcon,
+  xdIcon,
+  xcodeIcon,
+  typescriptIcon,
+  tensorflowIcon,
+  swiftIcon,
+  sketchIcon,
+  primereProIcon,
+  nodeJsIcon,
+  nextJsIcon,
+  kotlinIcon,
+  javaIcon,
+  gradleIcon,
+  firebaseIcon,
+  figmaIcon,
+  dialogflowIcon,
+  cocoapodsIcon,
+  canvaIcon,
+  androidStudioIcon,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
 import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
@@ -121,25 +137,25 @@ export const services = [
     title: "AI Chatbot Development",
     desc: "Elevate your customer experience with AI-powered chatbots. Our experts will design and develop a custom chatbot tailored to your specific needs.",
     image: Software,
-    subTitle: "IOS App Development: Empowering Your Digital Presence",
+    subTitle: "AI Chatbot Development: Transforming Customer Interaction",
     subDesc:
-      "At Exeonic, we craft mobile applications that are not only functional but also transformative. Our approach focuses on delivering seamless, intuitive user experiences that drive engagement and keep your business at the forefront of the mobile-first world. From concept to deployment, we ensure that your app is scalable, secure, and designed to make a lasting impact.",
+      "Our AI Chatbot Development service focuses on creating intelligent chatbots that enhance customer interaction and streamline business processes. We ensure that your chatbot is intuitive, responsive, and capable of handling complex queries.",
     subImage: Dev,
     offers: [
       {
-        title: "Custom IOS Development",
+        title: "Custom Chatbot Solutions",
         image: Dev,
       },
       {
-        title: "Cross-platform app development",
+        title: "Natural Language Processing",
         image: Dev,
       },
       {
-        title: "UI/UX design",
+        title: "Integration with Existing Systems",
         image: Dev,
       },
       {
-        title: "iOS development consulting",
+        title: "Chatbot Analytics",
         image: Dev,
       },
       {
@@ -149,32 +165,24 @@ export const services = [
     ],
     technologies: [
       {
-        title: "React Native",
-        image: reactIcon,
+        title: "TensorFlow",
+        image: tensorflowIcon,
       },
       {
-        title: "Flutter",
-        image: flutterIcon,
+        title: "Dialogflow",
+        image: dialogflowIcon,
       },
       {
         title: "Python",
         image: pythonIcon,
       },
       {
-        title: "IOS",
-        image: iosIcon,
+        title: "Node.js",
+        image: nodeJsIcon,
       },
       {
-        title: "Javascript",
+        title: "JavaScript",
         image: javaScriptIcon,
-      },
-      {
-        title: "C#",
-        image: csharpIcon,
-      },
-      {
-        title: "Gats By",
-        image: gatsByIcon,
       },
     ],
   },
@@ -184,25 +192,25 @@ export const services = [
     title: "Mobile App Development",
     desc: "Leveraging the power of JS/TS with React and React Native for efficient cross-platform app development. Single codebase for multiple platforms.",
     image: Software,
-    subTitle: "IOS App Development: Empowering Your Digital Presence",
+    subTitle: "Mobile App Development: Crafting Seamless Experiences",
     subDesc:
-      "At Exeonic, we craft mobile applications that are not only functional but also transformative. Our approach focuses on delivering seamless, intuitive user experiences that drive engagement and keep your business at the forefront of the mobile-first world. From concept to deployment, we ensure that your app is scalable, secure, and designed to make a lasting impact.",
+      "Our Mobile App Development service is dedicated to building high-performance apps that provide seamless user experiences across all devices. We focus on scalability, security, and user-centric design.",
     subImage: Dev,
     offers: [
       {
-        title: "Custom IOS Development",
+        title: "Custom Mobile App Development",
         image: Dev,
       },
       {
-        title: "Cross-platform app development",
+        title: "Cross-platform Solutions",
         image: Dev,
       },
       {
-        title: "UI/UX design",
+        title: "UI/UX Design",
         image: Dev,
       },
       {
-        title: "iOS development consulting",
+        title: "App Testing & QA",
         image: Dev,
       },
       {
@@ -220,24 +228,16 @@ export const services = [
         image: flutterIcon,
       },
       {
-        title: "Python",
-        image: pythonIcon,
+        title: "Swift",
+        image: swiftIcon,
       },
       {
-        title: "IOS",
-        image: iosIcon,
+        title: "Kotlin",
+        image: kotlinIcon,
       },
       {
-        title: "Javascript",
+        title: "JavaScript",
         image: javaScriptIcon,
-      },
-      {
-        title: "C#",
-        image: csharpIcon,
-      },
-      {
-        title: "Gats By",
-        image: gatsByIcon,
       },
     ],
   },
@@ -247,29 +247,28 @@ export const services = [
     title: "Mobile App Consulting",
     desc: "We help finalize app concepts, advise on platform compatibility, plan project tasks, and optimize development costs.",
     image: Software,
-    subTitle: "IOS App Development: Empowering Your Digital Presence",
-    subDesc:
-      "At Exeonic, we craft mobile applications that are not only functional but also transformative. Our approach focuses on delivering seamless, intuitive user experiences that drive engagement and keep your business at the forefront of the mobile-first world. From concept to deployment, we ensure that your app is scalable, secure, and designed to make a lasting impact.",
+    subTitle: "Mobile App Consulting: Strategic Guidance for Success",
+    subDesc: "Our Mobile App Consulting service provides expert guidance to ensure your app's success. We offer strategic advice on app development, platform selection, and cost optimization.",
     subImage: Dev,
     offers: [
       {
-        title: "Custom IOS Development",
+        title: "App Concept Finalization",
         image: Dev,
       },
       {
-        title: "Cross-platform app development",
+        title: "Platform Compatibility Analysis",
         image: Dev,
       },
       {
-        title: "UI/UX design",
+        title: "Project Planning",
         image: Dev,
       },
       {
-        title: "iOS development consulting",
+        title: "Cost Optimization",
         image: Dev,
       },
       {
-        title: "Maintenance & Support",
+        title: "Market Strategy",
         image: Dev,
       },
     ],
@@ -291,16 +290,8 @@ export const services = [
         image: iosIcon,
       },
       {
-        title: "Javascript",
+        title: "JavaScript",
         image: javaScriptIcon,
-      },
-      {
-        title: "C#",
-        image: csharpIcon,
-      },
-      {
-        title: "Gats By",
-        image: gatsByIcon,
       },
     ],
   },
@@ -310,60 +301,51 @@ export const services = [
     title: "Web Development Services​",
     desc: "Leveraging the power of JS/TS with React, NextJS, Expo & Remix for efficient & responsive Web App development.",
     image: Software,
-    subTitle: "IOS App Development: Empowering Your Digital Presence",
-    subDesc:
-      "At Exeonic, we craft mobile applications that are not only functional but also transformative. Our approach focuses on delivering seamless, intuitive user experiences that drive engagement and keep your business at the forefront of the mobile-first world. From concept to deployment, we ensure that your app is scalable, secure, and designed to make a lasting impact.",
+    subTitle: "Web Development Services: Building the Future of Web",
+    subDesc: "Our Web Development Services focus on creating responsive, high-performance web applications that meet the demands of modern users. We prioritize speed, security, and scalability.",
     subImage: Dev,
     offers: [
       {
-        title: "Custom IOS Development",
+        title: "Custom Web Development",
         image: Dev,
       },
       {
-        title: "Cross-platform app development",
+        title: "E-commerce Solutions",
         image: Dev,
       },
       {
-        title: "UI/UX design",
+        title: "Progressive Web Apps",
         image: Dev,
       },
       {
-        title: "iOS development consulting",
+        title: "Web App Maintenance",
         image: Dev,
       },
       {
-        title: "Maintenance & Support",
+        title: "SEO Optimization",
         image: Dev,
       },
     ],
     technologies: [
       {
-        title: "React Native",
+        title: "React",
         image: reactIcon,
       },
       {
-        title: "Flutter",
-        image: flutterIcon,
+        title: "Next.js",
+        image: nextJsIcon,
       },
       {
-        title: "Python",
-        image: pythonIcon,
+        title: "Node.js",
+        image: nodeJsIcon,
       },
       {
-        title: "IOS",
-        image: iosIcon,
+        title: "TypeScript",
+        image: typescriptIcon,
       },
       {
-        title: "Javascript",
+        title: "JavaScript",
         image: javaScriptIcon,
-      },
-      {
-        title: "C#",
-        image: csharpIcon,
-      },
-      {
-        title: "Gats By",
-        image: gatsByIcon,
       },
     ],
   },
@@ -373,60 +355,51 @@ export const services = [
     title: "UI/UX Design Services",
     desc: "Our designers create easy-to-use UX and visually attractive UI that drive engagement, user acceptance and conversions.",
     image: Software,
-    subTitle: "IOS App Development: Empowering Your Digital Presence",
-    subDesc:
-      "At Exeonic, we craft mobile applications that are not only functional but also transformative. Our approach focuses on delivering seamless, intuitive user experiences that drive engagement and keep your business at the forefront of the mobile-first world. From concept to deployment, we ensure that your app is scalable, secure, and designed to make a lasting impact.",
+    subTitle: "UI/UX Design Services: Crafting Engaging Interfaces",
+    subDesc: "Our UI/UX Design Services focus on creating intuitive and visually appealing interfaces that enhance user engagement and satisfaction. We prioritize user-centric design principles.",
     subImage: Dev,
     offers: [
       {
-        title: "Custom IOS Development",
+        title: "User Research & Analysis",
         image: Dev,
       },
       {
-        title: "Cross-platform app development",
+        title: "Wireframing & Prototyping",
         image: Dev,
       },
       {
-        title: "UI/UX design",
+        title: "Visual Design",
         image: Dev,
       },
       {
-        title: "iOS development consulting",
+        title: "Usability Testing",
         image: Dev,
       },
       {
-        title: "Maintenance & Support",
+        title: "Design System Development",
         image: Dev,
       },
     ],
     technologies: [
       {
-        title: "React Native",
-        image: reactIcon,
+        title: "Figma",
+        image: figmaIcon,
       },
       {
-        title: "Flutter",
-        image: flutterIcon,
+        title: "Sketch",
+        image: sketchIcon,
       },
       {
-        title: "Python",
-        image: pythonIcon,
+        title: "Adobe XD",
+        image: xdIcon,
       },
       {
-        title: "IOS",
-        image: iosIcon,
+        title: "Primere Pro",
+        image: primereProIcon,
       },
       {
-        title: "Javascript",
-        image: javaScriptIcon,
-      },
-      {
-        title: "C#",
-        image: csharpIcon,
-      },
-      {
-        title: "Gats By",
-        image: gatsByIcon,
+        title: "Canva",
+        image: canvaIcon,
       },
     ],
   },
@@ -436,25 +409,25 @@ export const services = [
     title: "Native iOS Development",
     desc: "Our team of iOS developers has significant experience in custom iOS app development services and will help your iOS app run smoothly",
     image: Software,
-    subTitle: "IOS App Development: Empowering Your Digital Presence",
+    subTitle: "Native iOS Development: Excellence in iOS Apps",
     subDesc:
-      "At Exeonic, we craft mobile applications that are not only functional but also transformative. Our approach focuses on delivering seamless, intuitive user experiences that drive engagement and keep your business at the forefront of the mobile-first world. From concept to deployment, we ensure that your app is scalable, secure, and designed to make a lasting impact.",
+      "Our Native iOS Development service delivers high-quality iOS applications that are optimized for performance and user experience. We ensure seamless integration with the latest iOS features.",
     subImage: Dev,
     offers: [
       {
-        title: "Custom IOS Development",
+        title: "Custom iOS App Development",
         image: Dev,
       },
       {
-        title: "Cross-platform app development",
+        title: "Swift Development",
         image: Dev,
       },
       {
-        title: "UI/UX design",
+        title: "App Store Deployment",
         image: Dev,
       },
       {
-        title: "iOS development consulting",
+        title: "iOS App Testing",
         image: Dev,
       },
       {
@@ -464,32 +437,24 @@ export const services = [
     ],
     technologies: [
       {
-        title: "React Native",
-        image: reactIcon,
+        title: "Swift",
+        image: swiftIcon,
       },
       {
-        title: "Flutter",
-        image: flutterIcon,
-      },
-      {
-        title: "Python",
-        image: pythonIcon,
-      },
-      {
-        title: "IOS",
+        title: "Objective-C",
         image: iosIcon,
       },
       {
-        title: "Javascript",
-        image: javaScriptIcon,
+        title: "Xcode",
+        image: xcodeIcon,
       },
       {
-        title: "C#",
-        image: csharpIcon,
+        title: "iOS SDK",
+        image: iosIcon,
       },
       {
-        title: "Gats By",
-        image: gatsByIcon,
+        title: "CocoaPods",
+        image: cocoapodsIcon,
       },
     ],
   },
@@ -497,27 +462,27 @@ export const services = [
     id: 7,
     icon: NAD,
     title: "Native Android Development",
-    desc: "Our team of iOS developers has significant experience in custom iOS app development services and will help your iOS app run smoothly",
+    desc: "Our team of Android developers has significant experience in custom Android app development services and will help your Android app run smoothly",
     image: Software,
-    subTitle: "IOS App Development: Empowering Your Digital Presence",
+    subTitle: "Native Android Development: Excellence in Android Apps",
     subDesc:
-      "At Exeonic, we craft mobile applications that are not only functional but also transformative. Our approach focuses on delivering seamless, intuitive user experiences that drive engagement and keep your business at the forefront of the mobile-first world. From concept to deployment, we ensure that your app is scalable, secure, and designed to make a lasting impact.",
+      "Our Native Android Development service delivers high-quality Android applications that are optimized for performance and user experience. We ensure seamless integration with the latest Android features.",
     subImage: Dev,
     offers: [
       {
-        title: "Custom IOS Development",
+        title: "Custom Android App Development",
         image: Dev,
       },
       {
-        title: "Cross-platform app development",
+        title: "Kotlin Development",
         image: Dev,
       },
       {
-        title: "UI/UX design",
+        title: "Google Play Deployment",
         image: Dev,
       },
       {
-        title: "iOS development consulting",
+        title: "Android App Testing",
         image: Dev,
       },
       {
@@ -527,32 +492,24 @@ export const services = [
     ],
     technologies: [
       {
-        title: "React Native",
-        image: reactIcon,
+        title: "Kotlin",
+        image: kotlinIcon,
       },
       {
-        title: "Flutter",
-        image: flutterIcon,
+        title: "Java",
+        image: javaIcon,
       },
       {
-        title: "Python",
-        image: pythonIcon,
+        title: "Android Studio",
+        image: androidStudioIcon,
       },
       {
-        title: "IOS",
-        image: iosIcon,
+        title: "Gradle",
+        image: gradleIcon,
       },
       {
-        title: "Javascript",
-        image: javaScriptIcon,
-      },
-      {
-        title: "C#",
-        image: csharpIcon,
-      },
-      {
-        title: "Gats By",
-        image: gatsByIcon,
+        title: "Firebase",
+        image: firebaseIcon,
       },
     ],
   },
