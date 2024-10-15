@@ -86,4 +86,10 @@ export const strings = {
   termsAndConditions: "TERM & CONDITIONS",
   privacyPolicy: "PRIVACY POLICY",
   getDirection: "Get Directions",
+  blogsCardTitle: "Artificial Intelligence",
+  blogDesc: "Mastering ChatGPT Blog Creation: Dos and Don'ts for SaaS Marketing Managers",
+  blogDate: "October 19",
+  blogTime: "10 min ago",
+  artical: "In this article",
+  relatedArticals: "Related Articles",
 };

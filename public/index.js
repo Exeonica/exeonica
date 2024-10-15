@@ -34,6 +34,7 @@ import Cursor from "./Images/cursor.webp";
 import Phillip from "./Images/Phillip.jpg";
 import Kiersten from "./Images/Kiersten.jpeg";
 import Fazle from "./Images/Fazle.jpg";
+import BlogImage1 from "./Images/blog1.webp";
 
 export {
   Phillip,
@@ -72,6 +73,7 @@ export {
   MobMap,
   Marker,
   Cursor,
+  BlogImage1,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";
