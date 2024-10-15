@@ -46,7 +46,7 @@ const blogDetails = ({ cardsData }) => {
               <h2 className="mb-4 text-lg font-bold">{strings["artical"]}</h2>
 
               {articles.map((article, index) => (
-                <div className="border-l-4 border-blue-400 pl-4">
+                <div className="border-l-4 border-primary pl-4">
                   <p key={index} className={"mb-2 cursor-pointer"}>
                     {article}
                   </p>
