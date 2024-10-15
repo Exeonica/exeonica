@@ -24,3 +24,4 @@ export { default as AchievementCards } from "./achievementCards";
 export { default as OfferedServices } from "./offeredServices";
 export { default as ButtonFilter } from "./buttonsFilter";
 export { default as ProjectEstimation } from "./projectEstimation";
+export { default as TechnologySection } from "./technologySection";

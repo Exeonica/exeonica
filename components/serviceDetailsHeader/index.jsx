@@ -8,7 +8,7 @@ import { strings } from "@/utils";
 
 const ServiceDetailsHeader = ({ service }) => {
   return (
-    <div className="bg-gradient-to-b from-white to-color-2 px-[16px] py-[60px] lg:flex lg:items-center lg:justify-between lg:space-x-[60px] lg:px-[120px] lg:py-[50px] xl:space-x-[179px]">
+    <div className="bg-gradient-to-b from-white to-color-9 px-[16px] py-[60px] lg:flex lg:items-center lg:justify-between lg:space-x-[60px] lg:px-[120px] lg:py-[50px] xl:space-x-[179px]">
       <div>
         <Button variant={"outlineRounded"} classes="text-xs md:text-base md:font-normal cursor-default">
           {strings["serviceDetailsBtn"]}
