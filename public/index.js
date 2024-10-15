@@ -34,9 +34,15 @@ import Cursor from "./Images/cursor.webp";
 import Phillip from "./Images/Phillip.jpg";
 import Kiersten from "./Images/Kiersten.jpeg";
 import Fazle from "./Images/Fazle.jpg";
+import serviceHeaderImage from "./Images/serviceHeaderImage.webp";
+import serviceImage from "./Images/service.webp";
+import offerImage from "./Images/offerService.webp";
 import BlogImage1 from "./Images/blog1.webp";
 
 export {
+  offerImage,
+  serviceImage,
+  serviceHeaderImage,
   Phillip,
   Kiersten,
   Fazle,
