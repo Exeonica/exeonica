@@ -142,6 +142,7 @@ export const services = [
     ],
   },
   {
+    id: 2,
     icon: MAD,
     title: "Mobile App Development",
     desc: "Leveraging the power of JS/TS with React and React Native for efficient cross-platform app development. Single codebase for multiple platforms.",
@@ -174,6 +175,7 @@ export const services = [
     ],
   },
   {
+    id: 3,
     icon: MAC,
     title: "Mobile App Consulting",
     desc: "We help finalize app concepts, advise on platform compatibility, plan project tasks, and optimize development costs.",
@@ -206,6 +208,7 @@ export const services = [
     ],
   },
   {
+    id: 4,
     icon: WDS,
     title: "Web Development Services​",
     desc: "Leveraging the power of JS/TS with React, NextJS, Expo & Remix for efficient & responsive Web App development.",
@@ -238,6 +241,7 @@ export const services = [
     ],
   },
   {
+    id: 5,
     icon: UDS,
     title: "UI/UX Design Services",
     desc: "Our designers create easy-to-use UX and visually attractive UI that drive engagement, user acceptance and conversions.",
@@ -270,6 +274,7 @@ export const services = [
     ],
   },
   {
+    id: 6,
     icon: NID,
     title: "Native iOS Development",
     desc: "Our team of iOS developers has significant experience in custom iOS app development services and will help your iOS app run smoothly",
@@ -302,6 +307,7 @@ export const services = [
     ],
   },
   {
+    id: 7,
     icon: NAD,
     title: "Native Android Development",
     desc: "Our team of iOS developers has significant experience in custom iOS app development services and will help your iOS app run smoothly",
