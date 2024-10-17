@@ -44,6 +44,7 @@ import {
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
 import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
+import { Android, AppleLogo, Chat, CreditCard, Guarantee, Map, Notification, SocialMedia } from "@/public/ProjectEstimation/index";
 
 export const navLinks = [
   { name: "Home", path: "/" },
@@ -836,5 +837,81 @@ export const portfolioData = [
       { icon: C, name: "C#" },
       { icon: React, name: "React.js" },
     ],
+  },
+];
+
+export const options = [
+  {
+    id: 1,
+    title: "What describes your needs best?",
+    type: "radio",
+    choices: ["Build an app from Scratch", "Outsource a development team", "Something else"],
+  },
+  {
+    id: 2,
+    title: "What kind of services are you looking for to support your project?",
+    type: "checkbox",
+    choices: ["Mobile Development", "Web Development"],
+  },
+  {
+    id: 3,
+    title: "What is the primary focus of the app you want to build?",
+    type: "radio",
+    choices: ["Ecommerce App", "Health App", "Social Media App", "Something else"],
+  },
+  {
+    id: 4,
+    type: "radioWithIcon",
+    title: "What is the primary focus of the app you want to build?",
+    choices: [
+      { label: "IOS", icon: AppleLogo },
+      { label: "Android", icon: Android },
+      { label: "Both", icon: AppleLogo },
+    ],
+  },
+  {
+    id: 5,
+    title: "What is your planned monetization strategy?",
+    type: "radio",
+    choices: ["Subscription", "Ads", "Paid installation", "Freemium","Percent from transaction cost","I don't plan to monetize my app"],
+  },
+  {
+    id: 6,
+    title: "Do you need additional services?",
+    type: "radio",
+    choices: ["UI/UX Design", "SEO/ASO", "Maintenance", "Consulting","No Additional Services","Other"],
+  },
+  {
+    id: 7,
+    type: "checkBoxWithIcon",
+    title: "What features are essential for your app?",
+    choices: [
+      { label: "In App Purchase", icon: CreditCard },
+      { label: "Push Notification", icon: Notification },
+      { label: "Social media", icon: SocialMedia },
+      { label: "User Authentcation", icon: Guarantee },
+      { label: "Geolocation", icon: Map },
+      { label: "Chat/Messaging", icon: Chat },
+      { label: "Others", icon: Android },
+    ],
+  },
+  {
+    id: 8,
+    title: "What is your preferred timeline for development?",
+    type: "radio",
+    choices: ["1 to 3 months", "2 to 6 months", "6 to 12 months", "Flexible"],
+  },
+
+  {
+    id: 9,
+    title: "How much money are you willing to invest in your project? (optional)",
+    type: "radio",
+    choices: ["10,000$", "20,000$", "0,000$", "30,000$"],
+  },
+  {
+    id: 10,
+    title: "Please provide the following details so we can send you a cost estimate.",
+    type: "textarea",
+    placeholders: ["Your Name *", "Company Name *", "Email *"],
   },
 ];
