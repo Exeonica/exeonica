@@ -3,13 +3,23 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import { Button } from "@/components/index";
+import { Button, SuccessModal } from "@/components/index";
 import { Carousel, CarouselContent } from "@/components/ui/carousel";
-import { options } from "@/utils";
+import { options, strings } from "@/utils";
+import { TrueArrow } from "@/public";
 
 const ProjectEstimation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState("");
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalVisible(true);
+  };
+
+  const handleCloseForm = () => {
+    setModalVisible(false);
+  };
 
   const handleIndexChange = (index) => {
     setActiveIndex(index);
@@ -21,8 +31,8 @@ const ProjectEstimation = () => {
     return (
       <div key={option.id} className="mb-6">
         <>
-          <div className="mx-[454px] flex flex-col">
-            <p className="mb-[24px] text-[36px] font-semibold leading-[53.46px]">{option.title}</p>
+          <div className="flex flex-1 flex-col px-[33px]">
+            <p className="mb-[24px] text-[28px] font-semibold leading-[53.46px] text-card-foreground lg:text-[36px] lg:leading-[41.58px]">{option.title}</p>
 
             {option.type === "radio" &&
               option.choices.map((choice, index) => {
@@ -36,14 +46,51 @@ const ProjectEstimation = () => {
                       setSelectedChoice(choice);
                     }}
                   >
-                    <div className="flex justify-between">
-                      <p>{choice}</p>
+                    <div className="flex flex-1 items-center justify-between">
+                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
                       <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
                     </div>
                   </div>
                 );
               })}
 
+            {option.type === "radioWithTwoValues" && (
+              <div className="space-y-4">
+                {/* Two-column layout for the first two rows */}
+                <div className="grid grid-cols-2 gap-4">
+                  {option.choices.slice(0, 4).map((choice, index) => {
+                    const choiceId = `option${option.id}_choice${index}`;
+
+                    return (
+                      <div
+                        key={index}
+                        className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[24px] py-[30px] ${selectedChoice === choice ? "border-primary" : ""}`}
+                        onClick={() => setSelectedChoice(choice)}
+                      >
+                        <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
+                        <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Single-column layout for the remaining options */}
+                {option.choices.slice(4).map((choice, index) => {
+                  const choiceId = `option${option.id}_choice${index + 4}`;
+
+                  return (
+                    <div
+                      key={index}
+                      className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[24px] py-[30px] ${selectedChoice === choice ? "border-primary" : ""}`}
+                      onClick={() => setSelectedChoice(choice)}
+                    >
+                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
+                      <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
             {option.type === "checkbox" &&
               option.choices.map((choice, index) => {
                 const choiceId = `option${option.id}_choice${index}`;
@@ -57,13 +104,12 @@ const ProjectEstimation = () => {
                     }}
                   >
                     <div className="flex justify-between">
-                      <p>{choice}</p>
+                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
                       <input type="checkbox" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
                     </div>
                   </div>
                 );
               })}
-
             {option.type === "radioWithIcon" &&
               option.choices.map((choice, index) => {
                 const choiceId = `option${option.id}_choice${index}`;
@@ -79,14 +125,13 @@ const ProjectEstimation = () => {
                     <div key={index} className="flex w-full justify-between">
                       <div className="flex items-center">
                         {choice.label === "Both" ? null : <Image src={choice.icon} alt={""} className="h-[36px] w-[36px] object-contain" />}
-                        <p className="ml-[16px]">{choice.label}</p>
+                        <p className="ml-[16px] text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice.label}</p>
                       </div>
                       <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
                     </div>
                   </div>
                 );
               })}
-
             {option.type === "checkBoxWithIcon" &&
               option.choices.map((choice, index) => {
                 const choiceId = `option${option.id}_choice${index}`;
@@ -101,20 +146,15 @@ const ProjectEstimation = () => {
                   >
                     <div key={index} className="flex w-full justify-between">
                       <div className="flex items-center">
-                        {choice.label === "Both" ? null : <Image src={choice.icon} alt={""} className="h-[36px] w-[36px] object-contain" />}
-                        <p className="ml-[16px]">{choice.label}</p>
+                        {choice.label === "Others" ? null : <Image src={choice.icon} alt={""} className="h-[36px] w-[36px] object-contain" />}
+                        <p className="ml-[16px] text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice.label}</p>
                       </div>
                       <input type="checkbox" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
                     </div>
                   </div>
                 );
               })}
-
-            {option.type === "textarea" &&
-              option.placeholders.map((item, index) => (
-                // alert(item.placeholders)
-                <textarea key={index} placeholder={item} className="mb-4 mt-2 w-full rounded border p-2" rows="2" />
-              ))}
+            {option.type === "textarea" && option.placeholders.map((item, index) => <textarea key={index} placeholder={item} className="mb-4 mt-2 w-full rounded border p-2" rows="2" />)}
           </div>
         </>
       </div>
@@ -122,10 +162,10 @@ const ProjectEstimation = () => {
   };
 
   return (
-    <div className="mb-[56px] flex flex-1 justify-center">
+    <div className="mx:[16px] mb-[56px] flex flex-1 flex-col px-[11.5px] md:mx-[210px] lg:mx-[300px] xl:mx-[405px]">
       <div className="mt-[36px] flex flex-1 flex-col items-center justify-center">
         <div>
-          <p className="text-[48px] font-semibold leading-[71.28px] text-text">Project Estimation Calculator</p>
+          <p className="text-center text-[48px] font-semibold leading-[71.28px] text-text">Project Estimation Calculator</p>
           <p className="justify-center text-center text-[24px] font-normal leading-[35.64px] text-color-1">It will take less than 2 min to complete the form</p>
         </div>
 
@@ -139,18 +179,43 @@ const ProjectEstimation = () => {
           <CarouselContent>{renderActiveSlide()}</CarouselContent>
         </Carousel>
 
-        <div className="mt-4 flex items-center justify-between">
+        <div className="mt-4 flex w-[90%] items-center justify-between md:justify-evenly">
           {activeIndex === 0 || activeIndex === options.length - 1 ? null : (
-            <Button variant={"outlineRounded"} classes="px-[73px] py-[12px] rounded-[8px] mr-[16px]" disabled={activeIndex === 0} onClick={() => setActiveIndex(activeIndex - 1)}>
+            <Button
+              variant={"outlineRounded"}
+              classes="px-[39.5px] mb-[10px] md:[59.5px] py-[12px] rounded-[8px] md:mr-[16px]"
+              disabled={activeIndex === 0}
+              onClick={() => setActiveIndex(activeIndex - 1)}
+            >
               Previous
             </Button>
           )}
+          {isModalVisible && (
+            <SuccessModal onClose={handleCloseForm} modalstyle={"flex flex-col flex-1 justify-center items-center"}>
+              <div className="mb-[20px] flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary">
+                <Image src={TrueArrow} alt={""} className="h-[18.87px] w-[28.33px]" />
+              </div>
 
+              <div className="items-center justify-center px-[25.5px] text-center sm:ml-4 sm:mt-0 sm:text-left">
+                <p className={`text-center text-[24px] font-semibold leading-[32px] text-text`} id="modal-title">
+                  {strings["successMsg"]}
+                </p>
+                <div className="mb-[20px] mt-[16px]">
+                  <p className={`text-center text-[16px] font-normal leading-[22px] text-color-1`}>{strings["successDescription"]}</p>
+                </div>
+              </div>
+              <div>
+                <Button variant={"default"} onClick={() => {}} classes="w-full ">
+                  {strings["goToHome"]}
+                </Button>
+              </div>
+            </SuccessModal>
+          )}
           <Button
-            classes="px-[73px] py-[12px] rounded-[8px]"
+            classes="px-[53.5px] mb-[10px] md:[73px] py-[12px] rounded-[8px] md:mr-[16px]"
             onClick={() => {
               if (activeIndex === options.length - 1) {
-                alert("Submitted");
+                handleButtonClick();
               } else {
                 setActiveIndex(activeIndex + 1);
               }

@@ -11,7 +11,7 @@ const locations = [
     name: "Faisalabad, PAK",
     position: { lat: 31.4504, lng: 73.135 },
     address: "P-176 (First Floor), Block A Behind Wasa Tanky Near Gourmet Chenone Road, People Colony No. 1, FSD",
-    contact: "+88017 000 555 15",
+    contact: "+92 317 4922289",
     countryCode: "PK",
     flag: PKFlag,
   },

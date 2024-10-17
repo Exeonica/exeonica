@@ -33,9 +33,12 @@ import {
   nodeJsIcon,
   nextJsIcon,
   kotlinIcon,
+  javaIcon,
+  gradleIcon,
   firebaseIcon,
   figmaIcon,
   dialogflowIcon,
+  cocoapodsIcon,
   canvaIcon,
   androidStudioIcon,
 } from "@/public";
@@ -435,8 +438,8 @@ export const services = [
     ],
     technologies: [
       {
-        title: "Javascript",
-        image: javaScriptIcon,
+        title: "Swift",
+        image: swiftIcon,
       },
       {
         title: "Typescript",
@@ -873,13 +876,13 @@ export const options = [
   {
     id: 5,
     title: "What is your planned monetization strategy?",
-    type: "radio",
+    type: "radioWithTwoValues",
     choices: ["Subscription", "Ads", "Paid installation", "Freemium", "Percent from transaction cost", "I don't plan to monetize my app"],
   },
   {
     id: 6,
     title: "Do you need additional services?",
-    type: "radio",
+    type: "radioWithTwoValues",
     choices: ["UI/UX Design", "SEO/ASO", "Maintenance", "Consulting", "No Additional Services", "Other"],
   },
   {
