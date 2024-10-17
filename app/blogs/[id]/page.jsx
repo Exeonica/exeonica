@@ -14,10 +14,7 @@ const BlogDetails = async ({ params }) => {
 
   return (
     <div>
-      {/* <span>{blog.title}</span> */}
-      {/* <div dangerouslySetInnerHTML={{ __html: blog.template }} /> */}
-
-      <BlogsDetailsComp cardsData={allBlogs} />
+      <BlogsDetailsComp blog={blog} cardsData={allBlogs} />
     </div>
   );
 };

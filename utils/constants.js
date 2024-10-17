@@ -442,21 +442,25 @@ export const services = [
         image: swiftIcon,
       },
       {
-        title: "Objective-C",
-        image: iosIcon,
+        title: "Typescript",
+        image: typescriptIcon,
       },
       {
         title: "Xcode",
         image: xcodeIcon,
       },
       {
-        title: "iOS SDK",
+        title: "iOS",
         image: iosIcon,
       },
       {
-        title: "CocoaPods",
-        image: cocoapodsIcon,
+        title: "React Native",
+        image: reactIcon,
       },
+      // {
+      //   title: "Firebase",
+      //   image: firebaseIcon,
+      // },
     ],
   },
   {
@@ -493,20 +497,20 @@ export const services = [
     ],
     technologies: [
       {
-        title: "Kotlin",
-        image: kotlinIcon,
+        title: "React Native",
+        image: reactIcon,
       },
       {
-        title: "Java",
-        image: javaIcon,
+        title: "Javascript",
+        image: javaScriptIcon,
       },
       {
         title: "Android Studio",
         image: androidStudioIcon,
       },
       {
-        title: "Gradle",
-        image: gradleIcon,
+        title: "Typescript",
+        image: typescriptIcon,
       },
       {
         title: "Firebase",

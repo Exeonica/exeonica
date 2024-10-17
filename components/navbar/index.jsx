@@ -28,8 +28,10 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="ml-10 flex gap-[10px] xl:flex">
-          {/* <Button variant={"outline"}>{strings["calculateCost"]}</Button> */}
+        <div className="lg:hidden-none ml-10 flex gap-[10px] md:hidden xl:flex">
+          <Link href="./projectEstimation">
+            <Button variant={"outline"}>{strings["calculateCost"]}</Button>
+          </Link>
           <Link href="./contact">
             <Button variant={"default"}>{strings["getInTouch"]}</Button>
           </Link>
