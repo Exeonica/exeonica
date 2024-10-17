@@ -3,16 +3,22 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import { Button } from "@/components/index";
-// import { Carousel, CarouselContent } from "@/components/ui/carousel";
+import { Button, SuccessModal } from "@/components/index";
+import { Carousel, CarouselContent } from "@/components/ui/carousel";
 import { options } from "@/utils";
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const ProjectEstimation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState("");
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalVisible(true);
+  };
+
+  const handleCloseForm = () => {
+    setModalVisible(false);
+  };
 
   const handleIndexChange = (index) => {
     setActiveIndex(index);
@@ -183,12 +189,12 @@ const ProjectEstimation = () => {
               Previous
             </Button>
           )}
-
+          {isModalVisible && <SuccessModal title="successMsg" onClose={handleCloseForm} message="successDescription" onConfirm={() => {}} btnTitle={"goToHome"} />}
           <Button
             classes="px-[53.5px] mb-[10px] md:[73px] py-[12px] rounded-[8px] md:mr-[16px]"
             onClick={() => {
               if (activeIndex === options.length - 1) {
-                alert("Submitted");
+                handleButtonClick();
               } else {
                 setActiveIndex(activeIndex + 1);
               }

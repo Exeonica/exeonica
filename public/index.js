@@ -38,6 +38,7 @@ import serviceHeaderImage from "./Images/serviceHeaderImage.webp";
 import serviceImage from "./Images/service.webp";
 import offerImage from "./Images/offerService.webp";
 import BlogImage1 from "./Images/blog1.webp";
+import TrueArrow from "./Images/arrow.webp";
 
 export {
   offerImage,
@@ -80,6 +81,7 @@ export {
   Marker,
   Cursor,
   BlogImage1,
+  TrueArrow,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";

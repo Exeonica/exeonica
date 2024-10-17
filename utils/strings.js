@@ -95,4 +95,7 @@ export const strings = {
   blogTime: "10 min ago",
   artical: "In this article",
   relatedArticals: "Related Articles",
+  successMsg: "Successfully Submitted",
+  successDescription: "Your information is submitted successfully. We will get back to you shortly through an Email",
+  goToHome: "Return to home",
 };

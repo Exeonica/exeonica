@@ -22,7 +22,7 @@ const BlogsCards = ({ cardsData, limit }) => {
                 <h2 className="mb-[12px] text-[14px] font-semibold leading-[20px] text-primary">{card.category}</h2>
 
                 <div className="flex">
-                  <h2 className="text-color-12 mb-[12px] text-[26px] font-semibold leading-[32px]">{card.title}</h2>
+                  <h2 className="mb-[12px] text-[26px] font-semibold leading-[32px] text-color-12">{card.title}</h2>
                   <div className="mt-[8px]">
                     <GreyArrow color="red" />
                   </div>
@@ -35,7 +35,7 @@ const BlogsCards = ({ cardsData, limit }) => {
                   <Image src={BlogPost} alt={card.profileName} layout="fill" priority objectFit="cover" className="rounded-full" />
                 </div>
                 <div>
-                  <p className="text-color-12 text-[15px] font-semibold leading-[20px]">{card.profileName}</p>
+                  <p className="text-[15px] font-semibold leading-[20px] text-color-12">{card.profileName}</p>
                   <p className="text-[14px] font-normal leading-[20px] text-color-11">{"12 Nov 2021"}</p>
                 </div>
               </div>
