@@ -698,14 +698,14 @@ export const options = [
   {
     id: 5,
     title: "What is your planned monetization strategy?",
-    type: "radio",
-    choices: ["Subscription", "Ads", "Paid installation", "Freemium","Percent from transaction cost","I don't plan to monetize my app"],
+    type: "radioWithTwoValues",
+    choices: ["Subscription", "Ads", "Paid installation", "Freemium", "Percent from transaction cost", "I don't plan to monetize my app"],
   },
   {
     id: 6,
     title: "Do you need additional services?",
-    type: "radio",
-    choices: ["UI/UX Design", "SEO/ASO", "Maintenance", "Consulting","No Additional Services","Other"],
+    type: "radioWithTwoValues",
+    choices: ["UI/UX Design", "SEO/ASO", "Maintenance", "Consulting", "No Additional Services", "Other"],
   },
   {
     id: 7,
