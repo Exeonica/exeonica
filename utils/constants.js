@@ -33,12 +33,9 @@ import {
   nodeJsIcon,
   nextJsIcon,
   kotlinIcon,
-  javaIcon,
-  gradleIcon,
   firebaseIcon,
   figmaIcon,
   dialogflowIcon,
-  cocoapodsIcon,
   canvaIcon,
   androidStudioIcon,
 } from "@/public";
