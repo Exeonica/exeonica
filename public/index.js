@@ -63,8 +63,10 @@ import tensorflowIcon from "./Images/tensorflow.webp";
 import typescriptIcon from "./Images/typescript.webp";
 import xcodeIcon from "./Images/xcode.webp";
 import xdIcon from "./Images/xd.webp";
+import TrueArrow from "./Images/arrow.webp";
 
 export {
+  TrueArrow,
   xdIcon,
   xcodeIcon,
   typescriptIcon,
@@ -130,7 +132,6 @@ export {
   Marker,
   Cursor,
   BlogImage1,
-  TrueArrow,
 };
 
 export { default as ArrowUp } from "./Icons/arrowUp";
