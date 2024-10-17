@@ -47,7 +47,7 @@ import gatsByIcon from "./Images/gatsBy.webp";
 import csharpIcon from "./Images/cSharp.webp";
 import androidStudioIcon from "./Images/androidStudio.webp";
 import canvaIcon from "./Images/canva.webp";
-import cocoapodsIcon from "./Images/Cocoapods.webp";
+import cocoapodsIcon from "./Images/cocoapods.webp";
 import dialogflowIcon from "./Images/dialogflow.webp";
 import figmaIcon from "./Images/figma.webp";
 import firebaseIcon from "./Images/firebase.webp";
