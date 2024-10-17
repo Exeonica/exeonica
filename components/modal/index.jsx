@@ -1,12 +1,7 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
-import Image from "next/image";
+import React, { useRef, useEffect } from "react";
 
-import { Button } from "@/components/index";
-import { TrueArrow } from "@/public";
-import { strings } from "@/utils";
-
-const ApplicationForm = ({ title, message, onConfirm, btnTitle, classTitle = "", classMessage = "", onClose }) => {
+const Modal = ({ onClose, children, modalstyle }) => {
   const formRef = useRef(null);
 
   const handleClickOutside = (event) => {
@@ -36,23 +31,9 @@ const ApplicationForm = ({ title, message, onConfirm, btnTitle, classTitle = "",
                 </button>
               </div>
             </div>
-            <div className="mb-[20px] flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary">
-              <Image src={TrueArrow} alt={""} className="h-[18.87px] w-[28.33px]" />
-            </div>
 
-            <div className="items-center justify-center px-[25.5px] text-center sm:ml-4 sm:mt-0 sm:text-left">
-              <p className={`text-center text-[24px] font-semibold leading-[32px] text-text ${classTitle}`} id="modal-title">
-                {strings[title]}
-              </p>
-              <div className="mb-[20px] mt-[16px]">
-                <p className={`text-center text-[16px] font-normal leading-[22px] text-color-1 ${classMessage}`}>{strings[message]}</p>
-              </div>
-            </div>
-            <div>
-              <Button variant={"default"} onClick={onConfirm} classes="w-full ">
-                {strings[btnTitle]}
-              </Button>
-            </div>
+            {/* Render children here */}
+            <div className={`${modalstyle}`}>{children}</div>
           </div>
         </div>
       </div>
@@ -60,4 +41,4 @@ const ApplicationForm = ({ title, message, onConfirm, btnTitle, classTitle = "",
   );
 };
 
-export default ApplicationForm;
+export default Modal;

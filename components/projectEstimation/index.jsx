@@ -5,7 +5,8 @@ import Image from "next/image";
 
 import { Button, SuccessModal } from "@/components/index";
 import { Carousel, CarouselContent } from "@/components/ui/carousel";
-import { options } from "@/utils";
+import { options, strings } from "@/utils";
+import { TrueArrow } from "@/public";
 
 const ProjectEstimation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -189,7 +190,27 @@ const ProjectEstimation = () => {
               Previous
             </Button>
           )}
-          {isModalVisible && <SuccessModal title="successMsg" onClose={handleCloseForm} message="successDescription" onConfirm={() => {}} btnTitle={"goToHome"} />}
+          {isModalVisible && (
+            <SuccessModal onClose={handleCloseForm} modalstyle={"flex flex-col flex-1 justify-center items-center"}>
+              <div className="mb-[20px] flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary">
+                <Image src={TrueArrow} alt={""} className="h-[18.87px] w-[28.33px]" />
+              </div>
+
+              <div className="items-center justify-center px-[25.5px] text-center sm:ml-4 sm:mt-0 sm:text-left">
+                <p className={`text-center text-[24px] font-semibold leading-[32px] text-text`} id="modal-title">
+                  {strings["successMsg"]}
+                </p>
+                <div className="mb-[20px] mt-[16px]">
+                  <p className={`text-center text-[16px] font-normal leading-[22px] text-color-1`}>{strings["successDescription"]}</p>
+                </div>
+              </div>
+              <div>
+                <Button variant={"default"} onClick={() => {}} classes="w-full ">
+                  {strings["goToHome"]}
+                </Button>
+              </div>
+            </SuccessModal>
+          )}
           <Button
             classes="px-[53.5px] mb-[10px] md:[73px] py-[12px] rounded-[8px] md:mr-[16px]"
             onClick={() => {
