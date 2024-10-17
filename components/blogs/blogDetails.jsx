@@ -17,7 +17,7 @@ const articles = [
   "Afterword: The AI Behind This Article",
 ];
 
-const blogDetails = ({ cardsData }) => {
+const blogDetails = ({ cardsData, blog }) => {
   return (
     <div className="mx-[110px]">
       <div>
@@ -38,8 +38,10 @@ const blogDetails = ({ cardsData }) => {
             </div>
           </div>
         </div>
-        <div className="mt-[36px] flex flex-1 flex-col lg:flex-row">
-          <div className="flex flex-1">{/* <div dangerouslySetInnerHTML={{ __html: blogDetails }} /> */}</div>
+        <div className="mt-[36px] flex flex-1 flex-col justify-between lg:flex-row lg:space-x-[117px]">
+          <div className="flex flex-1">
+            <div dangerouslySetInnerHTML={{ __html: blog.template }} />
+          </div>
 
           <div className="flex-1/2 flex flex-col">
             <div className="p-4">

@@ -11,10 +11,10 @@ const BlogsCards = ({ cardsData, limit }) => {
     <div className="grid grid-cols-1 gap-4 pb-[112px] md:grid-cols-2 lg:grid-cols-3">
       {displayedCards.map((card) => (
         <Link key={card.id} href={`blogs/${card.id}`}>
-          <div key={card.id} className="flex rounded-[16px] p-[24px] shadow-lg">
+          <div key={card.id} className="flex w-max rounded-[16px] p-[24px] shadow-lg">
             <div className="cursor-pointer overflow-hidden rounded bg-white">
               <div className="relative h-[240px] overflow-hidden rounded-xl">
-                <Image src={card.profileImage} alt={card.title} layout="fill" objectFit="cover" />
+                <Image src={card.bloggerImage} alt={card.title} layout="fill" objectFit="cover" className="w-full" />
               </div>
 
               <div className="pt-[24px]">
@@ -32,10 +32,10 @@ const BlogsCards = ({ cardsData, limit }) => {
 
               <div className="mb-[32px] flex">
                 <div className="relative mr-[12px] h-[40px] w-[40px]">
-                  <Image src={BlogPost} alt={card.profileName} layout="fill" priority objectFit="cover" className="rounded-full" />
+                  <Image src={BlogPost} alt={card.bloggerName} layout="fill" priority objectFit="cover" className="rounded-full" />
                 </div>
                 <div>
-                  <p className="text-[15px] font-semibold leading-[20px] text-color-12">{card.profileName}</p>
+                  <p className="text-[15px] font-semibold leading-[20px] text-color-12">{card.bloggerName}</p>
                   <p className="text-[14px] font-normal leading-[20px] text-color-11">{"12 Nov 2021"}</p>
                 </div>
               </div>

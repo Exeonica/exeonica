@@ -33,12 +33,9 @@ import {
   nodeJsIcon,
   nextJsIcon,
   kotlinIcon,
-  javaIcon,
-  gradleIcon,
   firebaseIcon,
   figmaIcon,
   dialogflowIcon,
-  cocoapodsIcon,
   canvaIcon,
   androidStudioIcon,
 } from "@/public";
@@ -438,25 +435,29 @@ export const services = [
     ],
     technologies: [
       {
-        title: "Swift",
-        image: swiftIcon,
+        title: "Javascript",
+        image: javaScriptIcon,
       },
       {
-        title: "Objective-C",
-        image: iosIcon,
+        title: "Typescript",
+        image: typescriptIcon,
       },
       {
         title: "Xcode",
         image: xcodeIcon,
       },
       {
-        title: "iOS SDK",
+        title: "iOS",
         image: iosIcon,
       },
       {
-        title: "CocoaPods",
-        image: cocoapodsIcon,
+        title: "React Native",
+        image: reactIcon,
       },
+      // {
+      //   title: "Firebase",
+      //   image: firebaseIcon,
+      // },
     ],
   },
   {
@@ -493,20 +494,20 @@ export const services = [
     ],
     technologies: [
       {
-        title: "Kotlin",
-        image: kotlinIcon,
+        title: "React Native",
+        image: reactIcon,
       },
       {
-        title: "Java",
-        image: javaIcon,
+        title: "Javascript",
+        image: javaScriptIcon,
       },
       {
         title: "Android Studio",
         image: androidStudioIcon,
       },
       {
-        title: "Gradle",
-        image: gradleIcon,
+        title: "Typescript",
+        image: typescriptIcon,
       },
       {
         title: "Firebase",
@@ -873,13 +874,13 @@ export const options = [
     id: 5,
     title: "What is your planned monetization strategy?",
     type: "radio",
-    choices: ["Subscription", "Ads", "Paid installation", "Freemium","Percent from transaction cost","I don't plan to monetize my app"],
+    choices: ["Subscription", "Ads", "Paid installation", "Freemium", "Percent from transaction cost", "I don't plan to monetize my app"],
   },
   {
     id: 6,
     title: "Do you need additional services?",
     type: "radio",
-    choices: ["UI/UX Design", "SEO/ASO", "Maintenance", "Consulting","No Additional Services","Other"],
+    choices: ["UI/UX Design", "SEO/ASO", "Maintenance", "Consulting", "No Additional Services", "Other"],
   },
   {
     id: 7,
