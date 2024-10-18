@@ -20,13 +20,13 @@ export default function Hero() {
         <p className="text-lg font-normal text-color-1">{strings["heroDescription2"]}</p>
       </div>
       <div className="flex items-center justify-center gap-3">
-        <Link href={"./services"}>
+        <Link href={"/services"}>
           <Button variant={"outlineArrow"} classes="text-sm md:text-base gap-[8px]">
             {strings["heroBtn1"]}
             <GreyArrow />
           </Button>
         </Link>
-        <Link href={"./contact"}>
+        <Link href={"/contact"}>
           <Button variant={"default"} classes="text-sm md:text-base">
             {strings["heroBtn2"]}
           </Button>

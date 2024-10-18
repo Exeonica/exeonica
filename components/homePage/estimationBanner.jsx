@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -12,11 +13,14 @@ const EstimationBanner = () => {
         <Button variant={"outlineRounded"} classes="text-xs lg:text-base cursor-default">
           {strings["bannerTitle"]}
         </Button>
+
         <p className="my-2 text-[28px] font-semibold md:text-[40px]">{strings["bannerHeading"]}</p>
         <p className="text-lg font-normal text-color-3 md:font-medium">{strings["bannerDesc"]}</p>
-        <Button variant={"default"} classes="text-base mt-9">
-          {strings["bannerBtn"]}
-        </Button>
+        <Link href="/projectEstimation">
+          <Button variant={"default"} classes="text-base mt-9">
+            {strings["bannerBtn"]}
+          </Button>
+        </Link>
       </div>
       <div className="mt-11 w-max">
         <Image src={calculatorImage} alt="Calculator Image" height={"auto"} width={"auto"} className="h-[300px] w-[300px] lg:h-[400px] lg:w-[400px]" />
