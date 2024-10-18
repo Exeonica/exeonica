@@ -47,7 +47,7 @@ const FrequentlyAskedQuestions = () => {
         <p className="mb-3 mt-[30px] text-xl font-medium">{strings["faqHeading2"]}</p>
         <p className="text-base font-normal text-color-1">{strings["faqDesc2"]}</p>
         <p className="mb-[30px] text-base font-normal text-color-1">{strings["faqDesc3"]}</p>
-        <Link href={"/contact"}>
+        <Link href={"./contact"}>
           <Button variant="bgRounded">
             <div className="mr-2 items-center">
               <CellPhoneIcon />
