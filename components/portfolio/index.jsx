@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { portfolioData, portfolioFilters, strings } from "@/utils";
 import { Button, Carousal } from "@/components/index";
@@ -57,8 +58,20 @@ const Index = ({ filter }) => {
   };
 
   return (
-    <div className="my-[60px] px-6 lg:px-[124px] lg:py-[67px] xl:px-[110px]">
-      <div className="flex flex-1 flex-col lg:items-start">{portfolioData.map((card, i) => (filter ? (portfolioFilters.includes(filter) ? renderCard(card, i) : null) : renderCard(card, i)))}</div>
+    <div className="px-6 lg:px-[124px] lg:py-[67px] xl:px-[110px]">
+      <div className="mb-9 flex space-x-4">
+        <Link href={"/portfolio"}>
+          <Button variant="outlineRounded">All</Button>
+        </Link>
+        {portfolioFilters.map((v, i) => (
+          <Link key={i} href={`/portfolio/${v}`}>
+            <Button variant="outlineRounded">{v}</Button>
+          </Link>
+        ))}
+      </div>
+      <div className="flex flex-1 flex-col lg:items-start">
+        {portfolioData.map((card, i) => (filter ? (card.tags.includes(filter[0].replace("%20", " ")) ? renderCard(card, i) : null) : renderCard(card, i)))}
+      </div>
     </div>
   );
 };

@@ -7,6 +7,7 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 
 const OfferedServices = ({ service }) => {
   const [api, setApi] = useState(null);
+  const [selectedBtn, setSelectedBtn] = useState(service.offers[0].title);
 
   useEffect(() => {
     if (!api) {
@@ -25,8 +26,11 @@ const OfferedServices = ({ service }) => {
           {service.offers.map((item, index) => (
             <div key={index} className="mt-4">
               <button
-                onClick={() => api?.scrollTo(index)}
-                className="w-full px-[30px] py-[30px] text-left text-2xl font-semibold text-color-1 hover:rounded-[15px] hover:border hover:border-primary hover:bg-primary hover:text-color-10"
+                onClick={() => {
+                  setSelectedBtn(item.title);
+                  api?.scrollTo(index);
+                }}
+                className={`w-full px-[30px] py-[30px] text-left text-2xl font-semibold text-color-1 hover:rounded-[15px] hover:bg-primary hover:text-color-10 ${selectedBtn === item.title ? "rounded-[15px] bg-primary text-color-10" : ""}`}
               >
                 {item.title}
               </button>
@@ -43,8 +47,8 @@ const OfferedServices = ({ service }) => {
                     <Image
                       src={item.image}
                       alt={item.title}
-                      width={"fixed"}
-                      height={"fixed"}
+                      width={"auto"}
+                      height={"auto"}
                       className="h-[343px] w-[343px] rounded-2xl object-cover md:min-h-[400px] md:min-w-[400px] lg:h-[631px] lg:w-[518px]"
                     />
                   </div>

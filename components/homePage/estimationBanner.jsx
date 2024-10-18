@@ -16,7 +16,7 @@ const EstimationBanner = () => {
 
         <p className="my-2 text-[28px] font-semibold md:text-[40px]">{strings["bannerHeading"]}</p>
         <p className="text-lg font-normal text-color-3 md:font-medium">{strings["bannerDesc"]}</p>
-        <Link href="./projectEstimation">
+        <Link href="/projectEstimation">
           <Button variant={"default"} classes="text-base mt-9">
             {strings["bannerBtn"]}
           </Button>

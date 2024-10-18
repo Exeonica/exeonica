@@ -32,7 +32,7 @@ const NavMenu = () => {
                 ))}
               </div>
               <div className="flex flex-col pt-[48px]">
-                <Link href="./projectEstimation" className="!w-full">
+                <Link href="/projectEstimation" className="!w-full">
                   <SheetClose asChild>
                     <Button variant="outline" classes="!w-full mb-3 items-center justify-center">
                       {strings["calculateCost"]}
@@ -40,7 +40,7 @@ const NavMenu = () => {
                   </SheetClose>
                 </Link>
 
-                <Link href="./contact" className="!w-full">
+                <Link href="/contact" className="!w-full">
                   <SheetClose asChild>
                     <Button variant="default" classes="!w-full items-center justify-center">
                       {strings["getInTouch"]}
