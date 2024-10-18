@@ -933,7 +933,7 @@ export const options = [
   {
     id: 10,
     title: "Please provide the following details so we can send you a cost estimate.",
-    type: "textarea",
+    type: "contact",
     placeholders: [
       { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
       { label: "Email", inputKey: "email", type: "email", placeholder: "Email" },
