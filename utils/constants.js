@@ -38,6 +38,10 @@ import {
   dialogflowIcon,
   canvaIcon,
   androidStudioIcon,
+  BlogsImage,
+  BlogPost,
+  BlogImage1,
+  blogImage2,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
 import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
@@ -131,7 +135,7 @@ export const testimonialData = [
 export const services = [
   {
     id: 1,
-    icon: ACD,
+    icon: <ACD />,
     title: "AI Chatbot Development",
     desc: "Elevate your customer experience with AI-powered chatbots. Our experts will design and develop a custom chatbot tailored to your specific needs.",
     image: Software,
@@ -146,19 +150,19 @@ export const services = [
       },
       {
         title: "Natural Language Processing",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Integration with Existing Systems",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Chatbot Analytics",
-        image: Dev,
+        image: BlogPost,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogsImage,
       },
     ],
     technologies: [
@@ -186,7 +190,7 @@ export const services = [
   },
   {
     id: 2,
-    icon: MAD,
+    icon: <MAD />,
     title: "Mobile App Development",
     desc: "Leveraging the power of JS/TS with React and React Native for efficient cross-platform app development. Single codebase for multiple platforms.",
     image: Software,
@@ -201,19 +205,19 @@ export const services = [
       },
       {
         title: "Cross-platform Solutions",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "UI/UX Design",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "App Testing & QA",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -241,7 +245,7 @@ export const services = [
   },
   {
     id: 3,
-    icon: MAC,
+    icon: <MAC />,
     title: "Mobile App Consulting",
     desc: "We help finalize app concepts, advise on platform compatibility, plan project tasks, and optimize development costs.",
     image: Software,
@@ -255,19 +259,19 @@ export const services = [
       },
       {
         title: "Platform Compatibility Analysis",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Project Planning",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Cost Optimization",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "Market Strategy",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -295,7 +299,7 @@ export const services = [
   },
   {
     id: 4,
-    icon: WDS,
+    icon: <WDS />,
     title: "Web Development Services​",
     desc: "Leveraging the power of JS/TS with React, NextJS, Expo & Remix for efficient & responsive Web App development.",
     image: Software,
@@ -309,19 +313,19 @@ export const services = [
       },
       {
         title: "E-commerce Solutions",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Progressive Web Apps",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Web App Maintenance",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "SEO Optimization",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -349,7 +353,7 @@ export const services = [
   },
   {
     id: 5,
-    icon: UDS,
+    icon: <UDS />,
     title: "UI/UX Design Services",
     desc: "Our designers create easy-to-use UX and visually attractive UI that drive engagement, user acceptance and conversions.",
     image: Software,
@@ -363,19 +367,19 @@ export const services = [
       },
       {
         title: "Wireframing & Prototyping",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Visual Design",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Usability Testing",
-        image: Dev,
+        image: BlogPost,
       },
       {
         title: "Design System Development",
-        image: Dev,
+        image: BlogsImage,
       },
     ],
     technologies: [
@@ -403,7 +407,7 @@ export const services = [
   },
   {
     id: 6,
-    icon: NID,
+    icon: <NID />,
     title: "Native iOS Development",
     desc: "Our team of iOS developers has significant experience in custom iOS app development services and will help your iOS app run smoothly",
     image: Software,
@@ -418,19 +422,19 @@ export const services = [
       },
       {
         title: "Swift Development",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "App Store Deployment",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "iOS App Testing",
-        image: Dev,
+        image: BlogPost,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogsImage,
       },
     ],
     technologies: [
@@ -462,7 +466,7 @@ export const services = [
   },
   {
     id: 7,
-    icon: NAD,
+    icon: <NAD />,
     title: "Native Android Development",
     desc: "Our team of Android developers has significant experience in custom Android app development services and will help your Android app run smoothly",
     image: Software,
@@ -477,19 +481,19 @@ export const services = [
       },
       {
         title: "Kotlin Development",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Google Play Deployment",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Android App Testing",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [

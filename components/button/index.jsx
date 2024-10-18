@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Button({ variant, children, classes = "", loading = false, ...rest }) {
-  let className = "flex text-base font-medium w-max text-center py-3 px-6 h-12 items-center";
+  let className = "flex text-base font-medium w-max text-center py-3 px-6 h-12 items-center cursor-pointer";
 
   switch (variant) {
     case "outline":
