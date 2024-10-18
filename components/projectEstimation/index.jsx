@@ -2,16 +2,39 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { toast } from "react-toastify";
 
-import { Button, SuccessModal } from "@/components/index";
+import { Button, SuccessModal, TextInput } from "@/components/index";
 import { Carousel, CarouselContent } from "@/components/ui/carousel";
-import { options, strings } from "@/utils";
-import { TrueArrow } from "@/public";
+import { options, strings, sendMail } from "@/utils";
+import { TrueArrow, projectEstimation } from "@/public";
 
 const ProjectEstimation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedChoice, setSelectedChoice] = useState("");
+  const [activeChoiceSelected, setActiveChoiceSelected] = useState(null);
   const [isModalVisible, setModalVisible] = useState(false);
+  const [formData, setFormData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  console.log("form data", formData);
+
+  const handleTextareaChange = (field, value) => {
+    const currentOptionIndex = activeIndex;
+    const updatedData = [...formData];
+
+    if (!updatedData[activeIndex]) {
+      updatedData[activeIndex] = {};
+    }
+
+    updatedData[activeIndex] = {
+      ...updatedData[activeIndex],
+      [field]: value,
+      type: options[currentOptionIndex].type,
+    };
+
+    setFormData(updatedData);
+  };
 
   const handleButtonClick = () => {
     setModalVisible(true);
@@ -21,8 +44,58 @@ const ProjectEstimation = () => {
     setModalVisible(false);
   };
 
-  const handleIndexChange = (index) => {
-    setActiveIndex(index);
+  const handleSelection = (choice, optionIndex) => {
+    const updatedData = [...formData];
+
+    updatedData[optionIndex] = {
+      title: options[optionIndex].title,
+      type: options[optionIndex].type,
+      choice,
+    };
+
+    setFormData(updatedData);
+    setActiveChoiceSelected(choice);
+  };
+
+  const handleCheckBoxChoice = (choice) => {
+    setFormData((prevData) => {
+      const updatedChoices = [...prevData];
+      const currentOptionIndex = activeIndex;
+
+      if (!updatedChoices[currentOptionIndex]) {
+        updatedChoices[currentOptionIndex] = {
+          title: options[currentOptionIndex].title,
+          type: options[currentOptionIndex].type,
+          choices: [],
+        };
+      }
+
+      const currentChoices = updatedChoices[currentOptionIndex].choices;
+      updatedChoices[currentOptionIndex].choices = currentChoices.filter((c) => c !== choice);
+      updatedChoices[currentOptionIndex].choices.push(choice);
+
+      return updatedChoices;
+    });
+  };
+
+  const handleForm = async () => {
+    if (!formData) {
+      toast.error("Please Select Data");
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      toast.info("Sending Mail");
+      await sendMail(email, projectEstimation);
+      toast.success("Mail Sent Successfully");
+      setModalVisible(true);
+    } catch (error) {
+      toast.error(error.message);
+      console.log(" credentials ", error.message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const renderActiveSlide = () => {
@@ -30,133 +103,141 @@ const ProjectEstimation = () => {
 
     return (
       <div key={option.id} className="mb-6">
-        <>
-          <div className="flex flex-1 flex-col px-[33px]">
-            <p className="mb-[24px] text-[28px] font-semibold leading-[53.46px] text-card-foreground lg:text-[36px] lg:leading-[41.58px]">{option.title}</p>
+        <div className="flex flex-1 flex-col px-[33px]">
+          <p className="mb-[24px] text-[28px] font-semibold leading-[53.46px] text-card-foreground lg:text-[36px] lg:leading-[41.58px]">{option.title}</p>
 
-            {option.type === "radio" &&
-              option.choices.map((choice, index) => {
-                const choiceId = `option${option.id}_choice${index}`;
+          {option.type === "radio" &&
+            option.choices.map((choice, index) => {
+              const choiceId = `option${option.id}_choice${index}`;
 
-                return (
-                  <div
-                    key={index}
-                    className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${selectedChoice === choice ? "border-primary" : ""}`}
-                    onClick={() => {
-                      setSelectedChoice(choice);
-                    }}
-                  >
-                    <div className="flex flex-1 items-center justify-between">
-                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
-                      <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
-                    </div>
+              return (
+                <div
+                  key={index}
+                  className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
+                  onClick={() => handleSelection(choice, activeIndex)}
+                >
+                  <div className="flex flex-1 items-center justify-between">
+                    <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
+                    <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={activeChoiceSelected === choice} onChange={() => {}} className={"accent-primary"} />
                   </div>
-                );
-              })}
-
-            {option.type === "radioWithTwoValues" && (
-              <div className="space-y-4">
-                {/* Two-column layout for the first two rows */}
-                <div className="grid grid-cols-2 gap-4">
-                  {option.choices.slice(0, 4).map((choice, index) => {
-                    const choiceId = `option${option.id}_choice${index}`;
-
-                    return (
-                      <div
-                        key={index}
-                        className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[24px] py-[30px] ${selectedChoice === choice ? "border-primary" : ""}`}
-                        onClick={() => setSelectedChoice(choice)}
-                      >
-                        <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
-                        <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
-                      </div>
-                    );
-                  })}
+                  <div>{activeChoiceSelected === "Others" ? <TextInput placeholder={"Write Something here"} /> : null}</div>
                 </div>
+              );
+            })}
 
-                {/* Single-column layout for the remaining options */}
-                {option.choices.slice(4).map((choice, index) => {
-                  const choiceId = `option${option.id}_choice${index + 4}`;
+          {option.type === "radioWithTwoValues" && (
+            <div className="space-y-4">
+              {/* Two-column layout for the first two rows */}
+              <div className="grid grid-cols-2 gap-4">
+                {option.choices.slice(0, 4).map((choice, index) => {
+                  const choiceId = `option${option.id}_choice${index}`;
 
                   return (
                     <div
                       key={index}
-                      className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[24px] py-[30px] ${selectedChoice === choice ? "border-primary" : ""}`}
-                      onClick={() => setSelectedChoice(choice)}
+                      className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[24px] py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
+                      onClick={() => handleSelection(choice, activeIndex)}
                     >
                       <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
-                      <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
+                      <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={activeChoiceSelected === choice} onChange={() => {}} className={"accent-primary"} />
                     </div>
                   );
                 })}
               </div>
-            )}
-            {option.type === "checkbox" &&
-              option.choices.map((choice, index) => {
-                const choiceId = `option${option.id}_choice${index}`;
+
+              {/* Single-column layout for the remaining options */}
+              {option.choices.slice(4).map((choice, index) => {
+                const choiceId = `option${option.id}_choice${index + 4}`;
 
                 return (
                   <div
                     key={index}
-                    className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${selectedChoice === choice ? "border-primary" : ""}`}
-                    onClick={() => {
-                      setSelectedChoice(choice);
-                    }}
+                    className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[24px] py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
+                    onClick={() => handleSelection(choice, activeIndex)}
                   >
-                    <div className="flex justify-between">
-                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
-                      <input type="checkbox" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
-                    </div>
+                    <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
+                    <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={activeChoiceSelected === choice} onChange={() => {}} className={"accent-primary"} />
                   </div>
                 );
               })}
-            {option.type === "radioWithIcon" &&
-              option.choices.map((choice, index) => {
-                const choiceId = `option${option.id}_choice${index}`;
+            </div>
+          )}
 
-                return (
-                  <div
-                    key={index}
-                    className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${selectedChoice === choice ? "border-primary" : ""}`}
-                    onClick={() => {
-                      setSelectedChoice(choice);
-                    }}
-                  >
-                    <div key={index} className="flex w-full justify-between">
-                      <div className="flex items-center">
-                        {choice.label === "Both" ? null : <Image src={choice.icon} alt={""} className="h-[36px] w-[36px] object-contain" />}
-                        <p className="ml-[16px] text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice.label}</p>
-                      </div>
-                      <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
-                    </div>
-                  </div>
-                );
-              })}
-            {option.type === "checkBoxWithIcon" &&
-              option.choices.map((choice, index) => {
-                const choiceId = `option${option.id}_choice${index}`;
+          {option.type === "checkbox" &&
+            option.choices.map((choice, index) => {
+              const choiceId = `option${option.id}_choice${index}`;
+              const isSelected = formData[activeIndex]?.choices?.includes(choice) || false;
 
-                return (
-                  <div
-                    key={index}
-                    className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${selectedChoice === choice ? "border-primary" : ""}`}
-                    onClick={() => {
-                      setSelectedChoice(choice);
-                    }}
-                  >
-                    <div key={index} className="flex w-full justify-between">
-                      <div className="flex items-center">
-                        {choice.label === "Others" ? null : <Image src={choice.icon} alt={""} className="h-[36px] w-[36px] object-contain" />}
-                        <p className="ml-[16px] text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice.label}</p>
-                      </div>
-                      <input type="checkbox" name={`option${option.id}`} value={choice} id={choiceId} checked={selectedChoice === choice} onChange={() => {}} className={"accent-primary"} />
-                    </div>
+              return (
+                <div
+                  key={index}
+                  className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${isSelected ? "border-primary" : ""}`}
+                  onClick={() => handleCheckBoxChoice(choice)}
+                >
+                  <div className="flex justify-between">
+                    <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
+                    <input type="checkbox" name={`option${option.id}`} value={choice} id={choiceId} checked={isSelected} onChange={() => handleCheckBoxChoice(choice)} className={"accent-primary"} />
                   </div>
-                );
-              })}
-            {option.type === "textarea" && option.placeholders.map((item, index) => <textarea key={index} placeholder={item} className="mb-4 mt-2 w-full rounded border p-2" rows="2" />)}
-          </div>
-        </>
+                </div>
+              );
+            })}
+
+          {option.type === "radioWithIcon" &&
+            option.choices.map((choice, index) => {
+              const choiceId = `option${option.id}_choice${index}`;
+
+              return (
+                <div
+                  key={index}
+                  className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${activeChoiceSelected === choice.label ? "border-primary" : ""}`}
+                  onClick={() => handleSelection(choice.label, activeIndex)}
+                >
+                  <div key={index} className="flex w-full justify-between">
+                    <div className="flex items-center">
+                      {choice.label === "Both" ? null : <Image src={choice.icon} alt={""} className="h-[36px] w-[36px] object-contain" />}
+                      <p className="ml-[16px] text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice.label}</p>
+                    </div>
+                    <>
+                      <input
+                        type="radio"
+                        name={`option${option.id}`}
+                        value={choice.label}
+                        id={choiceId}
+                        checked={activeChoiceSelected === choice.label}
+                        onChange={() => {}}
+                        className={"accent-primary"}
+                      />
+                    </>
+                  </div>
+                </div>
+              );
+            })}
+          {option.type === "checkBoxWithIcon" &&
+            option.choices.map((choice, index) => {
+              const choiceId = `option${option.id}_choice${index}`;
+              const isSelected = formData[activeIndex]?.choices?.includes(choice) || false;
+
+              return (
+                <div
+                  key={index}
+                  className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${isSelected ? "border-primary" : ""}`}
+                  onClick={() => handleCheckBoxChoice(choice)}
+                >
+                  <div key={index} className="flex w-full justify-between">
+                    <div className="flex items-center">
+                      {choice.label === "Others" ? null : <Image src={choice.icon} alt={""} className="h-[36px] w-[36px] object-contain" />}
+                      <p className="ml-[16px] text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice.label}</p>
+                    </div>
+                    <input type="checkbox" name={`option${option.id}`} value={choice} id={choiceId} checked={isSelected} onChange={() => {}} className={"accent-primary"} />
+                  </div>
+                </div>
+              );
+            })}
+          {option.type === "textarea" &&
+            option.placeholders.map((item, index) => (
+              <textarea key={index} placeholder={item.placeholder} className="mb-4 mt-2 w-full rounded border p-2" rows="2" onChange={(e) => handleTextareaChange(item.inputKey, e.target.value)} />
+            ))}
+        </div>
       </div>
     );
   };
@@ -175,7 +256,7 @@ const ProjectEstimation = () => {
           ))}
         </div>
 
-        <Carousel className="mt-[0px] w-full" onIndexChange={handleIndexChange}>
+        <Carousel className="mt-[0px] w-full">
           <CarouselContent>{renderActiveSlide()}</CarouselContent>
         </Carousel>
 
@@ -205,8 +286,8 @@ const ProjectEstimation = () => {
                 </div>
               </div>
               <div>
-                <Button variant={"default"} onClick={() => {}} classes="w-full ">
-                  {strings["goToHome"]}
+                <Button variant={"default"} classes="w-full ">
+                  <Link href={"/home"}>{strings["goToHome"]}</Link>
                 </Button>
               </div>
             </SuccessModal>
@@ -216,6 +297,7 @@ const ProjectEstimation = () => {
             onClick={() => {
               if (activeIndex === options.length - 1) {
                 handleButtonClick();
+                handleForm();
               } else {
                 setActiveIndex(activeIndex + 1);
               }
