@@ -38,6 +38,10 @@ import {
   dialogflowIcon,
   canvaIcon,
   androidStudioIcon,
+  BlogsImage,
+  BlogPost,
+  BlogImage1,
+  blogImage2,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
 import { Simfree, Deepmove, Dukan, Dukan1, Simfree1, Deepmove1, Mathani, Mathani1, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
@@ -146,19 +150,19 @@ export const services = [
       },
       {
         title: "Natural Language Processing",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Integration with Existing Systems",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Chatbot Analytics",
-        image: Dev,
+        image: BlogPost,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogsImage,
       },
     ],
     technologies: [
@@ -201,19 +205,19 @@ export const services = [
       },
       {
         title: "Cross-platform Solutions",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "UI/UX Design",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "App Testing & QA",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -255,19 +259,19 @@ export const services = [
       },
       {
         title: "Platform Compatibility Analysis",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Project Planning",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Cost Optimization",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "Market Strategy",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -309,19 +313,19 @@ export const services = [
       },
       {
         title: "E-commerce Solutions",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Progressive Web Apps",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Web App Maintenance",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "SEO Optimization",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -363,19 +367,19 @@ export const services = [
       },
       {
         title: "Wireframing & Prototyping",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Visual Design",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Usability Testing",
-        image: Dev,
+        image: BlogPost,
       },
       {
         title: "Design System Development",
-        image: Dev,
+        image: BlogsImage,
       },
     ],
     technologies: [
@@ -418,19 +422,19 @@ export const services = [
       },
       {
         title: "Swift Development",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "App Store Deployment",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "iOS App Testing",
-        image: Dev,
+        image: BlogPost,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogsImage,
       },
     ],
     technologies: [
@@ -477,19 +481,19 @@ export const services = [
       },
       {
         title: "Kotlin Development",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Google Play Deployment",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Android App Testing",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../button";
 
@@ -12,7 +13,9 @@ const TechnologySection = ({ service }) => {
         <p className="text-[28px] font-semibold md:text-[40px]">Technologies We Used In {service.title} </p>
         <p className="my-[20px] text-lg font-normal text-color-3">{service.subDesc}</p>
         <div className="flex justify-center xl:justify-start">
-          <Button classes="text-xs lg:text-base cursor-default">{strings["getInTouch"]}</Button>
+          <Link href={"/contact"}>
+            <Button classes="text-xs lg:text-base cursor-default">{strings["getInTouch"]}</Button>
+          </Link>
         </div>
       </div>
       <div className="flex justify-center space-x-3 md:space-x-6">

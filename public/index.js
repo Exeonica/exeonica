@@ -64,8 +64,10 @@ import typescriptIcon from "./Images/typescript.webp";
 import xcodeIcon from "./Images/xcode.webp";
 import xdIcon from "./Images/xd.webp";
 import TrueArrow from "./Images/arrow.webp";
+import blogImage2 from "./Images/blog2.webp";
 
 export {
+  blogImage2,
   TrueArrow,
   xdIcon,
   xcodeIcon,
