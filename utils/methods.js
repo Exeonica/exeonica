@@ -27,6 +27,14 @@ export const getAllBlogs = async () => {
   return blogList;
 };
 
+export const getBlogFilters = async () => {
+  const blogsCollection = collection(db, "blogFilters");
+  const blogSnapshot = await getDocs(blogsCollection);
+  const filters = blogSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+  return filters;
+};
+
 export const getBlog = async (blogId) => {
   const blogCollection = doc(db, "blogs", blogId);
   const blogSnapshot = await getDoc(blogCollection);

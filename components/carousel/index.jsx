@@ -19,7 +19,7 @@ const Carousal = ({ portfolioItem }) => {
   return (
     <div className="relative w-full max-w-[600px] flex-shrink-0 overflow-hidden rounded-[16px]">
       {/* Show the current image */}
-      <Image alt={`Image ${currentIndex + 1}`} src={portfolioItem.images[currentIndex]} layout="responsive" objectFit="cover" className="block" />
+      <Image alt={`Image ${currentIndex + 1}`} src={portfolioItem.images[currentIndex]} layout="responsive" className="block" />
 
       {/* Left Arrow */}
       <div className="absolute left-2 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer lg:top-[35%] xl:top-1/2">

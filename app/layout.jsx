@@ -1,4 +1,3 @@
-import NextTopLoader from "nextjs-toploader";
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ToastContainer } from "react-toastify";
@@ -37,8 +36,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${pangeaAfrikanTrial.variable} mx-auto max-w-[2100px] font-pangeaAfrikanTrial antialiased`}>
-        <NextTopLoader />
-
         <Navbar />
         {children}
         <SpeedInsights />

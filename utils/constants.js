@@ -44,13 +44,13 @@ import {
   blogImage2,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
-import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
+import { Simfree, Deepmove, Dukan, Dukan1, Simfree1, Deepmove1, Mathani, Mathani1, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
 import { Android, AppleLogo, Chat, CreditCard, Guarantee, Map, Notification, SocialMedia } from "@/public/ProjectEstimation/index";
 
 export const navLinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
-  // { name: "Portfolio", path: "/portfolio" },
+  { name: "Portfolio", path: "/portfolio" },
   { name: "About Us", path: "/about" },
   { name: "Blogs", path: "/blogs" },
   { name: "Careers", path: "/careers" },
@@ -797,10 +797,13 @@ export const launchCards = [
   },
 ];
 
+export const portfolioFilters = ["Web App", "Mobile App"];
+
 export const portfolioData = [
   {
-    title: "WALLIFY",
-    images: [FileManagerApp, GiftShopWeb, ToDoListApp],
+    title: "Simfree",
+    images: [Simfree, Simfree1],
+    link: "https://dev.simfree.io/",
     tags: ["Mobile App", "Web App", "Backend", "Backend", "Backend"],
     description: "Wallpaper downloader App for both iOS & Android.",
     details:
@@ -814,8 +817,9 @@ export const portfolioData = [
     ],
   },
   {
-    title: "Project Two",
-    images: [WallpaperDownloader, ToDoListApp, FileManagerApp],
+    title: "Deepmove",
+    images: [Deepmove, Deepmove1],
+    link: "https://deepmove.com/",
     tags: ["Mobile App", "Web App"],
     details:
       "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
@@ -829,8 +833,25 @@ export const portfolioData = [
     ],
   },
   {
-    title: "Project Three",
-    images: [GiftShopWeb, WallpaperDownloader, ToDoListApp],
+    title: "Dukan",
+    images: [Dukan, Dukan1],
+    link: "https://www.dukan.pk/",
+    tags: ["Web App"],
+    details:
+      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+
+    tools: [
+      { icon: Ex, name: "Express.js" },
+      { icon: GatsBy, name: "GraphQL" },
+      { icon: TechIcon, name: "Next.js" },
+      { icon: C, name: "C#" },
+      { icon: React, name: "React.js" },
+    ],
+  },
+  {
+    title: "Mathani",
+    images: [Mathani, Mathani1],
+    link: "https://play.google.com/store/apps/details?id=com.mathani",
     tags: ["Web App"],
     details:
       "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
