@@ -6,7 +6,7 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 
 import { Button, SuccessModal, TextInput } from "@/components/index";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent } from "@/components/ui/carousel";
 import { options, strings, sendMail } from "@/utils";
 import { TrueArrow, projectEstimation } from "@/public";
 
@@ -346,15 +346,15 @@ const ProjectEstimation = () => {
 
         <Carousel className="flex max-w-[629px] flex-1 items-center justify-center">
           <CarouselContent>
-            {/* {renderActiveSlide()} */}
-            {options.map((item, index) => (
+            {renderActiveSlide()}
+            {/* {options.map((item, index) => (
               <CarouselItem key={index}>
                 <div className="h-[343px] w-[343px] md:h-[400px] md:w-[400px] lg:h-[631px] lg:w-[518px]">
                   <p>{item.title}</p>
                   {renderActiveSlide()}
                 </div>
               </CarouselItem>
-            ))}
+            ))} */}
           </CarouselContent>
         </Carousel>
 
