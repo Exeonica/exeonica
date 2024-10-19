@@ -50,9 +50,9 @@ import { Android, AppleLogo, Chat, CreditCard, Guarantee, Map, Notification, Soc
 export const navLinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
-  { name: "Portfolio", path: "/portfolio" },
+  { name: "Portfolio", path: "/portfolio/all" },
   { name: "About Us", path: "/about" },
-  { name: "Blogs", path: "/blogs" },
+  { name: "Blogs", path: "/blogs/all" },
   { name: "Careers", path: "/careers" },
 ];
 

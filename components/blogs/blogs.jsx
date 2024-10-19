@@ -8,12 +8,12 @@ const Blogs = ({ blogs, filters, params }) => {
   return (
     <div className="mx-[16px] space-y-9 p-4 pt-[80px] lg:mx-[112px]">
       <div className="flex space-x-4">
-        <Link href={"/blogs"}>
-          <Button variant="outlineRounded">All</Button>
+        <Link href={"/blogs/all"} scroll={false}>
+          <Button variant={params.filter === "all" ? "bgRounded" : "outlineRounded"}>All</Button>
         </Link>
         {filters.map((v, i) => (
-          <Link key={i} href={`/blogs/filter/${v.title}`}>
-            <Button variant="outlineRounded">{v.title}</Button>
+          <Link key={i} href={`/blogs/${v.title}`} scroll={false}>
+            <Button variant={params.filter.replaceAll("%20", " ") === v.title ? "bgRounded" : "outlineRounded"}>{v.title}</Button>
           </Link>
         ))}
       </div>

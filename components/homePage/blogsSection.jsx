@@ -18,7 +18,7 @@ const BlogsSection = ({ blogsData }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-[35px] xl:gap-x-[50px]">
         <div className="flex flex-col rounded-2xl border border-border drop-shadow-sm">
-          <Link href={`/blogs/${displayedBlogs[0]?.id}`}>
+          <Link href={`/blog/${displayedBlogs[0]?.id}`}>
             <Image
               priority
               className="h-[268px] w-full rounded-t-2xl object-cover lg:h-[350px] lg:w-full"
@@ -48,7 +48,7 @@ const BlogsSection = ({ blogsData }) => {
           <div className="space-y-5">
             {displayedBlogs.slice(1, 3).map((blog) => (
               <div key={blog.id} className="mt-9 flex flex-col rounded-2xl border border-border drop-shadow-sm lg:mt-0 lg:flex-row lg:items-center">
-                <Link href={`/blogs/${blog.id}`}>
+                <Link href={`/blog/${blog.id}`}>
                   <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-4">
                     <div className="w-full lg:w-auto">
                       <Image
@@ -87,7 +87,7 @@ const BlogsSection = ({ blogsData }) => {
 
       {blogsData.length > 4 && (
         <div className="flex justify-center">
-          <Link href="/blogs">
+          <Link href="/blogs/all">
             <Button variant="outline" classes="mt-9">
               {strings["blogsBtn"]}
             </Button>
