@@ -6,7 +6,7 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 
 import { Button, SuccessModal, TextInput } from "@/components/index";
-import { Carousel, CarouselContent } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { options, strings, sendMail } from "@/utils";
 import { TrueArrow, projectEstimation } from "@/public";
 
@@ -17,7 +17,7 @@ const ProjectEstimation = () => {
   const [formData, setFormData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [contactData, setContactData] = useState({ email: "", name: "", whatsappNumber: "" });
-  console.log("Form Data is here", contactData);
+  // console.log("Active Choices ", formData);
 
   const handleTextareaChange = (field, value) => {
     const currentOptionIndex = activeIndex;
@@ -34,10 +34,7 @@ const ProjectEstimation = () => {
     };
 
     setFormData(updatedData);
-  };
-
-  const handleButtonClick = () => {
-    setModalVisible(true);
+    setContactData(updatedData);
   };
 
   const handleCloseForm = () => {
@@ -46,6 +43,7 @@ const ProjectEstimation = () => {
 
   const handleSelection = (answer, optionIndex) => {
     const updatedData = [...formData];
+
     if (answer === "Something else" && "Other") {
       updatedData[optionIndex] = {
         question: options[optionIndex].title,
@@ -70,12 +68,21 @@ const ProjectEstimation = () => {
       const updatedChoices = [...prevData];
       const currentOptionIndex = activeIndex;
 
-      if (!updatedChoices[currentOptionIndex]) {
+      if (choice === "Other") {
         updatedChoices[currentOptionIndex] = {
           title: options[currentOptionIndex].title,
           type: options[currentOptionIndex].type,
           choices: [],
+          message: "",
         };
+      } else {
+        if (!updatedChoices[currentOptionIndex]) {
+          updatedChoices[currentOptionIndex] = {
+            title: options[currentOptionIndex].title,
+            type: options[currentOptionIndex].type,
+            choices: [],
+          };
+        }
       }
 
       const currentChoices = updatedChoices[currentOptionIndex].choices;
@@ -86,15 +93,10 @@ const ProjectEstimation = () => {
     });
   };
 
-  const handleChange = (key, val) => {
-    setContactData((v) => ({
-      ...v,
-      [key]: val,
-    }));
-  };
-
   const handleForm = async () => {
-    if (!contactData.email || !contactData.name || !contactData.message) {
+    const contactInfo = formData[9];
+
+    if (!contactInfo || !contactInfo.name || !contactInfo.email || !contactInfo.number) {
       toast.error("Please Enter Data");
 
       return;
@@ -103,7 +105,8 @@ const ProjectEstimation = () => {
     try {
       setIsLoading(true);
       toast.info("Sending Mail");
-      await sendMail(contactData, projectEstimation);
+
+      await sendMail(contactInfo, projectEstimation);
       toast.success("Mail Sent Successfully");
     } catch (error) {
       toast.error(error.message);
@@ -251,43 +254,76 @@ const ProjectEstimation = () => {
                 </div>
               );
             })}
-          {option.type === "checkBoxWithIcon" &&
-            option.choices.map((choice, index) => {
-              const choiceId = `option${option.id}_choice${index}`;
-              const isSelected = formData[activeIndex]?.choices?.includes(choice) || false;
 
-              return (
-                <div
-                  key={index}
-                  className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${isSelected ? "border-primary" : ""}`}
-                  onClick={() => handleCheckBoxChoice(choice)}
-                >
-                  <div key={index} className="flex w-full justify-between">
-                    <div className="flex items-center">
-                      {choice.label === "Others" ? null : <Image src={choice.icon} alt={""} className="h-[36px] w-[36px] object-contain" />}
-                      <p className="ml-[16px] text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice.label}</p>
+          {option.type === "checkBoxWithIcon" && (
+            <div>
+              {activeChoiceSelected === "Something else" && (
+                <TextInput
+                  labelclass="text-lg font-medium"
+                  classes="mb-3  w-full rounded-[10px] border border-color-1 py-[30px] bg-white focus:border-primary focus:outline-none "
+                  type={"text"}
+                  inputKey={"message"}
+                  placeholder="write a short note..."
+                  value={formData[activeIndex]?.message || ""}
+                  handleChange={handleTextareaChange}
+                  loading={isLoading}
+                />
+              )}
+            </div>
+          )}
+
+          {option.type === "checkBoxWithIcon" && (
+            <div>
+              {option.choices.map((choice, index) => {
+                const choiceId = `option${option.id}_choice${index}`;
+                const isSelected = formData[activeIndex]?.choices?.includes(choice) || false;
+
+                return (
+                  <div
+                    key={choiceId}
+                    className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${isSelected ? "border-primary" : ""}`}
+                    onClick={() => handleCheckBoxChoice(choice)}
+                  >
+                    <div className="flex w-full justify-between">
+                      <div className="flex items-center">
+                        {choice.label === "Others" ? null : <Image src={choice.icon} alt="" className="h-[36px] w-[36px] object-contain" />}
+                        <p className="ml-[16px] text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice.label}</p>
+                      </div>
+                      <input type="checkbox" name={`option${option.id}`} value={choice.label} id={choiceId} checked={isSelected} onChange={() => {}} className="accent-primary" />
                     </div>
-                    <input type="checkbox" name={`option${option.id}`} value={choice} id={choiceId} checked={isSelected} onChange={() => {}} className={"accent-primary"} />
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+
+              {activeChoiceSelected === "Others" && (
+                <TextInput
+                  labelclass="text-lg font-medium"
+                  classes="mb-3 w-full rounded-[10px] border border-color-1 py-[30px] bg-white focus:border-primary focus:outline-none"
+                  type="text"
+                  inputKey="message"
+                  placeholder="write a short note..."
+                  value={formData[activeIndex]?.message || ""}
+                  handleChange={handleTextareaChange}
+                  loading={isLoading}
+                />
+              )}
+            </div>
+          )}
+
           {option.type === "contact" &&
             option.placeholders.map((item, index) => (
-              <>
-                <textarea key={index} placeholder={item.placeholder} className="mb-4 mt-2 w-full rounded border p-2" rows="2" onChange={(e) => handleTextareaChange(item.inputKey, e.target.value)} />
+              <div key={index}>
                 <TextInput
                   labelclass="text-lg font-medium"
                   classes="mb-3 mt-[20px] w-full rounded-[10px] border border-color-1 p-4 bg-white"
-                  type={"text"}
-                  label="nameInput"
+                  type={item.type}
                   inputKey={item.inputKey}
                   placeholder={item.placeholder}
                   value={contactData[item.inputKey]}
-                  handleChange={handleChange}
+                  handleChange={handleTextareaChange}
                   loading={isLoading}
                 />
-              </>
+              </div>
             ))}
         </div>
       </div>
@@ -309,7 +345,17 @@ const ProjectEstimation = () => {
         </div>
 
         <Carousel className="flex max-w-[629px] flex-1 items-center justify-center">
-          <CarouselContent>{renderActiveSlide()}</CarouselContent>
+          <CarouselContent>
+            {/* {renderActiveSlide()} */}
+            {options.map((item, index) => (
+              <CarouselItem key={index}>
+                <div className="h-[343px] w-[343px] md:h-[400px] md:w-[400px] lg:h-[631px] lg:w-[518px]">
+                  <p>{item.title}</p>
+                  {renderActiveSlide()}
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
         </Carousel>
 
         <div className="mt-4 flex w-[90%] items-center justify-between md:justify-evenly">
@@ -323,6 +369,21 @@ const ProjectEstimation = () => {
               Previous
             </Button>
           )}
+
+          <Button
+            classes="px-[53.5px] mb-[10px] md:[73px] py-[12px] rounded-[8px] md:mr-[16px]"
+            onClick={() => {
+              if (activeIndex === options.length - 1) {
+                handleForm();
+              } else {
+                setActiveIndex(activeIndex + 1);
+              }
+            }}
+            disabled={activeIndex !== options.length - 1 && !(formData[activeIndex]?.choices?.length > 0 || formData[activeIndex]?.answer || formData[activeIndex]?.message)}
+          >
+            {activeIndex === options.length - 1 ? "Submit" : "Next"}
+          </Button>
+
           {isModalVisible && (
             <SuccessModal onClose={handleCloseForm} modalstyle={"flex flex-col flex-1 justify-center items-center"}>
               <>
@@ -344,20 +405,6 @@ const ProjectEstimation = () => {
               </>
             </SuccessModal>
           )}
-
-          <Button
-            classes="px-[53.5px] mb-[10px] md:[73px] py-[12px] rounded-[8px] md:mr-[16px]"
-            onClick={() => {
-              if (activeIndex === options.length - 1) {
-                handleButtonClick();
-                handleForm();
-              } else {
-                setActiveIndex(activeIndex + 1);
-              }
-            }}
-          >
-            {activeIndex === options.length - 1 ? "Submit" : "Next"}
-          </Button>
         </div>
       </div>
     </div>

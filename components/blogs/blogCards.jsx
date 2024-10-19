@@ -16,7 +16,7 @@ const BlogsCards = ({ cardsData, limit, params }) => {
 
   const renderBlog = (card) => {
     return (
-      <Link key={card.id} href={`blogs/${card.id}`}>
+      <Link key={card.id} href={`/blogs/${card.id}`}>
         <div key={card.id} className="flex w-max rounded-[16px] p-[24px] shadow-lg">
           <div className="cursor-pointer overflow-hidden rounded bg-white">
             <div className="relative h-[240px] overflow-hidden rounded-xl">
