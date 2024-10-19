@@ -10,9 +10,9 @@ const Index = ({ filter }) => {
 
   const renderCard = (portfolioItem, index) => {
     return (
-      <div key={index} className={`flex flex-col lg:flex-row ${index % 2 === 0 ? "gap-[100px] lg:flex-row" : "gap-[100px] lg:flex-row-reverse"} mb-[60px] w-full`}>
+      <div key={index} className={`flex flex-col lg:flex-row ${index % 2 === 0 ? "lg:flex-row lg:gap-[100px]" : "lg:flex-row-reverse lg:gap-[100px]"} mb-[60px] w-full`}>
         {/* Left Section - App Screens */}
-        <div className="flex flex-1">
+        <div className="flex flex-1 justify-center lg:justify-start xl:justify-start">
           <Carousal portfolioItem={portfolioItem} index={index} />
         </div>
 
@@ -47,11 +47,13 @@ const Index = ({ filter }) => {
 
             {/* View Live Project Button */}
             <div className="mt-[24px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
-              <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
-                <Link href={portfolioItem.link} target="_blank">
-                  {strings["liveSection"]}
-                </Link>
-              </Button>
+              {portfolioItem.link && (
+                <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
+                  <a href={portfolioItem.link} target="_blank">
+                    {strings["liveSection"]}
+                  </a>
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -60,8 +62,8 @@ const Index = ({ filter }) => {
   };
 
   return (
-    <div className="px-6 lg:px-[124px] lg:py-[67px] xl:px-[110px]">
-      <div className="mb-9 flex space-x-4">
+    <div className="px-6 py-[60px] lg:px-[124px] lg:py-[67px] xl:px-[110px]">
+      <div className="mb-9 flex space-x-4 overflow-scroll [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Link href={"/portfolio/all"} scroll={false}>
           <Button variant={filter === "all" ? "bgRounded" : "outlineRounded"}>All</Button>
         </Link>

@@ -65,8 +65,14 @@ import xcodeIcon from "./Images/xcode.webp";
 import xdIcon from "./Images/xd.webp";
 import TrueArrow from "./Images/arrow.webp";
 import blogImage2 from "./Images/blog2.webp";
+import mongoDbIcon from "./Images/mongoDb.webp";
+import photoshopIcon from "./Images/photoshop.webp";
+import jiraIcon from "./Images/jira.webp";
 
 export {
+  photoshopIcon,
+  jiraIcon,
+  mongoDbIcon,
   blogImage2,
   TrueArrow,
   xdIcon,
