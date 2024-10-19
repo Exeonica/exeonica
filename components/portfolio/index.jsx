@@ -45,11 +45,13 @@ const Index = ({ filter }) => {
 
             {/* View Live Project Button */}
             <div className="mt-[24px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
-              <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
-                <a href={portfolioItem.link} target="_blank">
-                  {strings["liveSection"]}
-                </a>
-              </Button>
+              {portfolioItem.link && (
+                <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
+                  <a href={portfolioItem.link} target="_blank">
+                    {strings["liveSection"]}
+                  </a>
+                </Button>
+              )}
             </div>
           </div>
         </div>

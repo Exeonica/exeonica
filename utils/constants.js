@@ -27,8 +27,6 @@ import {
   xcodeIcon,
   typescriptIcon,
   tensorflowIcon,
-  swiftIcon,
-  sketchIcon,
   primereProIcon,
   nodeJsIcon,
   nextJsIcon,
@@ -36,15 +34,17 @@ import {
   firebaseIcon,
   figmaIcon,
   dialogflowIcon,
-  canvaIcon,
   androidStudioIcon,
   BlogsImage,
   BlogPost,
   BlogImage1,
   blogImage2,
+  mongoDbIcon,
+  photoshopIcon,
+  jiraIcon,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
-import { Simfree, Deepmove, Dukan, Dukan1, Simfree1, Deepmove1, Mathani, Mathani1, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
+import { Simfree, Deepmove, Dukan, Dukan1, Simfree1, Deepmove1, Mathani, Mathani1 } from "@/public/PortfolioImages";
 import { Android, AppleLogo, Chat, CreditCard, Guarantee, Map, Notification, SocialMedia } from "@/public/ProjectEstimation/index";
 
 export const navLinks = [
@@ -230,8 +230,8 @@ export const services = [
         image: flutterIcon,
       },
       {
-        title: "Swift",
-        image: swiftIcon,
+        title: "Typescript",
+        image: typescriptIcon,
       },
       {
         title: "Kotlin",
@@ -349,6 +349,14 @@ export const services = [
         title: "JavaScript",
         image: javaScriptIcon,
       },
+      {
+        title: "Mongodb",
+        image: mongoDbIcon,
+      },
+      {
+        title: "Firebase",
+        image: firebaseIcon,
+      },
     ],
   },
   {
@@ -388,10 +396,6 @@ export const services = [
         image: figmaIcon,
       },
       {
-        title: "Sketch",
-        image: sketchIcon,
-      },
-      {
         title: "Adobe XD",
         image: xdIcon,
       },
@@ -400,8 +404,12 @@ export const services = [
         image: primereProIcon,
       },
       {
-        title: "Canva",
-        image: canvaIcon,
+        title: "Adobe Photoshop",
+        image: photoshopIcon,
+      },
+      {
+        title: "Jira",
+        image: jiraIcon,
       },
     ],
   },
@@ -439,8 +447,8 @@ export const services = [
     ],
     technologies: [
       {
-        title: "Swift",
-        image: swiftIcon,
+        title: "Javascript",
+        image: javaScriptIcon,
       },
       {
         title: "Typescript",
@@ -804,16 +812,14 @@ export const portfolioData = [
     title: "Simfree",
     images: [Simfree, Simfree1],
     link: "https://dev.simfree.io/",
-    tags: ["Mobile App", "Web App", "Backend", "Backend", "Backend"],
+    tags: ["Mobile App", "Web App"],
     description: "Wallpaper downloader App for both iOS & Android.",
     details:
       "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
     tools: [
-      { icon: Ex, name: "Express.js" },
-      { icon: GatsBy, name: "GraphQL" },
-      { icon: TechIcon, name: "Next.js" },
-      { icon: C, name: "C#" },
-      { icon: React, name: "React.js" },
+      { icon: reactIcon, name: "React Js" },
+      { icon: reactIcon, name: "React Native" },
+      { icon: firebaseIcon, name: "Firebase" },
     ],
   },
   {
@@ -825,43 +831,38 @@ export const portfolioData = [
       "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
 
     tools: [
-      { icon: Ex, name: "Express.js" },
-      { icon: GatsBy, name: "GraphQL" },
-      { icon: TechIcon, name: "Next.js" },
-      { icon: C, name: "C#" },
-      { icon: React, name: "React.js" },
+      { icon: reactIcon, name: "React Js" },
+      { icon: reactIcon, name: "React Native" },
+      { icon: firebaseIcon, name: "Firebase" },
     ],
   },
   {
     title: "Dukan",
     images: [Dukan, Dukan1],
     link: "https://www.dukan.pk/",
-    tags: ["Web App"],
+    tags: ["Web App", "Mobile app"],
     details:
       "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
 
     tools: [
-      { icon: Ex, name: "Express.js" },
-      { icon: GatsBy, name: "GraphQL" },
-      { icon: TechIcon, name: "Next.js" },
-      { icon: C, name: "C#" },
-      { icon: React, name: "React.js" },
+      { icon: reactIcon, name: "React Native" },
+      { icon: firebaseIcon, name: "Firebase" },
+      { icon: androidStudioIcon, name: "Android Studio" },
+      { icon: xcodeIcon, name: "xcode" },
     ],
   },
   {
     title: "Mathani",
     images: [Mathani, Mathani1],
     link: "https://play.google.com/store/apps/details?id=com.mathani",
-    tags: ["Web App"],
+    tags: ["Mobile App"],
     details:
       "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
 
     tools: [
-      { icon: Ex, name: "Express.js" },
-      { icon: GatsBy, name: "GraphQL" },
-      { icon: TechIcon, name: "Next.js" },
-      { icon: C, name: "C#" },
-      { icon: React, name: "React.js" },
+      { icon: reactIcon, name: "React Native" },
+      { icon: firebaseIcon, name: "Firebase" },
+      { icon: androidStudioIcon, name: "Android Studio" },
     ],
   },
 ];
