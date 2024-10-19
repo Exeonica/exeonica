@@ -35,7 +35,7 @@ const Contact = ({ sectionBgColor, tableBgColor }) => {
           </div>
         </div>
       </div>
-      <div className="mt-6 md:mt-0">
+      <div className="mt-6 lg:mt-0">
         <ContactForm tableBgColor={tableBgColor} />
       </div>
     </div>

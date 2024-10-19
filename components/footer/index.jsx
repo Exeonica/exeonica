@@ -60,7 +60,7 @@ const Footer = () => {
             <h4 className="mt-[48px] text-[20px] font-medium leading-[24px] text-white">{strings["newsLetTitle"]}</h4>
             <p className="mt-[15px] text-[16px] font-normal leading-[24px] text-white lg:text-base">{strings["newsLetterDesc"]}</p>
             <div className="mt-[40px] flex flex-row items-center md:pr-[40px]">
-              <TextInput classes="pl-[8px] py-[6px] text-black" type={"text"} inputKey={"name"} placeholder="Enter your email" />
+              <TextInput classes="pl-[8px] py-[6px] text-black rounded-sm" type={"text"} inputKey={"name"} placeholder="Enter your email" />
               <button className="ml-2 rounded-sm bg-primary px-4 py-2 text-white">Subscribe</button>
             </div>
           </div>
