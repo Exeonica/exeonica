@@ -7,7 +7,7 @@ import { BlogsCards } from "./index";
 const Blogs = ({ blogs, filters, params }) => {
   return (
     <div className="mx-[16px] space-y-9 p-4 pt-[80px] lg:mx-[112px]">
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 overflow-scroll [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Link href={"/blogs/all"} scroll={false}>
           <Button variant={params.filter === "all" ? "bgRounded" : "outlineRounded"}>All</Button>
         </Link>

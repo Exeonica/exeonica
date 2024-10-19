@@ -815,7 +815,7 @@ export const portfolioData = [
     tags: ["Mobile App", "Web App"],
     description: "Wallpaper downloader App for both iOS & Android.",
     details:
-      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+      "The app makes travel and connectivity easier with instant activation and plan switching. Users can track data usage in real-time and choose from various data plans for trips, whether short or long.",
     tools: [
       { icon: reactIcon, name: "React Js" },
       { icon: reactIcon, name: "React Native" },
@@ -828,7 +828,7 @@ export const portfolioData = [
     link: "https://deepmove.com/",
     tags: ["Mobile App", "Web App"],
     details:
-      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+      "We are building a network-based marketplace. Where there is more content, there are more buyers. Students will have the ability to browse rather than perform blind searches, and when they arrive, they have the option to bring their friends, or, your potential clients.",
 
     tools: [
       { icon: reactIcon, name: "React Js" },
@@ -841,8 +841,7 @@ export const portfolioData = [
     images: [Dukan, Dukan1],
     link: "https://www.dukan.pk/",
     tags: ["Web App", "Mobile app"],
-    details:
-      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+    details: "Dukan builds digital banking software and e-commerce infrastructure to connect retailers, distributors, and manufacturers with embedded financial services.",
 
     tools: [
       { icon: reactIcon, name: "React Native" },
@@ -857,7 +856,7 @@ export const portfolioData = [
     link: "https://play.google.com/store/apps/details?id=com.mathani",
     tags: ["Mobile App"],
     details:
-      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+      "The Quran Learning & Recitation App helps Muslims improve their Quran recitation and understanding by providing the full Quran in Arabic with translations in multiple languages. It features a user-friendly index for easy navigation through Surahs and Ayahs, and integrated references and Tafsir for deeper context. Designed for both beginners and experienced readers, the app offers an intuitive interface to enhance the learning experience.",
 
     tools: [
       { icon: reactIcon, name: "React Native" },
