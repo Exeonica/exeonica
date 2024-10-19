@@ -6,6 +6,8 @@ import { portfolioData, portfolioFilters, strings } from "@/utils";
 import { Button, Carousal } from "@/components/index";
 
 const Index = ({ filter }) => {
+  const filteredValue = filter?.replaceAll("%20", " ");
+
   const renderCard = (portfolioItem, index) => {
     return (
       <div key={index} className={`flex flex-col lg:flex-row ${index % 2 === 0 ? "gap-[100px] lg:flex-row" : "gap-[100px] lg:flex-row-reverse"} mb-[60px] w-full`}>
@@ -62,17 +64,17 @@ const Index = ({ filter }) => {
   return (
     <div className="px-6 lg:px-[124px] lg:py-[67px] xl:px-[110px]">
       <div className="mb-9 flex space-x-4">
-        <Link href={"/portfolio"}>
-          <Button variant="outlineRounded">All</Button>
+        <Link href={"/portfolio/all"} scroll={false}>
+          <Button variant={filter === "all" ? "bgRounded" : "outlineRounded"}>All</Button>
         </Link>
         {portfolioFilters.map((v, i) => (
-          <Link key={i} href={`/portfolio/${v}`}>
-            <Button variant="outlineRounded">{v}</Button>
+          <Link key={i} href={`/portfolio/${v}`} scroll={false}>
+            <Button variant={filter.replaceAll("%20", " ") === v ? "bgRounded" : "outlineRounded"}>{v}</Button>
           </Link>
         ))}
       </div>
       <div className="flex flex-1 flex-col lg:items-start">
-        {portfolioData.map((card, i) => (filter ? (card.tags.includes(filter[0].replace("%20", " ")) ? renderCard(card, i) : null) : renderCard(card, i)))}
+        {portfolioData.map((card, i) => (filter ? (filter === "all" ? renderCard(card, i) : card.tags.includes(filteredValue) ? renderCard(card, i) : null) : renderCard(card, i)))}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ export async function generateStaticParams() {
   const filters = await getBlogFilters();
 
   return filters.map((filter) => ({
-    filter: ["filter", filter.title],
+    filter: filter.title,
   }));
 }
 
