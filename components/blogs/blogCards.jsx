@@ -16,27 +16,25 @@ const BlogsCards = ({ cardsData, limit, params }) => {
   const renderBlog = (card) => {
     return (
       <Link key={card.id} href={`/blog/${card.id}`}>
-        <div key={card.id} className="flex w-max rounded-[16px] p-[24px] shadow-lg">
-          <div className="cursor-pointer overflow-hidden rounded bg-white">
-            <div className="relative h-[240px] overflow-hidden rounded-xl">
-              <Image src={card.bloggerImage} alt={card.title} fill priority className="w-full object-cover" />
+        <div key={card.id} className="flex flex-col rounded-xl bg-border p-6 pb-8 shadow-lg">
+          <div className="cursor-pointer overflow-hidden rounded-md">
+            <div className="relative min-h-[240px] w-full object-cover pb-[60%]">
+              <Image src={card.bloggerImage} alt={card.title} fill priority className="rounded-md object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </div>
-
-            <div className="pt-[24px]">
-              <h2 className="mb-[12px] text-[14px] font-semibold leading-[20px] text-primary">{card.type}</h2>
-              <h2 className="mb-[12px] text-[14px] font-semibold leading-[20px] text-primary">{card.category}</h2>
+            <div className="pt-6">
+              <h2 className="mb-3 text-[14px] font-semibold leading-[20px] text-primary">{card.type}</h2>
+              <h2 className="mb-3 text-[14px] font-semibold leading-[20px] text-primary">{card.category}</h2>
 
               <div className="flex">
-                <h2 className="mb-[12px] text-[26px] font-semibold leading-[32px] text-color-12">{card.title}</h2>
-                <div className="mt-[8px]">
+                <h2 className="mb-3 text-[24px] font-semibold leading-[32px] text-color-12">{card.title}</h2>
+                <div className="ml-2 mt-2">
                   <GreyArrow color="red" />
                 </div>
               </div>
-              <p className="mb-[32px] text-[16px] font-normal leading-[24px] text-color-11">{card.desc}</p>
+              <p className="mb-8 text-[16px] font-normal leading-[24px] text-color-11">{card.desc}</p>
             </div>
-
-            <div className="mb-[32px] flex">
-              <div className="relative mr-[12px] h-[40px] w-[40px]">
+            <div className="flex items-center">
+              <div className="relative mr-3 h-10 w-10">
                 <Image src={BlogPost} alt={card.bloggerName} fill priority className="rounded-full object-cover" />
               </div>
               <div>
@@ -54,7 +52,7 @@ const BlogsCards = ({ cardsData, limit, params }) => {
     <>
       <p className="text-[36px] font-semibold leading-[53.64px] text-card-foreground">Recent Blogs.</p>
 
-      <div className="grid grid-cols-1 gap-4 pb-[112px] md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 pb-28 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {displayedCards.map((card) => (params?.filter ? (params.filter === "all" ? renderBlog(card) : filteredValue === card.type ? renderBlog(card) : renderNoBlog()) : renderBlog(card)))}
       </div>
     </>
