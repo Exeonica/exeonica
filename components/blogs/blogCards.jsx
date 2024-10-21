@@ -6,17 +6,16 @@ import { BlogPost, GreyArrow } from "@/public";
 
 const BlogsCards = ({ cardsData, limit, params }) => {
   const displayedCards = limit ? cardsData.slice(0, limit) : cardsData;
-  const { filter } = params;
 
-  const filteredArray = filter?.map((item) => item.replaceAll("%20", " "));
+  const filteredValue = params?.filter?.replaceAll("%20", " ");
 
   const renderNoBlog = () => {
-    return <p className="text-[36px] font-semibold leading-[53.64px] text-card-foreground">No Blog Available.</p>;
+    return <p className="text-xl font-semibold text-card-foreground">No Blog Available.</p>;
   };
 
   const renderBlog = (card) => {
     return (
-      <Link key={card.id} href={`/blogs/${card.id}`}>
+      <Link key={card.id} href={`/blog/${card.id}`}>
         <div key={card.id} className="flex w-max rounded-[16px] p-[24px] shadow-lg">
           <div className="cursor-pointer overflow-hidden rounded bg-white">
             <div className="relative h-[240px] overflow-hidden rounded-xl">
@@ -56,7 +55,7 @@ const BlogsCards = ({ cardsData, limit, params }) => {
       <p className="text-[36px] font-semibold leading-[53.64px] text-card-foreground">Recent Blogs.</p>
 
       <div className="grid grid-cols-1 gap-4 pb-[112px] md:grid-cols-2 lg:grid-cols-3">
-        {displayedCards.map((card) => (filter ? (filteredArray.includes(card.type) ? renderBlog(card) : renderNoBlog()) : renderBlog(card)))}
+        {displayedCards.map((card) => (params?.filter ? (params.filter === "all" ? renderBlog(card) : filteredValue === card.type ? renderBlog(card) : renderNoBlog()) : renderBlog(card)))}
       </div>
     </>
   );
