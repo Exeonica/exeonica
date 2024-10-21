@@ -165,5 +165,6 @@ export { default as DottedLine } from "./Icons/dottedLine";
 
 export { default as ClockIcon } from "./Icons/clock";
 export { default as CalenderIcon } from "./Icons/calender";
+export { default as BlogsArrowIcon } from "./Icons/blogsArrow";
 
 export * from "./Templates";
