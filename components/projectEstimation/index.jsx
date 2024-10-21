@@ -132,7 +132,6 @@ const ProjectEstimation = () => {
 
   const handleForm = async () => {
     const contactInfo = formData[9];
-    sendData(formData);
 
     if (!contactInfo || !contactInfo.name || !contactInfo.email || !contactInfo.whatsappNumber) {
       toast.error("Please Enter Data");
@@ -143,7 +142,7 @@ const ProjectEstimation = () => {
     try {
       setIsLoading(true);
       toast.info("Sending Mail");
-
+      sendData(formData);
       await sendMail(contactInfo, projectEstimation);
       toast.success("Mail Sent Successfully");
 
