@@ -21,7 +21,7 @@ const OfferedServices = ({ service }) => {
         <p className="my-2 text-[28px] font-semibold md:text-[40px]">Services we offer in {service.title}</p>
         <p className="text-lg font-normal text-color-3">{service.desc}</p>
       </div>
-      <div className="mt-[70px] lg:flex lg:items-center lg:justify-end lg:gap-x-[50px] xl:gap-x-[100px]">
+      <div className="mt-[70px] lg:flex lg:items-center lg:justify-between lg:space-x-[50px] xl:space-x-[100px]">
         <div className="lg:w-[50%] xl:w-[70%]">
           {service.offers.map((item, index) => (
             <div key={index} className="mt-4">
@@ -38,18 +38,18 @@ const OfferedServices = ({ service }) => {
           ))}
         </div>
 
-        <div className="mt-8 lg:mt-0 lg:w-[50%] xl:w-[30%]">
+        <div className="mt-8 lg:mt-0 lg:w-[50%]">
           <Carousel setApi={setApi}>
             <CarouselContent>
               {service.offers.map((item, index) => (
                 <CarouselItem key={index}>
-                  <div className="h-[343px] w-[343px] md:h-[400px] md:w-[400px] lg:h-[631px] lg:w-[518px]">
+                  <div className="h-[343px] w-[343px] md:h-[400px] md:w-[400px] lg:h-[520px] lg:w-full">
                     <Image
                       src={item.image}
                       alt={item.title}
                       width={"auto"}
                       height={"auto"}
-                      className="h-[343px] w-[343px] rounded-2xl object-cover md:min-h-[400px] md:min-w-[400px] lg:h-[631px] lg:w-[518px]"
+                      className="h-[300px] w-[300px] rounded-2xl object-cover md:min-h-[400px] md:min-w-[400px] lg:h-[520px] lg:w-full"
                     />
                   </div>
                 </CarouselItem>

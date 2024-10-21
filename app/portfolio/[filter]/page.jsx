@@ -3,7 +3,7 @@ import { portfolioFilters } from "@/utils";
 
 export async function generateStaticParams() {
   return portfolioFilters.map((filter) => ({
-    filter: [filter],
+    filter: filter,
   }));
 }
 

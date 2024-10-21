@@ -22,9 +22,11 @@ const Footer = () => {
             <p className="mr-[50px] mt-[10px] text-[16px] text-border lg:text-base">{strings["footerDescription"]}</p>
             <div className="mt-[24px] flex space-x-4">
               {socialLinks.map((link, index) => (
-                <a key={index} href={link.link} target="_blank" className="flex h-[30px] w-[30px] items-center justify-center rounded-full border-2 border-white text-gray-400 hover:text-white">
-                  <Image src={link.Icon} alt="icon" className="h-[20px] w-[20px]" />
-                </a>
+                <Link key={index} href={link.link} target="_blank">
+                  <span className="flex h-[30px] w-[30px] items-center justify-center rounded-full border-2 border-white text-gray-400 hover:text-white">
+                    <Image src={link.Icon} alt="icon" className="h-[20px] w-[20px]" />
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
