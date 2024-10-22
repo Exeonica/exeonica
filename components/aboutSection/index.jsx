@@ -47,7 +47,7 @@ const AboutSection = ({ btnLabel, title, description, classes }) => {
             alt="Picture of the author"
             width={"auto"}
             height={"auto"}
-            className="sm:h-[343px] sm:w-[349px] md:h-[430px] md:w-[516px] lg:h-[430px] lg:w-[516px] xl:h-[507px] xl:w-[516px]"
+            className="h-[343px] w-[349px] md:h-[430px] md:w-[516px] lg:h-[430px] lg:w-[516px] xl:h-[507px] xl:w-[516px]"
           />
         </div>
       </div>

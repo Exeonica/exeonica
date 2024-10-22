@@ -23,22 +23,41 @@ const Carousal = ({ portfolioItem }) => {
 
   return (
     <div className="relative w-full max-w-[600px] flex-shrink-0 overflow-hidden rounded-[16px]">
-      {/* Show the current image */}
-      <Image alt={`Image ${currentIndex + 1}`} src={portfolioItem.images[currentIndex]} layout="responsive" className="block" />
+      <Carousel
+        setApi={setApi}
+        opts={{
+          loop: true,
+        }}
+      >
+        <CarouselContent>
+          {portfolioItem.images.map((imageSrc, index) => (
+            <CarouselItem key={index}>
+              <Image src={imageSrc} alt={`Project Image ${index + 1}`} width={600} height={400} className="h-auto w-max object-cover" />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
 
-      {/* Left Arrow */}
-      <div className="absolute left-2 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer lg:top-[35%] xl:top-1/2">
-        <button className="flex items-center justify-center rounded-full bg-white px-[17px] py-[10px] shadow-lg" onClick={handleImageChangeBack}>
-          <span className="text-[20px] text-color-1">&#8592;</span>
-        </button>
-      </div>
-
-      {/* Right Arrow */}
-      <div className="absolute right-2 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer lg:top-[35%] xl:top-1/2">
-        <button className="flex items-center justify-center rounded-full bg-white px-[17px] py-[10px] shadow-lg" onClick={handleImageChange}>
-          <span className="text-[20px] text-color-1">&#8594;</span>
-        </button>
-      </div>
+        <div className="absolute left-0 top-1/2 ml-6 -translate-y-1/2 transform">
+          <button
+            onClick={() => {
+              api?.scrollTo(current) - 1;
+            }}
+            className="flex items-center justify-center rounded-full bg-white px-[17px] py-[10px] shadow-lg"
+          >
+            <span className="text-[20px] text-color-1">&#8592;</span>
+          </button>
+        </div>
+        <div className="absolute right-0 top-1/2 mr-6 -translate-y-1/2 transform">
+          <button
+            onClick={() => {
+              api?.scrollTo(current) + 1;
+            }}
+            className="flex items-center justify-center rounded-full bg-white px-[17px] py-[10px] shadow-lg"
+          >
+            <span className="text-[20px] text-color-1">&#8594;</span>
+          </button>
+        </div>
+      </Carousel>
     </div>
   );
 };

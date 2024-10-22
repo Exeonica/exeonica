@@ -11,12 +11,10 @@ const Index = ({ filter }) => {
   const renderCard = (portfolioItem, index) => {
     return (
       <div key={index} className={`flex flex-col lg:flex-row ${index % 2 === 0 ? "lg:flex-row lg:gap-[100px]" : "lg:flex-row-reverse lg:gap-[100px]"} mb-[60px] w-full`}>
-        {/* Left Section - App Screens */}
         <div className="flex flex-1 justify-center lg:justify-start xl:justify-start">
           <Carousal portfolioItem={portfolioItem} index={index} />
         </div>
 
-        {/* Right Section - Project Details */}
         <div className="flex flex-1 flex-col items-start justify-start">
           <div className="mt-12 lg:mt-0 lg:flex-1 lg:text-left">
             <h1 className="mb-[24px] bg-gradient-to-t from-color-7 to-color-8 bg-clip-text text-5xl font-bold text-transparent">{portfolioItem.title}</h1>
@@ -45,7 +43,6 @@ const Index = ({ filter }) => {
               </div>
             </div>
 
-            {/* View Live Project Button */}
             <div className="mt-[24px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
               {portfolioItem.link && (
                 <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
