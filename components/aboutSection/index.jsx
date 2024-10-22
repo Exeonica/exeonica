@@ -9,7 +9,7 @@ import { strings } from "@/utils";
 
 const AboutSection = ({ btnLabel, title, description, classes }) => {
   return (
-    <div className={`py-[80px] lg:px-[137px] ${classes}`}>
+    <div className={`py-[80px] lg:px-[110px] xl:px-[137px] ${classes}`}>
       <div className="flex flex-col px-[16px] sm:justify-center md:flex-row md:items-start">
         {/* Left Section */}
         <div className="flex flex-1 flex-col">
@@ -41,8 +41,14 @@ const AboutSection = ({ btnLabel, title, description, classes }) => {
         </div>
 
         {/* Right Section */}
-        <div className="px:16 mt-8 flex flex-1 items-center justify-center md:mt-0">
-          <Image src={AboutUsImg} alt="Picture of the author" width={"auto"} height={"auto"} className="sm:h-[343px] sm:w-[349px] lg:h-[507px] lg:w-[516px]" />
+        <div className="px:14 mt-8 flex flex-1 items-center justify-center md:mt-0">
+          <Image
+            src={AboutUsImg}
+            alt="Picture of the author"
+            width={"auto"}
+            height={"auto"}
+            className="h-[343px] w-[349px] md:h-[430px] md:w-[516px] lg:h-[430px] lg:w-[516px] xl:h-[507px] xl:w-[516px]"
+          />
         </div>
       </div>
     </div>

@@ -299,3 +299,17 @@ So, together, we’re going explore how this technology could help us deliver va
 </html>
 
 `;
+
+export const projectEstimation = `<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form Submission</title>
+</head>
+<body>
+    <h1>Contact Form Submission</h1>
+    <p>Name: {{name}}</p>
+    <p>Email: {{email}}</p>
+    <p>WhatsApp No: {{whatsappNumber}}</p>
+</body>
+</html>`;
