@@ -92,7 +92,6 @@ const ProjectEstimation = () => {
     setFormData((prevData) => {
       let updatedChoices = [...prevData];
       const currentOptionIndex = activeIndex;
-      console.log(updatedChoices, activeIndex);
 
       if (answer === "Other") {
         updatedChoices[currentOptionIndex] = {
@@ -112,7 +111,7 @@ const ProjectEstimation = () => {
 
         const currentAnswers = updatedChoices[activeIndex].answer;
 
-        if (currentAnswers.length) {
+        if (currentAnswers) {
           if (currentAnswers.includes(answer)) {
             updatedChoices[activeIndex] = { ...updatedChoices[activeIndex], answer: currentAnswers.filter((c) => c != answer) };
           } else {
@@ -139,14 +138,13 @@ const ProjectEstimation = () => {
       return;
     }
 
+    setModalVisible(true);
     try {
       setIsLoading(true);
       toast.info("Sending Mail");
       sendData(formData);
       await sendMail(contactInfo, projectEstimation);
       toast.success("Mail Sent Successfully");
-
-      setModalVisible(true);
     } catch (error) {
       toast.error(error.message);
     } finally {
@@ -329,7 +327,7 @@ const ProjectEstimation = () => {
                 );
               })}
 
-              {activeChoiceSelected === "Others" && (
+              {formData[6]?.answer.includes("Others") && (
                 <TextInput
                   labelclass="text-lg font-medium"
                   classes="mb-3 w-full rounded-[10px] border border-color-1 py-[30px] bg-white focus:border-primary focus:outline-none"
