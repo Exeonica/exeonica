@@ -30,10 +30,9 @@ const ProjectEstimation = () => {
 
   const sendData = async (formData) => {
     try {
-      const docRef = await addDoc(collection(db, "calculator"), {
+      await addDoc(collection(db, "calculator"), {
         items: formData,
       });
-      console.log("Document written with ID: ", docRef.id);
     } catch (e) {
       console.error("Error adding document: ", e);
     }
@@ -215,7 +214,7 @@ const ProjectEstimation = () => {
                   return (
                     <div
                       key={index}
-                      className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[24px] py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
+                      className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[10px] py-[25px] sm:px-[24px] sm:py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
                       onClick={() => handleSelection(choice, activeIndex)}
                     >
                       <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
@@ -231,7 +230,7 @@ const ProjectEstimation = () => {
                   return (
                     <div
                       key={index}
-                      className={`mt-[25px] flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[24px] py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
+                      className={`mt-[25px] flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[10px] py-[25px] sm:px-[24px] sm:py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
                       onClick={() => handleSelection(choice, activeIndex)}
                     >
                       <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
@@ -405,10 +404,12 @@ const ProjectEstimation = () => {
           ))}
         </div>
 
-        <Carousel setApi={setApi} className="flex h-fit max-w-[410px] flex-1 px-[16px] sm:max-w-[520px] md:max-w-[629px]">
+        <Carousel setApi={setApi} className="w-full max-w-[629px] items-center justify-center overflow-hidden px-[16px]">
           <CarouselContent>
             {options.map((option, index) => (
-              <CarouselItem key={index}>{renderActiveSlide(option)}</CarouselItem>
+              <CarouselItem key={index} className="h-auto max-h-max overflow-hidden">
+                {renderActiveSlide(option)}
+              </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
