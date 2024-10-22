@@ -82,7 +82,7 @@ const ProjectEstimation = () => {
     setFormData(updatedData);
     setActiveChoiceSelected(answer);
 
-    if (answer !== "Something else" && "Other") {
+    if (answer !== "Something else" && answer !== "Other") {
       setActiveIndex(activeIndex + 1);
       api?.scrollTo(activeIndex + 1);
     }
