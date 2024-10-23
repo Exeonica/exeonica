@@ -12,7 +12,7 @@ export const sendMail = async (templateData, temp) => {
   const info = await transporter.sendMail({
     ...mailOptions,
     ...templateData,
-    to: ["ahsan@exeonic.com, sumeera.sehar@exeonic.com, bilal.akram@exeonic.com, ahmad.jamil@exeonic.com, hello@exeonic"],
+    to: ["ahsan@exeonic.com, sumeera.sehar@exeonic.com, bilal.akram@exeonic.com, hello@exeonic"],
     html: html,
   });
 
@@ -57,16 +57,16 @@ export const getCareer = async (careersId) => {
   return careersSnapshot.data();
 };
 
-export const uploadCV = async (file) => {
-  const storageRef = ref(storage, `cvs/${file.name}`);
+export const uploadCV = async (file, email) => {
+  try {
+    const storageRef = ref(storage, `cvs/${email}_${file.name}`);
+    await uploadBytes(storageRef, file);
 
-  uploadBytes(storageRef, file)
-    .then(() => {
-      const downloadURL = getDownloadURL(storageRef);
+    const downloadURL = await getDownloadURL(storageRef);
 
-      return downloadURL;
-    })
-    .catch((error) => {
-      console.error("Error uploading file", error);
-    });
+    return downloadURL;
+  } catch (error) {
+    console.error("Error uploading file:", error);
+    throw new Error("File upload failed");
+  }
 };

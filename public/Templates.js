@@ -46,6 +46,7 @@ export const applicationTemp = `<!DOCTYPE html>
     <p>Last Degree Completion Year: {{lastDegreeCompletionYear}}</p>
     <p>CGPA: {{cgpa}}</p>
     <p>Cover Letter: {{coverLetter}}</p>
+    <p>CV: {{CVURL}}</p>
     
 </body>
 </html>`;
