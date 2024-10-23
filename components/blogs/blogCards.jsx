@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { BlogPost, GreyArrow } from "@/public";
+import { BlogPost, BlogsArrowIcon } from "@/public";
 
 const BlogsCards = ({ cardsData, limit, params }) => {
   const displayedCards = limit ? cardsData.slice(0, limit) : cardsData;
@@ -25,13 +25,13 @@ const BlogsCards = ({ cardsData, limit, params }) => {
               <h2 className="mb-3 text-[14px] font-semibold leading-[20px] text-primary">{card.type}</h2>
               <h2 className="mb-3 text-[14px] font-semibold leading-[20px] text-primary">{card.category}</h2>
 
-              <div className="flex">
-                <h2 className="mb-3 text-[24px] font-semibold leading-[32px] text-color-12">{card.title}</h2>
-                <div className="ml-2 mt-2">
-                  <GreyArrow color="red" />
+              <div className="flex justify-between">
+                <h2 className="mb-3 text-[24px] font-semibold leading-[32px] text-color-12 hover:underline">{card.title}</h2>
+                <div className="mt-1">
+                  <BlogsArrowIcon color="red" />
                 </div>
               </div>
-              <p className="mb-8 text-[16px] font-normal leading-[24px] text-color-11">{card.desc}</p>
+              <p className="mb-8 text-[16px] font-normal leading-[24px] text-color-11 hover:underline">{card.desc}</p>
             </div>
             <div className="flex items-center">
               <div className="relative mr-3 h-10 w-10">

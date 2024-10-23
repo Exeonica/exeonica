@@ -49,7 +49,7 @@ const OfferedServices = ({ service }) => {
                       alt={item.title}
                       width={"auto"}
                       height={"auto"}
-                      className="h-[300px] w-[300px] rounded-2xl object-cover md:min-h-[400px] md:min-w-[400px] lg:h-[520px] lg:w-full"
+                      className="h-[285px] w-[285px] rounded-2xl object-cover md:min-h-[400px] md:min-w-[400px] lg:h-[520px] lg:w-full"
                     />
                   </div>
                 </CarouselItem>
