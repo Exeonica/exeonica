@@ -12,7 +12,7 @@ const Home = async () => {
       <AchievementCards cardclass={"!bg-white"} btnTitle={"achievementTitle"} heading={"achievementHeading"} classes={"!bg-border"} hiddenClass={"hidden"} />
       <Services />
       <EstimationBanner />
-      {/* <BlogsSection blogsData={blogs} /> */}
+      <BlogsSection blogsData={blogs} />
       <Testimonial />
       <FrequentlyAskedQuestions />
       <Contact sectionBgColor={"color-2"} tableBgColor={"white"} />
