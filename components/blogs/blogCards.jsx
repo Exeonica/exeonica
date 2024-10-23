@@ -50,8 +50,6 @@ const BlogsCards = ({ cardsData, limit, params }) => {
 
   return (
     <>
-      <p className="text-[36px] font-semibold leading-[53.64px] text-card-foreground">Recent Blogs.</p>
-
       <div className="grid grid-cols-1 gap-6 pb-28 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {displayedCards.map((card) => (params?.filter ? (params.filter === "all" ? renderBlog(card) : filteredValue === card.type ? renderBlog(card) : renderNoBlog()) : renderBlog(card)))}
       </div>

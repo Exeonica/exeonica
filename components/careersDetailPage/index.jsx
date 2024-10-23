@@ -16,7 +16,7 @@ const CareerDetails = ({ job }) => {
   };
 
   return (
-    <div className="mx-[16px] mt-[80px] px-4 py-8 lg:mx-[225px] lg:mt-[141px]">
+    <div className="mx-[16px] mt-[80px] px-4 py-8 lg:mx-[130px] lg:mt-[141px] xl:mx-[225px]">
       <div className="mb-[80px] flex flex-col-reverse md:flex-row lg:gap-[24px]">
         <div className="flex-1">
           <div className="mb-[48px]">

@@ -137,10 +137,10 @@ const ProjectEstimation = () => {
       return;
     }
 
-    setModalVisible(true);
     try {
       setIsLoading(true);
       toast.info("Sending Mail");
+      setModalVisible(true);
       sendData(formData);
       await sendMail(contactInfo, projectEstimation);
       toast.success("Mail Sent Successfully");
