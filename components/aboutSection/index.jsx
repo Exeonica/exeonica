@@ -9,8 +9,8 @@ import { strings } from "@/utils";
 
 const AboutSection = ({ btnLabel, title, description, classes }) => {
   return (
-    <div className={`py-[80px] lg:px-[137px] ${classes}`}>
-      <div className="flex flex-col px-[16px] sm:justify-center md:flex-row md:items-start">
+    <div className={`py-[80px] lg:px-[110px] xl:px-[137px] ${classes}`}>
+      <div className="flex flex-col px-[16px] sm:justify-center md:items-center lg:flex-row">
         {/* Left Section */}
         <div className="flex flex-1 flex-col">
           <div className="sm:w-12/3 md:w-1/4">
@@ -26,7 +26,7 @@ const AboutSection = ({ btnLabel, title, description, classes }) => {
             <div className="container">
               <h1 className="text-title mb-4 text-center text-[28px] font-semibold leading-[41.58px] md:text-left md:leading-[54.9px] lg:text-[40px]"> {strings[title] || title}</h1>
             </div>
-            <p className="text-center text-[18px] font-normal leading-[26.73px] text-color-1 md:text-start md:leading-[26.73px]">{strings[description] || description}</p>
+            <p className="text-center text-[18px] font-normal leading-[26.73px] text-color-1 md:w-[90%] md:text-start md:leading-[26.73px]">{strings[description] || description}</p>
           </div>
 
           <div className="sm:w-12/3 md:w-1/4">
@@ -41,8 +41,14 @@ const AboutSection = ({ btnLabel, title, description, classes }) => {
         </div>
 
         {/* Right Section */}
-        <div className="px:16 mt-8 flex flex-1 items-center justify-center md:mt-0">
-          <Image src={AboutUsImg} alt="Picture of the author" width={"auto"} height={"auto"} className="sm:h-[343px] sm:w-[349px] lg:h-[507px] lg:w-[516px]" />
+        <div className="px:14 justify-cente mt-8 flex flex-1 items-center md:mt-0">
+          <Image
+            src={AboutUsImg}
+            alt="Picture of the author"
+            width={"auto"}
+            height={"auto"}
+            className="h-[343px] w-[349px] md:h-[430px] md:w-[516px] lg:h-[420px] lg:w-[516px] xl:h-[507px] xl:w-[516px]"
+          />
         </div>
       </div>
     </div>

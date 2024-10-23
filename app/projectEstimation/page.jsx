@@ -1,9 +1,10 @@
-import { ProjectEstimation } from "@/components/index";
+import { Footer, ProjectEstimation } from "@/components/index";
 
 const ProjectEstimationCalculator = () => {
   return (
     <div>
       <ProjectEstimation />
+      <Footer />
     </div>
   );
 };

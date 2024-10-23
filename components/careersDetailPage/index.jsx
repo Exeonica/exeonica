@@ -16,9 +16,8 @@ const CareerDetails = ({ job }) => {
   };
 
   return (
-    <div className="mx-[16px] mt-[80px] px-4 py-8 lg:mx-[225px] lg:mt-[141px]">
+    <div className="mx-[16px] mt-[80px] px-4 py-8 lg:mx-[130px] lg:mt-[141px] xl:mx-[225px]">
       <div className="mb-[80px] flex flex-col-reverse md:flex-row lg:gap-[24px]">
-        {/* Left Job Details Side */}
         <div className="flex-1">
           <div className="mb-[48px]">
             <span className="mb-[8px] text-[28px] font-semibold leading-[41.58px] text-text">{strings["aboutUs"]}</span>
@@ -39,7 +38,6 @@ const CareerDetails = ({ job }) => {
                   {item.descriptions.map((description, index) => (
                     <li key={index} className="gap-[9px]">
                       {" "}
-                      {/* to create bullets use li tag  */}
                       {description}
                     </li>
                   ))}
@@ -49,9 +47,7 @@ const CareerDetails = ({ job }) => {
           </div>
         </div>
 
-        {/* Right Column (Job Information)  */}
-
-        <div className="flex-2/5 rounded-lg p-6">
+        <div className="flex-2/5 rounded-lg p-0 md:p-6">
           <span className="mb-[24px] text-[28px] font-semibold leading-[41.58px] text-text">Job Information</span>
 
           <div className="text-gray-600">
@@ -66,8 +62,6 @@ const CareerDetails = ({ job }) => {
       </div>
 
       {isFormVisible && <ApplicationForm title={job.title} onClose={handleCloseForm} />}
-
-      {/* Button Container */}
       <div className="mb-[80px] mt-[60px] flex items-center justify-center lg:mb-[61px] lg:mt-[29px]">
         <div className="flex flex-col md:items-start md:justify-start md:px-0">
           <Button variant="default" onClick={handleButtonClick} classes="w-full mb-3 rounded-[8px] font-normal border-white px-[64px] py-[12px] text-[16px] text-white ">

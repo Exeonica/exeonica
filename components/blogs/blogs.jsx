@@ -11,12 +11,15 @@ const Blogs = ({ blogs, filters, params }) => {
         <Link href={"/blogs/all"} scroll={false}>
           <Button variant={params.filter === "all" ? "bgRounded" : "outlineRounded"}>All</Button>
         </Link>
+
         {filters.map((v, i) => (
           <Link key={i} href={`/blogs/${v.title}`} scroll={false}>
             <Button variant={params.filter.replaceAll("%20", " ") === v.title ? "bgRounded" : "outlineRounded"}>{v.title}</Button>
           </Link>
         ))}
       </div>
+      <p className="text-[36px] font-semibold leading-[53.64px] text-card-foreground">Recent Blogs.</p>
+
       <BlogsCards cardsData={blogs} params={params} />
     </div>
   );
