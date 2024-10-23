@@ -31,6 +31,7 @@ const ApplicationForm = ({ title, onClose }) => {
     lastDegreeCompletionYear: "",
     cgpa: "",
     coverLetter: "",
+    selectedCV: null,
   });
 
   const handleClickOutside = (event) => {
@@ -40,23 +41,26 @@ const ApplicationForm = ({ title, onClose }) => {
   };
 
   const handleChange = (key, val) => {
-    setFormData((v) => ({
-      ...v,
-      [key]: val,
-    }));
+    const data = JSON.parse(JSON.stringify(formData));
+    data[key] = val;
+    setFormData(data);
   };
 
   const handleSubmit = async () => {
     let isValid = true;
 
-    inputs.map((v) => {
+    inputs.forEach((v) => {
       if (!formData[v.inputKey]) {
         isValid = false;
       }
     });
 
+    if (!formData.selectedCV) {
+      isValid = false;
+    }
+
     if (!isValid) {
-      toast.error("Please fill the form");
+      toast.error("Please fill the form and upload the CV");
 
       return;
     }
@@ -64,12 +68,42 @@ const ApplicationForm = ({ title, onClose }) => {
     try {
       setIsLoading(true);
 
-      toast.info("Saving Data");
-      await sendMail({ title, ...formData }, applicationTemp);
+      const formDataCV = new FormData();
+      formDataCV.append("file", formData.selectedCV);
+      formDataCV.append("email", formData.email);
+
+      const response = await fetch("/api/uploadCV", {
+        method: "POST",
+        body: formDataCV,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("API Error:", errorData.message);
+        throw new Error("Failed to upload CV");
+      }
+
+      const { url } = await response.json();
+
+      const emailData = {
+        title,
+        name: formData.name,
+        email: formData.email,
+        whatsappNumber: formData.whatsappNumber,
+        totalExperience: formData.totalExperience,
+        lastDegree: formData.lastDegree,
+        lastDegreeCompletionYear: formData.lastDegreeCompletionYear,
+        cgpa: formData.cgpa,
+        coverLetter: formData.coverLetter,
+        CVURL: url,
+      };
+
+      await sendMail(emailData, applicationTemp);
       toast.success("Data Saved");
-      setIsLoading(false);
     } catch (error) {
+      console.error("Submission Error:", error);
       toast.error(error.message);
+    } finally {
       setIsLoading(false);
     }
   };
@@ -82,13 +116,13 @@ const ApplicationForm = ({ title, onClose }) => {
     };
   }, []);
 
-  // const handleFileChange = (e) => {
-  //   const file = e.target.files[0];
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
 
-  //   if (file) {
-  //     handleChange("selectedCV", file);
-  //   }
-  // };
+    if (file) {
+      handleChange("selectedCV", file);
+    }
+  };
 
   return (
     <div className="relative z-10 flex items-center justify-center" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -113,23 +147,30 @@ const ApplicationForm = ({ title, onClose }) => {
             </div>
             {/* Text Input Fields */}
             {inputs.map((v, i) => (
-              <div className="pb-5" key={i}>
+              <div className="pb-[29px]" key={i}>
                 <TextInput type={v.type} inputKey={v.inputKey} placeholder={v.placeholder} value={formData[v.inputKey]} handleChange={handleChange} rows={i === inputs.length - 1 ? 3 : 0} />
               </div>
             ))}
             {/* Upload CV module */}
-            {/* <div className="flex flex-row items-center">
+            <div className="flex flex-row items-center">
               <div>
-                <label className="rounded-md bg-border px-[34px] py-[6px] text-[18px] font-light text-text" htmlFor="image_uploads">
+                <label className="rounded-md bg-border px-[16px] py-[6px] text-[18px] font-light text-text shadow-sm hover:bg-primary hover:text-white" htmlFor="image_uploads">
                   {strings["uploadCV"]}
                 </label>
                 <input type="file" id="image_uploads" name="image_uploads" accept=".pdf" className="hidden" onChange={handleFileChange} />
               </div>
               <p className="ml-[13px]">{formData.selectedCV?.name || strings["fileAttachment"]}</p>
-            </div> */}
+            </div>
 
-            <div className="mt-[60px] flex !w-full lg:mt-[29px]">
-              <Button loading={isLoading} onClick={handleSubmit} variant="default" classes="!w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white justify-center">
+            <div className="mt-[51px] flex !w-full lg:mt-[29px]">
+              <Button
+                loading={isLoading}
+                onClick={() => {
+                  handleSubmit();
+                }}
+                variant="default"
+                classes="!w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white justify-center"
+              >
                 {strings["apply"]}
               </Button>
             </div>
