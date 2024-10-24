@@ -57,8 +57,11 @@ export const getCareer = async (careersId) => {
   return careersSnapshot.data();
 };
 
-export const uploadCV = async (file, email) => {
+export const uploadCV = async (formData) => {
   try {
+    const file = formData.get("file");
+    const email = formData.get("email");
+
     const storageRef = ref(storage, `cvs/${email}_${file.name}`);
     await uploadBytes(storageRef, file);
 
