@@ -76,7 +76,7 @@ const blogDetails = ({ cardsData, blog }) => {
           <div>
             <p className="mb-[36px] text-[32px] font-semibold leading-[47.52px] text-card-foreground">{strings["relatedArticals"]}</p>
           </div>
-          <BlogsCards cardsData={cardsData} limit={3} />
+          <BlogsCards cardsData={cardsData} limit={3} params={"all"} />
         </div>
       </div>
     </div>
