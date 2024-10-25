@@ -186,8 +186,8 @@ export const termAndConditions = `
              <h2 class="text-2xl font-semibold mt-6 mb-4">Contact Us</h2>
               <p class="mb-4">Don't hesitate to contact us if you have any questions.</p>
               <ul class="list-disc list-inside space-y-2">
-                 <li>Via this Link: <a href="mailto:hello@exeonic.com"> hello@exeonic.com </a></li>
-                <li> Via this Link: <a href="/"> https://www.exeonic.com</a> </li>
+                <li> Via this Link:<u class="underline hover:text-primary  > <a href="mailto:hello@exeonic.com"> hello@exeonic.com </a> </u></li>
+                <li>Via this Link:<u class="underline hover:text-primary >   <a href="/"> https://www.exeonic.com </a> </u></li>
                </ul>
 
     </main>
@@ -379,8 +379,10 @@ export const privacyPolicy = `
     <h2 class="text-2xl font-semibold mt-6 mb-4">Contact Us</h2>
     <p class="mb-4">Don't hesitate to contact us if you have any questions.</p>
     <ul class="list-disc list-inside space-y-2">
-      <li>Via this Link: <a href="mailto:hello@exeonic.com"> hello@exeonic.com </a></li>
-      <li>Via this Link:<a href="/"> https://www.exeonic.com</a> </li>
+    <li> Via this Link:<u class="underline hover:text-primary mr-1 > <a href="mailto:hello@exeonic.com"> hello@exeonic.com </a> </u></li>
+    <li>Via this Link:<u class="underline hover:text-primary >   <a href="/"> https://www.exeonic.com </a> </u></li>
+
+
     </ul>
 
    

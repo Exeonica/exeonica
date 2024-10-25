@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import moment from "moment";
 
 import { Button } from "@/components/index";
 import { BlogsArrowIcon } from "@/public";
@@ -20,7 +21,7 @@ const BlogsCards = ({ cardsData, limit, params }) => {
       <Link href={`/blog/${card.id}`}>
         <div className="cursor-pointer overflow-hidden rounded-md">
           <div className="relative min-h-[240px] w-full object-cover pb-[60%]">
-            <Image src={card.bloggerImage} alt={card.title} fill priority className="rounded-md object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            <Image src={card.blogImage} alt={card.title} fill priority className="rounded-md object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
           <div className="pt-6">
             <h2 className="mb-3 text-[14px] font-semibold leading-[20px] text-primary">{card.type || ""}</h2>
@@ -40,7 +41,7 @@ const BlogsCards = ({ cardsData, limit, params }) => {
             </div>
             <div>
               <p className="text-[15px] font-semibold leading-[20px] text-color-12">{card.bloggerName || ""}</p>
-              <p className="text-[14px] font-normal leading-[20px] text-color-11">{"12 Nov 2021"}</p>
+              <p className="text-[14px] font-normal leading-[20px] text-color-11">{moment(card.updatedAt, "MMMM DD, YYYY [at] h:mm:ss A [UTC]Z").format("MMMM Do, YYYY")}</p>
             </div>
           </div>
         </div>
