@@ -17,7 +17,7 @@ const BlogsCards = ({ cardsData, limit, params }) => {
   const renderNoBlog = () => <p className="text-xl font-semibold text-card-foreground">No Blog Available.</p>;
 
   const renderBlog = (card) => (
-    <div key={card.id} className="flex flex-col rounded-xl bg-border p-6 pb-8 shadow-lg">
+    <div key={card.id} className="flex flex-col justify-between rounded-xl bg-border p-6 pb-8 shadow-lg">
       <Link href={`/blog/${card.id}`}>
         <div className="cursor-pointer overflow-hidden rounded-md">
           <div className="relative min-h-[240px] w-full object-cover pb-[60%]">
@@ -55,7 +55,7 @@ const BlogsCards = ({ cardsData, limit, params }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 justify-between gap-6 pb-28 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 pb-28 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {params?.filter === "all" || params?.filter === undefined
           ? displayedCards.map((card) => renderBlog(card))
           : displayedCards.filter((card) => filteredValue === card.type).length > 0
