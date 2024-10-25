@@ -1,16 +1,12 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
 
-import { Button } from "@/components/index";
 import { BlogsArrowIcon } from "@/public";
-import { strings } from "@/utils";
 
 const BlogsCards = ({ cardsData, limit, params }) => {
-  const [visibleCount, setVisibleCount] = useState(limit);
-  const displayedCards = cardsData.slice(0, visibleCount);
+  const displayedCards = limit ? cardsData.slice(0, limit) : cardsData;
 
   const filteredValue = params?.filter ? params.filter.replaceAll("%20", " ") : "all";
 
@@ -49,10 +45,6 @@ const BlogsCards = ({ cardsData, limit, params }) => {
     </div>
   );
 
-  const loadMore = () => {
-    setVisibleCount((prevCount) => prevCount + 3);
-  };
-
   return (
     <>
       <div className="grid grid-cols-1 gap-6 pb-28 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
@@ -62,7 +54,6 @@ const BlogsCards = ({ cardsData, limit, params }) => {
             ? displayedCards.filter((card) => filteredValue === card.type).map((card) => renderBlog(card))
             : renderNoBlog()}
       </div>
-      <div className="mb-[200px] flex w-full flex-1 items-center justify-center">{visibleCount < cardsData.length && <Button onClick={loadMore}>{strings["loadArticals"]}</Button>}</div>
     </>
   );
 };
