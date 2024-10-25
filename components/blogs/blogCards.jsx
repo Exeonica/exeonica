@@ -23,13 +23,14 @@ const BlogsCards = ({ cardsData, limit, params }) => {
             </div>
             <div className="pt-6">
               <h2 className="mb-3 text-[14px] font-semibold leading-[20px] text-primary">{card.type || ""}</h2>
-              {/* <h2 className="mb-3 text-[14px] font-semibold leading-[20px] text-primary">{card.category || ""}</h2> */}
 
               <div className="flex justify-between">
                 <h2 className="mb-3 text-[24px] font-semibold leading-[32px] text-color-12 hover:underline">{card.title || ""}</h2>
-                <div className="mt-1">
-                  <BlogsArrowIcon color="red" />
-                </div>
+                {card.title && (
+                  <div className="mt-1">
+                    <BlogsArrowIcon color="red" />
+                  </div>
+                )}
               </div>
               <p className="mb-8 text-[16px] font-normal leading-[24px] text-color-11 hover:underline">{card.desc || ""}</p>
             </div>
@@ -50,8 +51,12 @@ const BlogsCards = ({ cardsData, limit, params }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-6 pb-28 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-        {displayedCards.map((card) => (params?.filter ? (params.filter === "all" ? renderBlog(card) : filteredValue === card.type ? renderBlog(card) : renderNoBlog()) : renderBlog(card)))}
+      <div className="grid grid-cols-1 justify-between gap-6 pb-28 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+        {params?.filter === "all"
+          ? displayedCards.map((card) => renderBlog(card))
+          : displayedCards.filter((card) => filteredValue === card.type).length > 0
+            ? displayedCards.filter((card) => filteredValue === card.type).map((card) => renderBlog(card))
+            : renderNoBlog()}
       </div>
     </>
   );

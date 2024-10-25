@@ -186,8 +186,8 @@ export const termAndConditions = `
              <h2 class="text-2xl font-semibold mt-6 mb-4">Contact Us</h2>
               <p class="mb-4">Don't hesitate to contact us if you have any questions.</p>
               <ul class="list-disc list-inside space-y-2">
-                <li>Via Email: hello@exeonic.com</li>
-                <li>Via this Link: https://www.exeonic.com/</li>
+                 <li>Via this Link: <a href="mailto:hello@exeonic.com"> hello@exeonic.com </a></li>
+                <li> Via this Link: <a href="/"> https://www.exeonic.com</a> </li>
                </ul>
 
     </main>
@@ -379,9 +379,8 @@ export const privacyPolicy = `
     <h2 class="text-2xl font-semibold mt-6 mb-4">Contact Us</h2>
     <p class="mb-4">Don't hesitate to contact us if you have any questions.</p>
     <ul class="list-disc list-inside space-y-2">
-      <li>Via Email: hello@exeonic.com</li>
-      <li>Via this Link: https://www.exeonic.com/</li>
-      
+      <li>Via this Link: <a href="mailto:hello@exeonic.com"> hello@exeonic.com </a></li>
+      <li>Via this Link:<a href="/"> https://www.exeonic.com</a> </li>
     </ul>
 
    
