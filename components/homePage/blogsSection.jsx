@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import moment from "moment";
 
 import Button from "../button";
 
@@ -34,7 +35,7 @@ const BlogsSection = ({ blogsData }) => {
             <div className="flex space-x-4 px-4 pb-[30px]">
               <div className="flex items-center space-x-2">
                 <CalenderIcon />
-                <p className="text-sm font-medium text-color-1">3 April 2002</p>
+                <p className="text-sm font-medium text-color-1">{moment(displayedBlogs.updatedAt, "MMMM DD, YYYY [at] h:mm:ss A [UTC]Z").format("MMMM Do, YYYY") || ""}</p>
               </div>
               <div className="flex items-center space-x-2">
                 <ClockIcon />
@@ -67,7 +68,7 @@ const BlogsSection = ({ blogsData }) => {
                       <div className="flex space-x-4 px-4 pb-[30px] lg:pb-0 lg:pt-4 xl:pt-8">
                         <div className="flex items-center space-x-2">
                           <CalenderIcon />
-                          <p className="text-sm font-medium text-color-1">12 Jan 2024</p>
+                          <p className="text-sm font-medium text-color-1">{moment(displayedBlogs.updatedAt, "MMMM DD, YYYY [at] h:mm:ss A [UTC]Z").format("MMMM Do, YYYY") || ""}</p>
                         </div>
                         <div className="flex items-center space-x-2">
                           <ClockIcon />

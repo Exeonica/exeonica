@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { jobs } from "@/utils";
-import { ComHeader, Footer, CareersDetailPage } from "@/components/index";
+import { Footer, CareersDetailPage } from "@/components/index";
 
 export async function generateStaticParams() {
   return jobs.map((job) => ({
@@ -18,7 +18,6 @@ export default function CareerDetails({ params }) {
 
   return (
     <div>
-      <ComHeader title={job.title} showButton={true} />
       <CareersDetailPage job={job} />
       <Footer />
     </div>

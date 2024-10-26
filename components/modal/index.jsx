@@ -24,7 +24,6 @@ const Modal = ({ onClose, children, modalstyle }) => {
         <div ref={formRef} className="relative flex transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
           <div className="flex flex-1 flex-col items-center justify-center py-[28px]">
             <div className="mr-[80px] w-full items-end justify-end">
-              {/* Close Icon */}
               <div className="flex-end flex justify-end">
                 <button type="button" onClick={onClose}>
                   <span className="text-[20px] font-bold text-card-foreground">X</span>
@@ -32,7 +31,6 @@ const Modal = ({ onClose, children, modalstyle }) => {
               </div>
             </div>
 
-            {/* Render children here */}
             <div className={`${modalstyle}`}>{children}</div>
           </div>
         </div>
