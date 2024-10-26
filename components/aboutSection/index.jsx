@@ -41,7 +41,7 @@ const AboutSection = ({ btnLabel, title, description, classes }) => {
         </div>
 
         {/* Right Section */}
-        <div className="px:14 justify-cente mt-8 flex flex-1 items-center md:mt-0">
+        <div className="px:14 mt-8 flex flex-1 justify-center sm:items-center md:mt-0">
           <Image
             src={AboutUsImg}
             alt="Picture of the author"

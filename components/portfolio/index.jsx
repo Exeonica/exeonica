@@ -45,11 +45,11 @@ const Index = ({ filter }) => {
 
             <div className="mt-[24px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
               {portfolioItem.link && (
-                <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
-                  <a href={portfolioItem.link} target="_blank">
+                <a href={portfolioItem.link} target="_blank">
+                  <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">
                     {strings["liveSection"]}
-                  </a>
-                </Button>
+                  </Button>
+                </a>
               )}
             </div>
           </div>
