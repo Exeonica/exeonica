@@ -3,10 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
 
+import { Button } from "@/components/index";
+import { strings } from "@/utils";
 import { BlogsArrowIcon } from "@/public";
 
 const BlogsCards = ({ cardsData, limit, params }) => {
   const displayedCards = limit ? cardsData.slice(0, limit) : cardsData;
+  console.log("card Data", displayedCards);
 
   const filteredValue = params?.filter ? params.filter.replaceAll("%20", " ") : "all";
 
@@ -37,7 +40,7 @@ const BlogsCards = ({ cardsData, limit, params }) => {
             </div>
             <div>
               <p className="text-[15px] font-semibold leading-[20px] text-color-12">{card.bloggerName || ""}</p>
-              <p className="text-[14px] font-normal leading-[20px] text-color-11">{moment(card.updatedAt, "MMMM DD, YYYY [at] h:mm:ss A [UTC]Z").format("MMMM Do, YYYY")}</p>
+              <p className="text-[14px] font-normal leading-[20px] text-color-11">{moment(card.updatedAt, "MMMM DD, YYYY [at] h:mm:ss A [UTC]Z").format("MMMM Do, YYYY") || ""}</p>
             </div>
           </div>
         </div>
@@ -54,6 +57,13 @@ const BlogsCards = ({ cardsData, limit, params }) => {
             ? displayedCards.filter((card) => filteredValue === card.type).map((card) => renderBlog(card))
             : renderNoBlog()}
       </div>
+      {limit && displayedCards.length < cardsData.length && (
+        <div className="mb-[200px] flex justify-center">
+          <Link href="/blogs/all">
+            <Button>{strings["loadArticles"] || "View All Blogs"}</Button>
+          </Link>
+        </div>
+      )}
     </>
   );
 };

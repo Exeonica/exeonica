@@ -39,7 +39,7 @@ const blogDetails = ({ cardsData, blog }) => {
           </div>
         </div>
         <div className="mt-[36px] flex flex-1 flex-col justify-between lg:flex-row lg:space-x-[117px]">
-          <div className="flex flex-1 lg:w-[50%] xl:w-auto">
+          <div className="flex flex-1 lg:w-[50%] lg:flex-none xl:w-auto">
             <div dangerouslySetInnerHTML={{ __html: blog.template }} />
           </div>
 
