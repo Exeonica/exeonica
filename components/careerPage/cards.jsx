@@ -10,7 +10,6 @@ const CareerCards = () => {
   return (
     <div>
       <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px]">
-        {/* Job Cards */}
         <div className="mb-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {jobs.map((job, index) => (
             <div key={index} className="rounded-md border border-border p-6 shadow-md">

@@ -15,15 +15,6 @@ const locations = [
     countryCode: "PK",
     flag: PKFlag,
   },
-  // {
-  //   id: 2,
-  //   name: "New York, USA",
-  //   position: { lat: 40.7128, lng: -74.006 },
-  //   address: "P-176 (First Floor), Block A, NY",
-  //   contact: "+88017 000 555 15",
-  //   countryCode: "US",
-  //   flag: UKFlag,
-  // },
 ];
 
 const LocationCard = ({ location }) => (

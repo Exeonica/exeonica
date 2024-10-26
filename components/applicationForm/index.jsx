@@ -160,11 +160,9 @@ const ApplicationForm = ({ title, onClose }) => {
             ref={formRef}
             className="relative max-h-[70vh] transform overflow-scroll overflow-y-auto rounded-2xl bg-white px-[12px] py-[37px] text-left shadow-xl transition-all [-ms-overflow-style:none] [scrollbar-width:none] md:px-[82px] md:py-[53px] [&::-webkit-scrollbar]:hidden"
           >
-            {/* Title */}
             <div>
               <p className="mb-[51px] text-center text-[28px] font-semibold leading-[41.58px] text-text lg:text-[36px] lg:leading-[53.46px]">Application for {title}</p>
             </div>
-            {/* Text Input Fields */}
             {inputs.map((v, i) => (
               <div className="pb-[29px]" key={i}>
                 <TextInput
@@ -179,7 +177,6 @@ const ApplicationForm = ({ title, onClose }) => {
                 />
               </div>
             ))}
-            {/* Upload CV module */}
             <div className="flex flex-row items-center">
               <div>
                 <label
