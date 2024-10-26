@@ -584,6 +584,12 @@ export const jobs = [
         ],
       },
     ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.8+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "Full-Time" },
+    ],
   },
   {
     id: 2,
@@ -627,6 +633,12 @@ export const jobs = [
           "Strong understanding of UI/UX principles.",
         ],
       },
+    ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.5+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "On-Site" },
     ],
   },
   {
@@ -672,6 +684,12 @@ export const jobs = [
         ],
       },
     ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.5+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "On-Site" },
+    ],
   },
   {
     id: 4,
@@ -715,6 +733,12 @@ export const jobs = [
           "Strong understanding of UI/UX principles.",
         ],
       },
+    ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.5+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "On-Site" },
     ],
   },
   {
@@ -760,14 +784,13 @@ export const jobs = [
         ],
       },
     ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.5+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "On-Site" },
+    ],
   },
-];
-
-export const jobInfo = [
-  { title: "Industry", result: "IT Services" },
-  { title: "Work experience", result: "0.5+ Years" },
-  { title: "Location", result: "Faisalabad, Pakistan" },
-  { title: "Role", result: "On-Site" },
 ];
 
 export const frequentlyAskedQuestions = [
