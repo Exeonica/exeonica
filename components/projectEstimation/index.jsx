@@ -157,7 +157,7 @@ const ProjectEstimation = () => {
         <div className="flex h-auto flex-1 flex-col px-[26px] md:px-[33px]">
           <p className="mb-[24px] text-[28px] font-semibold leading-[53.46px] text-card-foreground lg:text-[36px] lg:leading-[41.58px]">{option.title}</p>
 
-          {option.type === "radio" && (
+          {/* {option.type === "radio" && (
             <div>
               {option.choices.map((choice, index) => {
                 const choiceId = `option${option.id}_choice${index}`;
@@ -198,6 +198,68 @@ const ProjectEstimation = () => {
                   inputKey={"message"}
                   placeholder="write a short note..."
                   value={formData[activeIndex]?.message}
+                  handleChange={handleTextareaChange}
+                  loading={isLoading}
+                />
+              )}
+            </div>
+          )} */}
+
+          {option.type === "radio" && (
+            <div>
+              {option.choices.map((choice, index) => {
+                const choiceId = `option${option.id}_choice${index}`;
+
+                return (
+                  <div
+                    key={index}
+                    className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
+                    onClick={() => {
+                      handleSelection(choice, activeIndex);
+
+                      setFormData((prev) => {
+                        const newFormData = [...prev];
+                        newFormData[activeIndex] = { ...newFormData[activeIndex], message: "" };
+
+                        return newFormData;
+                      });
+                    }}
+                  >
+                    <div className="flex flex-1 items-center justify-between">
+                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
+                      <input
+                        type="radio"
+                        name={`option${option.id}`}
+                        value={choice}
+                        id={choiceId}
+                        checked={activeChoiceSelected === choice}
+                        onChange={() => {
+                          setActiveIndex(activeIndex + 1);
+                          api?.scrollTo(activeIndex + 1);
+
+                          if (choice !== "Something else") {
+                            setFormData((prev) => {
+                              const newFormData = [...prev];
+                              newFormData[activeIndex].message = "";
+
+                              return newFormData;
+                            });
+                          }
+                        }}
+                        className={"accent-primary"}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+              {activeChoiceSelected === "Something else" && (
+                <TextInput
+                  labelclass="text-lg font-medium"
+                  classes="mb-3  w-full rounded-[10px] border border-color-1 py-[30px] bg-white focus:border-primary focus:outline-none "
+                  type={"text"}
+                  inputKey={"message"}
+                  placeholder="write a short note..."
+                  value={formData[activeIndex]?.message || ""}
                   handleChange={handleTextareaChange}
                   loading={isLoading}
                 />
