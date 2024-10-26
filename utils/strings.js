@@ -99,4 +99,5 @@ export const strings = {
   successDescription: "Your information is submitted successfully. We will get back to you shortly through an Email",
   goToHome: "Return to home",
   loadArticals: " Load More Articals",
+  viewAllBlogs: "View All Blogs",
 };

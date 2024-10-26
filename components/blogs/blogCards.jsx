@@ -9,7 +9,6 @@ import { BlogsArrowIcon } from "@/public";
 
 const BlogsCards = ({ cardsData, limit, params }) => {
   const displayedCards = limit ? cardsData.slice(0, limit) : cardsData;
-  console.log("card Data", displayedCards);
 
   const filteredValue = params?.filter ? params.filter.replaceAll("%20", " ") : "all";
 
@@ -60,7 +59,7 @@ const BlogsCards = ({ cardsData, limit, params }) => {
       {limit && displayedCards.length < cardsData.length && (
         <div className="mb-[200px] flex justify-center">
           <Link href="/blogs/all">
-            <Button>{strings["loadArticles"] || "View All Blogs"}</Button>
+            <Button>{strings["viewAllBlogs"]}</Button>
           </Link>
         </div>
       )}
