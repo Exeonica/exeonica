@@ -4,25 +4,15 @@ import Image from "next/image";
 
 import { BlogsCards } from "@/components/index";
 import { Button } from "@/components/index";
-import { strings } from "@/utils";
+import { strings, articles } from "@/utils";
 import { MsgIcon, CellPhoneIcon, BlogImage1 } from "@/public";
-
-const articles = [
-  "Exploring Generative AI in Content Creation",
-  "Steering Clear of Common AI Writing Pitfalls",
-  "Understanding ChatGPT Capabilities - Define Your Style",
-  "Understand Your Readers",
-  "Creating Quality AI-powered Blogs that Stand Out",
-  "Conclusion: Embracing AI in Blog Creation",
-  "Afterword: The AI Behind This Article",
-];
 
 const blogDetails = ({ cardsData, blog }) => {
   return (
     <div className="px-[16px] lg:px-[110px]">
       <div>
         <div>
-          <Image src={BlogImage1} className="mb-[36px] mt-[60px] h-[264px] flex-1 rounded-3xl object-cover xl:h-[427px]" alt="maintainance" />
+          <Image src={BlogImage1} className="mb-[36px] mt-[60px] h-[264px] flex-1 rounded-3xl object-cover xl:h-[427px]" alt="maintainance" priority />
           <div className="rounded-lg bg-border px-[36px] py-[24px] shadow-md">
             <div>
               <div className="flex flex-row items-center">
@@ -44,7 +34,7 @@ const blogDetails = ({ cardsData, blog }) => {
           </div>
 
           <div className="flex-1/2 flex flex-col lg:w-[50%] xl:w-auto">
-            <div className="p-4">
+            <div className="py-4 pr-4 lg:p-4 lg:py-0 lg:pr-0">
               <h2 className="mb-4 text-lg font-bold">{strings["artical"]}</h2>
 
               {articles.map((article, index) => (

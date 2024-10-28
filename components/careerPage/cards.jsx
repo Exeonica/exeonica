@@ -28,9 +28,11 @@ const CareerCards = () => {
                   <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.location}</span>
                 </div>
                 <div>
-                  <Button variant={"default"} className="rounded-md bg-primary p-[14px] text-white">
-                    <Link href={`/careers/${job.id}`}>{job.applyText}</Link>
-                  </Button>
+                  <Link href={`/careers/${job.id}`}>
+                    <Button variant={"default"} className="rounded-md bg-primary p-[14px] text-white">
+                      {job.applyText}
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

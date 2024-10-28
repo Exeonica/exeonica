@@ -18,7 +18,7 @@ const CareerDetails = ({ job }) => {
   return (
     <>
       <ComHeader>
-        <div className="flex flex-1 items-center justify-center">
+        <div className="flex flex-1 items-center justify-evenly">
           <div className="gap-8px mb-4 mt-[59px] flex w-fit items-center rounded-md bg-white">
             {job.tags.map((tag, index) => (
               <div key={index} className="flex items-center">
@@ -31,7 +31,7 @@ const CareerDetails = ({ job }) => {
         </div>
 
         <p className="z-10 text-center text-4xl font-medium text-text md:text-4xl lg:text-5xl">{job.title}</p>
-        <div className="mb-[80px] mt-[60px] flex items-center justify-center lg:mb-[61px] lg:mt-[29px]">
+        <div className="mb-[80px] mt-[20px] flex items-center justify-center lg:mb-[61px]">
           <div className="flex flex-col md:items-start md:justify-start md:px-0">
             <Button variant="default" onClick={handleButtonClick} classes="w-full mb-3 rounded-[8px] font-normal border-white px-[64px] py-[12px] text-[16px] text-white ">
               {strings["intrested"]}

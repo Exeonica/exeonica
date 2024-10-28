@@ -31,7 +31,6 @@ const Index = ({ filter }) => {
             <p className="my-[12px] text-[32px] font-semibold leading-[47.52px] text-card-foreground">{portfolioItem.description}</p>
             <p className="text-[18px] font-normal leading-[26.73px] text-color-1">{portfolioItem.details}</p>
 
-            {/* Tools and Technologies */}
             <div className="mt-8">
               <h2 className="mb-[12px] mt-[24px] text-[22px] font-semibold leading-[32.67px] text-card-foreground">Tools & Technologies</h2>
               <div className="mt-4 flex flex-wrap gap-[16px]">
@@ -43,7 +42,7 @@ const Index = ({ filter }) => {
               </div>
             </div>
 
-            <div className="mt-[24px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
+            <div className="mt-[24px] flex flex-col items-start justify-start md:px-0">
               {portfolioItem.link && (
                 <a href={portfolioItem.link} target="_blank">
                   <Button variant="default" classes="w-full mb-3 rounded-[8px] px-[16px] py-[10px] text-[16px]">

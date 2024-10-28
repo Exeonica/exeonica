@@ -9,8 +9,8 @@ import { strings } from "@/utils";
 
 const AboutSection = ({ btnLabel, title, description, classes }) => {
   return (
-    <div className={`py-[80px] lg:px-[110px] xl:px-[137px] ${classes}`}>
-      <div className="flex flex-col px-[16px] sm:justify-center md:items-center lg:flex-row">
+    <div className={`py-[80px] lg:px-[100px] xl:px-[137px] ${classes}`}>
+      <div className="flex flex-col px-[16px] sm:justify-center md:items-center lg:flex-row xl:items-end">
         <div className="flex flex-1 flex-col">
           <div className="sm:w-12/3 md:w-1/4">
             <div className="mt-[45.5px] flex flex-col items-center justify-center md:items-start md:justify-start md:px-0">
@@ -38,7 +38,7 @@ const AboutSection = ({ btnLabel, title, description, classes }) => {
             </div>
           </div>
         </div>
-        <div className="px:14 mt-8 flex flex-1 justify-center sm:items-center md:mt-0">
+        <div className="px:14 mt-8 flex flex-1 justify-center sm:items-center md:mt-[60px] lg:items-end lg:justify-end">
           <Image
             src={AboutUsImg}
             alt="Picture of the author"

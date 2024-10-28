@@ -529,8 +529,6 @@ export const services = [
   },
 ];
 
-export const buttonLabels = ["All", "Option 2", "Option 3", "Option 4"];
-
 export const images = [
   { src: Award4, alt: "Picture of the author 1" },
   { src: Award1, alt: "Picture of the author 1" },
@@ -963,8 +961,18 @@ export const options = [
     type: "contact",
     placeholders: [
       { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
-      { label: "Email", inputKey: "email", type: "email", placeholder: "Email" },
-      { label: "WhatsApp Number", inputKey: "whatsappNumber", type: "tel", placeholder: "WhatsApp Number" },
+      { label: "Email", inputKey: "email", type: "email", placeholder: "Email   (Ex.example@gmail.com)" },
+      { label: "WhatsApp Number", inputKey: "whatsappNumber", type: "tel", placeholder: "WhatsApp Number  (Ex. +923000000000 or 03000000000)" },
     ],
   },
+];
+
+export const articles = [
+  "Exploring Generative AI in Content Creation",
+  "Steering Clear of Common AI Writing Pitfalls",
+  "Understanding ChatGPT Capabilities - Define Your Style",
+  "Understand Your Readers",
+  "Creating Quality AI-powered Blogs that Stand Out",
+  "Conclusion: Embracing AI in Blog Creation",
+  "Afterword: The AI Behind This Article",
 ];

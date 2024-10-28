@@ -31,10 +31,6 @@ const ServiceComponent = () => {
           );
         })}
       </div>
-
-      {/* <Button variant={"default"} classes="text-base mt-12 mb-[80px]">
-        {strings["allServicesBtn"]}
-      </Button> */}
     </div>
   );
 };

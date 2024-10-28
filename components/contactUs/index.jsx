@@ -34,11 +34,11 @@ const LocationCard = ({ location }) => (
         </div>
       </div>
 
-      <Button variant={"default"} classes="text-xs md:text-base md:font-normal">
-        <Link href={"https://shorturl.at/qdwje"} target="_blank">
+      <Link href={"https://shorturl.at/qdwje"} target="_blank">
+        <Button variant={"default"} classes="text-xs md:text-base md:font-normal">
           {strings["getDirection"]}
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </div>
   </div>
 );
