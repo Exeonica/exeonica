@@ -14,7 +14,7 @@ const BlogDetails = async ({ params }) => {
 
   return (
     <div>
-      <BlogsDetailsComp blog={blog} cardsData={allBlogs} />
+      <BlogsDetailsComp blog={blog} cardsData={allBlogs} params={params} />
       <Footer />
     </div>
   );

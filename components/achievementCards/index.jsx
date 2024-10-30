@@ -13,7 +13,6 @@ const AchievementCards = ({ cardclass, btnTitle, heading, classes, hiddenClass }
         </Button>
         <p className="my-[18px] text-[28px] font-semibold md:text-[40px]">{strings[heading]}</p>
       </div>
-      {/* Cards Section */}
       <div className="grid grid-cols-1 gap-[24px] px-[15px] pt-[36px] md:grid-cols-2 xl:grid-cols-4">
         {aboutInfo.map((item, index) => (
           <div key={index} className={`rounded-[12px] border border-border bg-border py-[26px] pl-[27px] shadow-sm ${cardclass} `}>

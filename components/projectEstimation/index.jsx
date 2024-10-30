@@ -22,6 +22,19 @@ const ProjectEstimation = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [contactData, setContactData] = useState({ email: "", name: "", whatsappNumber: "" });
 
+  const validateEmail = (email) => {
+    email = email.toLowerCase();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^(\+92|0)?[3][0-9]{9}$/;
+
+    return phoneRegex.test(phone);
+  };
+
   useEffect(() => {
     if (!api) {
       return;
@@ -34,7 +47,7 @@ const ProjectEstimation = () => {
         items: formData,
       });
     } catch (e) {
-      console.error("Error adding document: ", e);
+      console.error("Error while adding document in firebase: ", e);
     }
   };
 
@@ -49,6 +62,10 @@ const ProjectEstimation = () => {
     if (!updatedData[activeIndex]) {
       updatedData[activeIndex] = {};
     }
+
+    const data = JSON.parse(JSON.stringify(formData));
+    data[field] = value;
+    setFormData(data);
 
     updatedData[activeIndex] = {
       ...updatedData[activeIndex],
@@ -130,9 +147,26 @@ const ProjectEstimation = () => {
 
   const handleForm = async () => {
     const contactInfo = formData[9];
+    let isValid = true;
+
+    if (!validateEmail(formData[9].email)) {
+      isValid = false;
+      setContactData((prev) => ({ ...prev, email: "Invalid email format" }));
+    }
+
+    if (!validatePhone(formData[9].whatsappNumber)) {
+      isValid = false;
+      setContactData((prev) => ({ ...prev, whatsappNumber: "Invalid phone number format" }));
+    }
 
     if (!contactInfo || !contactInfo.name || !contactInfo.email || !contactInfo.whatsappNumber) {
       toast.error("Please Enter Data");
+
+      return;
+    }
+
+    if (!isValid) {
+      toast.error("Please fill the highlighted field.");
 
       return;
     }
@@ -154,7 +188,7 @@ const ProjectEstimation = () => {
   const renderActiveSlide = (option) => {
     return (
       <div key={option.id} className="mb-0">
-        <div className="flex h-auto flex-1 flex-col px-[26px] md:px-[33px]">
+        <div className="flex h-auto flex-1 flex-col sm:px-[26px] md:px-[33px]">
           <p className="mb-[24px] text-[28px] font-semibold leading-[53.46px] text-card-foreground lg:text-[36px] lg:leading-[41.58px]">{option.title}</p>
 
           {option.type === "radio" && (
@@ -166,7 +200,16 @@ const ProjectEstimation = () => {
                   <div
                     key={index}
                     className={`mb-7 cursor-pointer rounded-[16px] border border-color-1 px-[24px] py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
-                    onClick={() => handleSelection(choice, activeIndex)}
+                    onClick={() => {
+                      handleSelection(choice, activeIndex);
+
+                      setFormData((prev) => {
+                        const newFormData = [...prev];
+                        newFormData[activeIndex] = { ...newFormData[activeIndex], message: "" };
+
+                        return newFormData;
+                      });
+                    }}
                   >
                     <div className="flex flex-1 items-center justify-between">
                       <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
@@ -181,7 +224,12 @@ const ProjectEstimation = () => {
                           api?.scrollTo(activeIndex + 1);
 
                           if (choice !== "Something else") {
-                            null;
+                            setFormData((prev) => {
+                              const newFormData = [...prev];
+                              newFormData[activeIndex].message = "";
+
+                              return newFormData;
+                            });
                           }
                         }}
                         className={"accent-primary"}
@@ -197,7 +245,7 @@ const ProjectEstimation = () => {
                   type={"text"}
                   inputKey={"message"}
                   placeholder="write a short note..."
-                  value={formData[activeIndex]?.message}
+                  value={formData[activeIndex]?.message || ""}
                   handleChange={handleTextareaChange}
                   loading={isLoading}
                 />
@@ -350,9 +398,11 @@ const ProjectEstimation = () => {
                   type={item.type}
                   inputKey={item.inputKey}
                   placeholder={item.placeholder}
-                  value={contactData[item.inputKey]}
+                  value={formData[item.inputKey]}
                   handleChange={handleTextareaChange}
                   loading={isLoading}
+                  isInvalid={(item.inputKey === "email" && contactData.email) || (item.inputKey === "whatsappNumber" && contactData.whatsappNumber)}
+                  errorMsg={contactData[item.inputKey]}
                 />
               </div>
             ))}
@@ -404,7 +454,7 @@ const ProjectEstimation = () => {
           ))}
         </div>
 
-        <Carousel setApi={setApi} className="w-full max-w-[629px] items-center justify-center overflow-hidden px-[16px]">
+        <Carousel setApi={setApi} className="w-full max-w-[629px] overflow-hidden px-[16px] sm:items-center sm:justify-center">
           <CarouselContent>
             {options.map((option, index) => (
               <CarouselItem key={index} className="h-auto max-h-max overflow-hidden">
