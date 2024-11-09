@@ -1,10 +1,13 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import { toast } from "react-toastify";
+import Link from "next/link";
+import Image from "next/image";
 
-import { TextInput, Button } from "@/components/index";
+import { TextInput, SuccessModal, Button } from "@/components/index";
 import { sendMail, strings, uploadCV } from "@/utils";
 import { applicationTemp } from "@/public";
+import { TrueArrow } from "@/public";
 
 const inputs = [
   { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
@@ -22,6 +25,7 @@ const ApplicationForm = ({ title, onClose }) => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [missingFields, setMissingFields] = useState([]);
+  const [isModalVisible, setModalVisible] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -45,6 +49,10 @@ const ApplicationForm = ({ title, onClose }) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     return emailRegex.test(email);
+  };
+
+  const handleCloseForm = () => {
+    setModalVisible(false);
   };
 
   const validatePhone = (phone) => {
@@ -122,10 +130,10 @@ const ApplicationForm = ({ title, onClose }) => {
         coverLetter: formData.coverLetter,
         CVURL: url,
       };
-
+      setModalVisible(true);
       await sendMail(emailData, applicationTemp);
-      toast.success("Data Saved");
-      toast.success("Submit Successfully");
+      // toast.success("Data Saved");
+      // toast.success("Submit Successfully");
     } catch (error) {
       console.error("Submission Error:", error);
       toast.error(error.message);
@@ -177,7 +185,7 @@ const ApplicationForm = ({ title, onClose }) => {
                 />
               </div>
             ))}
-            <div className="flex flex-row items-center">
+            <div className="flex flex-col items-center gap-y-2 md:flex-row md:gap-y-0">
               <div>
                 <label
                   className={`rounded-md px-[16px] py-[6px] text-[18px] font-light shadow-sm hover:bg-primary hover:text-white ${
@@ -207,6 +215,27 @@ const ApplicationForm = ({ title, onClose }) => {
           </div>
         </div>
       </div>
+      {isModalVisible && (
+        <SuccessModal onClose={handleCloseForm} modalstyle={"flex flex-col flex-1 justify-center items-center"}>
+          <>
+            <div className="mb-[20px] flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary">
+              <Image src={TrueArrow} alt={""} className="h-[18.87px] w-[28.33px]" />
+            </div>
+
+            <div className="items-center justify-center px-[25.5px] text-center sm:ml-4 sm:mt-0 sm:text-left">
+              <p className={`text-center text-[24px] font-semibold leading-[32px] text-text`} id="modal-title">
+                {strings["successMsg"]}
+              </p>
+              <div className="mb-[20px] mt-[16px]">
+                <p className={`text-center text-[16px] font-normal leading-[22px] text-color-1`}>{strings["successDescription"]}</p>
+              </div>
+            </div>
+            <Link href={"/"}>
+              <Button variant="default">{strings.goToHome}</Button>
+            </Link>
+          </>
+        </SuccessModal>
+      )}
     </div>
   );
 };

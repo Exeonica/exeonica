@@ -256,33 +256,35 @@ const ProjectEstimation = () => {
           {option.type === "radioWithTwoValues" && (
             <div className="mb-7 space-y-[25px]">
               <div className="grid grid-cols-2 gap-[25px]">
-                {option.choices.slice(0, 4).map((choice, index) => {
+                {option.choices.slice(0, 4).map((option, index) => {
+                  const isSelected = formData[activeIndex]?.answer?.includes(option) || false;
                   const choiceId = `option${option.id}_choice${index}`;
 
                   return (
                     <div
                       key={index}
-                      className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[10px] py-[25px] sm:px-[24px] sm:py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
-                      onClick={() => handleSelection(choice, activeIndex)}
+                      className={`flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[10px] py-[25px] sm:px-[24px] sm:py-[30px] ${isSelected ? "border-primary" : ""}`}
+                      onClick={() => handleCheckBoxChoice(option)}
                     >
-                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
-                      <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={activeChoiceSelected === choice} onChange={() => {}} className={"accent-primary"} />
+                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{option}</p>
+                      <input type="checkbox" name={`option${option.id}`} value={option} id={choiceId} checked={isSelected} onChange={() => handleCheckBoxChoice(option)} className={"accent-primary"} />
                     </div>
                   );
                 })}
               </div>
               <div>
-                {option.choices.slice(4).map((choice, index) => {
+                {option.choices.slice(4).map((option, index) => {
+                  const isSelected = formData[activeIndex]?.answer?.includes(option) || false;
                   const choiceId = `option${option.id}_choice${index + 4}`;
 
                   return (
                     <div
                       key={index}
-                      className={`mt-[25px] flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[10px] py-[25px] sm:px-[24px] sm:py-[30px] ${activeChoiceSelected === choice ? "border-primary" : ""}`}
-                      onClick={() => handleSelection(choice, activeIndex)}
+                      className={`mt-[25px] flex cursor-pointer items-center justify-between rounded-[16px] border border-color-1 px-[10px] py-[25px] sm:px-[24px] sm:py-[30px] ${isSelected ? "border-primary" : ""}`}
+                      onClick={() => handleCheckBoxChoice(option)}
                     >
-                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{choice}</p>
-                      <input type="radio" name={`option${option.id}`} value={choice} id={choiceId} checked={activeChoiceSelected === choice} onChange={() => {}} className={"accent-primary"} />
+                      <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{option}</p>
+                      <input type="checkbox" name={`option${option.id}`} value={option} id={choiceId} checked={isSelected} onChange={() => handleCheckBoxChoice(option)} className={"accent-primary"} />
                     </div>
                   );
                 })}
@@ -407,7 +409,7 @@ const ProjectEstimation = () => {
               </div>
             ))}
         </div>
-        <div className="flex w-[100%] items-center justify-evenly lg:justify-evenly">
+        <div className="flex w-[100%] items-center justify-center gap-x-1 lg:justify-evenly">
           {activeIndex === 0 || activeIndex === options.length - 1 ? null : (
             <Button
               onClick={() => {
@@ -415,14 +417,14 @@ const ProjectEstimation = () => {
                 api?.scrollTo(activeIndex - 1);
               }}
               variant={"outlineRounded"}
-              classes="px-[39.5px] mb-[10px] md:[59.5px] py-[12px] rounded-[8px] md:mr-[16px]"
+              classes="px-[40px] md:px-[39.5px] mb-[10px] md:[59.5px] py-[12px] rounded-[8px] md:mr-[16px] text-sm"
               disabled={activeIndex === 0}
             >
               Previous
             </Button>
           )}
           <Button
-            classes="px-[53.5px] mb-[10px] md:[73px] py-[12px] rounded-[8px] md:mr-[16px]"
+            classes="md:px-[53.5px] px-[40px]  mb-[10px] md:[73px] py-[12px] rounded-[8px] md:mr-[16px] sm:text-sm"
             onClick={() => {
               if (activeIndex === options.length - 1) {
                 handleForm();
