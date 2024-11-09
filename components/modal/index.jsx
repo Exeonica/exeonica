@@ -21,7 +21,7 @@ const Modal = ({ onClose, children, modalstyle }) => {
   return (
     <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
       <div className="fixed inset-0 flex items-center justify-center bg-color-11 bg-opacity-75 transition-opacity">
-        <div ref={formRef} className="relative flex transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+        <div ref={formRef} className="relative mx-5 flex transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
           <div className="flex flex-1 flex-col items-center justify-center py-[28px]">
             <div className="mr-[80px] w-full items-end justify-end">
               <div className="flex-end flex justify-end">
