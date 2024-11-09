@@ -20,7 +20,7 @@ const FrequentlyAskedQuestions = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between px-[16px] py-[80px] md:px-[60px] lg:flex lg:flex-row lg:items-center lg:space-x-[133px] lg:px-[110px]">
+    <div className="flex flex-col justify-between px-[16px] py-[80px] md:px-[30px] lg:flex lg:flex-row lg:items-center lg:space-x-[133px] lg:px-[110px]">
       <div className="mb-12 md:mb-0">
         <Button variant={"outlineRounded"} classes="text-xs md:text-base md:font-normal cursor-default">
           {strings["faqTitle"]}
