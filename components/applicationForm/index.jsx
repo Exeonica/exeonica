@@ -185,7 +185,7 @@ const ApplicationForm = ({ title, onClose }) => {
                 />
               </div>
             ))}
-            <div className="flex flex-col items-center gap-y-2 md:flex-row md:gap-y-0">
+            <div className="flex flex-col items-start gap-y-2 md:flex-row md:items-center md:gap-y-0">
               <div>
                 <label
                   className={`rounded-md px-[16px] py-[6px] text-[18px] font-light shadow-sm hover:bg-primary hover:text-white ${
