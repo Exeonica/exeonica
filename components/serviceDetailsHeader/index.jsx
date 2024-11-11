@@ -15,14 +15,14 @@ const ServiceDetailsHeader = ({ service }) => {
         </Button>
         <p className="my-[18px] text-[28px] font-semibold md:text-[40px]">{service.title}</p>
         <p className="text-base font-normal text-color-3">{service.desc}</p>
-        <div className="mt-9 flex gap-2">
-          <Link href={"./services"}>
-            <Button variant={"outlineArrow"} classes="text-sm md:text-base gap-[8px]">
+        <div className="mt-9 flex gap-[4px] md:gap-[16px]">
+          <Link href={"/services"}>
+            <Button variant={"outlineArrow"} classes="text-sm md:text-base gap-[6px]">
               {strings["heroBtn1"]}
               <GreyArrow />
             </Button>
           </Link>
-          <Link href={"./contact"}>
+          <Link href={"/contact"}>
             <Button variant={"default"} classes="text-sm md:text-base">
               {strings["heroBtn2"]}
             </Button>

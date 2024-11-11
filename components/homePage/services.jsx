@@ -7,7 +7,7 @@ import { strings, services } from "@/utils";
 
 const ServiceComponent = () => {
   return (
-    <div className="my-[80px] flex flex-col items-center justify-center px-[16px] md:mx-[126px]">
+    <div className="my-[80px] flex flex-col items-center justify-center px-[16px] lg:mx-[126px]">
       <Button variant={"outlineRounded"} classes="text-xs md:text-base md:font-normal cursor-default">
         {strings["serviceBtn"]}
       </Button>
@@ -31,10 +31,6 @@ const ServiceComponent = () => {
           );
         })}
       </div>
-
-      {/* <Button variant={"default"} classes="text-base mt-12 mb-[80px]">
-        {strings["allServicesBtn"]}
-      </Button> */}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
 
-import { BlogsDetailsComp } from "@/components/index";
+import { BlogsDetailsComp, Footer } from "@/components/index";
 import { getBlog, getAllBlogs } from "@/utils";
 
 const BlogDetails = async ({ params }) => {
@@ -14,7 +14,8 @@ const BlogDetails = async ({ params }) => {
 
   return (
     <div>
-      <BlogsDetailsComp blog={blog} cardsData={allBlogs} />
+      <BlogsDetailsComp blog={blog} cardsData={allBlogs} params={params} />
+      <Footer />
     </div>
   );
 };

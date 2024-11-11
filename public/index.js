@@ -47,7 +47,7 @@ import gatsByIcon from "./Images/gatsBy.webp";
 import csharpIcon from "./Images/cSharp.webp";
 import androidStudioIcon from "./Images/androidStudio.webp";
 import canvaIcon from "./Images/canva.webp";
-import cocoapodsIcon from "./Images/Cocoapods.webp";
+import cocoapodsIcon from "./Images/cocoapods.webp";
 import dialogflowIcon from "./Images/dialogflow.webp";
 import figmaIcon from "./Images/figma.webp";
 import firebaseIcon from "./Images/firebase.webp";
@@ -64,8 +64,16 @@ import typescriptIcon from "./Images/typescript.webp";
 import xcodeIcon from "./Images/xcode.webp";
 import xdIcon from "./Images/xd.webp";
 import TrueArrow from "./Images/arrow.webp";
+import blogImage2 from "./Images/blog2.webp";
+import mongoDbIcon from "./Images/mongoDb.webp";
+import photoshopIcon from "./Images/photoshop.webp";
+import jiraIcon from "./Images/jira.webp";
 
 export {
+  photoshopIcon,
+  jiraIcon,
+  mongoDbIcon,
+  blogImage2,
   TrueArrow,
   xdIcon,
   xcodeIcon,
@@ -157,5 +165,6 @@ export { default as DottedLine } from "./Icons/dottedLine";
 
 export { default as ClockIcon } from "./Icons/clock";
 export { default as CalenderIcon } from "./Icons/calender";
+export { default as BlogsArrowIcon } from "./Icons/blogsArrow";
 
 export * from "./Templates";

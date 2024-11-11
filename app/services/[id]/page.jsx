@@ -16,6 +16,8 @@ export default function ServicesDetails({ params }) {
     return notFound();
   }
 
+  delete service.icon;
+
   return (
     <div>
       <ServiceDetailsHeader service={service} />

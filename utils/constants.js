@@ -27,8 +27,6 @@ import {
   xcodeIcon,
   typescriptIcon,
   tensorflowIcon,
-  swiftIcon,
-  sketchIcon,
   primereProIcon,
   nodeJsIcon,
   nextJsIcon,
@@ -36,19 +34,25 @@ import {
   firebaseIcon,
   figmaIcon,
   dialogflowIcon,
-  canvaIcon,
   androidStudioIcon,
+  BlogsImage,
+  BlogPost,
+  BlogImage1,
+  blogImage2,
+  mongoDbIcon,
+  photoshopIcon,
+  jiraIcon,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
-import { FileManagerApp, GiftShopWeb, ToDoListApp, WallpaperDownloader, C, GatsBy, React, Ex, TechIcon } from "@/public/PortfolioImages";
+import { Simfree, Deepmove, Dukan, Dukan1, Simfree1, Deepmove1, Mathani, Mathani1 } from "@/public/PortfolioImages";
 import { Android, AppleLogo, Chat, CreditCard, Guarantee, Map, Notification, SocialMedia } from "@/public/ProjectEstimation/index";
 
 export const navLinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
-  // { name: "Portfolio", path: "/portfolio" },
+  { name: "Portfolio", path: "/portfolio/all" },
   { name: "About Us", path: "/about" },
-  { name: "Blogs", path: "/blogs" },
+  // { name: "Blogs", path: "/blogs/all" },
   { name: "Careers", path: "/careers" },
 ];
 
@@ -146,19 +150,19 @@ export const services = [
       },
       {
         title: "Natural Language Processing",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Integration with Existing Systems",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Chatbot Analytics",
-        image: Dev,
+        image: BlogPost,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogsImage,
       },
     ],
     technologies: [
@@ -201,19 +205,19 @@ export const services = [
       },
       {
         title: "Cross-platform Solutions",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "UI/UX Design",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "App Testing & QA",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -226,8 +230,8 @@ export const services = [
         image: flutterIcon,
       },
       {
-        title: "Swift",
-        image: swiftIcon,
+        title: "Typescript",
+        image: typescriptIcon,
       },
       {
         title: "Kotlin",
@@ -255,19 +259,19 @@ export const services = [
       },
       {
         title: "Platform Compatibility Analysis",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Project Planning",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Cost Optimization",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "Market Strategy",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -309,19 +313,19 @@ export const services = [
       },
       {
         title: "E-commerce Solutions",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Progressive Web Apps",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Web App Maintenance",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "SEO Optimization",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -345,6 +349,14 @@ export const services = [
         title: "JavaScript",
         image: javaScriptIcon,
       },
+      {
+        title: "Mongodb",
+        image: mongoDbIcon,
+      },
+      {
+        title: "Firebase",
+        image: firebaseIcon,
+      },
     ],
   },
   {
@@ -363,29 +375,25 @@ export const services = [
       },
       {
         title: "Wireframing & Prototyping",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Visual Design",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Usability Testing",
-        image: Dev,
+        image: BlogPost,
       },
       {
         title: "Design System Development",
-        image: Dev,
+        image: BlogsImage,
       },
     ],
     technologies: [
       {
         title: "Figma",
         image: figmaIcon,
-      },
-      {
-        title: "Sketch",
-        image: sketchIcon,
       },
       {
         title: "Adobe XD",
@@ -396,8 +404,12 @@ export const services = [
         image: primereProIcon,
       },
       {
-        title: "Canva",
-        image: canvaIcon,
+        title: "Adobe Photoshop",
+        image: photoshopIcon,
+      },
+      {
+        title: "Jira",
+        image: jiraIcon,
       },
     ],
   },
@@ -418,25 +430,25 @@ export const services = [
       },
       {
         title: "Swift Development",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "App Store Deployment",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "iOS App Testing",
-        image: Dev,
+        image: BlogPost,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogsImage,
       },
     ],
     technologies: [
       {
-        title: "Swift",
-        image: swiftIcon,
+        title: "Javascript",
+        image: javaScriptIcon,
       },
       {
         title: "Typescript",
@@ -477,19 +489,19 @@ export const services = [
       },
       {
         title: "Kotlin Development",
-        image: Dev,
+        image: BlogImage1,
       },
       {
         title: "Google Play Deployment",
-        image: Dev,
+        image: blogImage2,
       },
       {
         title: "Android App Testing",
-        image: Dev,
+        image: BlogsImage,
       },
       {
         title: "Maintenance & Support",
-        image: Dev,
+        image: BlogPost,
       },
     ],
     technologies: [
@@ -516,8 +528,6 @@ export const services = [
     ],
   },
 ];
-
-export const buttonLabels = ["All", "Option 2", "Option 3", "Option 4"];
 
 export const images = [
   { src: Award4, alt: "Picture of the author 1" },
@@ -572,6 +582,12 @@ export const jobs = [
         ],
       },
     ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.8+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "Full-Time" },
+    ],
   },
   {
     id: 2,
@@ -615,6 +631,12 @@ export const jobs = [
           "Strong understanding of UI/UX principles.",
         ],
       },
+    ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.5+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "On-Site" },
     ],
   },
   {
@@ -660,6 +682,12 @@ export const jobs = [
         ],
       },
     ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.5+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "On-Site" },
+    ],
   },
   {
     id: 4,
@@ -703,6 +731,12 @@ export const jobs = [
           "Strong understanding of UI/UX principles.",
         ],
       },
+    ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.5+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "On-Site" },
     ],
   },
   {
@@ -748,14 +782,13 @@ export const jobs = [
         ],
       },
     ],
+    jobInfo: [
+      { title: "Industry", result: "IT Services" },
+      { title: "Work experience", result: "0.5+ Years" },
+      { title: "Location", result: "Faisalabad, Pakistan" },
+      { title: "Role", result: "On-Site" },
+    ],
   },
-];
-
-export const jobInfo = [
-  { title: "Industry", result: "IT Services" },
-  { title: "Work experience", result: "0.5+ Years" },
-  { title: "Location", result: "Faisalabad, Pakistan" },
-  { title: "Role", result: "On-Site" },
 ];
 
 export const frequentlyAskedQuestions = [
@@ -793,50 +826,63 @@ export const launchCards = [
   },
 ];
 
+export const portfolioFilters = ["Web App", "Mobile App"];
+
 export const portfolioData = [
   {
-    title: "WALLIFY",
-    images: [FileManagerApp, GiftShopWeb, ToDoListApp],
-    tags: ["Mobile App", "Web App", "Backend", "Backend", "Backend"],
+    title: "Simfree",
+    images: [Simfree, Simfree1],
+    link: "https://dev.simfree.io/",
+    tags: ["Mobile App", "Web App"],
     description: "Wallpaper downloader App for both iOS & Android.",
     details:
-      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+      "The app makes travel and connectivity easier with instant activation and plan switching. Users can track data usage in real-time and choose from various data plans for trips, whether short or long.",
     tools: [
-      { icon: Ex, name: "Express.js" },
-      { icon: GatsBy, name: "GraphQL" },
-      { icon: TechIcon, name: "Next.js" },
-      { icon: C, name: "C#" },
-      { icon: React, name: "React.js" },
+      { icon: reactIcon, name: "React Js" },
+      { icon: reactIcon, name: "React Native" },
+      { icon: firebaseIcon, name: "Firebase" },
     ],
   },
   {
-    title: "Project Two",
-    images: [WallpaperDownloader, ToDoListApp, FileManagerApp],
+    title: "Deepmove",
+    images: [Deepmove, Deepmove1],
+    link: "https://deepmove.com/",
     tags: ["Mobile App", "Web App"],
     details:
-      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+      "We are building a network-based marketplace. Where there is more content, there are more buyers. Students will have the ability to browse rather than perform blind searches, and when they arrive, they have the option to bring their friends, or, your potential clients.",
 
     tools: [
-      { icon: Ex, name: "Express.js" },
-      { icon: GatsBy, name: "GraphQL" },
-      { icon: TechIcon, name: "Next.js" },
-      { icon: C, name: "C#" },
-      { icon: React, name: "React.js" },
+      { icon: reactIcon, name: "React Js" },
+      { icon: reactIcon, name: "React Native" },
+      { icon: firebaseIcon, name: "Firebase" },
     ],
   },
   {
-    title: "Project Three",
-    images: [GiftShopWeb, WallpaperDownloader, ToDoListApp],
-    tags: ["Web App"],
-    details:
-      "At Exonic, we believe in harnessing the power of technology to transform businesses. With over seven years of experience, we specialize in delivering innovative and customized software solutions. Our mission is to empower companies by offering them robust digital tools that streamline operations, boost efficiency, and foster growth.",
+    title: "Dukan",
+    images: [Dukan, Dukan1],
+    link: "https://www.dukan.pk/",
+    tags: ["Web App", "Mobile app"],
+    details: "Dukan builds digital banking software and e-commerce infrastructure to connect retailers, distributors, and manufacturers with embedded financial services.",
 
     tools: [
-      { icon: Ex, name: "Express.js" },
-      { icon: GatsBy, name: "GraphQL" },
-      { icon: TechIcon, name: "Next.js" },
-      { icon: C, name: "C#" },
-      { icon: React, name: "React.js" },
+      { icon: reactIcon, name: "React Native" },
+      { icon: firebaseIcon, name: "Firebase" },
+      { icon: androidStudioIcon, name: "Android Studio" },
+      { icon: xcodeIcon, name: "xcode" },
+    ],
+  },
+  {
+    title: "Mathani",
+    images: [Mathani, Mathani1],
+    link: "https://play.google.com/store/apps/details?id=com.mathani",
+    tags: ["Mobile App"],
+    details:
+      "The Quran Learning & Recitation App helps Muslims improve their Quran recitation and understanding by providing the full Quran in Arabic with translations in multiple languages. It features a user-friendly index for easy navigation through Surahs and Ayahs, and integrated references and Tafsir for deeper context. Designed for both beginners and experienced readers, the app offers an intuitive interface to enhance the learning experience.",
+
+    tools: [
+      { icon: reactIcon, name: "React Native" },
+      { icon: firebaseIcon, name: "Firebase" },
+      { icon: androidStudioIcon, name: "Android Studio" },
     ],
   },
 ];
@@ -912,7 +958,21 @@ export const options = [
   {
     id: 10,
     title: "Please provide the following details so we can send you a cost estimate.",
-    type: "textarea",
-    placeholders: ["Your Name *", "Company Name *", "Email *"],
+    type: "contact",
+    placeholders: [
+      { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
+      { label: "Email", inputKey: "email", type: "email", placeholder: "Email   (Ex.example@gmail.com)" },
+      { label: "WhatsApp Number", inputKey: "whatsappNumber", type: "tel", placeholder: "WhatsApp Number  (Ex. +923000000000 or 03000000000)" },
+    ],
   },
+];
+
+export const articles = [
+  "Exploring Generative AI in Content Creation",
+  "Steering Clear of Common AI Writing Pitfalls",
+  "Understanding ChatGPT Capabilities - Define Your Style",
+  "Understand Your Readers",
+  "Creating Quality AI-powered Blogs that Stand Out",
+  "Conclusion: Embracing AI in Blog Creation",
+  "Afterword: The AI Behind This Article",
 ];

@@ -4,32 +4,22 @@ import Image from "next/image";
 
 import { BlogsCards } from "@/components/index";
 import { Button } from "@/components/index";
-import { strings } from "@/utils";
+import { strings, articles } from "@/utils";
 import { MsgIcon, CellPhoneIcon, BlogImage1 } from "@/public";
-
-const articles = [
-  "Exploring Generative AI in Content Creation",
-  "Steering Clear of Common AI Writing Pitfalls",
-  "Understanding ChatGPT Capabilities - Define Your Style",
-  "Understand Your Readers",
-  "Creating Quality AI-powered Blogs that Stand Out",
-  "Conclusion: Embracing AI in Blog Creation",
-  "Afterword: The AI Behind This Article",
-];
 
 const blogDetails = ({ cardsData, blog }) => {
   return (
-    <div className="mx-[110px]">
+    <div className="px-[16px] lg:px-[110px]">
       <div>
         <div>
-          <Image src={BlogImage1} className="mb-[36px] mt-[60px] h-[447px] flex-1 object-contain" alt="maintainance" />
+          <Image src={BlogImage1} className="mb-[36px] mt-[60px] h-[264px] flex-1 rounded-3xl object-cover xl:h-[427px]" alt="maintainance" priority />
           <div className="rounded-lg bg-border px-[36px] py-[24px] shadow-md">
             <div>
               <div className="flex flex-row items-center">
                 <div className="inline-block h-[16px] w-[16px] rounded-full bg-primary"></div>{" "}
                 <p className="ml-[10px] text-[14px] font-normal leading-[20.35px] text-primary">{strings["blogsCardTitle"]}</p>
               </div>
-              <p className="my-[10px] pr-[174px] text-[36px] font-bold leading-[53.46px] text-text">{strings["blogDesc"]}</p>
+              <p className="my-[10px] text-[28px] font-bold text-text xl:pr-[174px] xl:text-[36px] xl:leading-[53.46px]">{strings["blogDesc"]}</p>
               <div className="flex space-x-2">
                 <span className="text-[14px] font-normal leading-[20.79px] text-text">{strings["blogDate"]}</span>
                 <span className="text-[14px] font-normal leading-[20.79px] text-text">.</span>
@@ -39,12 +29,12 @@ const blogDetails = ({ cardsData, blog }) => {
           </div>
         </div>
         <div className="mt-[36px] flex flex-1 flex-col justify-between lg:flex-row lg:space-x-[117px]">
-          <div className="flex flex-1">
+          <div className="flex flex-1 lg:w-[50%] lg:flex-none xl:w-auto">
             <div dangerouslySetInnerHTML={{ __html: blog.template }} />
           </div>
 
-          <div className="flex-1/2 flex flex-col">
-            <div className="p-4">
+          <div className="flex-1/2 flex flex-col lg:w-[50%] xl:w-auto">
+            <div className="py-4 pr-4 lg:p-4 lg:py-0 lg:pr-0">
               <h2 className="mb-4 text-lg font-bold">{strings["artical"]}</h2>
 
               {articles.map((article, index) => (
@@ -55,12 +45,12 @@ const blogDetails = ({ cardsData, blog }) => {
                 </div>
               ))}
             </div>
-            <div className="mt-[58px] flex max-h-[400px] flex-col items-center rounded-[20px] border border-border bg-color-2 p-[30px] text-center md:p-[50px] lg:w-[500px]">
+            <div className="mt-[58px] flex max-h-[400px] flex-col items-center rounded-[20px] border border-border bg-color-2 p-[30px] text-center md:p-[50px] lg:w-auto">
               <MsgIcon />
               <p className="mt-[30px] pb-3 text-xl font-medium">{strings["faqHeading2"]}</p>
               <p className="text-base font-normal text-color-1">{strings["faqDesc2"]}</p>
               <p className="mb-[30px] text-base font-normal text-color-1">{strings["faqDesc3"]}</p>
-              <Link href={"./contact"}>
+              <Link href={"/contact"}>
                 <Button variant="bgRounded">
                   <div className="mr-2 items-center">
                     <CellPhoneIcon />
@@ -76,7 +66,7 @@ const blogDetails = ({ cardsData, blog }) => {
           <div>
             <p className="mb-[36px] text-[32px] font-semibold leading-[47.52px] text-card-foreground">{strings["relatedArticals"]}</p>
           </div>
-          <BlogsCards cardsData={cardsData} limit={3} />
+          <BlogsCards cardsData={cardsData} limit={3} params={"all"} />
         </div>
       </div>
     </div>

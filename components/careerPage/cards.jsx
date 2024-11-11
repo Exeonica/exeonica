@@ -10,7 +10,6 @@ const CareerCards = () => {
   return (
     <div>
       <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px]">
-        {/* Job Cards */}
         <div className="mb-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {jobs.map((job, index) => (
             <div key={index} className="rounded-md border border-border p-6 shadow-md">
@@ -29,9 +28,11 @@ const CareerCards = () => {
                   <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.location}</span>
                 </div>
                 <div>
-                  <Button variant={"default"} className="rounded-md bg-primary p-[14px] text-white">
-                    <Link href={`/careers/${job.id}`}>{job.applyText}</Link>
-                  </Button>
+                  <Link href={`/careers/${job.id}`}>
+                    <Button variant={"default"} className="rounded-md bg-primary p-[14px] text-white">
+                      {job.applyText}
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
