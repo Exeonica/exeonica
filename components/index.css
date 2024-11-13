@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'PangeaAfrikanTrial';
+    src: url('../app/fonts/PangeaAfrikanTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Set default font for Quill editor content */
+/* .ql-editor {
+    font-family: 'PangeaAfrikanTrial';
+} */
+
+
+
+.quill-content-preview pre {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    font-family: monospace;
+}
+
+.quill-content-preview code {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+
+.quill-content-preview h1 {
+    @apply text-2xl font-bold;
+  }
+  
+  .quill-content-preview h2 {
+    @apply text-xl font-semibold;
+  }
+  
+
+  .quill-content-preview .ql-size-small {
+    @apply text-sm;
+  }
+  
+  .quill-content-preview .ql-size-large {
+    @apply text-xl;
+  }
+  
+  .quill-content-preview .ql-size-huge {
+    @apply text-3xl font-bold;
+  }
+
+  
+  .quill-content-preview p {
+    @apply text-base;
+  }
+  
+
+  .quill-content-preview img {
+    display: inline-block;
+    max-width: 100%; 
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  /* Style for ordered lists (numbers) in the editor and output */
+.ql-editor ol, .quill-content-preview ol {
+    margin-left: 20px; 
+    padding-left: 10px;
+    list-style-type: decimal; 
+    font-size: 14px; 
+  }
+  
+ 
+  .ql-editor ul, .quill-content-preview ul {
+    margin-left: 20px; 
+    padding-left: 10px; 
+    list-style-type: disc; 
+    font-size: 14px; 
+  }
+  
+  /* Style list items in the editor and output */
+  .ql-editor ol li, .quill-content-preview ol li,
+  .ql-editor ul li, .quill-content-preview ul li {
+    margin-bottom: 10px;
+  }
+  
