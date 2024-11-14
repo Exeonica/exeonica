@@ -52,7 +52,7 @@ export const navLinks = [
   { name: "Services", path: "/services" },
   { name: "Portfolio", path: "/portfolio/all" },
   { name: "About Us", path: "/about" },
-  // { name: "Blogs", path: "/blogs/all" },
+  { name: "Blogs", path: "/blogs/all" },
   { name: "Careers", path: "/careers" },
 ];
 

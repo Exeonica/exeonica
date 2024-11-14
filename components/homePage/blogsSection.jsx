@@ -15,19 +15,12 @@ const BlogsSection = ({ blogsData }) => {
       <Button variant={"outlineRounded"} classes="text-xs md:text-base md:font-normal cursor-default">
         {strings["blogsTitle"]}
       </Button>
-      <p className="mt-2 pb-9 text-[28px] font-semibold md:text-[40px]">{strings["blogsHeading"]}</p>
+      <p className="mt-2 pb-9 text-[28px] font-semibold md:text-[40px]">{blogsData.title}</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-[35px] xl:gap-x-[50px]">
         <div className="flex flex-col rounded-2xl border border-border drop-shadow-sm">
           <Link href={`/blog/${displayedBlogs[0]?.id}`}>
-            <Image
-              priority
-              className="h-[268px] w-full rounded-t-2xl object-cover lg:h-[350px] lg:w-full"
-              src={displayedBlogs[0]?.bloggerImage}
-              alt={displayedBlogs[0]?.title}
-              width={700}
-              height={350}
-            />
+            <Image priority className="h-[268px] w-full rounded-t-2xl object-cover lg:h-[350px] lg:w-full" src={displayedBlogs[0]?.blogImage} alt={displayedBlogs[0]?.title} width={700} height={350} />
             <div className="px-[10px] py-[30px]">
               <p className="text-2xl font-semibold hover:underline">{displayedBlogs[0]?.title}</p>
               <p className="mt-3 text-base font-normal text-color-6 hover:underline">{displayedBlogs[0]?.desc}</p>
@@ -35,11 +28,11 @@ const BlogsSection = ({ blogsData }) => {
             <div className="flex space-x-4 px-4 pb-[30px]">
               <div className="flex items-center space-x-2">
                 <CalenderIcon />
-                <p className="text-sm font-medium text-color-1">{moment(displayedBlogs.updatedAt, "MMMM DD, YYYY [at] h:mm:ss A [UTC]Z").format("MMMM Do, YYYY") || ""}</p>
+                <p className="text-sm font-medium text-color-1">{moment(displayedBlogs[0]?.updatedAt.toDate()).format("MMMM Do, YYYY")}</p>
               </div>
               <div className="flex items-center space-x-2">
                 <ClockIcon />
-                <p className="text-sm font-medium text-color-1">9 min read</p>
+                <p className="text-sm font-medium text-color-1">{moment(displayedBlogs[0]?.updatedAt.toDate()).fromNow()}</p>
               </div>
             </div>
           </Link>
@@ -47,14 +40,14 @@ const BlogsSection = ({ blogsData }) => {
 
         {displayedBlogs.length > 1 ? (
           <div className="space-y-5">
-            {displayedBlogs.slice(1, 3).map((blog) => (
+            {displayedBlogs.slice(1, 4).map((blog) => (
               <div key={blog.id} className="mt-9 flex flex-col rounded-2xl border border-border drop-shadow-sm lg:mt-0 lg:flex-row lg:items-center">
                 <Link href={`/blog/${blog.id}`}>
                   <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-4">
                     <div className="w-full lg:w-auto">
                       <Image
                         className="h-[268px] w-full rounded-t-2xl object-cover lg:h-[160px] lg:w-[170px] lg:rounded-l-2xl lg:rounded-r-none lg:object-cover"
-                        src={blog.bloggerImage}
+                        src={blog.blogImage}
                         alt={blog.title}
                         width={170}
                         height={160}
@@ -68,11 +61,11 @@ const BlogsSection = ({ blogsData }) => {
                       <div className="flex space-x-4 px-4 pb-[30px] lg:pb-0 lg:pt-4 xl:pt-8">
                         <div className="flex items-center space-x-2">
                           <CalenderIcon />
-                          <p className="text-sm font-medium text-color-1">{moment(displayedBlogs.updatedAt, "MMMM DD, YYYY [at] h:mm:ss A [UTC]Z").format("MMMM Do, YYYY") || ""}</p>
+                          <p className="text-sm font-medium text-color-1">{moment(blog.updatedAt.toDate()).format("MMMM Do, YYYY")}</p>
                         </div>
                         <div className="flex items-center space-x-2">
                           <ClockIcon />
-                          <p className="text-sm font-medium text-color-1">10 min read</p>
+                          <p className="text-sm font-medium text-color-1">{moment(blog.updatedAt.toDate()).fromNow()}</p>
                         </div>
                       </div>
                     </div>
