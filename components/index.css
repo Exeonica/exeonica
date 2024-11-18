@@ -13,72 +13,134 @@
 
 
 .quill-content-preview pre {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    padding-left: 30px;
-    font-family: monospace;
+  background-color: #2B2B2B;
+  color: #F7FAFC;
+  padding: 10px;
+  padding-left: 30px;
+  font-family: monospace;
 }
 
 .quill-content-preview code {
-    background-color: black;
-    color: white;
-    font-family: monospace;
+  background-color: #2B2B2B;
+  color: #F7FAFC;
+  font-family: monospace;
 }
 
+
 .quill-content-preview h1 {
-    @apply text-2xl font-bold;
-  }
-  
-  .quill-content-preview h2 {
-    @apply text-xl font-semibold;
-  }
-  
+  @apply text-[32px] font-bold;
+}
 
-  .quill-content-preview .ql-size-small {
-    @apply text-sm;
-  }
-  
-  .quill-content-preview .ql-size-large {
-    @apply text-xl;
-  }
-  
-  .quill-content-preview .ql-size-huge {
-    @apply text-3xl font-bold;
-  }
+.quill-content-preview h2 {
+  @apply text-2xl font-semibold;
+}
 
-  
-  .quill-content-preview p {
-    @apply text-base;
-  }
-  
+.quill-content-preview .ql-size-small {
+  @apply text-sm;
+}
 
-  .quill-content-preview img {
-    display: inline-block;
-    max-width: 100%; 
-    margin-right: 10px;
-    vertical-align: middle;
-  }
+.quill-content-preview .ql-size-large {
+  @apply text-lg;
+}
 
-  /* Style for ordered lists (numbers) in the editor and output */
+.quill-content-preview .ql-size-huge {
+  @apply text-3xl font-bold;
+}
+
+
+.quill-content-preview p {
+  @apply text-base;
+}
+
+
+.quill-content-preview img {
+  display: inline-block;
+  max-width: 100%; 
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 .ql-editor ol, .quill-content-preview ol {
-    margin-left: 20px; 
-    padding-left: 10px;
-    list-style-type: decimal; 
-    font-size: 14px; 
-  }
-  
- 
-  .ql-editor ul, .quill-content-preview ul {
-    margin-left: 20px; 
-    padding-left: 10px; 
-    list-style-type: disc; 
-    font-size: 14px; 
-  }
-  
-  /* Style list items in the editor and output */
-  .ql-editor ol li, .quill-content-preview ol li,
-  .ql-editor ul li, .quill-content-preview ul li {
-    margin-bottom: 10px;
-  }
-  
+  margin-left: 20px; 
+  padding-left: 10px;
+  list-style-type: decimal; 
+  font-size: 14px; 
+}
+
+
+.ql-editor ul, .quill-content-preview ul {
+  margin-left: 20px; 
+  padding-left: 10px; 
+  list-style-type: disc; 
+  font-size: 14px; 
+}
+
+.ql-editor ol li, .quill-content-preview ol li,
+.ql-editor ul li, .quill-content-preview ul li {
+  margin-bottom: 10px;
+}
+
+
+.quill-content-preview a {
+@apply text-primary font-semibold; 
+transition: color 0.3s;  
+}
+
+
+.quill-content-preview a:hover {
+@apply underline;
+}
+
+.quill-content-preview ol,
+.quill-content-preview ul {
+  list-style-position: outside;
+  padding-left: 20px; 
+  margin-left: 10px; 
+}
+
+.quill-content-preview ol li,
+.quill-content-preview ul li {
+  font-size: inherit; 
+  color: inherit; 
+}
+
+.quill-content-preview ol {
+  counter-reset: list-counter; 
+}
+
+.quill-content-preview ol li {
+  counter-increment: list-counter; 
+}
+
+.quill-content-preview ol li::marker {
+  content: counter(list-counter) ". "; 
+  color: inherit;
+  font-size: inherit; 
+}
+
+
+.quill-content-preview ul li::marker {
+  color: inherit; 
+  font-size: inherit;
+}
+
+.quill-content-preview .ql-size-small ol, 
+.quill-content-preview .ql-size-small ul, 
+.quill-content-preview .ql-size-small ol li, 
+.quill-content-preview .ql-size-small ul li {
+  font-size: 0.875rem; 
+}
+
+.quill-content-preview .ql-size-large ol, 
+.quill-content-preview .ql-size-large ul, 
+.quill-content-preview .ql-size-large ol li, 
+.quill-content-preview .ql-size-large ul li {
+  font-size: 1.25rem; 
+}
+
+.quill-content-preview .ql-size-huge ol, 
+.quill-content-preview .ql-size-huge ul, 
+.quill-content-preview .ql-size-huge ol li, 
+.quill-content-preview .ql-size-huge ul li {
+  font-size: 1.875rem; 
+}
