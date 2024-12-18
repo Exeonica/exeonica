@@ -790,6 +790,42 @@ export const jobs = [
     ],
   },
 ];
+export const jobDetails = [
+  {
+    title: "Who Are We Looking For",
+    descriptions: [
+      "Passionate and driven individuals",
+      "Knowledge of basic concepts of OOP and DSA",
+      "Excellent problem-solving skills and attention to detail.",
+      "Ability to work in a fast-paced environment.",
+      "Strong communication and teamwork abilities.",
+      "Eagerness to learn and adapt to new technologies.",
+      "Must be a graduate.",
+    ],
+  },
+  {
+    title: "What You Will Do",
+    descriptions: [
+      "Collaborate with cross-functional teams to define project requirements",
+      "Write clean, scalable, and maintainable code",
+      "Participate in code reviews and testing.",
+      "Work closely with designers and product managers to create user-friendly applications.",
+      "Troubleshoot and debug software issues.",
+      "Stay up-to-date with industry trends and technologies.",
+    ],
+  },
+  {
+    title: "Required Skills",
+    descriptions: [
+      "Create and enhance mobile applications using React Native",
+      "Solid background in software development.",
+      "Familiarity with RESTful APIs and integration.",
+      "Knowledge of version control systems (Git, GitHub).",
+      "Excellent communication and teamwork skills.",
+      "Strong understanding of UI/UX principles.",
+    ],
+  },
+];
 
 export const frequentlyAskedQuestions = [
   { question: "How often will we communicate throughout the project?", answer: "We'll maintain regular communication through weekly meetings, as-needed contact, and a project management tool." },

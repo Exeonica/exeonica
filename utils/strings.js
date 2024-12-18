@@ -100,4 +100,5 @@ export const strings = {
   goToHome: "Return to home",
   loadArticals: " Load More Articals",
   viewAllBlogs: "View All Blogs",
+  applyNow: "Apply Now",
 };

@@ -1,16 +1,18 @@
+import React from "react";
 import { notFound } from "next/navigation";
 
-import { jobs } from "@/utils";
-import { Footer, CareersDetailPage } from "@/components/index";
+import { CareersDetailPage, Footer } from "@/components/index";
+import { getCareer, getAllCareers } from "@/utils";
 
 export async function generateStaticParams() {
-  return jobs.map((job) => ({
+  const allJobs = await getAllCareers();
+  return allJobs.map((job) => ({
     id: job.id.toString(),
   }));
 }
 
-export default function CareerDetails({ params }) {
-  const job = jobs.find((job) => job.id.toString() === params.id);
+const CareerDetails = async ({ params }) => {
+  const job = await getCareer(params.id);
 
   if (!job) {
     return notFound();
@@ -22,4 +24,6 @@ export default function CareerDetails({ params }) {
       <Footer />
     </div>
   );
-}
+};
+
+export default CareerDetails;
