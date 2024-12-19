@@ -144,8 +144,8 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
         careerId: careerId,
       };
       setModalVisible(true);
-      await sendMail(emailData, applicationTemp);
       await applicants(applicantData);
+      await sendMail(emailData, applicationTemp);
       // toast.success("Data Saved");
       // toast.success("Submit Successfully");
     } catch (error) {
