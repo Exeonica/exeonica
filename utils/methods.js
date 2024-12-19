@@ -44,7 +44,6 @@ export const getBlog = async (blogId) => {
 
 export const getAllCareers = async () => {
   const careersCollection = collection(db, "careers");
-  console.log("career id is here ", careersCollection);
   const careersSnapshot = await getDocs(careersCollection);
   const careersList = careersSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
