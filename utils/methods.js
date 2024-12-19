@@ -1,6 +1,6 @@
 "use server";
 import Handlebars from "handlebars";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 
 import { db, transporter, mailOptions, storage } from "@/services";
@@ -44,10 +44,23 @@ export const getBlog = async (blogId) => {
 
 export const getAllCareers = async () => {
   const careersCollection = collection(db, "careers");
+  console.log("career id is here ", careersCollection);
   const careersSnapshot = await getDocs(careersCollection);
   const careersList = careersSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
   return careersList;
+};
+
+export const applicants = async (emailData) => {
+  try {
+    const applicantsCollection = collection(db, "applicants");
+    const docRef = await addDoc(applicantsCollection, emailData);
+
+    return docRef.id;
+  } catch (e) {
+    console.error("Error adding document: ", e);
+    throw e;
+  }
 };
 
 export const getCareer = async (careersId) => {

@@ -25,6 +25,7 @@ const TextInput = ({ label, placeholder, handleChange = () => {}, type = "text",
           className={`w-full rounded-md p-4 ${classes} ${inputClass} ${loading ? "cursor-default opacity-50" : ""}`}
           onChange={(e) => handleChange(inputKey, e.target.value)}
           disabled={loading}
+          min={0}
         />
       )}
       {isInvalid && errorMsg && <p className="text-sm text-red-500">{errorMsg}</p>}

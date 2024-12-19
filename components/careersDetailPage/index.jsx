@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import { strings } from "@/utils";
+import { jobDetails, jobs, strings } from "@/utils";
 import { Button, ApplicationForm, ComHeader } from "@/components/index";
 
 const CareerDetails = ({ job }) => {
@@ -20,13 +20,13 @@ const CareerDetails = ({ job }) => {
       <ComHeader>
         <div className="flex flex-1 items-center justify-evenly">
           <div className="gap-8px mb-4 mt-[59px] flex w-fit items-center rounded-md bg-white">
-            {job.tags.map((tag, index) => (
-              <div key={index} className="flex items-center">
-                <span className="px-[12.5px] py-[9.5px] text-[14px] font-normal leading-[20.79px] text-color-1">{tag}</span>
+            {/* {job?.role?.map((tag, index) => (
+              <div key={index} className="flex items-center"> */}
+            <span className="px-[12.5px] py-[9.5px] text-[14px] font-normal leading-[20.79px] text-color-1">{job?.role}</span>
 
-                {index < job.tags.length - 1 && <div className="mx-[8px] h-[20px] w-[1px] bg-color-1" />}
+            {/* {index < job?.tags?.length - 1 && <div className="mx-[8px] h-[20px] w-[1px] bg-color-1" />}
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
 
@@ -50,11 +50,11 @@ const CareerDetails = ({ job }) => {
             <div>
               <span className="mb-[24px] text-[28px] font-semibold leading-[41.58px] text-text">{strings["jobDescTitle"]}</span>
 
-              {job.jobDetails.map((item, index) => (
+              {jobDetails?.map((item, index) => (
                 <div key={index} className="mb-4">
                   <div className="flex items-center">
                     <span className="mr-2 inline-block h-1 w-8 bg-primary"></span>
-                    <p className="mb-[17px] text-[24px] font-semibold leading-[35.76px] text-text">{item.title}</p>
+                    <p className="mb-[17px] text-[24px] font-semibold leading-[35.76px] text-text">{item?.title}</p>
                   </div>
 
                   <span className="list-inside list-disc space-y-[9px] text-[16px] font-normal leading-[23.58px] text-color-1">
@@ -74,17 +74,25 @@ const CareerDetails = ({ job }) => {
             <span className="mb-[24px] text-[28px] font-semibold leading-[41.58px] text-text">Job Information</span>
 
             <div className="text-gray-600">
-              {job.jobInfo.map((detail, index) => (
-                <span key={index}>
-                  <p className="mb-[8px] text-[18px] font-semibold leading-[26.73px] text-text">{detail.title}: </p>
-                  <p className="mb-[26px] text-[18px] font-normal leading-[26.73px] text-color-1"> {detail.result}</p>
-                </span>
-              ))}
+              {/* {job.map((detail, index) => (*/}
+              <span>
+                <p className="mb-[8px] text-[18px] font-semibold leading-[26.73px] text-text">Industry : </p>
+                <p className="mb-[26px] text-[18px] font-normal leading-[26.73px] text-color-1"> {job?.industry}</p>
+              </span>
+              <span>
+                <p className="mb-[8px] text-[18px] font-semibold leading-[26.73px] text-text">Location : </p>
+                <p className="mb-[26px] text-[18px] font-normal leading-[26.73px] text-color-1"> {job?.jobOffices}</p>
+              </span>
+              <span>
+                <p className="mb-[8px] text-[18px] font-semibold leading-[26.73px] text-text">Role : </p>
+                <p className="mb-[26px] text-[18px] font-normal leading-[26.73px] text-color-1"> {job?.role}</p>
+              </span>
+              {/* ))} */}
             </div>
           </div>
         </div>
 
-        {isFormVisible && <ApplicationForm title={job.title} onClose={handleCloseForm} />}
+        {isFormVisible && <ApplicationForm title={job?.title} onClose={handleCloseForm} careerId={job?.id} />}
         <div className="mb-[80px] mt-[60px] flex items-center justify-center lg:mb-[61px] lg:mt-[29px]">
           <div className="flex flex-col md:items-start md:justify-start md:px-0">
             <Button variant="default" onClick={handleButtonClick} classes="w-full mb-3 rounded-[8px] font-normal border-white px-[64px] py-[12px] text-[16px] text-white ">

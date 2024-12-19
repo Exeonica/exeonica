@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { TextInput, SuccessModal, Button } from "@/components/index";
-import { sendMail, strings, uploadCV } from "@/utils";
+import { applicants, sendMail, strings, uploadCV } from "@/utils";
 import { applicationTemp } from "@/public";
 import { TrueArrow } from "@/public";
 
@@ -20,7 +20,7 @@ const inputs = [
   { label: "Cover Letter (optional)", inputKey: "coverLetter", type: "textarea", placeholder: "Cover Letter (optional)" },
 ];
 
-const ApplicationForm = ({ title, onClose }) => {
+const ApplicationForm = ({ title, onClose, careerId }) => {
   const formRef = useRef(null);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -130,7 +130,21 @@ const ApplicationForm = ({ title, onClose }) => {
         coverLetter: formData.coverLetter,
         CVURL: url,
       };
+      const applicantData = {
+        title,
+        name: formData.name,
+        email: formData.email,
+        whatsappNumber: formData.whatsappNumber,
+        totalExperience: formData.totalExperience,
+        lastDegree: formData.lastDegree,
+        lastDegreeCompletionYear: formData.lastDegreeCompletionYear,
+        cgpa: formData.cgpa,
+        coverLetter: formData.coverLetter,
+        CVURL: url,
+        careerId: careerId,
+      };
       setModalVisible(true);
+      await applicants(applicantData);
       await sendMail(emailData, applicationTemp);
       // toast.success("Data Saved");
       // toast.success("Submit Successfully");
