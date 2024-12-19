@@ -141,7 +141,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
         lastDegreeCompletionYear: formData.lastDegreeCompletionYear,
         cgpa: formData.cgpa,
         coverLetter: formData.coverLetter,
-        CVURL: url,
+        cvLink: url,
         careerId: careerId,
       };
       setModalVisible(true);
