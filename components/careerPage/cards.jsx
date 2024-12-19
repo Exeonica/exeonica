@@ -5,11 +5,9 @@ import moment from "moment";
 
 import { Button } from "@/components/index";
 import { Location } from "@/public";
-import { jobs, strings } from "@/utils";
+import { strings } from "@/utils";
 
 const CareerCards = ({ cardsData }) => {
-  console.log("first", cardsData);
-
   return (
     <div>
       <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px]">

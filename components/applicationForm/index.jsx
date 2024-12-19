@@ -130,6 +130,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
         coverLetter: formData.coverLetter,
         CVURL: url,
       };
+
       const applicantData = {
         title,
         name: formData.name,

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import { jobDetails, jobs, strings } from "@/utils";
+import { jobDetails, strings } from "@/utils";
 import { Button, ApplicationForm, ComHeader } from "@/components/index";
 
 const CareerDetails = ({ job }) => {

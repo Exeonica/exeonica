@@ -6,6 +6,7 @@ import { getCareer, getAllCareers } from "@/utils";
 
 export async function generateStaticParams() {
   const allJobs = await getAllCareers();
+
   return allJobs.map((job) => ({
     id: job.id.toString(),
   }));
