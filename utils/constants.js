@@ -44,7 +44,7 @@ import {
   jiraIcon,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
-import { Simfree, Deepmove, Dukan, Dukan1, Simfree1, Deepmove1, Mathani, Mathani1 } from "@/public/PortfolioImages";
+import { Deepmove, Dukan, Dukan1, Deepmove1, Mathani, Mathani1 } from "@/public/PortfolioImages";
 import { Android, AppleLogo, Chat, CreditCard, Guarantee, Map, Notification, SocialMedia } from "@/public/ProjectEstimation/index";
 
 export const navLinks = [
@@ -829,20 +829,20 @@ export const launchCards = [
 export const portfolioFilters = ["Web App", "Mobile App"];
 
 export const portfolioData = [
-  {
-    title: "Simfree",
-    images: [Simfree, Simfree1],
-    link: "https://dev.simfree.io/",
-    tags: ["Mobile App", "Web App"],
-    description: "Wallpaper downloader App for both iOS & Android.",
-    details:
-      "The app makes travel and connectivity easier with instant activation and plan switching. Users can track data usage in real-time and choose from various data plans for trips, whether short or long.",
-    tools: [
-      { icon: reactIcon, name: "React Js" },
-      { icon: reactIcon, name: "React Native" },
-      { icon: firebaseIcon, name: "Firebase" },
-    ],
-  },
+  // {
+  //   title: "Simfree",
+  //   images: [Simfree, Simfree1],
+  //   link: "https://dev.simfree.io/",
+  //   tags: ["Mobile App", "Web App"],
+  //   description: "Wallpaper downloader App for both iOS & Android.",
+  //   details:
+  //     "The app makes travel and connectivity easier with instant activation and plan switching. Users can track data usage in real-time and choose from various data plans for trips, whether short or long.",
+  //   tools: [
+  //     { icon: reactIcon, name: "React Js" },
+  //     { icon: reactIcon, name: "React Native" },
+  //     { icon: firebaseIcon, name: "Firebase" },
+  //   ],
+  // },
   {
     title: "Deepmove",
     images: [Deepmove, Deepmove1],
