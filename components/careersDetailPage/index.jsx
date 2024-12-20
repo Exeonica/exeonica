@@ -87,6 +87,10 @@ const CareerDetails = ({ job }) => {
                 <p className="mb-[8px] text-[18px] font-semibold leading-[26.73px] text-text">Role : </p>
                 <p className="mb-[26px] text-[18px] font-normal leading-[26.73px] text-color-1"> {job?.role}</p>
               </span>
+              <span>
+                <p className="mb-[8px] text-[18px] font-semibold leading-[26.73px] text-text">Experience : </p>
+                <p className="mb-[26px] text-[18px] font-normal leading-[26.73px] text-color-1"> {job?.expLevel}</p>
+              </span>
               {/* ))} */}
             </div>
           </div>
