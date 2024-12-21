@@ -109,13 +109,13 @@ export const cardData = [
 ];
 
 export const testimonialData = [
-  {
-    description:
-      "I worked with the Exeonic team to help develop a mobile and web app in the health and wellness space. We had a large codebase and quite a lot of legacy code for Ahsan to familiarize himself with. Ahsan was incredibly quick to not only master the code, but also make suggestions for greater efficiencies, fewer packages, and better design, all of which improved our app’s performance and ease of use within the first few months of his hire. Exeonic's immediately proved to be a key contributor to our team, not only with his vast knowledge, deep expertise, and reliable work, but also with his clear, kind, and thorough mode of communication. I highly recommend a team for any project and any team, big or small.  Thank you! ",
-    imageSrc: Kiersten,
-    developerName: "Kiersten Jakobsen",
-    developerTitle: "Founder of Yoga & Fitness",
-  },
+  // {
+  //   description:
+  //     "I worked with the Exeonic team to help develop a mobile and web app in the health and wellness space. We had a large codebase and quite a lot of legacy code for Ahsan to familiarize himself with. Ahsan was incredibly quick to not only master the code, but also make suggestions for greater efficiencies, fewer packages, and better design, all of which improved our app’s performance and ease of use within the first few months of his hire. Exeonic's immediately proved to be a key contributor to our team, not only with his vast knowledge, deep expertise, and reliable work, but also with his clear, kind, and thorough mode of communication. I highly recommend a team for any project and any team, big or small.  Thank you! ",
+  //   imageSrc: Kiersten,
+  //   developerName: "Kiersten Jakobsen",
+  //   developerTitle: "Founder of Yoga & Fitness",
+  // },
   {
     description:
       "I worked with Exeonic on the Simfee project, involving web, mobile, and backend development. They impressed me with his speed and efficiency, delivering a first prototype in just four weeks. His handling of complex integrations, like stripe and crypto payments, was exceptional. With Ahsan's and his team's expertise, we launched on web, Playstore, and Appstore seamlessly. I highly recommend these guys for any development project.",
@@ -538,258 +538,6 @@ export const images = [
   { src: Award6, alt: "Picture of the author 3", classes: "h-[120px] w-[171.17px]" },
 ];
 
-export const jobs = [
-  {
-    id: 1,
-    time: "24 hours ago",
-    title: "React Developer",
-    tags: ["Full-time"],
-    location: "Faisalabad, Pakistan",
-    applyText: "Apply Now",
-    jobDetails: [
-      {
-        title: "Who Are We Looking For",
-        descriptions: [
-          "Passionate and driven individuals",
-          "0.5-1 years of experience in software development or related fields",
-          "Excellent problem-solving skills and attention to detail.",
-          "Ability to work in a fast-paced environment.",
-          "Strong communication and teamwork abilities.",
-          "Eagerness to learn and adapt to new technologies.",
-          "Must be a graduate.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-      {
-        title: "Required Skills",
-        descriptions: [
-          "Create and enhance mobile applications using React Native",
-          "Solid background in software development.",
-          "Familiarity with RESTful APIs and integration.",
-          "Knowledge of version control systems (Git, GitHub).",
-          "Excellent communication and teamwork skills.",
-          "Strong understanding of UI/UX principles.",
-        ],
-      },
-    ],
-    jobInfo: [
-      { title: "Industry", result: "IT Services" },
-      { title: "Work experience", result: "0.8+ Years" },
-      { title: "Location", result: "Faisalabad, Pakistan" },
-      { title: "Role", result: "Full-Time" },
-    ],
-  },
-  {
-    id: 2,
-    time: "20 hours ago",
-    title: "React Native Developer",
-    tags: ["Full-time"],
-    location: "Faisalabad, Pakistan",
-    applyText: "Apply Now",
-    jobDetails: [
-      {
-        title: "Who Are We Looking For",
-        descriptions: [
-          "Passionate and driven individuals",
-          "0.5-1 years of experience in software development or related fields",
-          "Excellent problem-solving skills and attention to detail.",
-          "Ability to work in a fast-paced environment.",
-          "Strong communication and teamwork abilities.",
-          "Eagerness to learn and adapt to new technologies.",
-          "Must be a graduate.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-      {
-        title: "Required Skills",
-        descriptions: [
-          "Create and enhance mobile applications using React Native",
-          "Solid background in software development.",
-          "Familiarity with RESTful APIs and integration.",
-          "Knowledge of version control systems (Git, GitHub).",
-          "Excellent communication and teamwork skills.",
-          "Strong understanding of UI/UX principles.",
-        ],
-      },
-    ],
-    jobInfo: [
-      { title: "Industry", result: "IT Services" },
-      { title: "Work experience", result: "0.5+ Years" },
-      { title: "Location", result: "Faisalabad, Pakistan" },
-      { title: "Role", result: "On-Site" },
-    ],
-  },
-  {
-    id: 3,
-    time: "20 hours ago",
-    title: "React Intern",
-    tags: ["Full-time"],
-    location: "Faisalabad, Pakistan",
-    applyText: "Apply Now",
-    jobDetails: [
-      {
-        title: "Who Are We Looking For",
-        descriptions: [
-          "Passionate and driven individuals",
-          "Knowledge of basic concepts of OOP and DSA",
-          "Excellent problem-solving skills and attention to detail.",
-          "Ability to work in a fast-paced environment.",
-          "Strong communication and teamwork abilities.",
-          "Eagerness to learn and adapt to new technologies.",
-          "Must be a graduate.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-      {
-        title: "Required Skills",
-        descriptions: [
-          "Create and enhance mobile applications using React Native",
-          "Solid background in software development.",
-          "Familiarity with RESTful APIs and integration.",
-          "Knowledge of version control systems (Git, GitHub).",
-          "Excellent communication and teamwork skills.",
-          "Strong understanding of UI/UX principles.",
-        ],
-      },
-    ],
-    jobInfo: [
-      { title: "Industry", result: "IT Services" },
-      { title: "Work experience", result: "0.5+ Years" },
-      { title: "Location", result: "Faisalabad, Pakistan" },
-      { title: "Role", result: "On-Site" },
-    ],
-  },
-  {
-    id: 4,
-    time: "25 hours ago",
-    title: "React Native Intern",
-    tags: ["Full-time"],
-    location: "Faisalabad, Pakistan",
-    applyText: "Apply Now",
-    jobDetails: [
-      {
-        title: "Who Are We Looking For",
-        descriptions: [
-          "Passionate and driven individuals",
-          "Knowledge of basic concepts of OOP and DSA",
-          "Excellent problem-solving skills and attention to detail.",
-          "Ability to work in a fast-paced environment.",
-          "Strong communication and teamwork abilities.",
-          "Eagerness to learn and adapt to new technologies.",
-          "Must be a graduate.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-      {
-        title: "Required Skills",
-        descriptions: [
-          "Create and enhance mobile applications using React Native",
-          "Solid background in software development.",
-          "Familiarity with RESTful APIs and integration.",
-          "Knowledge of version control systems (Git, GitHub).",
-          "Excellent communication and teamwork skills.",
-          "Strong understanding of UI/UX principles.",
-        ],
-      },
-    ],
-    jobInfo: [
-      { title: "Industry", result: "IT Services" },
-      { title: "Work experience", result: "0.5+ Years" },
-      { title: "Location", result: "Faisalabad, Pakistan" },
-      { title: "Role", result: "On-Site" },
-    ],
-  },
-  {
-    id: 5,
-    time: "20 hours ago",
-    title: "UI/UX Designer Intern",
-    tags: ["Full-time"],
-    location: "Faisalabad, Pakistan",
-    applyText: "Apply Now",
-    jobDetails: [
-      {
-        title: "Who Are We Looking For",
-        descriptions: [
-          "Passionate and driven individuals",
-          "Knowledge of basic concepts of OOP and DSA",
-          "Excellent problem-solving skills and attention to detail.",
-          "Ability to work in a fast-paced environment.",
-          "Strong communication and teamwork abilities.",
-          "Eagerness to learn and adapt to new technologies.",
-          "Must be a graduate.",
-        ],
-      },
-      {
-        title: "What You Will Do",
-        descriptions: [
-          "Collaborate with cross-functional teams to define project requirements",
-          "Write clean, scalable, and maintainable code",
-          "Participate in code reviews and testing.",
-          "Work closely with designers and product managers to create user-friendly applications.",
-          "Troubleshoot and debug software issues.",
-          "Stay up-to-date with industry trends and technologies.",
-        ],
-      },
-      {
-        title: "Required Skills",
-        descriptions: [
-          "Create and enhance mobile applications using React Native",
-          "Solid background in software development.",
-          "Familiarity with RESTful APIs and integration.",
-          "Knowledge of version control systems (Git, GitHub).",
-          "Excellent communication and teamwork skills.",
-          "Strong understanding of UI/UX principles.",
-        ],
-      },
-    ],
-    jobInfo: [
-      { title: "Industry", result: "IT Services" },
-      { title: "Work experience", result: "0.5+ Years" },
-      { title: "Location", result: "Faisalabad, Pakistan" },
-      { title: "Role", result: "On-Site" },
-    ],
-  },
-];
 export const jobDetails = [
   {
     title: "Who Are We Looking For",
@@ -879,34 +627,34 @@ export const portfolioData = [
       { icon: firebaseIcon, name: "Firebase" },
     ],
   },
-  {
-    title: "Deepmove",
-    images: [Deepmove, Deepmove1],
-    link: "https://deepmove.com/",
-    tags: ["Mobile App", "Web App"],
-    details:
-      "We are building a network-based marketplace. Where there is more content, there are more buyers. Students will have the ability to browse rather than perform blind searches, and when they arrive, they have the option to bring their friends, or, your potential clients.",
+  // {
+  //   title: "Deepmove",
+  //   images: [Deepmove, Deepmove1],
+  //   link: "https://deepmove.com/",
+  //   tags: ["Mobile App", "Web App"],
+  //   details:
+  //     "We are building a network-based marketplace. Where there is more content, there are more buyers. Students will have the ability to browse rather than perform blind searches, and when they arrive, they have the option to bring their friends, or, your potential clients.",
 
-    tools: [
-      { icon: reactIcon, name: "React Js" },
-      { icon: reactIcon, name: "React Native" },
-      { icon: firebaseIcon, name: "Firebase" },
-    ],
-  },
-  {
-    title: "Dukan",
-    images: [Dukan, Dukan1],
-    link: "https://www.dukan.pk/",
-    tags: ["Web App", "Mobile app"],
-    details: "Dukan builds digital banking software and e-commerce infrastructure to connect retailers, distributors, and manufacturers with embedded financial services.",
+  //   tools: [
+  //     { icon: reactIcon, name: "React Js" },
+  //     { icon: reactIcon, name: "React Native" },
+  //     { icon: firebaseIcon, name: "Firebase" },
+  //   ],
+  // },
+  // {
+  //   title: "Dukan",
+  //   images: [Dukan, Dukan1],
+  //   link: "https://www.dukan.pk/",
+  //   tags: ["Web App", "Mobile app"],
+  //   details: "Dukan builds digital banking software and e-commerce infrastructure to connect retailers, distributors, and manufacturers with embedded financial services.",
 
-    tools: [
-      { icon: reactIcon, name: "React Native" },
-      { icon: firebaseIcon, name: "Firebase" },
-      { icon: androidStudioIcon, name: "Android Studio" },
-      { icon: xcodeIcon, name: "xcode" },
-    ],
-  },
+  //   tools: [
+  //     { icon: reactIcon, name: "React Native" },
+  //     { icon: firebaseIcon, name: "Firebase" },
+  //     { icon: androidStudioIcon, name: "Android Studio" },
+  //     { icon: xcodeIcon, name: "xcode" },
+  //   ],
+  // },
   {
     title: "Mathani",
     images: [Mathani, Mathani1],
