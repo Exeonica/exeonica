@@ -16,7 +16,6 @@ import {
   LaunchCardIcon3,
   LaunchCardIcon4,
   Phillip,
-  Kiersten,
   Fazle,
   reactIcon,
   pythonIcon,
@@ -44,7 +43,7 @@ import {
   jiraIcon,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
-import { Simfree, Deepmove, Dukan, Dukan1, Simfree1, Deepmove1, Mathani, Mathani1 } from "@/public/PortfolioImages";
+import { Deepmove, Dukan, Dukan1, Deepmove1, Mathani, Mathani1 } from "@/public/PortfolioImages";
 import { Android, AppleLogo, Chat, CreditCard, Guarantee, Map, Notification, SocialMedia } from "@/public/ProjectEstimation/index";
 
 export const navLinks = [
@@ -111,14 +110,7 @@ export const cardData = [
 export const testimonialData = [
   {
     description:
-      "I worked with the Exeonic team to help develop a mobile and web app in the health and wellness space. We had a large codebase and quite a lot of legacy code for Ahsan to familiarize himself with. Ahsan was incredibly quick to not only master the code, but also make suggestions for greater efficiencies, fewer packages, and better design, all of which improved our app’s performance and ease of use within the first few months of his hire. Exeonic's immediately proved to be a key contributor to our team, not only with his vast knowledge, deep expertise, and reliable work, but also with his clear, kind, and thorough mode of communication. I highly recommend a team for any project and any team, big or small.  Thank you! ",
-    imageSrc: Kiersten,
-    developerName: "Kiersten Jakobsen",
-    developerTitle: "Founder of Yoga & Fitness",
-  },
-  {
-    description:
-      "I worked with Exeonic on the Simfee project, involving web, mobile, and backend development. They impressed me with his speed and efficiency, delivering a first prototype in just four weeks. His handling of complex integrations, like stripe and crypto payments, was exceptional. With Ahsan's and his team's expertise, we launched on web, Playstore, and Appstore seamlessly. I highly recommend these guys for any development project.",
+      "I worked with Exeonic on the Simfee project, involving web, mobile, and backend development. They impressed me with his speed and efficiency, delivering a first prototype in just four weeks. His handling of complex integrations, like stripe and crypto payments, was exceptional. With this team's expertise, we launched on web, Playstore, and Appstore seamlessly. I highly recommend these guys for any development project.",
     imageSrc: Fazle,
     developerName: "Muhammad Fazle",
     developerTitle: "Serial Entrepreneur",
@@ -865,20 +857,20 @@ export const launchCards = [
 export const portfolioFilters = ["Web App", "Mobile App"];
 
 export const portfolioData = [
-  {
-    title: "Simfree",
-    images: [Simfree, Simfree1],
-    link: "https://dev.simfree.io/",
-    tags: ["Mobile App", "Web App"],
-    description: "Wallpaper downloader App for both iOS & Android.",
-    details:
-      "The app makes travel and connectivity easier with instant activation and plan switching. Users can track data usage in real-time and choose from various data plans for trips, whether short or long.",
-    tools: [
-      { icon: reactIcon, name: "React Js" },
-      { icon: reactIcon, name: "React Native" },
-      { icon: firebaseIcon, name: "Firebase" },
-    ],
-  },
+  // {
+  //   title: "Simfree",
+  //   images: [Simfree, Simfree1],
+  //   link: "https://dev.simfree.io/",
+  //   tags: ["Mobile App", "Web App"],
+  //   description: "Wallpaper downloader App for both iOS & Android.",
+  //   details:
+  //     "The app makes travel and connectivity easier with instant activation and plan switching. Users can track data usage in real-time and choose from various data plans for trips, whether short or long.",
+  //   tools: [
+  //     { icon: reactIcon, name: "React Js" },
+  //     { icon: reactIcon, name: "React Native" },
+  //     { icon: firebaseIcon, name: "Firebase" },
+  //   ],
+  // },
   {
     title: "Deepmove",
     images: [Deepmove, Deepmove1],
