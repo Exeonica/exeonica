@@ -116,7 +116,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
       formDataCV.append("file", formData.selectedCV);
       formDataCV.append("email", formData.email);
 
-      const { url } = await uploadCV(formDataCV);
+      const url = await uploadCV(formDataCV);
 
       const emailData = {
         title,
@@ -141,7 +141,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
         lastDegreeCompletionYear: formData.lastDegreeCompletionYear,
         cgpa: formData.cgpa,
         coverLetter: formData.coverLetter,
-        CVURL: url,
+        cvLink: url,
         careerId: careerId,
       };
       setModalVisible(true);

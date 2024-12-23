@@ -24,7 +24,7 @@ const CareerCards = ({ cardsData }) => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center text-gray-600">
                   <Image src={Location} alt="icon" className="mr-[4px] h-[20px] w-[20px]" />
-                  <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.offices}</span>
+                  <span className="text-[14px] font-normal leading-[23.76px] text-color-1">{job.jobOffices}</span>
                 </div>
                 <div>
                   <Link href={`/careers/${job.id}`}>
