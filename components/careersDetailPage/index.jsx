@@ -69,8 +69,9 @@ const CareerDetails = ({ job }) => {
               ))} 
             </div>
           </div>  */}
-
-          <div dangerouslySetInnerHTML={{ __html: job?.desc }} />
+          <div className="flex-1">
+            <div dangerouslySetInnerHTML={{ __html: job?.desc }} />
+          </div>
 
           <div className="flex-2/5 rounded-lg p-0 md:p-6">
             <span className="mb-[24px] text-[28px] font-semibold leading-[41.58px] text-text">Job Information</span>
