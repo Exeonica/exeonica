@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import { jobDetails, strings } from "@/utils";
+import { strings } from "@/utils";
 import { Button, ApplicationForm, ComHeader } from "@/components/index";
 
 const CareerDetails = ({ job }) => {
@@ -20,13 +20,7 @@ const CareerDetails = ({ job }) => {
       <ComHeader>
         <div className="flex flex-1 items-center justify-evenly">
           <div className="gap-8px mb-4 mt-[59px] flex w-fit items-center rounded-md bg-white">
-            {/* {job?.role?.map((tag, index) => (
-              <div key={index} className="flex items-center"> */}
             <span className="px-[12.5px] py-[9.5px] text-[14px] font-normal leading-[20.79px] text-color-1">{job?.role}</span>
-
-            {/* {index < job?.tags?.length - 1 && <div className="mx-[8px] h-[20px] w-[1px] bg-color-1" />}
-              </div>
-            ))} */}
           </div>
         </div>
 
