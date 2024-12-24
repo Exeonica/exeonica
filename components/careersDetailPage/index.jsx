@@ -35,7 +35,10 @@ const CareerDetails = ({ job }) => {
       </ComHeader>
       <div className="mx-[16px] mt-[80px] px-4 py-8 lg:mx-[130px] lg:mt-[141px] xl:mx-[225px]">
         <div className="mb-[80px] flex flex-col-reverse md:flex-row lg:gap-[24px]">
-          <div dangerouslySetInnerHTML={{ __html: job?.desc }} />
+
+          <div className="flex-1">
+            <div dangerouslySetInnerHTML={{ __html: job?.desc }} />
+          </div>
 
           <div className="flex-2/5 rounded-lg p-0 md:p-6">
             <span className="mb-[24px] text-[28px] font-semibold leading-[41.58px] text-text">Job Information</span>
