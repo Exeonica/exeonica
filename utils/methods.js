@@ -12,7 +12,7 @@ export const sendMail = async (templateData, temp) => {
   const info = await transporter.sendMail({
     ...mailOptions,
     ...templateData,
-    to: ["ahsan@exeonic.com, sumeera.sehar@exeonic.com, bilal.akram@exeonic.com, hello@exeonic"],
+    to: ["ahsan@exeonic.com, sumeera.sehar@exeonic.com, bilal.akram@exeonic.com, hello@exeonic.com"],
     html: html,
   });
 
