@@ -16,7 +16,6 @@ import {
   LaunchCardIcon3,
   LaunchCardIcon4,
   Phillip,
-  Kiersten,
   Fazle,
   reactIcon,
   pythonIcon,
@@ -44,7 +43,7 @@ import {
   jiraIcon,
 } from "@/public";
 import { ACD, MAC, MAD, NAD, NID, UDS, WDS, Dev, Software } from "@/public/ServiceImages";
-import { Simfree, Deepmove, Dukan, Dukan1, Simfree1, Deepmove1, Mathani, Mathani1 } from "@/public/PortfolioImages";
+import { Simfree, Simfree1, Mathani, Mathani1 } from "@/public/PortfolioImages";
 import { Android, AppleLogo, Chat, CreditCard, Guarantee, Map, Notification, SocialMedia } from "@/public/ProjectEstimation/index";
 
 export const navLinks = [
