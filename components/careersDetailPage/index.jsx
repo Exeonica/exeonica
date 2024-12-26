@@ -35,9 +35,36 @@ const CareerDetails = ({ job }) => {
       </ComHeader>
       <div className="mx-[16px] mt-[80px] px-4 py-8 lg:mx-[130px] lg:mt-[141px] xl:mx-[225px]">
         <div className="mb-[80px] flex flex-col-reverse md:flex-row lg:gap-[24px]">
+          {/* <div className="flex-1">
+            <div className="mb-[48px]">
+              <span className="mb-[8px] text-[28px] font-semibold leading-[41.58px] text-text">{strings["aboutUs"]}</span>
+              <p className="text-[16px] font-normal leading-[23.58px] text-color-1">{strings["jobDescrip"]}</p>
+            </div>
 
+            <div>
+              <span className="mb-[24px] text-[28px] font-semibold leading-[41.58px] text-text">{strings["jobDescTitle"]}</span>
+
+             {jobDetails?.map((item, index) => (
+                <div key={index} className="mb-4">
+                  <div className="flex items-center">
+                    <span className="mr-2 inline-block h-1 w-8 bg-primary"></span>
+                    <p className="mb-[17px] text-[24px] font-semibold leading-[35.76px] text-text">{item?.title}</p>
+                  </div>
+
+                  <span className="list-inside list-disc space-y-[9px] text-[16px] font-normal leading-[23.58px] text-color-1">
+                    {item.descriptions.map((description, index) => (
+                      <li key={index} className="gap-[9px]">
+                        {" "}
+                        {description}
+                      </li>
+                    ))}
+                  </span> 
+                </div>
+              ))} 
+            </div>
+          </div>  */}
           <div className="flex-1">
-            <div dangerouslySetInnerHTML={{ __html: job?.desc }} />
+            <div className="quill-content-preview" dangerouslySetInnerHTML={{ __html: job?.desc }} />
           </div>
 
           <div className="flex-2/5 rounded-lg p-0 md:p-6">
