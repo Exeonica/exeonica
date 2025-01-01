@@ -5,6 +5,8 @@ import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 
 import { db, transporter, mailOptions, storage } from "@/services";
 
+export const dynamic = "force-dynamic";
+
 export const sendMail = async (templateData, temp) => {
   const template = Handlebars.compile(temp);
   const html = template(templateData);
