@@ -2,15 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 
 import { CareersDetailPage, Footer } from "@/components/index";
-import { getCareer, getAllCareers } from "@/utils";
-
-export async function generateStaticParams() {
-  const allJobs = await getAllCareers();
-
-  return allJobs.map((job) => ({
-    id: job.id.toString(),
-  }));
-}
+import { getCareer } from "@/utils";
 
 const CareerDetails = async ({ params }) => {
   const job = await getCareer(params.id);
