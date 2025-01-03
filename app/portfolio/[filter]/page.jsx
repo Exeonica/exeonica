@@ -1,17 +1,13 @@
 import { ComHeader, PortfolioData, RevenueSection, Footer } from "@/components/index";
 import { portfolioFilters } from "@/utils";
 
-export async function generateStaticParams() {
-  return portfolioFilters.map((filter) => ({
-    filter: filter,
-  }));
-}
-
 const Portfolio = ({ params }) => {
+  const { filter } = params;
+
   return (
     <div>
       <ComHeader title={"portfolioHeader"} />
-      <PortfolioData filter={params.filter} />
+      <PortfolioData filter={filter} />
       <RevenueSection />
       <Footer />
     </div>
