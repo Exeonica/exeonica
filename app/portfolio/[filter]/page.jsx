@@ -1,5 +1,4 @@
 import { ComHeader, PortfolioData, RevenueSection, Footer } from "@/components/index";
-import { portfolioFilters } from "@/utils";
 
 const Portfolio = ({ params }) => {
   const { filter } = params;
