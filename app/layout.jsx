@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Script from "next/script";
 
 import Navbar from "@/components/navbar";
 
@@ -35,6 +36,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-9LVQ2Q9XBQ"></Script>
+
+        <Script>
+          dangerouslySetInnerHTML=
+          {{
+            __html: ` window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-9LVQ2Q9XBQ');`,
+          }}
+        </Script>
+      </head>
       <body className={`${pangeaAfrikanTrial.variable} mx-auto max-w-[2100px] font-pangeaAfrikanTrial antialiased`}>
         <Navbar />
         {children}

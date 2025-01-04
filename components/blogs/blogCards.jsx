@@ -58,10 +58,12 @@ const BlogsCards = ({ cardsData, limit, params }) => {
     <>
       <div className="grid grid-cols-1 gap-6 pb-28 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {params?.filter === "all" || params?.filter === undefined
-          ? displayedCards.map((card) => renderBlog(card))
+          ? displayedCards.length > 0
+            ? displayedCards.map((card) => renderBlog(card))
+            : renderNoBlog("No blogs available")
           : displayedCards.filter((card) => filteredValue === card.type).length > 0
             ? displayedCards.filter((card) => filteredValue === card.type).map((card) => renderBlog(card))
-            : renderNoBlog()}
+            : renderNoBlog("No blogs available")}
       </div>
       {limit && displayedCards.length < cardsData.length && (
         <div className="mb-[200px] flex justify-center">
