@@ -37,14 +37,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-9LVQ2Q9XBQ"></Script>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-9LVQ2Q9XBQ" strategy="afterInteractive" />
 
-        <Script>
-          dangerouslySetInnerHTML=
-          {{
-            __html: ` window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-9LVQ2Q9XBQ');`,
-          }}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9LVQ2Q9XBQ');
+  `}
         </Script>
       </head>
       <body className={`${pangeaAfrikanTrial.variable} mx-auto max-w-[2100px] font-pangeaAfrikanTrial antialiased`}>
