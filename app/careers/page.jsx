@@ -10,7 +10,14 @@ const Careers = async () => {
   return (
     <div>
       <ComHeader title={"joinUs"} />
-      {careers.length > 0 ? <CareersCards cardsData={careers} /> : <p className="my-10 items-center justify-center text-xl font-semibold text-card-foreground">No Job Available.</p>}
+      {careers.length > 0 ? (
+        <CareersCards cardsData={careers} />
+      ) : (
+        <div className="flex items-center justify-center">
+          {" "}
+          <p className="my-10 items-center justify-center text-xl font-semibold text-card-foreground">No Job Available.</p>
+        </div>
+      )}
 
       <Footer />
     </div>
