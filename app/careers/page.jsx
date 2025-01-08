@@ -1,8 +1,8 @@
-import React from "react";
-
 import { ComHeader, Footer } from "@/components/index";
 import { CareersCards } from "@/components/careerPage";
 import { getAllCareers } from "@/utils";
+
+export const revalidate = 1;
 
 const Careers = async () => {
   const careers = await getAllCareers();
