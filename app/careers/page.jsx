@@ -15,7 +15,7 @@ const Careers = async () => {
       ) : (
         <div className="flex items-center justify-center">
           {" "}
-          <p className="my-10 items-center justify-center text-xl font-semibold text-card-foreground">No Job Available.</p>
+          <p className="my-10 items-center justify-center text-xl font-semibold text-card-foreground">No Job Found.</p>
         </div>
       )}
 
