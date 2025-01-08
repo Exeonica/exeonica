@@ -1,8 +1,8 @@
-import React from "react";
-
 import { ComHeader, Footer } from "@/components/index";
 import { CareersCards } from "@/components/careerPage";
 import { getAllCareers } from "@/utils";
+
+export const revalidate = 60;
 
 const Careers = async () => {
   const careers = await getAllCareers();
@@ -11,7 +11,6 @@ const Careers = async () => {
     <div>
       <ComHeader title={"joinUs"} />
       {careers.length > 0 ? <CareersCards cardsData={careers} /> : <p className="my-10 items-center justify-center text-xl font-semibold text-card-foreground">No Job Available.</p>}
-
       <Footer />
     </div>
   );
