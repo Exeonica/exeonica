@@ -1,5 +1,3 @@
-import React from "react";
-
 import { ComHeader, Footer } from "@/components/index";
 import { CareersCards } from "@/components/careerPage";
 import { getAllCareers } from "@/utils";
