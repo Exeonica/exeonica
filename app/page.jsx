@@ -1,8 +1,8 @@
-import { RevenueSection, Footer, Hero, Services, Testimonial, Contact, Launch, AboutComponent, FrequentlyAskedQuestions, AchievementCards, EstimationBanner, BlogsSection } from "@/components/index";
-import { getAllBlogs } from "@/utils";
+import { RevenueSection, Footer, Hero, Services, Testimonial, Contact, Launch, AboutComponent, FrequentlyAskedQuestions, AchievementCards, EstimationBanner } from "@/components/index";
+// import { getAllBlogs } from "@/utils";
 
 const Home = async () => {
-  const blogs = await getAllBlogs();
+  // const blogs = await getAllBlogs();
 
   return (
     <div>
@@ -12,7 +12,7 @@ const Home = async () => {
       <AchievementCards cardclass={"!bg-white"} btnTitle={"achievementTitle"} heading={"achievementHeading"} classes={"!bg-border"} hiddenClass={"hidden"} />
       <Services />
       <EstimationBanner />
-      <BlogsSection blogsData={blogs} />
+      {/* <BlogsSection blogsData={blogs} /> */}
       <Testimonial />
       <FrequentlyAskedQuestions />
       <Contact sectionBgColor={"color-2"} tableBgColor={"white"} />
