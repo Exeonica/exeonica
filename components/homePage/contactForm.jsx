@@ -31,6 +31,7 @@ const ContactForm = ({ tableBgColor }) => {
       toast.info("Sending Mail");
       await sendMail(formData, contactUs);
       toast.success("Mail Sent Successfully");
+      setFormData({ email: "", name: "", message: "" });
     } catch (error) {
       toast.error(error.message);
     } finally {

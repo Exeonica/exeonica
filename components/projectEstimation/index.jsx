@@ -173,11 +173,11 @@ const ProjectEstimation = () => {
 
     try {
       setIsLoading(true);
-      // toast.info("Sending Mail");
+      toast.info("Sending Mail");
       setModalVisible(true);
       sendData(formData);
       await sendMail(contactInfo, projectEstimation);
-      // toast.success("Mail Sent Successfully");
+      toast.success("Mail Sent Successfully");
     } catch (error) {
       toast.error(error.message);
     } finally {
@@ -267,7 +267,16 @@ const ProjectEstimation = () => {
                       onClick={() => handleCheckBoxChoice(option)}
                     >
                       <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{option}</p>
-                      <input type="checkbox" name={`option${option.id}`} value={option} id={choiceId} checked={isSelected} onChange={() => handleCheckBoxChoice(option)} className={"accent-primary"} />
+                      <input
+                        type="checkbox"
+                        name={`option${option.id}`}
+                        value={option}
+                        id={choiceId}
+                        checked={isSelected}
+                        onClick={(e) => e.stopPropagation()}
+                        onChange={() => handleCheckBoxChoice(option)}
+                        className={"accent-primary"}
+                      />
                     </div>
                   );
                 })}
@@ -284,7 +293,16 @@ const ProjectEstimation = () => {
                       onClick={() => handleCheckBoxChoice(option)}
                     >
                       <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{option}</p>
-                      <input type="checkbox" name={`option${option.id}`} value={option} id={choiceId} checked={isSelected} onChange={() => handleCheckBoxChoice(option)} className={"accent-primary"} />
+                      <input
+                        type="checkbox"
+                        name={`option${option.id}`}
+                        value={option}
+                        id={choiceId}
+                        checked={isSelected}
+                        onClick={(e) => e.stopPropagation()}
+                        onChange={() => handleCheckBoxChoice(option)}
+                        className={"accent-primary"}
+                      />
                     </div>
                   );
                 })}
@@ -303,6 +321,7 @@ const ProjectEstimation = () => {
               )}
             </div>
           )}
+
           {option.type === "radioWithIcon" &&
             option.choices.map((choice, index) => {
               const choiceId = `option${option.id}_choice${index}`;
@@ -338,6 +357,20 @@ const ProjectEstimation = () => {
             option.choices.map((option, index) => {
               const choiceId = `option${option.id}_choice${index}`;
               const isSelected = formData[activeIndex]?.answer?.includes(option) || false;
+
+              const handleCheckBoxChoice = (option) => {
+                const updatedAnswer = formData[activeIndex]?.answer || [];
+
+                const newAnswer = isSelected ? updatedAnswer.filter((item) => item !== option) : [...updatedAnswer, option];
+
+                const updatedFormData = [...formData];
+                updatedFormData[activeIndex] = {
+                  ...updatedFormData[activeIndex],
+                  answer: newAnswer,
+                };
+
+                setFormData(updatedFormData);
+              };
 
               return (
                 <div

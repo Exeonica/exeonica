@@ -34,7 +34,7 @@ const LocationCard = ({ location }) => (
         </div>
       </div>
 
-      <Link href={"https://shorturl.at/qdwje"} target="_blank">
+      <Link href={"https://maps.app.goo.gl/FLCMoLVn1Rk4ssqg6"} target="_blank">
         <Button variant={"default"} classes="text-xs md:text-base md:font-normal">
           {strings["getDirection"]}
         </Button>
