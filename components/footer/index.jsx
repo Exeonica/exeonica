@@ -1,8 +1,10 @@
 "use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { toast } from "react-toastify";
+
 import TextInput from "../textInput";
 
 import { Logo } from "@/public";

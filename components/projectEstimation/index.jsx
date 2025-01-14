@@ -364,6 +364,7 @@ const ProjectEstimation = () => {
                 const newAnswer = isSelected ? updatedAnswer.filter((item) => item !== option) : [...updatedAnswer, option];
 
                 const updatedFormData = [...formData];
+
                 updatedFormData[activeIndex] = {
                   ...updatedFormData[activeIndex],
                   answer: newAnswer,
