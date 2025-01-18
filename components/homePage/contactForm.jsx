@@ -6,7 +6,7 @@ import Button from "../button";
 import TextInput from "../textInput";
 
 import { ArrowRight, contactUs } from "@/public";
-import { sendMail, strings } from "@/utils";
+import { contactedUS, sendMail, strings } from "@/utils";
 
 const ContactForm = ({ tableBgColor }) => {
   const [formData, setFormData] = useState({ email: "", name: "", message: "" });
@@ -30,6 +30,7 @@ const ContactForm = ({ tableBgColor }) => {
       setIsLoading(true);
       toast.info("Sending Mail");
       await sendMail(formData, contactUs);
+      await contactedUS(formData);
       toast.success("Mail Sent Successfully");
       setFormData({ email: "", name: "", message: "" });
     } catch (error) {
