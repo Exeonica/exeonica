@@ -169,7 +169,11 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
     const file = e.target.files[0];
 
     if (file) {
-      handleChange("selectedCV", file);
+      if (file.type === "application/pdf") {
+        handleChange("selectedCV", file);
+      } else {
+        toast.error("Please select a PDF file.");
+      }
     }
   };
 
