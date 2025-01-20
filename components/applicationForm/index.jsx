@@ -8,6 +8,7 @@ import { TextInput, SuccessModal, Button } from "@/components/index";
 import { applicants, sendMail, strings, uploadCV } from "@/utils";
 import { applicationTemp } from "@/public";
 import { TrueArrow } from "@/public";
+import moment from "moment";
 
 const inputs = [
   { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
@@ -117,6 +118,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
       formDataCV.append("email", formData.email);
 
       const url = await uploadCV(formDataCV);
+      const timestamp = moment().toISOString();
 
       const emailData = {
         title,
@@ -143,6 +145,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
         coverLetter: formData.coverLetter,
         cvLink: url,
         careerId: careerId,
+        createdAt: timestamp,
       };
       setModalVisible(true);
       await applicants(applicantData);
