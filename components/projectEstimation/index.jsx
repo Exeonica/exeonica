@@ -109,35 +109,35 @@ const ProjectEstimation = () => {
       let updatedChoices = [...prevData];
       const currentOptionIndex = activeIndex;
 
-      if (answer === "Other") {
-        updatedChoices[currentOptionIndex] = {
-          question: options[currentOptionIndex].title,
+      if (!updatedChoices[activeIndex]) {
+        updatedChoices[activeIndex] = {
+          question: options[activeIndex].title,
           type: "checkbox",
           answer: [],
-          message: "",
+        };
+      }
+
+      const currentAnswers = updatedChoices[activeIndex]?.answer || [];
+
+      if (answer === "Other") {
+        updatedChoices[currentOptionIndex] = {
+          ...updatedChoices[currentOptionIndex],
+          question: options[currentOptionIndex].title,
+          type: "checkbox",
+          answer: currentAnswers.includes("Other") ? currentAnswers.filter((c) => c !== "Other") : [...currentAnswers, "Other"], // Toggle "Other"
+          message: currentAnswers.includes("Other") ? "" : updatedChoices[currentOptionIndex]?.message || "",
         };
       } else {
-        if (!updatedChoices[activeIndex]) {
+        if (currentAnswers.includes(answer)) {
           updatedChoices[activeIndex] = {
-            question: options[activeIndex].title,
-            type: "checkbox",
-            answer: [],
+            ...updatedChoices[activeIndex],
+            answer: currentAnswers.filter((c) => c !== answer),
           };
-        }
-
-        const currentAnswers = updatedChoices[activeIndex].answer;
-
-        if (currentAnswers) {
-          if (currentAnswers.includes(answer)) {
-            updatedChoices[activeIndex] = { ...updatedChoices[activeIndex], answer: currentAnswers.filter((c) => c != answer) };
-          } else {
-            updatedChoices[activeIndex] = {
-              ...updatedChoices[activeIndex],
-              answer: [...currentAnswers, answer],
-            };
-          }
         } else {
-          updatedChoices[activeIndex].answer = [...currentAnswers, answer];
+          updatedChoices[activeIndex] = {
+            ...updatedChoices[activeIndex],
+            answer: [...currentAnswers, answer],
+          };
         }
       }
 
@@ -307,13 +307,14 @@ const ProjectEstimation = () => {
                   );
                 })}
               </div>
-              {activeChoiceSelected === "Other" && (
+
+              {formData[activeIndex]?.answer?.includes("Other") && (
                 <TextInput
                   labelclass="text-lg font-medium"
                   classes="mb-3 w-full rounded-[10px] border border-color-1 py-[30px] bg-white focus:border-primary focus:outline-none"
                   type={"text"}
                   inputKey={"message"}
-                  placeholder="write a short note..."
+                  placeholder="Write a short note..."
                   value={formData[activeIndex]?.message || ""}
                   handleChange={handleTextareaChange}
                   loading={isLoading}
