@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import moment from "moment";
 
 import Button from "../button";
 import TextInput from "../textInput";
 
 import { ArrowRight, contactUs } from "@/public";
 import { contactedUS, sendMail, strings } from "@/utils";
-import moment from "moment";
 
 const ContactForm = ({ tableBgColor }) => {
   const [formData, setFormData] = useState({ email: "", name: "", message: "" });

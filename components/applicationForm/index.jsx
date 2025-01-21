@@ -3,12 +3,12 @@ import React, { useRef, useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import Image from "next/image";
+import moment from "moment";
 
 import { TextInput, SuccessModal, Button } from "@/components/index";
 import { applicants, sendMail, strings, uploadCV } from "@/utils";
 import { applicationTemp } from "@/public";
 import { TrueArrow } from "@/public";
-import moment from "moment";
 
 const inputs = [
   { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
