@@ -17,7 +17,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
   const [missingFields, setMissingFields] = useState([]);
   const [isModalVisible, setModalVisible] = useState(false);
   const [isAgreed, setIsAgreed] = useState(false);
-  const isIntern = title.toLowerCase().includes("intern");
+  const isIntern = title.toLowerCase().includes("intern" || "internship");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -31,8 +31,11 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
     selectedCV: null,
     currentSalary: "",
     expectedSalary: "",
+    expectedJoin: "",
     city: "",
   });
+
+  const expectedJoinOptions = ["1 Week", "1 Month", "2 Months", "3 Months", "As Soon As Possible"];
 
   const inputs = [
     { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
@@ -44,6 +47,13 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
       ? [
           { label: "Current Salary", inputKey: "currentSalary", type: "number", placeholder: "Current Salary" },
           { label: "Expected Salary", inputKey: "expectedSalary", type: "number", placeholder: "Expected Salary" },
+          {
+            label: "Expected Joining Date",
+            inputKey: "expectedJoin",
+            type: "select",
+            options: expectedJoinOptions,
+            placeholder: "Expected Joining Date",
+          },
         ]
       : [
           { label: "Last Degree", inputKey: "lastDegree", type: "text", placeholder: "Last Degree" },
@@ -61,6 +71,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
   const validateEmail = (email) => {
     email = email.toLowerCase();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     return emailRegex.test(email);
   };
 
@@ -70,6 +81,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
 
   const validatePhone = (phone) => {
     const phoneRegex = /^(\+92|0)?[3][0-9]{9}$/;
+
     return phoneRegex.test(phone);
   };
 
@@ -91,10 +103,10 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
 
     setValidationErrors({ email: "", whatsappNumber: "" });
 
-    inputs.forEach((v, index) => {
+    inputs.forEach((v) => {
       if (
         (isIntern && (v.inputKey === "lastDegree" || v.inputKey === "lastDegreeCompletionYear" || v.inputKey === "cgpa")) ||
-        (!isIntern && (v.inputKey === "currentSalary" || v.inputKey === "expectedSalary" || v.inputKey === "city"))
+        (!isIntern && (v.inputKey === "currentSalary" || v.inputKey === "expectedSalary" || v.inputKey === "city" || v.inputKey === "expectedJoin"))
       ) {
         if (!formData[v.inputKey]) {
           isValid = false;
@@ -122,6 +134,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
 
     if (!isValid) {
       toast.error("Please fill the highlighted field.");
+
       return;
     }
 
@@ -169,6 +182,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
               currentSalary: formData.currentSalary,
               expectedSalary: formData.expectedSalary,
               city: formData.city,
+              expectedJoin: formData.expectedJoin,
             }),
       };
 
@@ -218,18 +232,34 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
             <div>
               <p className="mb-[51px] text-center text-[28px] font-semibold leading-[41.58px] text-text lg:text-[36px] lg:leading-[53.46px]">Application for {title}</p>
             </div>
+
             {inputs.map((v, i) => (
               <div className="pb-[29px]" key={i}>
-                <TextInput
-                  type={v.type}
-                  inputKey={v.inputKey}
-                  placeholder={v.placeholder}
-                  value={formData[v.inputKey]}
-                  handleChange={handleChange}
-                  isInvalid={missingFields.includes(v.inputKey) || (v.inputKey === "email" && validationErrors.email) || (v.inputKey === "whatsappNumber" && validationErrors.whatsappNumber)}
-                  errorMsg={validationErrors[v.inputKey]}
-                  rows={i === inputs.length - 1 ? 3 : 0}
-                />
+                {v.type === "select" ? (
+                  <div>
+                    <select value={formData[v.inputKey]} onChange={(e) => handleChange(v.inputKey, e.target.value)} className="w-full rounded-md border border-gray-300 p-4">
+                      <option value="">{v.placeholder}</option>
+                      {v.options.map((option, index) => (
+                        <option key={index} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                ) : (
+                  <>
+                    <TextInput
+                      type={v.type}
+                      inputKey={v.inputKey}
+                      placeholder={v.placeholder}
+                      value={formData[v.inputKey]}
+                      handleChange={handleChange}
+                      label={v.label}
+                      classes={`${validationErrors[v.inputKey] ? "border-red-500" : "border-gray-300"}`}
+                    />
+                    {validationErrors[v.inputKey] && <p className="text-sm text-red-500">{validationErrors[v.inputKey]}</p>}
+                  </>
+                )}
               </div>
             ))}
             <div className="flex flex-col items-start gap-y-2 md:flex-row md:items-center md:gap-y-0">
@@ -247,14 +277,14 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
               <p className={`ml-[13px] ${missingFields.includes("selectedCV") ? "text-red-500" : "text-text"}`}>{formData.selectedCV?.name || strings["fileAttachment"]}</p>
             </div>
 
-            <div className="mt-4 flex items-center">
+            <div className="mt-6 flex w-2/3">
               <input type="checkbox" id="agree" checked={isAgreed} onChange={() => setIsAgreed(!isAgreed)} className={"accent-primary"} />
               <label htmlFor="agree" className="ml-2 text-sm">
                 {strings["disclaimer"]}
               </label>
             </div>
 
-            <div className="mt-[51px] flex !w-full lg:mt-[29px]">
+            <div className="mt-[41px] flex !w-full lg:mt-[19px]">
               <Button
                 loading={isLoading}
                 onClick={() => {
