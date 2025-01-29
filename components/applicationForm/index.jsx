@@ -40,7 +40,6 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
     { label: "WhatsApp Number", inputKey: "whatsappNumber", type: "tel", placeholder: "WhatsApp Number" },
     { label: "Total Experience", inputKey: "totalExperience", type: "number", placeholder: "Total Experience" },
     { label: "City", inputKey: "city", type: "text", placeholder: "City" },
-    { label: "Cover Letter (optional)", inputKey: "coverLetter", type: "textarea", placeholder: "Cover Letter (optional)" },
     ...(!isIntern
       ? [
           { label: "Current Salary", inputKey: "currentSalary", type: "number", placeholder: "Current Salary" },
@@ -51,6 +50,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
           { label: "Last Degree Completion Year", inputKey: "lastDegreeCompletionYear", type: "number", placeholder: "Completion Year" },
           { label: "CGPA", inputKey: "cgpa", type: "number", placeholder: "CGPA" },
         ]),
+    { label: "Cover Letter (optional)", inputKey: "coverLetter", type: "textarea", placeholder: "Cover Letter (optional)" },
   ];
 
   const [validationErrors, setValidationErrors] = useState({
@@ -248,7 +248,6 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
             </div>
 
             <div className="mt-4 flex items-center">
-              {/* <input type="checkbox" id="agree" checked={isAgreed} onChange={() => setIsAgreed(!isAgreed)} /> */}
               <input type="checkbox" id="agree" checked={isAgreed} onChange={() => setIsAgreed(!isAgreed)} className={"accent-primary"} />
               <label htmlFor="agree" className="ml-2 text-sm">
                 {strings["disclaimer"]}
