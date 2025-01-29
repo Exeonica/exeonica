@@ -8,11 +8,13 @@ import { Location } from "@/public";
 import { strings } from "@/utils";
 
 const CareerCards = ({ cardsData }) => {
+  const filteredJobs = cardsData.filter((job) => job?.status !== "closed");
+
   return (
     <div>
       <div className="mx-[10px] mt-[80px] md:mx-[20px] lg:mx-[150px]">
         <div className="mb-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {cardsData.map((job, index) => (
+          {filteredJobs.map((job, index) => (
             <div key={index} className="rounded-md border border-border p-6 shadow-md">
               <p className="text-[14px] font-normal leading-[20.79px] text-color-1">{job?.lastUpdated ? moment(new Date(job.lastUpdated.seconds * 1000)).fromNow() : "N/A"}</p>
               <h2 className="mb-4 text-2xl font-semibold leading-[35.64px] text-text">{job?.title}</h2>
