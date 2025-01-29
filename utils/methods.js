@@ -62,6 +62,18 @@ export const applicants = async (emailData) => {
   }
 };
 
+export const contactedUS = async (emailData) => {
+  try {
+    const contactedCollection = collection(db, "contactedUsers");
+    const docRef = await addDoc(contactedCollection, emailData);
+
+    return docRef.id;
+  } catch (e) {
+    console.error("Error adding document: ", e);
+    throw e;
+  }
+};
+
 export const getCareer = async (careersId) => {
   const careersCollection = doc(db, "careers", careersId);
   const careersSnapshot = await getDoc(careersCollection);

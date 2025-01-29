@@ -109,35 +109,35 @@ const ProjectEstimation = () => {
       let updatedChoices = [...prevData];
       const currentOptionIndex = activeIndex;
 
-      if (answer === "Other") {
-        updatedChoices[currentOptionIndex] = {
-          question: options[currentOptionIndex].title,
+      if (!updatedChoices[activeIndex]) {
+        updatedChoices[activeIndex] = {
+          question: options[activeIndex].title,
           type: "checkbox",
           answer: [],
-          message: "",
+        };
+      }
+
+      const currentAnswers = updatedChoices[activeIndex]?.answer || [];
+
+      if (answer === "Other") {
+        updatedChoices[currentOptionIndex] = {
+          ...updatedChoices[currentOptionIndex],
+          question: options[currentOptionIndex].title,
+          type: "checkbox",
+          answer: currentAnswers.includes("Other") ? currentAnswers.filter((c) => c !== "Other") : [...currentAnswers, "Other"], // Toggle "Other"
+          message: currentAnswers.includes("Other") ? "" : updatedChoices[currentOptionIndex]?.message || "",
         };
       } else {
-        if (!updatedChoices[activeIndex]) {
+        if (currentAnswers.includes(answer)) {
           updatedChoices[activeIndex] = {
-            question: options[activeIndex].title,
-            type: "checkbox",
-            answer: [],
+            ...updatedChoices[activeIndex],
+            answer: currentAnswers.filter((c) => c !== answer),
           };
-        }
-
-        const currentAnswers = updatedChoices[activeIndex].answer;
-
-        if (currentAnswers) {
-          if (currentAnswers.includes(answer)) {
-            updatedChoices[activeIndex] = { ...updatedChoices[activeIndex], answer: currentAnswers.filter((c) => c != answer) };
-          } else {
-            updatedChoices[activeIndex] = {
-              ...updatedChoices[activeIndex],
-              answer: [...currentAnswers, answer],
-            };
-          }
         } else {
-          updatedChoices[activeIndex].answer = [...currentAnswers, answer];
+          updatedChoices[activeIndex] = {
+            ...updatedChoices[activeIndex],
+            answer: [...currentAnswers, answer],
+          };
         }
       }
 
@@ -173,11 +173,11 @@ const ProjectEstimation = () => {
 
     try {
       setIsLoading(true);
-      // toast.info("Sending Mail");
+      toast.info("Sending Mail");
       setModalVisible(true);
       sendData(formData);
       await sendMail(contactInfo, projectEstimation);
-      // toast.success("Mail Sent Successfully");
+      toast.success("Mail Sent Successfully");
     } catch (error) {
       toast.error(error.message);
     } finally {
@@ -267,7 +267,16 @@ const ProjectEstimation = () => {
                       onClick={() => handleCheckBoxChoice(option)}
                     >
                       <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{option}</p>
-                      <input type="checkbox" name={`option${option.id}`} value={option} id={choiceId} checked={isSelected} onChange={() => handleCheckBoxChoice(option)} className={"accent-primary"} />
+                      <input
+                        type="checkbox"
+                        name={`option${option.id}`}
+                        value={option}
+                        id={choiceId}
+                        checked={isSelected}
+                        onClick={(e) => e.stopPropagation()}
+                        onChange={() => handleCheckBoxChoice(option)}
+                        className={"accent-primary"}
+                      />
                     </div>
                   );
                 })}
@@ -284,18 +293,28 @@ const ProjectEstimation = () => {
                       onClick={() => handleCheckBoxChoice(option)}
                     >
                       <p className="text-[14px] font-medium leading-[20.79px] text-card-foreground lg:text-[20px] lg:leading-[29.7px]">{option}</p>
-                      <input type="checkbox" name={`option${option.id}`} value={option} id={choiceId} checked={isSelected} onChange={() => handleCheckBoxChoice(option)} className={"accent-primary"} />
+                      <input
+                        type="checkbox"
+                        name={`option${option.id}`}
+                        value={option}
+                        id={choiceId}
+                        checked={isSelected}
+                        onClick={(e) => e.stopPropagation()}
+                        onChange={() => handleCheckBoxChoice(option)}
+                        className={"accent-primary"}
+                      />
                     </div>
                   );
                 })}
               </div>
-              {activeChoiceSelected === "Other" && (
+
+              {formData[activeIndex]?.answer?.includes("Other") && (
                 <TextInput
                   labelclass="text-lg font-medium"
                   classes="mb-3 w-full rounded-[10px] border border-color-1 py-[30px] bg-white focus:border-primary focus:outline-none"
                   type={"text"}
                   inputKey={"message"}
-                  placeholder="write a short note..."
+                  placeholder="Write a short note..."
                   value={formData[activeIndex]?.message || ""}
                   handleChange={handleTextareaChange}
                   loading={isLoading}
@@ -303,6 +322,7 @@ const ProjectEstimation = () => {
               )}
             </div>
           )}
+
           {option.type === "radioWithIcon" &&
             option.choices.map((choice, index) => {
               const choiceId = `option${option.id}_choice${index}`;
@@ -338,6 +358,21 @@ const ProjectEstimation = () => {
             option.choices.map((option, index) => {
               const choiceId = `option${option.id}_choice${index}`;
               const isSelected = formData[activeIndex]?.answer?.includes(option) || false;
+
+              const handleCheckBoxChoice = (option) => {
+                const updatedAnswer = formData[activeIndex]?.answer || [];
+
+                const newAnswer = isSelected ? updatedAnswer.filter((item) => item !== option) : [...updatedAnswer, option];
+
+                const updatedFormData = [...formData];
+
+                updatedFormData[activeIndex] = {
+                  ...updatedFormData[activeIndex],
+                  answer: newAnswer,
+                };
+
+                setFormData(updatedFormData);
+              };
 
               return (
                 <div

@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import moment from "moment";
 
 import Button from "../button";
 import TextInput from "../textInput";
 
 import { ArrowRight, contactUs } from "@/public";
-import { sendMail, strings } from "@/utils";
+import { contactedUS, sendMail, strings } from "@/utils";
 
 const ContactForm = ({ tableBgColor }) => {
   const [formData, setFormData] = useState({ email: "", name: "", message: "" });
@@ -29,8 +30,16 @@ const ContactForm = ({ tableBgColor }) => {
     try {
       setIsLoading(true);
       toast.info("Sending Mail");
+      const timestamp = moment().toISOString();
+
+      const data = {
+        ...formData,
+        createdAt: timestamp,
+      };
       await sendMail(formData, contactUs);
+      await contactedUS(data);
       toast.success("Mail Sent Successfully");
+      setFormData({ email: "", name: "", message: "" });
     } catch (error) {
       toast.error(error.message);
     } finally {

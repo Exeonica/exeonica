@@ -734,7 +734,7 @@ export const options = [
     id: 9,
     title: "How much money are you willing to invest in your project? (optional)",
     type: "radio",
-    choices: ["10,000$", "20,000$", "0,000$", "30,000$"],
+    choices: ["10,000$", "20,000$", "25,000$", "30,000$"],
   },
   {
     id: 10,
