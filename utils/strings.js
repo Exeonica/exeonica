@@ -101,5 +101,5 @@ export const strings = {
   loadArticals: " Load More Articals",
   viewAllBlogs: "View All Blogs",
   applyNow: "Apply Now",
-  disclaimer: "I agree to work in the Faisalabad office from 10 AM to 7 PM, Monday to Saturday.",
+  disclaimer: "I understand this is an On-SITE job, requiring me to attend the office six days a week, from Monday to Saturday.",
 };
