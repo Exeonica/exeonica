@@ -10,23 +10,14 @@ import { applicants, sendMail, strings, uploadCV } from "@/utils";
 import { applicationTemp } from "@/public";
 import { TrueArrow } from "@/public";
 
-const inputs = [
-  { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
-  { label: "Email", inputKey: "email", type: "email", placeholder: "Email   (Ex.example@gmail.com)" },
-  { label: "WhatsApp Number", inputKey: "whatsappNumber", type: "tel", placeholder: "WhatsApp Number  (Ex. +923000000000 or 03000000000)" },
-  { label: "Total Experience", inputKey: "totalExperience", type: "number", placeholder: "Total Experience" },
-  { label: "Last Degree", inputKey: "lastDegree", type: "text", placeholder: "Last Degree" },
-  { label: "Last Degree Completion Year", inputKey: "lastDegreeCompletionYear", type: "number", placeholder: "Last Degree Completion Year" },
-  { label: "CGPA", inputKey: "cgpa", type: "number", placeholder: "CGPA" },
-  { label: "Cover Letter (optional)", inputKey: "coverLetter", type: "textarea", placeholder: "Cover Letter (optional)" },
-];
-
 const ApplicationForm = ({ title, onClose, careerId }) => {
   const formRef = useRef(null);
 
   const [isLoading, setIsLoading] = useState(false);
   const [missingFields, setMissingFields] = useState([]);
   const [isModalVisible, setModalVisible] = useState(false);
+  const [isAgreed, setIsAgreed] = useState(false);
+  const isIntern = title.toLowerCase().includes("intern");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -38,7 +29,29 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
     cgpa: "",
     coverLetter: "",
     selectedCV: null,
+    currentSalary: "",
+    expectedSalary: "",
+    city: "",
   });
+
+  const inputs = [
+    { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
+    { label: "Email", inputKey: "email", type: "email", placeholder: "Email (Ex. example@gmail.com)" },
+    { label: "WhatsApp Number", inputKey: "whatsappNumber", type: "tel", placeholder: "WhatsApp Number" },
+    { label: "Total Experience", inputKey: "totalExperience", type: "number", placeholder: "Total Experience" },
+    { label: "City", inputKey: "city", type: "text", placeholder: "City" },
+    { label: "Cover Letter (optional)", inputKey: "coverLetter", type: "textarea", placeholder: "Cover Letter (optional)" },
+    ...(!isIntern
+      ? [
+          { label: "Current Salary", inputKey: "currentSalary", type: "number", placeholder: "Current Salary" },
+          { label: "Expected Salary", inputKey: "expectedSalary", type: "number", placeholder: "Expected Salary" },
+        ]
+      : [
+          { label: "Last Degree", inputKey: "lastDegree", type: "text", placeholder: "Last Degree" },
+          { label: "Last Degree Completion Year", inputKey: "lastDegreeCompletionYear", type: "number", placeholder: "Completion Year" },
+          { label: "CGPA", inputKey: "cgpa", type: "number", placeholder: "CGPA" },
+        ]),
+  ];
 
   const [validationErrors, setValidationErrors] = useState({
     email: "",
@@ -48,7 +61,6 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
   const validateEmail = (email) => {
     email = email.toLowerCase();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     return emailRegex.test(email);
   };
 
@@ -58,7 +70,6 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
 
   const validatePhone = (phone) => {
     const phoneRegex = /^(\+92|0)?[3][0-9]{9}$/;
-
     return phoneRegex.test(phone);
   };
 
@@ -81,9 +92,14 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
     setValidationErrors({ email: "", whatsappNumber: "" });
 
     inputs.forEach((v, index) => {
-      if (index !== 7 && !formData[v.inputKey]) {
-        isValid = false;
-        missing.push(v.inputKey);
+      if (
+        (isIntern && (v.inputKey === "lastDegree" || v.inputKey === "lastDegreeCompletionYear" || v.inputKey === "cgpa")) ||
+        (!isIntern && (v.inputKey === "currentSalary" || v.inputKey === "expectedSalary" || v.inputKey === "city"))
+      ) {
+        if (!formData[v.inputKey]) {
+          isValid = false;
+          missing.push(v.inputKey);
+        }
       }
     });
 
@@ -106,7 +122,6 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
 
     if (!isValid) {
       toast.error("Please fill the highlighted field.");
-
       return;
     }
 
@@ -133,20 +148,30 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
         CVURL: url,
       };
 
+      // Conditional applicant data based on intern status
       const applicantData = {
         title,
         name: formData.name,
         email: formData.email,
         whatsappNumber: formData.whatsappNumber,
         totalExperience: formData.totalExperience,
-        lastDegree: formData.lastDegree,
-        lastDegreeCompletionYear: formData.lastDegreeCompletionYear,
-        cgpa: formData.cgpa,
-        coverLetter: formData.coverLetter,
-        cvLink: url,
         careerId: careerId,
         createdAt: timestamp,
+        cvLink: url,
+        coverLetter: formData.coverLetter,
+        ...(isIntern
+          ? {
+              lastDegree: formData.lastDegree,
+              lastDegreeCompletionYear: formData.lastDegreeCompletionYear,
+              cgpa: formData.cgpa,
+            }
+          : {
+              currentSalary: formData.currentSalary,
+              expectedSalary: formData.expectedSalary,
+              city: formData.city,
+            }),
       };
+
       setModalVisible(true);
       await applicants(applicantData);
       await sendMail(emailData, applicationTemp);
@@ -222,12 +247,21 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
               <p className={`ml-[13px] ${missingFields.includes("selectedCV") ? "text-red-500" : "text-text"}`}>{formData.selectedCV?.name || strings["fileAttachment"]}</p>
             </div>
 
+            <div className="mt-4 flex items-center">
+              {/* <input type="checkbox" id="agree" checked={isAgreed} onChange={() => setIsAgreed(!isAgreed)} /> */}
+              <input type="checkbox" id="agree" checked={isAgreed} onChange={() => setIsAgreed(!isAgreed)} className={"accent-primary"} />
+              <label htmlFor="agree" className="ml-2 text-sm">
+                {strings["disclaimer"]}
+              </label>
+            </div>
+
             <div className="mt-[51px] flex !w-full lg:mt-[29px]">
               <Button
                 loading={isLoading}
                 onClick={() => {
                   handleSubmit();
                 }}
+                disabled={!isAgreed}
                 variant="default"
                 classes="!w-full rounded-[8px] font-bold border-white px-[64px] py-[12px] text-[16px] text-white justify-center"
               >

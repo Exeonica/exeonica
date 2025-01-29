@@ -61,7 +61,7 @@ export const strings = {
   jobDescrip:
     "From concept to launch, we handle every stage of the development process, ensuring a seamless and efficient experience. Our apps are designed to engage, inform, and entertain,providing a valuable experience for your customers. Let us help you reach new heights with a cutting-edge mobile app that sets you apart from the competition!",
   jobDescTitle: "Job Description",
-  intrested: "I am Intrested",
+  intrested: "Apply",
   apply: "Apply Now",
   uploadCV: "Upload CV",
   fileAttachment: "No file chosen",
@@ -101,4 +101,5 @@ export const strings = {
   loadArticals: " Load More Articals",
   viewAllBlogs: "View All Blogs",
   applyNow: "Apply Now",
+  disclaimer: "I agree to work in the Faisalabad office from 10 AM to 7 PM, Monday to Saturday.",
 };
