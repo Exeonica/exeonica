@@ -744,7 +744,7 @@ export const options = [
     type: "contact",
     placeholders: [
       { label: "Name", inputKey: "name", type: "text", placeholder: "Name" },
-      { label: "Email", inputKey: "email", type: "email", placeholder: "Email   (Ex.example@gmail.com)" },
+      { label: "Email", inputKey: "email", type: "email", placeholder: "Email  (Ex.example@gmail.com)" },
       { label: "WhatsApp Number", inputKey: "whatsappNumber", type: "tel", placeholder: "WhatsApp Number  (Ex. +923000000000 or 03000000000)" },
     ],
   },
