@@ -8,7 +8,7 @@ import { Location } from "@/public";
 import { strings } from "@/utils";
 
 const CareerCards = ({ cardsData }) => {
-  const filteredJobs = cardsData.filter((job) => job?.status !== "closed");
+  const filteredJobs = cardsData.filter((job) => job?.closed !== "closed" && job?.status !== "paused");
 
   return (
     <div>
