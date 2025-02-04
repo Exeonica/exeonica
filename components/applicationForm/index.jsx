@@ -224,7 +224,7 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
       <div className="fixed inset-0 bg-color-11 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
 
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+        <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-6">
           <div
             ref={formRef}
             className="relative max-h-[70vh] transform overflow-scroll overflow-y-auto rounded-2xl bg-white px-[12px] py-[37px] text-left shadow-xl transition-all [-ms-overflow-style:none] [scrollbar-width:none] md:px-[82px] md:py-[53px] [&::-webkit-scrollbar]:hidden"
@@ -277,9 +277,9 @@ const ApplicationForm = ({ title, onClose, careerId }) => {
               <p className={`ml-[13px] ${missingFields.includes("selectedCV") ? "text-red-500" : "text-text"}`}>{formData.selectedCV?.name || strings["fileAttachment"]}</p>
             </div>
 
-            <div className="mt-6 flex w-2/3">
+            <div className="mt-6 flex">
               <input type="checkbox" id="agree" checked={isAgreed} onChange={() => setIsAgreed(!isAgreed)} className={"accent-primary"} />
-              <label htmlFor="agree" className="ml-2 text-sm">
+              <label htmlFor="agree" className="ml-2 text-lg font-medium">
                 {strings["disclaimer"]}
               </label>
             </div>
