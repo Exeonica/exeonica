@@ -101,5 +101,5 @@ export const strings = {
   loadArticals: " Load More Articals",
   viewAllBlogs: "View All Blogs",
   applyNow: "Apply Now",
-  disclaimer: "I understand this is an On-SITE job, requiring me to attend the office six days a week, from Monday to Saturday.",
+  disclaimer: "I understand this is an On-SITE job, requiring me to attend the office located in Faisalabad six days a week, from Monday to Saturday.",
 };
