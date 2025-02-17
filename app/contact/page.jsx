@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComHeader, Contact, RevenueSection, Footer, ContactUsMap } from "@/components/index";
+import { ComHeader, Contact, RevenueSection, Footer } from "@/components/index";
 
 const ContactUs = () => {
   return (
