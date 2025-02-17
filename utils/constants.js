@@ -50,7 +50,6 @@ export const navLinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
   { name: "About Us", path: "/about" },
-  { name: "Careers", path: "/careers" },
 ];
 
 export const socialLinks = [
