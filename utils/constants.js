@@ -54,8 +54,8 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-  { Icon: FacebookIcon, link: "https://www.facebook.com/exeonicdotcom" },
-  { Icon: LinkedinIcon, link: "https://www.linkedin.com/company/exeonic" },
+  { Icon: FacebookIcon, link: "https://www.facebook.com/exeonicadotcom" },
+  { Icon: LinkedinIcon, link: "https://www.linkedin.com/company/exeonica" },
 ];
 
 export const others = [
@@ -108,21 +108,21 @@ export const cardData = [
 export const testimonialData = [
   // {
   //   description:
-  //     "I worked with the Exeonic team to help develop a mobile and web app in the health and wellness space. We had a large codebase and quite a lot of legacy code for Ahsan to familiarize himself with. Ahsan was incredibly quick to not only master the code, but also make suggestions for greater efficiencies, fewer packages, and better design, all of which improved our app’s performance and ease of use within the first few months of his hire. Exeonic's immediately proved to be a key contributor to our team, not only with his vast knowledge, deep expertise, and reliable work, but also with his clear, kind, and thorough mode of communication. I highly recommend a team for any project and any team, big or small.  Thank you! ",
+  //     "I worked with the exeonica team to help develop a mobile and web app in the health and wellness space. We had a large codebase and quite a lot of legacy code for Ahsan to familiarize himself with. Ahsan was incredibly quick to not only master the code, but also make suggestions for greater efficiencies, fewer packages, and better design, all of which improved our app’s performance and ease of use within the first few months of his hire. exeonica's immediately proved to be a key contributor to our team, not only with his vast knowledge, deep expertise, and reliable work, but also with his clear, kind, and thorough mode of communication. I highly recommend a team for any project and any team, big or small.  Thank you! ",
   //   imageSrc: Kiersten,
   //   developerName: "Kiersten Jakobsen",
   //   developerTitle: "Founder of Yoga & Fitness",
   // },
   {
     description:
-      "I worked with Exeonic on the Simfee project, involving web, mobile, and backend development. They impressed me with his speed and efficiency, delivering a first prototype in just four weeks. His handling of complex integrations, like stripe and crypto payments, was exceptional. With Ahsan's and his team's expertise, we launched on web, Playstore, and Appstore seamlessly. I highly recommend these guys for any development project.",
+      "I worked with exeonica on the Simfee project, involving web, mobile, and backend development. They impressed me with his speed and efficiency, delivering a first prototype in just four weeks. His handling of complex integrations, like stripe and crypto payments, was exceptional. With Ahsan's and his team's expertise, we launched on web, Playstore, and Appstore seamlessly. I highly recommend these guys for any development project.",
     imageSrc: Fazle,
     developerName: "Muhammad Fazle",
     developerTitle: "Serial Entrepreneur",
   },
   {
     description:
-      "Exeonic team was patient and was an absolute pleasure to work with. His work is impeccable and I would recommend it to anyone. I look forward to working with him in the near future.",
+      "exeonica team was patient and was an absolute pleasure to work with. His work is impeccable and I would recommend it to anyone. I look forward to working with him in the near future.",
     imageSrc: Phillip,
     developerName: "Phillip Mostert",
     developerTitle: "Founder of RoadRunner",

@@ -11,6 +11,6 @@ export const transporter = nodemailer.createTransport({
 });
 
 export const mailOptions = {
-  from: `"Exeonic" <exeonic@gmail.com>`,
-  subject: "Exeonic Mail",
+  from: `"exeonica" <exeonica@gmail.com>`,
+  subject: "exeonica Mail",
 };

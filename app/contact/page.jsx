@@ -7,7 +7,7 @@ const ContactUs = () => {
     <div>
       <ComHeader title={"contact"} />
       <Contact sectionBgColor={"white"} tableBgColor={"color-2"} />
-      <ContactUsMap />
+      {/* <ContactUsMap /> */}
       <RevenueSection />
       <Footer />
     </div>

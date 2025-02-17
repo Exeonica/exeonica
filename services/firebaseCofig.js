@@ -3,13 +3,13 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBHIWz1ZK-EoFXxXlle9xIpdYx51OWNAmM",
-  authDomain: "exeonic-6e5e5.firebaseapp.com",
-  projectId: "exeonic-6e5e5",
-  storageBucket: "exeonic-6e5e5.appspot.com",
-  messagingSenderId: "353455895132",
-  appId: "1:353455895132:web:8c58c6d484895647daec99",
-  measurementId: "G-XXN3V6YKFB",
+  apiKey: "AIzaSyDsIfaWWpI8OCwHM3157s6sJH2S61s4_Lc",
+  authDomain: "exeonica.firebaseapp.com",
+  projectId: "exeonica",
+  storageBucket: "exeonica.firebasestorage.app",
+  messagingSenderId: "795800386037",
+  appId: "1:795800386037:web:c5e7cb17c9f4b2d74648bc",
+  measurementId: "G-3XDDZCSQ9E",
 };
 
 const app = initializeApp(firebaseConfig);

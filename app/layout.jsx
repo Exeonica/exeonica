@@ -20,8 +20,8 @@ const pangeaAfrikanTrial = localFont({
 });
 
 export const metadata = {
-  title: "Exeonic - Where Innovation meets Excellence",
-  description: "Discover cutting-edge technology solutions with Exeonic. We provide innovative services to tackle modern challenges.",
+  title: "exeonica - Where Innovation meets Excellence",
+  description: "Discover cutting-edge technology solutions with exeonica. We provide innovative services to tackle modern challenges.",
   openGraph: {
     images: [
       {

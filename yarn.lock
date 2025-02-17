@@ -2900,9 +2900,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"exeonic@workspace:.":
+"exeonica@workspace:.":
   version: 0.0.0-use.local
-  resolution: "exeonic@workspace:."
+  resolution: "exeonica@workspace:."
   dependencies:
     "@eslint/js": 8.57.0
     "@playwright/test": ^1.47.2

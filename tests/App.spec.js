@@ -6,5 +6,5 @@ const baseURL = "http://localhost:3000/";
 test("has title", async ({ page }) => {
   await page.goto(baseURL);
 
-  await expect(page).toHaveTitle("Exeonic");
+  await expect(page).toHaveTitle("exeonica");
 });
